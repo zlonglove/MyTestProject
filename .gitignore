@@ -33,3 +33,19 @@ freeline.py
 freeline_project_description.json
 freeline/
 
+#创建完上面的过滤文件后   需要执行以下方法才能生效：
+#
+#改动过.gitignore文件之后，在repo的根目录下运行：
+#git rm -r --cached .
+#git add .
+#之后可以进行提交：
+#git commit -m "fixed untracked files"
+#如果执行上面方法不能生效，并且在创建上面文件之前已经提交代码到版本库了，那么这个时候可以尝试以下方法将想要过滤的相关文件，那么只能关掉开发工具，然后删除相关想要被过滤的文件。然后
+#
+#
+#git add -A
+#
+#git commit -m "fixed untracked files"
+#git push origin master
+#git pull
+#此时打开开发工具即可实现想要的过滤效果了。

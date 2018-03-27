@@ -117,7 +117,7 @@ dependencies {
     compile 'com.yalantis:phoenix:1.2.3'
     compile rootProject.ext.dependencies.eventbus
 
-    compile 'com.android.support:multidex:1.0.0'
+    compile rootProject.ext.dependencies.multidex
     implementation project(':downloadfile')
     implementation project(':iosdialog')
     implementation project(':timeselector')

@@ -20,6 +20,7 @@ ext {
             rxjava = "2.1.10",
             rxjava_android = "2.0.1",
             eventbus = "3.1.1",
+            multidex = "1.0.3"
 
     ]
 
@@ -38,6 +39,7 @@ ext {
 
             rxjava                  : "io.reactivex.rxjava2:rxjava:${rootProject.rxjava}",
             rxjava_android          : "io.reactivex.rxjava2:rxandroid:${rootProject.rxjava_android}",
-            eventbus                : "org.greenrobot:eventbus:${rootProject.eventbus}"
+            eventbus                : "org.greenrobot:eventbus:${rootProject.eventbus}",
+            multidex                : "com.android.support:multidex:${rootProject.multidex}"
     ]
 }
