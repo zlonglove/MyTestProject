@@ -1,3 +1,0 @@
-/Users/zhanglong/Android/project/FirstAndroidProject/jnisdk/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/edit_cache.dir
-/Users/zhanglong/Android/project/FirstAndroidProject/jnisdk/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/rebuild_cache.dir
-/Users/zhanglong/Android/project/FirstAndroidProject/jnisdk/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/myproject-jni.dir
