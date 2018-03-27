@@ -82,11 +82,11 @@ public class GoldAnimationActivity extends AppCompatActivity {
 
     private PopupWindow showPopWindows(View v, String moneyStr, boolean show) {
         View view = LayoutInflater.from(this).inflate(R.layout.view_login_reward, null, false);
-        TextView tvTips = view.findViewById(R.id.tv_tip);
-        TextView money = view.findViewById(R.id.tv_money);
+        TextView tvTips = (TextView) view.findViewById(R.id.tv_tip);
+        TextView money = (TextView) view.findViewById(R.id.tv_money);
         tvTips.setText("打造国内领先的掌上投资理财");
         money.setText(moneyStr);
-        final LinearLayout container = view.findViewById(R.id.container);
+        final LinearLayout container = (LinearLayout) view.findViewById(R.id.container);
         // 将flakeView 添加到布局中
         container.addView(flakeView);
         // 设置背景
