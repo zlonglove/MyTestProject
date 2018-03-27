@@ -20,6 +20,7 @@ ext {
             rxjava = "2.1.10",
             rxjava_android = "2.0.1",
             eventbus = "3.1.1",
+
     ]
 
 
