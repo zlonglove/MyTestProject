@@ -1,0 +1,112 @@
+Android.mk介绍
+TARGET_ARCH：CUP架构，比如，ARM
+TARGET_PLATFORM：目标Android SDK版本的名字，比如android-3
+TARGET_ARCH_ABI：CPU架构名字和其对应的ABI（Application binary interface：应用程序二进制接口），例如armeabi-v7a
+TARGET_ABI：Android SDK版本和ABI名字，比如：amdroid-3-armeabi-v7a
+
+LOCAL_MODULE_FILENAME:定义目标文件的名字，默认使用的变量是LOCAL_MODULE，但是可以使用LOCAL_MODULE_FILENAME这个名字来代替
+LOCAL_CPP_EXTENSION: 默认的C++扩展名是.cpp，这个变量可以定义一个或多个C++文件扩展名。
+LOCAL_CPP_EXTENSION: =.cpp .cxx
+
+LOCAL_CPP_FEATURES: 定义模块依赖的C++功能，比如rtti,exception等
+LOCAL_CPP_FEATURES:=rtti  
+
+LOCAL_C_INCLUDES:除了NDK安装目录，项目所依赖的其他头文件路径
+LOCAL_C_INCLUDES := sources/shared-module  
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/include   
+
+LOCAL_CFLAGS: 为编译器定义额外的标志（如宏定义等），编译C和C++文件时传给编译器的标志，例如：
+LOCAL_CFLAGS :=−DNDEBUG –DPORT=1234 
+
+LOCAL_CPP_FLAGS: 只为C++文件定义额外标志
+
+LOCAL_WHOLE_STATIC_LIBRARIES: 程序中所有的变量和函数都编译到静态库中，包含没有用到的变量和函数。（注：当静态库中形成环形依赖的时候，这个变量将非常有用）
+LOCAL_LDLIBS: 指定程序所依赖的链接库，比如，链接Android NDK的日志库
+LOCAL_LDFLAGS := − llog  
+
+LOCAL_ALLOW_UNDEFINED_SYMBOLS:使检查缺失符号的功能丧失，如果不定义的话，链接器报错指示符号缺失。
+
+LOCAL_ARM_MODE: 指示编译目标文件的指令集，arm指令使用两种模式，一种是Thumb（每条指令两个字节），一种是arm指令（每条指令4个字节）
+LOCAL_ARM_MODE := arm  
+
+以.arm为扩展名的文件也可以作为源文件编译成固定指令集的目标文件
+LOCAL_SRC_FILES := file1.c file2.c.arm 
+
+LOCAL_ARM_NEON：在module中定义LOCAL_ARM_NEON为‘true’，这样NDK编译的文件将支持NEON指令。
+这是非常有用的，如果你编译的静态或动态库包含NEON代码路径的话，使用.neon后缀。
+LOCAL_ARM_NEON := true  
+LOCAL_SRC_FILES := file1.c file2.c.neon  
+
+LOCAL_DISABLE_NO_EXECUTE: 去除NX Bit安全功能（注：NX Bit安全是一种应用在CPU中的安全技术，表示never execute，
+把内存分为存储和代码执行两部分，这样可以防止恶意应用在内存的存储部分插入恶意代码控制程序）
+LOCAL_DISABLE_NO_EXECUTE := true  
+
+LOCAL_EXPORT_CFLAGS: 和LOCAL_CFLAGS一样指定标志（如宏定义），同时还可以作为另外module的依赖标志，如：
+LOCAL_MODULE := avilib  
+...  
+LOCAL_EXPORT_CFLAGS := − DENABLE_AUDIO  
+...  
+LOCAL_MODULE := module1  
+LOCAL_CFLAGS :=−DDEBUG  
+...  
+LOCAL_SHARED_LIBRARIES := avilib  
+
+编译器在编译module1的时候可以得到两个宏定义–DENABLE_AUDIO 和–DDEBUG
+
+LOCAL_EXPORT_CPPFLAGS:同上
+
+LOCAL_EXPORT_LDFLAGS: 同上
+LOCAL_EXPORT_C_INCLUDES: 同上
+LOCAL_SHORT_COMMANDS：Windows的CMD命令行支持最多8191个字符，当一个module需要依赖很多库文件时，这个变量可以设置为true。
+LOCAL_FILTER_ASM:从LOCAL_SRC_FILES文件中过滤汇编文件。
+
+all-subdir-makefiles: 返回当前目录下包括子目录下所有的Android.mk文件
+this-makefile: 返回当前Android.mk文件的路径
+parent-makefile: 返回当前Android.mk的父Android.mk的路径。
+grand-parent-makefile: 返回当前Android.mk的爷爷Android.mk的路径。
+
+定义新变量，例如：
+MY_SRC_FILES := avilib.c platform_posix.c  
+LOCAL_SRC_FILES := $(addprefix avilib/, $(MY_SRC_FILES))  
+
+条件操作符，例如：
+ifeq ($(TARGET_ARCH),arm)  
+LOCAL_SRC_FILES + = armonly.c  
+else  
+LOCAL_SRC_FILES + = generic.c  
+endif
+
+Application.mk介绍
+APP_MODULES: 可选项，如果没有定义，则NDK编译所有Android.mk中的modules.如果定义了，则只编译Android.mk中被APP_MODULES指定的模块以及他们所依赖的模块。
+APP_OPTIM: 可选项。设置为：'release' or 'debug'。系统根据此选项决定优化等级
+APP_CLAGS:这个CFLAGS将取代Android.mk中module中指定的
+APP_CPPFLAGS: 只对C++代码有效的CPPFLAGS
+APP_BUILD_SCRIPT:通常情况下，NDK Build 系统会查找Android.mk从$(APP_PROJECT_PATH)/jni/，即：$(APP_PROJECT_PATH)/jni/Android.mk，
+如果想改变这个行为，则修改:APP_BUILD_SCRIPT.例如：
+APP_BUILD_SCRIPT := $(APP_PROJECT_PATH)/Android.mk  
+
+APP_ABI:缺省情况下，NDK build system会产生'armeabi'，要想支持arm-v7，x86，mips，则修改为：
+APP_ABI := armeabi armeabi-v7a x86 mips  
+
+APP_STL:默认情况下，NDK会寻找系统的STL库，这个参数可以指定另外的库，例如：
+APP_STL := stlport_shared
+
+APP_GNUSTL_FORCE_CPP_FEATURES:类似LOCAL_CPP_EXTENSIONS
+
+APP_SHORT_COMMANDS: 类似LOCAL_SHORT_COMMANDS
+如何使用ndk-build脚本
+默认情况下，ndk-build脚本会编译本目录下的工程，我们也可以加-C来指定工程目录，有了这个，工程可以放到任何目录下
+ndk-build –C /path/to/the/project
+
+默认情况下，ndk-build脚本不会重新编译没有经过修改的文件，如果强行使其重新编译的话，需要加-B参数
+ndk-build -B
+
+为了clean编译的中间文件以及目标文件，执行以下命令：
+ndk-build clean
+
+另外，NDK依赖的GNU make来编译module，默认情况下，编译器会按照顺序执行，必须等待前者执行完毕才会编译后者，如果想要节省时间，
+可以同时开几个线程执行编译，类似编译Android操作系统。
+ndk-build –j 4  
+
+如果执行ndk-build的时候想要看到更多日志的话
+ndk-build NDK_LOG=1 

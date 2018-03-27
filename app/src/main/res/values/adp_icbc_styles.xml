@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- AlertDialogPro对话框 -->
+    <style name="Base.Theme.AlertDialogPro" parent="Theme.AppCompat.Dialog"></style>
+
+    <style name="Base.Theme.AlertDialogPro.Light" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="buttonBarStyle">@android:style/ButtonBar</item>
+        <item name="buttonBarButtonStyle">@android:style/Widget.Button</item>
+        <!-- Window colors -->
+        <item name="android:colorForeground">@color/bright_foreground_material_light</item>
+        <item name="android:colorForegroundInverse">@color/bright_foreground_material_dark</item>
+        <item name="android:colorBackground">@color/background_material_light</item>
+        <item name="android:colorBackgroundCacheHint">
+            @color/abc_background_cache_hint_selector_material_light
+        </item>
+        <item name="android:disabledAlpha">0.5</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:windowBackground">@color/background_material_light</item>
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/abc_primary_text_material_light</item>
+        <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_dark</item>
+        <item name="android:textColorSecondary">@color/abc_secondary_text_material_light</item>
+        <item name="android:textColorSecondaryInverse">@color/abc_secondary_text_material_dark
+        </item>
+        <item name="android:textColorTertiary">@color/abc_secondary_text_material_light</item>
+        <item name="android:textColorTertiaryInverse">@color/abc_secondary_text_material_dark</item>
+        <item name="android:textColorPrimaryDisableOnly">
+            @color/abc_primary_text_disable_only_material_light
+        </item>
+        <item name="android:textColorPrimaryInverseDisableOnly">
+            @color/abc_primary_text_disable_only_material_dark
+        </item>
+        <item name="android:textColorHint">@color/foreground_material_light</item>
+        <item name="android:textColorHintInverse">@color/foreground_material_dark</item>
+        <item name="android:textColorHighlight">@color/highlighted_text_material_light</item>
+        <item name="android:textColorLink">#ff009688</item>
+        <!-- Text styles -->
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
+        <item name="android:textAppearanceInverse">@style/TextAppearance.AppCompat.Inverse</item>
+        <item name="android:textAppearanceLarge">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:textAppearanceLargeInverse">
+            @style/TextAppearance.AppCompat.Large.Inverse
+        </item>
+        <item name="android:textAppearanceMedium">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:textAppearanceMediumInverse">
+            @style/TextAppearance.AppCompat.Medium.Inverse
+        </item>
+        <item name="android:textAppearanceSmall">@style/TextAppearance.AppCompat.Small</item>
+        <item name="android:textAppearanceSmallInverse">
+            @style/TextAppearance.AppCompat.Small.Inverse
+        </item>
+        <item name="android:spinnerStyle">@style/Widget.AppCompat.Spinner</item>
+        <item name="android:dropDownListViewStyle">@style/Widget.AppCompat.ListView.DropDown</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/selector_icbc_btn_radio</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/abc_btn_check_material</item>
+    </style>
+
+    <style name="Theme.AlertDialogPro" parent="Base.Theme.AlertDialogPro">
+        <item name="adpButtonBarPositiveButtonStyle">?attr/adpButtonBarButtonStyle</item>
+        <item name="adpButtonBarNegativeButtonStyle">?attr/adpButtonBarButtonStyle</item>
+        <item name="adpButtonBarNeutralButtonStyle">?attr/adpButtonBarButtonStyle</item>
+    </style>
+
+    <style name="Theme.AlertDialogPro.Light" parent="Base.Theme.AlertDialogPro.Light">
+        <item name="adpButtonBarPositiveButtonStyle">?attr/adpButtonBarButtonStyle</item>
+        <item name="adpButtonBarNegativeButtonStyle">?attr/adpButtonBarButtonStyle</item>
+        <item name="adpButtonBarNeutralButtonStyle">?attr/adpButtonBarButtonStyle</item>
+    </style>
+    <!-- Base text appearance for AlertDialogPro -->
+    <style name="TextAppearance.AlertDialogPro" parent="android:TextAppearance" />
+    <!-- Base text appearance for title of AlertDialogPro -->
+    <style name="TextAppearance.AlertDialogPro.DialogWindowTitle">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <!-- Base style for widget of AlertDialogPro -->
+    <style name="Widget.AlertDialogPro" parent="android:Widget" />
+    <!-- Base Animation Styles -->
+    <style name="Animation.AlertDialogPro" parent="android:Animation" />
+    <!-- Base style for AlertDialogPro -->
+    <style name="AlertDialogPro">
+        <!-- The core library has no default style -->
+        <item name="adpLayout">@null</item>
+        <item name="adpProgressLayout">@null</item>
+        <item name="adpHorizontalProgressLayout">@null</item>
+        <item name="adpListLayout">@null</item>
+        <item name="adpListItemLayout">@null</item>
+        <item name="adpMultiChoiceItemLayout">@null</item>
+        <item name="adpSingleChoiceItemLayout">@null</item>
+    </style>
+    <!-- Base style for title of AlertDialogPro -->
+    <style name="DialogWindowTitle.AlertDialogPro" parent="">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.AlertDialogPro.DialogWindowTitle
+        </item>
+    </style>
+
+
+    <!-- 开始自定义工行风格对话框 -->
+    <style name="Base.Theme.AlertDialogPro.ICBC" parent="Theme.AlertDialogPro.Light">
+        <!-- Animation -->
+        <item name="android:windowAnimationStyle">@style/Animation.AlertDialogPro.ICBC.Dialog</item>
+        <!-- Background -->
+        <item name="android:windowBackground">@drawable/adp_dialog_background_icbc</item>
+        <!-- Title -->
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle.AlertDialogPro.ICBC</item>
+        <item name="adpTitleDividerBackground">@color/transparent</item>
+        <item name="adpTitleDividerHeight">0dp</item>
+        <item name="adpTitleMinHeight">0dp</item>
+        <!-- Message -->
+        <item name="adpMessageTextAppearance">@style/TextAppearance.AlertDialogPro.ICBC.Subhead
+        </item>
+        <!-- ListView -->
+        <item name="adpListItemMinHeight">48dip</item>
+        <item name="adpListItemTextColor">#607483</item>
+        <item name="adpListItemTextAppearance">@style/TextAppearance.AlertDialogPro.ICBC.Subhead
+        </item>
+        <item name="adpListSingleChoiceTextAppearance">
+            @style/TextAppearance.AlertDialogPro.ICBC.ListChoice
+        </item>
+        <item name="adpListMultiChoiceTextAppearance">
+            @style/TextAppearance.AlertDialogPro.ICBC.ListChoice
+        </item>
+        <item name="adpListItemBackground">@drawable/adp_item_background_icbc</item>
+        <item name="adpListDivider">@drawable/adp_list_divider_icbc</item>
+        <item name="android:listViewStyle">@style/Widget.AlertDialogPro.ICBC.ListView</item>
+        <!-- ButtonBar-->
+        <item name="adpButtonBarStyle">@style/Widget.AlertDialogPro.ICBC.ButtonBar</item>
+        <item name="adpButtonBarDividerHorizontal">@drawable/adp_list_divider_icbc</item>
+        <item name="adpButtonBarDividerVertical">@drawable/adp_list_divider_icbc</item>
+        <item name="adpButtonBarButtonStyle">@style/Widget.AlertDialogPro.ICBC.Button</item>
+        <!-- Dialog -->
+        <item name="alertDialogProStyle">@style/AlertDialogPro.ICBC</item>
+    </style>
+
+    <style name="Theme.AlertDialogPro.ICBC" parent="Base.Theme.AlertDialogPro.ICBC">
+        <item name="android:listChoiceIndicatorSingle">@drawable/selector_icbc_btn_radio</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/selector_icbc_btn_multicheckbox
+        </item>
+    </style>
+    <!-- Button styles -->
+    <style name="Base.Widget.AlertDialogPro.ICBC.Button" parent="android:Widget.Button">
+        <item name="android:background">@drawable/adp_dialog_btn_icbc</item>
+        <item name="android:paddingLeft">5dip</item>
+        <item name="android:paddingRight">5dip</item>
+        <item name="android:textColor">@drawable/adp_dialog_btn_txt_icbc</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:minHeight">45dip</item>
+    </style>
+
+    <style name="Widget.AlertDialogPro.ICBC.Button" parent="Base.Widget.AlertDialogPro.ICBC.Button"></style>
+    <!-- ListView styles -->
+    <style name="Widget.AlertDialogPro.ICBC.ListView" parent="android:Widget.ListView">
+        <item name="android:listSelector">?attr/adpListItemBackground</item>
+    </style>
+    <!-- Text styles -->
+    <style name="TextAppearance.AlertDialogPro.ICBC.DialogWindowTitle" parent="TextAppearance.AppCompat.Title"></style>
+
+    <style name="TextAppearance.AlertDialogPro.ICBC.Subhead" parent="TextAppearance.AppCompat.Subhead">
+        <item name="android:textColor">#8897a2</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="TextAppearance.AlertDialogPro.ICBC.ListChoice" parent="TextAppearance.AppCompat.Medium"></style>
+    <!-- Widget Styles -->
+    <style name="Widget.AlertDialogPro.ICBC.ButtonBar" parent="">
+        <item name="divider">?attr/adpButtonBarDividerVertical</item>
+        <item name="showDividers">middle</item>
+        <item name="dividerPadding">0dip</item>
+        <item name="android:background">@null</item>
+    </style>
+    <!-- Window title -->
+    <style name="DialogWindowTitle.AlertDialogPro.ICBC">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textColor">#607483</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAppearance">
+            @style/TextAppearance.AlertDialogPro.ICBC.DialogWindowTitle
+        </item>
+    </style>
+    <!-- Animation Styles -->
+    <style name="Animation.AlertDialogPro.ICBC" />
+
+    <style name="Animation.AlertDialogPro.ICBC.Dialog">
+        <item name="android:windowEnterAnimation">@anim/adp_popup_enter_icbc</item>
+        <item name="android:windowExitAnimation">@anim/adp_popup_exit_icbc</item>
+    </style>
+    <!-- Dialog styles -->
+    <style name="AlertDialogPro.ICBC">
+        <item name="adpLayout">@layout/adp_alert_dialog_icbc</item>
+        <item name="adpProgressLayout">@layout/adp_progress_dialog_icbc</item>
+        <item name="adpHorizontalProgressLayout">@layout/adp_progress_dialog_horizontal_icbc</item>
+        <item name="adpListLayout">@layout/adp_select_dialog_icbc</item>
+        <item name="adpListItemLayout">@layout/adp_select_dialog_item_icbc</item>
+        <item name="adpMultiChoiceItemLayout">@layout/adp_select_dialog_multichoice_icbc</item>
+        <item name="adpSingleChoiceItemLayout">@layout/adp_select_dialog_singlechoice_icbc</item>
+    </style>
+
+</resources>

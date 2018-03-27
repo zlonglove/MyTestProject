@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">android测试</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings1">退出</string>
+    <string name="menu_settings2">Settings2</string>
+    <string name="menu_settings3">Settings3</string>
+    <string name="netWork_error">网络错误,请检查网络</string>
+    <string name="getpicture_internet">GetPictureFromInternet</string>
+    <string name="dialogActivityButton">DialogActivity按钮2</string>
+    <string name="picture_path">The Path of the picture:</string>
+    <string name="default_picture_address">http://192.168.46.44:8080/First_web_server/getImage.png?id=1</string>
+    <string name="showPicture">Show Picture</string>
+    <string name="uploadPicture">上传图片</string>
+    <string name="getPictureError">Get Picture error!</string>
+    <string name="source_prompt">Chose City</string>
+    <string name="dialogButton">ProgressDialogButton</string>
+    <string name="defineDialogButton">Dialo种类</string>
+    <string name="sparcelable">sparcelable</string>
+    <string name="serializable">Serializable</string>
+    <string name="parcelable">Parcelable</string>
+    <string name="listViewButton">listView</string>
+    <string name="ExpandableListView">ExpandableListView</string>
+    <string name="listViewActivityInfo">listViewActivityInfo</string>
+    <string name="add">add</string>
+    <string name="update">update</string>
+    <string name="delete">delete</string>
+    <string name="query">query</string>
+    <string name="queryTheCursor">queryTheCursor</string>
+    <string name="myImageLoader">ImageLoader</string>
+    <string name="AudioPlay">AudioPlay</string>
+    <string name="no_such_apk">apk不存在</string>
+    <string name="AudioText">音频录音回放测试</string>
+    <string name="AudioOpen">打开音频设备</string>
+    <string name="AudioClose">关闭音频设备</string>
+    <string name="Mute">静音</string>
+    <string name="PlayAssert">播放Assert文件</string>
+    <string name="NoMute">恢复</string>
+    <string name="ReturnButton">返回</string>
+    <string name="serviceTitle">服务测试</string>
+    <string name="serviceButton">service测试</string>
+    <string name="serviceStart">startService</string>
+    <string name="serviceStop">stopService</string>
+    <string name="bindServer">bindServer</string>
+    <string name="unbindServer">unbindServer</string>
+    <string name="asyncService">asyncService</string>
+    <string name="getCount">获取链接次数</string>
+    <string name="broadCastTitle">broadcast测试</string>
+    <string name="broadCastNormalSend">发送普通广播消息</string>
+    <string name="broadCastOrderedSend">发送有序广播消息</string>
+    <string name="broadCastActivityButton">broadCast测试</string>
+    <string name="contentproviderTitle">contentProvider测试</string>
+    <string name="contentProviderButton">contentProvider</string>
+    <string name="addContent">添加数据</string>
+    <string name="deleteContent">清除数据</string>
+    <string name="updateContent">更新数据</string>
+    <string name="queryContent">查询数据</string>
+    <string name="wifiTitle">wifi网卡测试</string>
+    <string name="startWifi">启动手机的wifi网卡</string>
+    <string name="stopWifi">关闭手机的wifi网卡</string>
+    <string name="checkWifi">检查当前wifi网卡状态</string>
+    <string name="NetWorkButtonTitle">网络编程</string>
+    <string name="WebCodeViewer">获取网页代码</string>
+    <string name="webCodeViewer_path">The Path of the webCodeViewer:</string>
+    <string name="default_webCodeViewer_address">http://192.168.1.101:8080/ServerForPicture/zhanglong.jsp</string>
+    <string name="showWebView">Show WebView</string>
+    <string name="MultithreadingDownloading">多线程下载</string>
+    <string name="MultipleThreadContinuableDownLoadButtonTitle">多线程断点续传下载</string>
+    <string name="MultipleThreadContinuableDownLoadTitle">多线程断点续传下载</string>
+    <string name="HttpPost">HttpPost</string>
+    <string name="HttpGet">HttpGet</string>
+    <string name="DefaultMultipleThreadContinuableDownLoadPath">http://192.168.1.101:8080/ServerForPicture/love.mp3</string>
+    <string name="MultipleThreadContinuableDownLoadStart">Start Downloading</string>
+    <string name="MultipleThreadContinuableDownLoadStop">Stop Downloading</string>
+    <string name="MultipleThreadContinuableDownLoadSuccess">Downloading Completed Successfully</string>
+    <string name="MultipleThreadContinuableDownLoadError">Downloading Error</string>
+    <string name="NoSdcard">There is no SDCard or not allow to write</string>
+    <string name="openWebPage">打开网页</string>
+    <string name="openWebView">webView</string>
+    <string name="default_webpage">122.19.173.71:8011</string>
+    <string name="go">Enter</string>
+    <string name="updateapk">在线更新apk</string>
+    <string name="dlg_prompt">提示</string>
+    <string name="username">"姓名"</string>
+    <string name="password">"密码"</string>
+    <string name="action">"登录"</string>
+    <string name="cancel">"取消"</string>
+    <string name="ok">确认</string>
+    <string name="loadTitle">登录</string>
+    <string name="ExitMessage">退出确认</string>
+    <string name="loading_info">正在加载...</string>
+    <string name="loading_dialog_button_title">加载对话框</string>
+    <string name="RemoteCalls_button_title">远程调用</string>
+    <string name="Get_RemoteCalls_Info">获取远程调用的信息</string>
+    <string name="RemoteCalls_Play_title">play</string>
+    <string name="RemoteCalls_info">获取的信息为:</string>
+    <string name="viewPager_button_title">滑屏</string>
+    <string name="exit_dialog_title">退出应用</string>
+    <!-- Tabs -->
+    <string name="tv_direct">电视直播</string>
+    <string name="tv_interactive">互动电视 </string>
+    <string name="tv_live">TV生活</string>
+    <string name="movie_world">影视天地</string>
+    <string name="video">视频通讯</string>
+    <string name="app_world">应用天地</string>
+    <string name="click_enter">点击进入</string>
+    <string name="tip">提示</string>
+    <string name="dlg_quit">退出</string>
+    <string name="dlg_cancel">取消</string>
+    <string name="exit_confim">是否要退出应用?</string>
+    <string name="user_account">用户账户</string>
+    <string name="system_settings">系统设置</string>
+    <string name="about_software">关于软件</string>
+    <string name="fragment_preference">"preference"</string>
+    <string name="toapk">启动另一个apk</string>
+    <string name="UI">UI</string>
+    <string name="date_time_title">日期和时间测试</string>
+    <string name="date_time">时间和日期</string>
+    <string name="app_manager">app管理</string>
+    <string name="date_title">显示日期</string>
+    <string name="date_button">Date</string>
+    <string name="time_title">显示时间</string>
+    <string name="time_button">Time</string>
+    <string name="next">Next</string>
+    <string name="theme_dialog_title">dialog种类</string>
+    <string name="inline_preferences">In-line preferences</string>
+    <string name="dialog_based_preferences">Dialog-based preferences</string>
+    <string name="launch_preferences">Launch preferences</string>
+    <string name="preference_attributes">Preference attributes</string>
+    <string name="title_checkbox_preference">Checkbox preference</string>
+    <string name="summary_checkbox_preference">This is a checkbox</string>
+    <string name="title_switch_preference">Switch preference</string>
+    <string name="summary_switch_preference">This is a switch</string>
+    <string name="summary_switch_preference_yes_no">This is a switch with custom text</string>
+    <string name="title_edittext_preference">Edit text preference</string>
+    <string name="summary_edittext_preference">An example that uses an edit text dialog</string>
+    <string name="dialog_title_edittext_preference">Enter your favorite animal</string>
+    <string name="title_list_preference">List preference</string>
+    <string name="summary_list_preference">An example that uses a list dialog</string>
+    <string name="dialog_title_list_preference">Choose one</string>
+    <string name="title_screen_preference">Screen preference</string>
+    <string name="summary_screen_preference">Shows another screen of preferences</string>
+    <string name="title_next_screen_toggle_preference">Toggle preference</string>
+    <string name="summary_next_screen_toggle_preference">Preference that is on the next screen but same hierarchy</string>
+    <string name="title_intent_preference">Intent preference</string>
+    <string name="summary_intent_preference">Launches an Activity from an Intent</string>
+    <string name="title_parent_preference">Parent checkbox preference</string>
+    <string name="summary_parent_preference">This is visually a parent</string>
+    <string name="title_child_preference">Child checkbox preference</string>
+    <string name="summary_child_preference">This is visually a child</string>
+    <string name="fragment_preferences">Preference/7. Fragment</string>
+    <string name="edittextpreference"></string>
+    <string name="exit">再按一次退出程序</string>
+    <string name="tab_sd">SD卡</string>
+    <string name="tab_remote">远程管理</string>
+    <string name="file_explorer">发通知</string>
+    <string name="tabs_1_tab_1">tab1</string>
+    <string name="tabs_1_tab_2">tab2</string>
+    <string name="tabs_1_tab_3">tab3</string>
+    <string name="contacts">contacts</string>
+    <string name="sendKey">sendKey</string>
+    <string name="myView">myView</string>
+    <string name="set_ip_button">设置静态wifi地址</string>
+    <string name="login_password_notip"></string>
+    <string name="login_password_tip">登录密码</string>
+    <string name="login_id">手机号/卡(账)号/用户名</string>
+    <string name="letter_bar_star">★</string>
+    <string name="round_image">圆角</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="user_app">USER_APP</string>
+    <string name="system_app">SYSTEM_APP</string>
+
+    <string name="title_activity_uri">UriActivity</string>
+    <string name="dummy_button">测试按钮</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_book_provider">BookProviderActivity</string>
+    <string name="title_activity_motion_event">MotionEventActivity</string>
+
+    <!--分享相关-->
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_failed">发送失败</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unknown">发送返回</string>
+    <string name="sharewechat_title">来自融e联的分享</string>
+    <string name="wechatuninstall_tip">您尚未安装微信</string>
+    <string name="share_text_null">内容不能为空</string>
+    <string name="wechatregisterAppFail">微信注册失败</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="title_activity_learning">LearningActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+
+    <string name="title_activity_process">ProcessActivity</string>
+    <!-- loading画面用到的文字信息 -->
+    <string name="loading">正在载入&#8230;</string>
+    <string name="post">post请求</string>
+
+    <string name="weibosdk_demo_toast_auth_success">授权成功</string>
+    <string name="weibosdk_demo_toast_auth_failed">授权失败</string>
+    <string name="weibosdk_demo_toast_auth_canceled">取消授权</string>
+    <string name="weibosdk_demo_token_to_string_format_1">Token：%1$s \n有效期：%2$s</string>
+    <string name="weibosdk_demo_token_has_existed">Token 仍在有效期内，无需再次登录。</string>
+
+    <!-- 分享成功失败的 Toast -->
+    <string name="weibosdk_demo_toast_share_success">分享成功</string>
+    <string name="weibosdk_demo_toast_share_failed">分享失败</string>
+    <string name="weibosdk_demo_toast_share_canceled">取消分享</string>
+
+
+    <string name="notifyTitle">提示</string>
+    <string name="notifyMsg">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="setting">设置</string>
+
+    <string name="network_failed_msg">您的网络暂不可用，请稍后再试。</string>
+    <string name="ssl_failed_msg">服务器安全证书验证失败，请联系我行，谢谢。</string>
+    <string name="server_connect_error">服务器连接错误</string>
+
+    <string name="confirm">确定</string>
+
+
+    <string name="lockscreen_access_pattern_start">"开始绘制图案"</string>
+    <string name="lockscreen_access_pattern_cleared">"图案已清除"</string>
+    <string name="lockscreen_access_pattern_cell_added">"已添加单元格"</string>
+    <string name="lockscreen_access_pattern_detected">"图案绘制完成"</string>
+    <string name="lockpattern_retry_button_text">"重试"</string>
+    <string name="lockpattern_continue_button_text">"继续"</string>
+    <string name="lockpattern_confirm_button_text">"确认"</string>
+    <string name="lockpattern_recording_intro_header">"绘制解锁图案"</string>
+    <string name="lockpattern_settings_help_how_to_record">"如何绘制解锁图案"</string>
+    <string name="lockpattern_recording_incorrect_too_short">"至少连接4个点，请重试"</string>
+    <string name="lockpattern_pattern_entered_header">"图案已记录"</string>
+    <string name="lockpattern_need_to_confirm">"请再次绘制解锁图案"</string>
+    <string name="lockpattern_need_to_unlock_wrong">"与上次输入不一致，请重试"</string>
+    <string name="lockpattern_pattern_confirmed_header">"确认保存新解锁图案"</string>
+    <string name="lockpattern_recording_inprogress">"完成后松开手指"</string>
+    <string name="gesture_password_guide_text">你可以创建一个解锁图案，这样他人在借用你的手机时，将无法打开应用。</string>
+    <string name="gesture_password_guide_creat_btn">创建手势密码</string>
+
+
+    <string name="main_tab_recent">会话</string>
+    <string name="main_tab_contact">联系人</string>
+    <string name="mian_tab_set">设置</string>
+
+</resources>

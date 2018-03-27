@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_glide_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ISHello.Glide.GlideTestActivity">
+
+    <com.ISHello.Glide.GlideImageView
+        android:id="@+id/glide_image_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <com.ISHello.Glide.GlideImageView
+        android:id="@+id/glide_image_view_round"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+</LinearLayout>

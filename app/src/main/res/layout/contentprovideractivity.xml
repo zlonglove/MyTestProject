@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/music"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/serviceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:layout_centerHorizontal="true"
+        android:text="@string/contentproviderTitle"
+        android:textSize="@dimen/titlesize" />
+
+    <Button
+        android:id="@+id/addContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/serviceTitle"
+        android:layout_alignParentLeft="true"
+        android:text="@string/addContent"
+        android:onClick="addContent" />
+
+    <Button
+        android:id="@+id/deleteContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/addContent"
+        android:layout_alignBottom="@id/addContent"
+        android:text="@string/deleteContent"
+        android:onClick="deleteAllData" />
+
+    <Button
+        android:id="@+id/updateContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/deleteContent"
+        android:layout_alignBottom="@id/deleteContent"
+        android:text="@string/updateContent"
+        android:onClick="updateContent" />
+
+    <Button
+        android:id="@+id/queryContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/updateContent"
+        android:layout_alignBottom="@id/updateContent"
+        android:text="@string/queryContent"
+        android:onClick="queryContent" />
+
+    <ListView
+        android:id="@+id/contentPeople"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addContent"
+        android:background="@color/blue"
+        android:listSelector="@drawable/list_item_layout"></ListView>
+
+</RelativeLayout>

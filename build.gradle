@@ -1,0 +1,22 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
+
+buildscript {
+    //buildscript：定义了 Android 编译工具的类路径。repositories中,jCenter是一个著名的 Maven 仓库
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+    }
+}
+
+//allprojects:中定义的属性会被应用到所有 moudle 中，但是为了保证每个项目的独立性，我们一般不会在这里面操作太多共有的东西
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        google()
+    }
+}

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mine_avator_relative"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="50dp">
+
+        <com.in.zlonglove.commonutil.view.CircleImageView
+            android:id="@+id/mine_avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/mine_avatar"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1dp" />
+
+        <TextView
+            android:id="@+id/mine_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@+id/mine_avatar"
+            android:text="张龙"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/mine_vip"
+            android:layout_width="40dp"
+            android:layout_height="27dp"
+            android:layout_alignTop="@+id/mine_nick"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@+id/mine_nick"
+            android:src="@drawable/vip" />
+
+        <ImageView
+            android:id="@+id/star_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/mine_nick"
+            android:layout_below="@+id/mine_nick"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/star" />
+
+        <ImageView
+
+            android:id="@+id/start_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/star_1"
+            android:layout_toRightOf="@+id/star_1"
+            android:src="@drawable/star" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mine_sign_relative"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:id="@+id/sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="个性签名:" />
+
+        <TextView
+            android:id="@+id/sign_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@+id/sign"
+            android:paddingRight="20dp"
+            android:text="做自己人生的CEO" />
+
+
+        <TextView
+            android:id="@+id/tv_set_name"
+            style="@style/Smile.TextView._Black"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/sign_content"
+            android:layout_marginRight="50dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/register_bottom_arrow" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:background="#CBCED2" />
+
+
+    <ScrollView
+        android:id="@+id/sv_left_menu"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/layout_left_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

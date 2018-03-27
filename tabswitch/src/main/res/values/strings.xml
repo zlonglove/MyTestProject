@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">tabSwitch</string>
+    <string name="title_activity_fragment_module">Fragment组件化</string>
+    <string name="title_home">news</string>
+    <string name="title_dashboard">girls</string>
+    <string name="title_notifications">预留</string>
+</resources>

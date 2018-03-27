@@ -1,0 +1,41 @@
+
+{
+	"buildFiles" : 
+	[
+		"/Users/zhanglong/Android/project/FirstAndroidProject/jnisdk/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"/Users/zhanglong/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/zhanglong/Android/project/FirstAndroidProject/jnisdk/.externalNativeBuild/cmake/debug/x86 --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"myproject-jni-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "myproject-jni",
+			"buildCommand" : "/Users/zhanglong/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/zhanglong/Android/project/FirstAndroidProject/jnisdk/.externalNativeBuild/cmake/debug/x86 --target myproject-jni",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=/Users/zhanglong/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/zhanglong/Library/Android/sdk/ndk-bundle/sysroot  -Dmyproject_jni_EXPORTS -I../../../../src/main/cpp/include -isystem /Users/zhanglong/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/zhanglong/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem /Users/zhanglong/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /Users/zhanglong/Library/Android/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=16 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/zhanglong/Android/project/FirstAndroidProject/jnisdk/src/main/cpp/myproject-jni.cpp",
+					"workingDirectory" : "/Users/zhanglong/Android/project/FirstAndroidProject/jnisdk/.externalNativeBuild/cmake/debug/x86"
+				}
+			],
+			"output" : "/Users/zhanglong/Android/project/FirstAndroidProject/jnisdk/build/intermediates/cmake/debug/obj/x86/libmyproject-jni.so",
+			"toolchain" : "3737324253159964590"
+		}
+	},
+	"toolchains" : 
+	{
+		"3737324253159964590" : 
+		{
+			"cCompilerExecutable" : "/Users/zhanglong/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/zhanglong/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

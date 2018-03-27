@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loadbk"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/AudioText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/red"
+        android:textSize="@dimen/titlesize"
+        android:text="@string/AudioText" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/AudioOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="openAudio"
+            android:text="@string/AudioOpen" />
+
+        <Button
+            android:id="@+id/AudioClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="closeAudio"
+            android:text="@string/AudioClose" />
+
+        <Button
+            android:id="@+id/muteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mute"
+            android:text="@string/Mute" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/PlayVol"
+        android:layout_margin="40dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="15"
+        android:progress="6"
+        android:secondaryProgress="15"></SeekBar>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/PlayAssert"
+            android:onClick="playAssert" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\Android\Studio\project\FirstAndroidProject\app\libs\dom4j-1.6.1.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="5d3ccc056b6f056dbf0dddfdf43894b9065a8f94">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\dom4j-1.6.1_1e8b889a3f453ec2950abcc2e891d483e0e751af.jar" />
+    </item>
+    <item
+        jar="D:\Android\Studio\project\FirstAndroidProject\app\libs\commons-codec-1.2.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="48443afb96873efe54cbb5cef1b06af429d9eace">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\commons-codec-1.2_284772ba840d706dc41e7674e9983260b031f086.jar" />
+    </item>
+    <item
+        jar="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\com.android.support-multidex-1.0.0_864fc5fe1dc8df409bb71b3317e0fd7b29c05358.jar" />
+    </item>
+    <item
+        jar="D:\Android\Studio\project\FirstAndroidProject\app\libs\android-async-http-1.4.4.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="3bae85a076241828810bf8fbcc12e5891d5fc34c">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.4_fa5e51d4614219e0172128b6a0eb3f3876587457.jar" />
+    </item>
+    <item
+        jar="D:\Android\Studio\project\FirstAndroidProject\app\libs\gson-2.2.4.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\gson-2.2.4_19d6e28bd4bafa83339f8ad6928c4fc9ca47ae46.jar" />
+    </item>
+    <item
+        jar="D:\Android\Studio\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_9615f34d18d9e3666fb9175ad0bb700e613fbe5b.jar" />
+    </item>
+    <item
+        jar="D:\Android\Studio\project\FirstAndroidProject\app\libs\ddmlib.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="4d3eedfa4c806734131d7d28c187f98b68184042">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\ddmlib_8a4075a29f397008ef09e4182b4db832d358ba08.jar" />
+    </item>
+    <item
+        jar="D:\Android\Studio\project\FirstAndroidProject\app\libs\sqlcipher.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="42d88faf28b689a3cb01d123ca71628be98e5520">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\sqlcipher_6d9c6ac384228b8a91f9906ff43c21765359feb2.jar" />
+    </item>
+    <item
+        jar="D:\Android\Studio\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_af7e135efceef472c34b15a090644b2403301ffe.jar" />
+    </item>
+    <item
+        jar="D:\Android\Studio\project\FirstAndroidProject\app\libs\AnimationLibrary.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="45235e40bd3113c8ee788e2260b8120abd83a06a">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\AnimationLibrary_2306bd6e958c3542e44504340941cdabb114a14f.jar" />
+    </item>
+    <item
+        jar="D:\Android\Studio\project\FirstAndroidProject\app\libs\jaxen-1.1-beta-6.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="adbce74e61d68b4f2a205eda5a51e17ccf3de723">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\jaxen-1.1-beta-6_5524c6093cad04d5f406462521b46146a284dadb.jar" />
+    </item>
+    <item
+        jar="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="c3a5df5b06b5a247a16cc59dc499c4643932d93c">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\instant-run_109be3532a9fc5d1a1b39bff02b6249c729a118f.jar" />
+    </item>
+    <item
+        jar="D:\Android\Studio\project\FirstAndroidProject\app\libs\commons-httpclient-3.0.1.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="d6364bcc1b2b2aa69d008602d36a700453648560">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\commons-httpclient-3.0.1_80051c8974af02a0af233c44e2f38f924349718e.jar" />
+    </item>
+    <item
+        jar="D:\Android\Studio\project\FirstAndroidProject\app\libs\icbcsafeedit.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="a0eb4c34980766a29d360bfec8ee5f7cef5bee58">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\icbcsafeedit_5da6af40595b5f2d485919a9bb353bdfe4266eaa.jar" />
+    </item>
+    <item
+        jar="D:\Android\Studio\project\FirstAndroidProject\app\libs\httpmime-4.2.3.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="dca10d76e8f2bf621608dc3c13ca5aab415cf5af">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\httpmime-4.2.3_b86f359b43613b7c1ace54c537057ae569c6a5ce.jar" />
+    </item>
+    <item
+        jar="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="6099e2420d7c7bc0b6fc0e2a9e99ac56a72a6d4f">
+        <dex dex="D:\Android\Studio\project\FirstAndroidProject\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_410dc16ebe523a733443fc3f34d3bf2ca2c2d251.jar" />
+    </item>
+
+</items>

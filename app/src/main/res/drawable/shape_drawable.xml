@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- 圆角 -->
+    <corners android:radius="5dp" />
+    <!--纯色填充-->
+    <solid android:color="@color/red" />
+    <!-- 描边 -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/blue"
+        android:dashGap="2dp"
+        android:dashWidth="10dp" />
+    <!-- 间隔，描述包含它的View的空白 -->
+    <padding
+        android:bottom="7dp"
+        android:left="7dp"
+        android:right="7dp"
+        android:top="7dp" />
+</shape>
+
+    <!-- 渐变,它和solid是冲突的,它们不能共同使用 --><!--
+<gradient
+android:angle="270"
+android:endColor="#80FF00FF"
+android:startColor="#FFFF0000"
+android:type="linear" />-->

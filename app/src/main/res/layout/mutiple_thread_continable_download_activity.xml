@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loadbk"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/MultipleThreadContinuableDownLoadTitle"
+        android:gravity="center_horizontal"
+        android:textColor="@color/red"
+        android:textSize="@dimen/server_image_title" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="@string/DefaultMultipleThreadContinuableDownLoadPath"
+        android:id="@+id/MultipleThreadContinuableDownLoadEditText" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:text="@string/MultipleThreadContinuableDownLoadStart"
+            android:id="@+id/MultipleThreadContinuableDownLoadStart"
+            android:onClick="MultipleThreadContinuableDownLoadStart" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:text="@string/MultipleThreadContinuableDownLoadStop"
+            android:id="@+id/MultipleThreadContinuableDownLoadStop"
+            android:enabled="false"
+            android:onClick="MultipleThreadContinuableDownLoadStop" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="fill_parent"
+        android:layout_height="18dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/MultipleThreadContinuableDownLoadProgressBar" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/MultipleThreadContinuableDownLoadResultView" />
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

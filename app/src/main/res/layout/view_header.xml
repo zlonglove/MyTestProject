@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/NewNavBar">
+
+    <Button
+        android:id="@+id/navbar_left_btn"
+        style="@style/NewNavBarLeftBtn"
+        android:text="返回"></Button>
+
+    <TextView
+        android:id="@+id/navbar_title"
+        style="@style/NewNavBarTitle"
+        android:text="测试标题"></TextView>
+
+    <Button
+        android:id="@+id/navbar_right_btn"
+        style="@style/NewNavBarRightBtn"
+        android:text="测试右边按钮"></Button>
+
+</RelativeLayout>

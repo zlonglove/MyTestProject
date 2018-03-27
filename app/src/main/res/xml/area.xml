@@ -1,0 +1,3932 @@
+<Cities>
+    <ITEM
+        AREACODE="1"
+        PROVINCE_NAME="北京市"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00200"
+        ICBCPROCODE="00200"
+        AREANAME="北京"></ITEM>
+    <ITEM
+        AREACODE="2"
+        PROVINCE_NAME="天津市"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00302"
+        ICBCPROCODE="00302"
+        AREANAME="天津"></ITEM>
+    <ITEM
+        AREACODE="3"
+        PROVINCE_NAME="河北省"
+        CITY_NAME="石家庄市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00402"
+        ICBCPROCODE="00400"
+        AREANAME="石家庄"></ITEM>
+    <ITEM
+        AREACODE="4"
+        PROVINCE_NAME="河北省"
+        CITY_NAME="唐山市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00403"
+        ICBCPROCODE="00400"
+        AREANAME="唐山"></ITEM>
+    <ITEM
+        AREACODE="5"
+        PROVINCE_NAME="河北省"
+        CITY_NAME="秦皇岛市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00404"
+        ICBCPROCODE="00400"
+        AREANAME="秦皇岛"></ITEM>
+    <ITEM
+        AREACODE="6"
+        PROVINCE_NAME="河北省"
+        CITY_NAME="邯郸市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00405"
+        ICBCPROCODE="00400"
+        AREANAME="邯郸"></ITEM>
+    <ITEM
+        AREACODE="7"
+        PROVINCE_NAME="河北省"
+        CITY_NAME="邢台市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00406"
+        ICBCPROCODE="00400"
+        AREANAME="邢台"></ITEM>
+    <ITEM
+        AREACODE="8"
+        PROVINCE_NAME="河北省"
+        CITY_NAME="保定市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00409"
+        ICBCPROCODE="00400"
+        AREANAME="保定"></ITEM>
+    <ITEM
+        AREACODE="9"
+        PROVINCE_NAME="河北省"
+        CITY_NAME="张家口市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00412"
+        ICBCPROCODE="00400"
+        AREANAME="张家口"></ITEM>
+    <ITEM
+        AREACODE="10"
+        PROVINCE_NAME="河北省"
+        CITY_NAME="承德市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00411"
+        ICBCPROCODE="00400"
+        AREANAME="承德"></ITEM>
+    <ITEM
+        AREACODE="11"
+        PROVINCE_NAME="河北省"
+        CITY_NAME="沧州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00408"
+        ICBCPROCODE="00400"
+        AREANAME="沧州"></ITEM>
+    <ITEM
+        AREACODE="12"
+        PROVINCE_NAME="河北省"
+        CITY_NAME="廊坊市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00410"
+        ICBCPROCODE="00400"
+        AREANAME="廊坊"></ITEM>
+    <ITEM
+        AREACODE="13"
+        PROVINCE_NAME="河北省"
+        CITY_NAME="衡水市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00407"
+        ICBCPROCODE="00400"
+        AREANAME="衡水"></ITEM>
+    <ITEM
+        AREACODE="14"
+        PROVINCE_NAME="山西省"
+        CITY_NAME="太原市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00502"
+        ICBCPROCODE="00500"
+        AREANAME="太原"></ITEM>
+    <ITEM
+        AREACODE="15"
+        PROVINCE_NAME="山西省"
+        CITY_NAME="大同市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00504"
+        ICBCPROCODE="00500"
+        AREANAME="大同"></ITEM>
+    <ITEM
+        AREACODE="16"
+        PROVINCE_NAME="山西省"
+        CITY_NAME="阳泉市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00503"
+        ICBCPROCODE="00500"
+        AREANAME="阳泉"></ITEM>
+    <ITEM
+        AREACODE="17"
+        PROVINCE_NAME="山西省"
+        CITY_NAME="长治市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00505"
+        ICBCPROCODE="00500"
+        AREANAME="长治"></ITEM>
+    <ITEM
+        AREACODE="18"
+        PROVINCE_NAME="山西省"
+        CITY_NAME="晋城市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00506"
+        ICBCPROCODE="00500"
+        AREANAME="晋城"></ITEM>
+    <ITEM
+        AREACODE="19"
+        PROVINCE_NAME="山西省"
+        CITY_NAME="朔州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00507"
+        ICBCPROCODE="00500"
+        AREANAME="朔州"></ITEM>
+    <ITEM
+        AREACODE="20"
+        PROVINCE_NAME="山西省"
+        CITY_NAME="晋中市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00508"
+        ICBCPROCODE="00500"
+        AREANAME="晋中"></ITEM>
+    <ITEM
+        AREACODE="21"
+        PROVINCE_NAME="山西省"
+        CITY_NAME="运城市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00511"
+        ICBCPROCODE="00500"
+        AREANAME="运城"></ITEM>
+    <ITEM
+        AREACODE="22"
+        PROVINCE_NAME="山西省"
+        CITY_NAME="忻州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00512"
+        ICBCPROCODE="00500"
+        AREANAME="忻州"></ITEM>
+    <ITEM
+        AREACODE="23"
+        PROVINCE_NAME="山西省"
+        CITY_NAME="临汾市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00510"
+        ICBCPROCODE="00500"
+        AREANAME="临汾"></ITEM>
+    <ITEM
+        AREACODE="24"
+        PROVINCE_NAME="山西省"
+        CITY_NAME="吕梁市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="25"
+        PROVINCE_NAME="内蒙古"
+        CITY_NAME="呼和浩特"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00602"
+        ICBCPROCODE="00600"
+        AREANAME="呼和浩特"></ITEM>
+    <ITEM
+        AREACODE="26"
+        PROVINCE_NAME="内蒙古"
+        CITY_NAME="包头市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00603"
+        ICBCPROCODE="00600"
+        AREANAME="包头"></ITEM>
+    <ITEM
+        AREACODE="27"
+        PROVINCE_NAME="内蒙古"
+        CITY_NAME="乌海市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00604"
+        ICBCPROCODE="00600"
+        AREANAME="乌海"></ITEM>
+    <ITEM
+        AREACODE="28"
+        PROVINCE_NAME="内蒙古"
+        CITY_NAME="赤峰市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00605"
+        ICBCPROCODE="00600"
+        AREANAME="赤峰"></ITEM>
+    <ITEM
+        AREACODE="29"
+        PROVINCE_NAME="内蒙古"
+        CITY_NAME="通辽市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00609"
+        ICBCPROCODE="00600"
+        AREANAME="通辽"></ITEM>
+    <ITEM
+        AREACODE="30"
+        PROVINCE_NAME="内蒙古"
+        CITY_NAME="鄂尔多斯"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00612"
+        ICBCPROCODE="00600"
+        AREANAME="鄂尔多斯"></ITEM>
+    <ITEM
+        AREACODE="31"
+        PROVINCE_NAME="内蒙古"
+        CITY_NAME="呼伦贝尔"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="32"
+        PROVINCE_NAME="内蒙古"
+        CITY_NAME="巴彦淖尔"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="33"
+        PROVINCE_NAME="内蒙古"
+        CITY_NAME="乌兰察布"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="34"
+        PROVINCE_NAME="内蒙古"
+        CITY_NAME="兴安盟"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE="00608"
+        ICBCPROCODE="00600"
+        AREANAME="兴安盟"></ITEM>
+    <ITEM
+        AREACODE="35"
+        PROVINCE_NAME="内蒙古"
+        CITY_NAME="锡林郭勒"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:38"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="36"
+        PROVINCE_NAME="内蒙古"
+        CITY_NAME="阿拉善盟"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="37"
+        PROVINCE_NAME="辽宁省"
+        CITY_NAME="沈阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="03301"
+        ICBCPROCODE="00700"
+        AREANAME="沈阳"></ITEM>
+    <ITEM
+        AREACODE="38"
+        PROVINCE_NAME="辽宁省"
+        CITY_NAME="大连市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="03400"
+        ICBCPROCODE="03400"
+        AREANAME="大连"></ITEM>
+    <ITEM
+        AREACODE="39"
+        PROVINCE_NAME="辽宁省"
+        CITY_NAME="鞍山市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00704"
+        ICBCPROCODE="00700"
+        AREANAME="鞍山"></ITEM>
+    <ITEM
+        AREACODE="40"
+        PROVINCE_NAME="辽宁省"
+        CITY_NAME="抚顺市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00705"
+        ICBCPROCODE="00700"
+        AREANAME="抚顺"></ITEM>
+    <ITEM
+        AREACODE="41"
+        PROVINCE_NAME="辽宁省"
+        CITY_NAME="本溪市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00706"
+        ICBCPROCODE="00700"
+        AREANAME="本溪"></ITEM>
+    <ITEM
+        AREACODE="42"
+        PROVINCE_NAME="辽宁省"
+        CITY_NAME="丹东市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00707"
+        ICBCPROCODE="00700"
+        AREANAME="丹东"></ITEM>
+    <ITEM
+        AREACODE="43"
+        PROVINCE_NAME="辽宁省"
+        CITY_NAME="锦州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00708"
+        ICBCPROCODE="00700"
+        AREANAME="锦州"></ITEM>
+    <ITEM
+        AREACODE="44"
+        PROVINCE_NAME="辽宁省"
+        CITY_NAME="营口市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00709"
+        ICBCPROCODE="00700"
+        AREANAME="营口"></ITEM>
+    <ITEM
+        AREACODE="45"
+        PROVINCE_NAME="辽宁省"
+        CITY_NAME="阜新市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00710"
+        ICBCPROCODE="00700"
+        AREANAME="阜新"></ITEM>
+    <ITEM
+        AREACODE="46"
+        PROVINCE_NAME="辽宁省"
+        CITY_NAME="辽阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00711"
+        ICBCPROCODE="00700"
+        AREANAME="辽阳"></ITEM>
+    <ITEM
+        AREACODE="47"
+        PROVINCE_NAME="辽宁省"
+        CITY_NAME="盘锦市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00714"
+        ICBCPROCODE="00700"
+        AREANAME="盘锦"></ITEM>
+    <ITEM
+        AREACODE="48"
+        PROVINCE_NAME="辽宁省"
+        CITY_NAME="铁岭市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00712"
+        ICBCPROCODE="00700"
+        AREANAME="铁岭"></ITEM>
+    <ITEM
+        AREACODE="49"
+        PROVINCE_NAME="辽宁省"
+        CITY_NAME="朝阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00713"
+        ICBCPROCODE="00700"
+        AREANAME="朝阳"></ITEM>
+    <ITEM
+        AREACODE="50"
+        PROVINCE_NAME="辽宁省"
+        CITY_NAME="葫芦岛市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00715"
+        ICBCPROCODE="00700"
+        AREANAME="葫芦岛"></ITEM>
+    <ITEM
+        AREACODE="51"
+        PROVINCE_NAME="吉林省"
+        CITY_NAME="长春市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="04200"
+        ICBCPROCODE="00800"
+        AREANAME="长春"></ITEM>
+    <ITEM
+        AREACODE="52"
+        PROVINCE_NAME="吉林省"
+        CITY_NAME="吉林市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00802"
+        ICBCPROCODE="00800"
+        AREANAME="吉林市"></ITEM>
+    <ITEM
+        AREACODE="53"
+        PROVINCE_NAME="吉林省"
+        CITY_NAME="四平市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00804"
+        ICBCPROCODE="00800"
+        AREANAME="四平"></ITEM>
+    <ITEM
+        AREACODE="54"
+        PROVINCE_NAME="吉林省"
+        CITY_NAME="辽源市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00803"
+        ICBCPROCODE="00800"
+        AREANAME="辽源"></ITEM>
+    <ITEM
+        AREACODE="55"
+        PROVINCE_NAME="吉林省"
+        CITY_NAME="通化市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00806"
+        ICBCPROCODE="00800"
+        AREANAME="通化"></ITEM>
+    <ITEM
+        AREACODE="56"
+        PROVINCE_NAME="吉林省"
+        CITY_NAME="白山市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00807"
+        ICBCPROCODE="00800"
+        AREANAME="白山"></ITEM>
+    <ITEM
+        AREACODE="57"
+        PROVINCE_NAME="吉林省"
+        CITY_NAME="松原市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00809"
+        ICBCPROCODE="00800"
+        AREANAME="松原"></ITEM>
+    <ITEM
+        AREACODE="58"
+        PROVINCE_NAME="吉林省"
+        CITY_NAME="白城市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00805"
+        ICBCPROCODE="00800"
+        AREANAME="白城"></ITEM>
+    <ITEM
+        AREACODE="59"
+        PROVINCE_NAME="吉林省"
+        CITY_NAME="延边州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00808"
+        ICBCPROCODE="00800"
+        AREANAME="延边"></ITEM>
+    <ITEM
+        AREACODE="60"
+        PROVINCE_NAME="黑龙江"
+        CITY_NAME="哈尔滨市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="03500"
+        ICBCPROCODE="00900"
+        AREANAME="哈尔滨"></ITEM>
+    <ITEM
+        AREACODE="61"
+        PROVINCE_NAME="黑龙江"
+        CITY_NAME="齐齐哈尔"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00902"
+        ICBCPROCODE="00900"
+        AREANAME="齐齐哈尔"></ITEM>
+    <ITEM
+        AREACODE="62"
+        PROVINCE_NAME="黑龙江"
+        CITY_NAME="鸡西市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00907"
+        ICBCPROCODE="00900"
+        AREANAME="鸡西"></ITEM>
+    <ITEM
+        AREACODE="63"
+        PROVINCE_NAME="黑龙江"
+        CITY_NAME="鹤岗市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00906"
+        ICBCPROCODE="00900"
+        AREANAME="鹤岗"></ITEM>
+    <ITEM
+        AREACODE="64"
+        PROVINCE_NAME="黑龙江"
+        CITY_NAME="双鸭山市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00908"
+        ICBCPROCODE="00900"
+        AREANAME="双鸭山"></ITEM>
+    <ITEM
+        AREACODE="65"
+        PROVINCE_NAME="黑龙江"
+        CITY_NAME="大庆市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00905"
+        ICBCPROCODE="00900"
+        AREANAME="大庆"></ITEM>
+    <ITEM
+        AREACODE="66"
+        PROVINCE_NAME="黑龙江"
+        CITY_NAME="伊春市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00909"
+        ICBCPROCODE="00900"
+        AREANAME="伊春"></ITEM>
+    <ITEM
+        AREACODE="67"
+        PROVINCE_NAME="黑龙江"
+        CITY_NAME="佳木斯市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00904"
+        ICBCPROCODE="00900"
+        AREANAME="佳木斯"></ITEM>
+    <ITEM
+        AREACODE="68"
+        PROVINCE_NAME="黑龙江"
+        CITY_NAME="七台河市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00910"
+        ICBCPROCODE="00900"
+        AREANAME="七台河"></ITEM>
+    <ITEM
+        AREACODE="69"
+        PROVINCE_NAME="黑龙江"
+        CITY_NAME="牡丹江市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00903"
+        ICBCPROCODE="00900"
+        AREANAME="牡丹江"></ITEM>
+    <ITEM
+        AREACODE="70"
+        PROVINCE_NAME="黑龙江"
+        CITY_NAME="黑河市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00913"
+        ICBCPROCODE="00900"
+        AREANAME="黑河"></ITEM>
+    <ITEM
+        AREACODE="71"
+        PROVINCE_NAME="黑龙江"
+        CITY_NAME="绥化市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00912"
+        ICBCPROCODE="00900"
+        AREANAME="绥化"></ITEM>
+    <ITEM
+        AREACODE="72"
+        PROVINCE_NAME="黑龙江"
+        CITY_NAME="大兴安岭"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="00914"
+        ICBCPROCODE="00900"
+        AREANAME="大兴安岭"></ITEM>
+    <ITEM
+        AREACODE="73"
+        PROVINCE_NAME="上海市"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="01001"
+        ICBCPROCODE="01001"
+        AREANAME="上海"></ITEM>
+    <ITEM
+        AREACODE="74"
+        PROVINCE_NAME="江苏省"
+        CITY_NAME="南京市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="04301"
+        ICBCPROCODE="01100"
+        AREANAME="南京"></ITEM>
+    <ITEM
+        AREACODE="75"
+        PROVINCE_NAME="江苏省"
+        CITY_NAME="无锡市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="01103"
+        ICBCPROCODE="01100"
+        AREANAME="无锡"></ITEM>
+    <ITEM
+        AREACODE="76"
+        PROVINCE_NAME="江苏省"
+        CITY_NAME="徐州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="01106"
+        ICBCPROCODE="01100"
+        AREANAME="徐州"></ITEM>
+    <ITEM
+        AREACODE="77"
+        PROVINCE_NAME="江苏省"
+        CITY_NAME="常州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="01105"
+        ICBCPROCODE="01100"
+        AREANAME="常州"></ITEM>
+    <ITEM
+        AREACODE="78"
+        PROVINCE_NAME="江苏省"
+        CITY_NAME="苏州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="01102"
+        ICBCPROCODE="01100"
+        AREANAME="苏州"></ITEM>
+    <ITEM
+        AREACODE="79"
+        PROVINCE_NAME="江苏省"
+        CITY_NAME="南通市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="01111"
+        ICBCPROCODE="01100"
+        AREANAME="南通"></ITEM>
+    <ITEM
+        AREACODE="80"
+        PROVINCE_NAME="江苏省"
+        CITY_NAME="连云港"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:39"
+        ICBCAREACODE="01107"
+        ICBCPROCODE="01100"
+        AREANAME="连云港"></ITEM>
+    <ITEM
+        AREACODE="81"
+        PROVINCE_NAME="江苏省"
+        CITY_NAME="淮安市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01110"
+        ICBCPROCODE="01100"
+        AREANAME="淮安"></ITEM>
+    <ITEM
+        AREACODE="82"
+        PROVINCE_NAME="江苏省"
+        CITY_NAME="盐城市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01109"
+        ICBCPROCODE="01100"
+        AREANAME="盐城"></ITEM>
+    <ITEM
+        AREACODE="83"
+        PROVINCE_NAME="江苏省"
+        CITY_NAME="扬州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01108"
+        ICBCPROCODE="01100"
+        AREANAME="扬州"></ITEM>
+    <ITEM
+        AREACODE="84"
+        PROVINCE_NAME="江苏省"
+        CITY_NAME="镇江市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01104"
+        ICBCPROCODE="01100"
+        AREANAME="镇江"></ITEM>
+    <ITEM
+        AREACODE="85"
+        PROVINCE_NAME="江苏省"
+        CITY_NAME="泰州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01115"
+        ICBCPROCODE="01100"
+        AREANAME="泰州"></ITEM>
+    <ITEM
+        AREACODE="86"
+        PROVINCE_NAME="江苏省"
+        CITY_NAME="宿迁市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01116"
+        ICBCPROCODE="01100"
+        AREANAME="宿迁"></ITEM>
+    <ITEM
+        AREACODE="87"
+        PROVINCE_NAME="浙江省"
+        CITY_NAME="杭州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01202"
+        ICBCPROCODE="01200"
+        AREANAME="杭州"></ITEM>
+    <ITEM
+        AREACODE="88"
+        PROVINCE_NAME="浙江省"
+        CITY_NAME="宁波市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="03901"
+        ICBCPROCODE="03901"
+        AREANAME="宁波"></ITEM>
+    <ITEM
+        AREACODE="89"
+        PROVINCE_NAME="浙江省"
+        CITY_NAME="温州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01203"
+        ICBCPROCODE="01200"
+        AREANAME="温州"></ITEM>
+    <ITEM
+        AREACODE="90"
+        PROVINCE_NAME="浙江省"
+        CITY_NAME="嘉兴市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01204"
+        ICBCPROCODE="01200"
+        AREANAME="嘉兴"></ITEM>
+    <ITEM
+        AREACODE="91"
+        PROVINCE_NAME="浙江省"
+        CITY_NAME="湖州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01205"
+        ICBCPROCODE="01200"
+        AREANAME="湖州"></ITEM>
+    <ITEM
+        AREACODE="92"
+        PROVINCE_NAME="浙江省"
+        CITY_NAME="绍兴市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01211"
+        ICBCPROCODE="01200"
+        AREANAME="绍兴"></ITEM>
+    <ITEM
+        AREACODE="93"
+        PROVINCE_NAME="浙江省"
+        CITY_NAME="金华市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01208"
+        ICBCPROCODE="01200"
+        AREANAME="金华"></ITEM>
+    <ITEM
+        AREACODE="94"
+        PROVINCE_NAME="浙江省"
+        CITY_NAME="衢州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01209"
+        ICBCPROCODE="01200"
+        AREANAME="衢州"></ITEM>
+    <ITEM
+        AREACODE="95"
+        PROVINCE_NAME="浙江省"
+        CITY_NAME="舟山市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01206"
+        ICBCPROCODE="01200"
+        AREANAME="舟山"></ITEM>
+    <ITEM
+        AREACODE="96"
+        PROVINCE_NAME="浙江省"
+        CITY_NAME="台州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01207"
+        ICBCPROCODE="01200"
+        AREANAME="台州"></ITEM>
+    <ITEM
+        AREACODE="97"
+        PROVINCE_NAME="浙江省"
+        CITY_NAME="丽水市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01210"
+        ICBCPROCODE="01200"
+        AREANAME="丽水"></ITEM>
+    <ITEM
+        AREACODE="98"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="合肥市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01302"
+        ICBCPROCODE="01300"
+        AREANAME="合肥"></ITEM>
+    <ITEM
+        AREACODE="99"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="芜湖市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01307"
+        ICBCPROCODE="01300"
+        AREANAME="芜湖"></ITEM>
+    <ITEM
+        AREACODE="100"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="蚌埠市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01303"
+        ICBCPROCODE="01300"
+        AREANAME="蚌埠"></ITEM>
+    <ITEM
+        AREACODE="101"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="淮南市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01304"
+        ICBCPROCODE="01300"
+        AREANAME="淮南"></ITEM>
+    <ITEM
+        AREACODE="102"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="马鞍山市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01306"
+        ICBCPROCODE="01300"
+        AREANAME="马鞍山"></ITEM>
+    <ITEM
+        AREACODE="103"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="淮北市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01305"
+        ICBCPROCODE="01300"
+        AREANAME="淮北"></ITEM>
+    <ITEM
+        AREACODE="104"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="铜陵市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01308"
+        ICBCPROCODE="01300"
+        AREANAME="铜陵"></ITEM>
+    <ITEM
+        AREACODE="105"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="安庆市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01309"
+        ICBCPROCODE="01300"
+        AREANAME="安庆"></ITEM>
+    <ITEM
+        AREACODE="106"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="黄山市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01310"
+        ICBCPROCODE="01300"
+        AREANAME="黄山"></ITEM>
+    <ITEM
+        AREACODE="107"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="滁州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01313"
+        ICBCPROCODE="01300"
+        AREANAME="滁州"></ITEM>
+    <ITEM
+        AREACODE="108"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="阜阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01311"
+        ICBCPROCODE="01300"
+        AREANAME="阜阳"></ITEM>
+    <ITEM
+        AREACODE="109"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="宿州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01312"
+        ICBCPROCODE="01300"
+        AREANAME="宿州"></ITEM>
+    <ITEM
+        AREACODE="110"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="巢湖市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01315"
+        ICBCPROCODE="01300"
+        AREANAME="巢湖"></ITEM>
+    <ITEM
+        AREACODE="111"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="六安市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01314"
+        ICBCPROCODE="01300"
+        AREANAME="六安"></ITEM>
+    <ITEM
+        AREACODE="112"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="亳州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01318"
+        ICBCPROCODE="01300"
+        AREANAME="亳州"></ITEM>
+    <ITEM
+        AREACODE="113"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="池州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01316"
+        ICBCPROCODE="01300"
+        AREANAME="池州"></ITEM>
+    <ITEM
+        AREACODE="114"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="宣城市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01317"
+        ICBCPROCODE="01300"
+        AREANAME="宣城"></ITEM>
+    <ITEM
+        AREACODE="115"
+        PROVINCE_NAME="福建省"
+        CITY_NAME="福州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01402"
+        ICBCPROCODE="01400"
+        AREANAME="福州"></ITEM>
+    <ITEM
+        AREACODE="116"
+        PROVINCE_NAME="福建省"
+        CITY_NAME="厦门市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="04100"
+        ICBCPROCODE="04100"
+        AREANAME="厦门"></ITEM>
+    <ITEM
+        AREACODE="117"
+        PROVINCE_NAME="福建省"
+        CITY_NAME="莆田市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01405"
+        ICBCPROCODE="01400"
+        AREANAME="莆田"></ITEM>
+    <ITEM
+        AREACODE="118"
+        PROVINCE_NAME="福建省"
+        CITY_NAME="三明市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01404"
+        ICBCPROCODE="01400"
+        AREANAME="三明"></ITEM>
+    <ITEM
+        AREACODE="119"
+        PROVINCE_NAME="福建省"
+        CITY_NAME="泉州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01408"
+        ICBCPROCODE="01400"
+        AREANAME="泉州"></ITEM>
+    <ITEM
+        AREACODE="120"
+        PROVINCE_NAME="福建省"
+        CITY_NAME="漳州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01409"
+        ICBCPROCODE="01400"
+        AREANAME="漳州"></ITEM>
+    <ITEM
+        AREACODE="121"
+        PROVINCE_NAME="福建省"
+        CITY_NAME="南平市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01406"
+        ICBCPROCODE="01400"
+        AREANAME="南平"></ITEM>
+    <ITEM
+        AREACODE="122"
+        PROVINCE_NAME="福建省"
+        CITY_NAME="龙岩市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:40"
+        ICBCAREACODE="01410"
+        ICBCPROCODE="01400"
+        AREANAME="龙岩"></ITEM>
+    <ITEM
+        AREACODE="123"
+        PROVINCE_NAME="福建省"
+        CITY_NAME="宁德市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01407"
+        ICBCPROCODE="01400"
+        AREANAME="宁德"></ITEM>
+    <ITEM
+        AREACODE="124"
+        PROVINCE_NAME="江西省"
+        CITY_NAME="南昌市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01502"
+        ICBCPROCODE="01500"
+        AREANAME="南昌"></ITEM>
+    <ITEM
+        AREACODE="125"
+        PROVINCE_NAME="江西省"
+        CITY_NAME="景德镇市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01503"
+        ICBCPROCODE="01500"
+        AREANAME="景德镇"></ITEM>
+    <ITEM
+        AREACODE="126"
+        PROVINCE_NAME="江西省"
+        CITY_NAME="萍乡市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01504"
+        ICBCPROCODE="01500"
+        AREANAME="萍乡"></ITEM>
+    <ITEM
+        AREACODE="127"
+        PROVINCE_NAME="江西省"
+        CITY_NAME="九江市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01507"
+        ICBCPROCODE="01500"
+        AREANAME="九江"></ITEM>
+    <ITEM
+        AREACODE="128"
+        PROVINCE_NAME="江西省"
+        CITY_NAME="新余市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01505"
+        ICBCPROCODE="01500"
+        AREANAME="新余"></ITEM>
+    <ITEM
+        AREACODE="129"
+        PROVINCE_NAME="江西省"
+        CITY_NAME="鹰潭市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01506"
+        ICBCPROCODE="01500"
+        AREANAME="鹰潭"></ITEM>
+    <ITEM
+        AREACODE="130"
+        PROVINCE_NAME="江西省"
+        CITY_NAME="赣州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01510"
+        ICBCPROCODE="01500"
+        AREANAME="赣州"></ITEM>
+    <ITEM
+        AREACODE="131"
+        PROVINCE_NAME="江西省"
+        CITY_NAME="吉安市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01509"
+        ICBCPROCODE="01500"
+        AREANAME="吉安"></ITEM>
+    <ITEM
+        AREACODE="132"
+        PROVINCE_NAME="江西省"
+        CITY_NAME="宜春市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01508"
+        ICBCPROCODE="01500"
+        AREANAME="宜春"></ITEM>
+    <ITEM
+        AREACODE="133"
+        PROVINCE_NAME="江西省"
+        CITY_NAME="抚州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01511"
+        ICBCPROCODE="01500"
+        AREANAME="抚州"></ITEM>
+    <ITEM
+        AREACODE="134"
+        PROVINCE_NAME="江西省"
+        CITY_NAME="上饶市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01512"
+        ICBCPROCODE="01500"
+        AREANAME="上饶"></ITEM>
+    <ITEM
+        AREACODE="135"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="济南市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01602"
+        ICBCPROCODE="01600"
+        AREANAME="济南"></ITEM>
+    <ITEM
+        AREACODE="136"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="青岛市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="03803"
+        ICBCPROCODE="03803"
+        AREANAME="青岛"></ITEM>
+    <ITEM
+        AREACODE="137"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="淄博市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01603"
+        ICBCPROCODE="01600"
+        AREANAME="淄博"></ITEM>
+    <ITEM
+        AREACODE="138"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="枣庄市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01605"
+        ICBCPROCODE="01600"
+        AREANAME="枣庄"></ITEM>
+    <ITEM
+        AREACODE="139"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="东营市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01615"
+        ICBCPROCODE="01600"
+        AREANAME="东营"></ITEM>
+    <ITEM
+        AREACODE="140"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="烟台市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01606"
+        ICBCPROCODE="01600"
+        AREANAME="烟台"></ITEM>
+    <ITEM
+        AREACODE="141"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="潍坊市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01607"
+        ICBCPROCODE="01600"
+        AREANAME="潍坊"></ITEM>
+    <ITEM
+        AREACODE="142"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="威海市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01614"
+        ICBCPROCODE="01600"
+        AREANAME="威海"></ITEM>
+    <ITEM
+        AREACODE="143"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="济宁市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01608"
+        ICBCPROCODE="01600"
+        AREANAME="济宁"></ITEM>
+    <ITEM
+        AREACODE="144"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="泰安市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01604"
+        ICBCPROCODE="01600"
+        AREANAME="泰安"></ITEM>
+    <ITEM
+        AREACODE="145"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="日照市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01616"
+        ICBCPROCODE="01600"
+        AREANAME="日照"></ITEM>
+    <ITEM
+        AREACODE="146"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="莱芜市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01617"
+        ICBCPROCODE="01600"
+        AREANAME="莱芜"></ITEM>
+    <ITEM
+        AREACODE="147"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="临沂市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01610"
+        ICBCPROCODE="01600"
+        AREANAME="临沂"></ITEM>
+    <ITEM
+        AREACODE="148"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="德州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01612"
+        ICBCPROCODE="01600"
+        AREANAME="德州"></ITEM>
+    <ITEM
+        AREACODE="149"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="聊城市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01611"
+        ICBCPROCODE="01600"
+        AREANAME="聊城"></ITEM>
+    <ITEM
+        AREACODE="150"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="滨州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01613"
+        ICBCPROCODE="01600"
+        AREANAME="滨州"></ITEM>
+    <ITEM
+        AREACODE="152"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="郑州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01702"
+        ICBCPROCODE="01701"
+        AREANAME="郑州"></ITEM>
+    <ITEM
+        AREACODE="153"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="开封市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01703"
+        ICBCPROCODE="01701"
+        AREANAME="开封"></ITEM>
+    <ITEM
+        AREACODE="154"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="洛阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01705"
+        ICBCPROCODE="01701"
+        AREANAME="洛阳"></ITEM>
+    <ITEM
+        AREACODE="155"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="平顶山市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01707"
+        ICBCPROCODE="01701"
+        AREANAME="平顶山"></ITEM>
+    <ITEM
+        AREACODE="156"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="焦作市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01709"
+        ICBCPROCODE="01701"
+        AREANAME="焦作"></ITEM>
+    <ITEM
+        AREACODE="157"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="鹤壁市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01710"
+        ICBCPROCODE="01701"
+        AREANAME="鹤壁"></ITEM>
+    <ITEM
+        AREACODE="158"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="新乡市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01704"
+        ICBCPROCODE="01701"
+        AREANAME="新乡"></ITEM>
+    <ITEM
+        AREACODE="159"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="安阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01706"
+        ICBCPROCODE="01701"
+        AREANAME="安阳"></ITEM>
+    <ITEM
+        AREACODE="160"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="濮阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01712"
+        ICBCPROCODE="01701"
+        AREANAME="濮阳"></ITEM>
+    <ITEM
+        AREACODE="161"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="许昌市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01708"
+        ICBCPROCODE="01701"
+        AREANAME="许昌"></ITEM>
+    <ITEM
+        AREACODE="162"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="漯河市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01711"
+        ICBCPROCODE="01701"
+        AREANAME="漯河"></ITEM>
+    <ITEM
+        AREACODE="163"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="三门峡市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01713"
+        ICBCPROCODE="01701"
+        AREANAME="三门峡"></ITEM>
+    <ITEM
+        AREACODE="164"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="南阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01714"
+        ICBCPROCODE="01701"
+        AREANAME="南阳"></ITEM>
+    <ITEM
+        AREACODE="165"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="商丘市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01716"
+        ICBCPROCODE="01701"
+        AREANAME="商丘"></ITEM>
+    <ITEM
+        AREACODE="166"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="信阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01718"
+        ICBCPROCODE="01701"
+        AREANAME="信阳"></ITEM>
+    <ITEM
+        AREACODE="167"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="周口市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01717"
+        ICBCPROCODE="01701"
+        AREANAME="周口"></ITEM>
+    <ITEM
+        AREACODE="168"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="驻马店市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01715"
+        ICBCPROCODE="01701"
+        AREANAME="驻马店"></ITEM>
+    <ITEM
+        AREACODE="169"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="济源市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="170"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="武汉市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="03202"
+        ICBCPROCODE="01800"
+        AREANAME="武汉"></ITEM>
+    <ITEM
+        AREACODE="171"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="黄石市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01803"
+        ICBCPROCODE="01800"
+        AREANAME="黄石"></ITEM>
+    <ITEM
+        AREACODE="172"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="襄樊市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01804"
+        ICBCPROCODE="01800"
+        AREANAME="襄樊"></ITEM>
+    <ITEM
+        AREACODE="173"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="十堰市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01810"
+        ICBCPROCODE="01800"
+        AREANAME="十堰"></ITEM>
+    <ITEM
+        AREACODE="174"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="荆州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01813"
+        ICBCPROCODE="01800"
+        AREANAME="荆州"></ITEM>
+    <ITEM
+        AREACODE="175"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="宜昌市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="176"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="荆门市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01809"
+        ICBCPROCODE="01800"
+        AREANAME="荆门"></ITEM>
+    <ITEM
+        AREACODE="177"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="鄂州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01811"
+        ICBCPROCODE="01800"
+        AREANAME="鄂州"></ITEM>
+    <ITEM
+        AREACODE="178"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="孝感市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01812"
+        ICBCPROCODE="01800"
+        AREANAME="孝感"></ITEM>
+    <ITEM
+        AREACODE="179"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="黄冈市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01814"
+        ICBCPROCODE="01800"
+        AREANAME="黄冈"></ITEM>
+    <ITEM
+        AREACODE="180"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="咸宁市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01818"
+        ICBCPROCODE="01800"
+        AREANAME="咸宁"></ITEM>
+    <ITEM
+        AREACODE="181"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="随州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01805"
+        ICBCPROCODE="01800"
+        AREANAME="随州"></ITEM>
+    <ITEM
+        AREACODE="182"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="恩施州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:41"
+        ICBCAREACODE="01817"
+        ICBCPROCODE="01800"
+        AREANAME="恩施"></ITEM>
+    <ITEM
+        AREACODE="183"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="仙桃市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="184"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="潜江市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="185"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="天门市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="186"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="神农架"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="187"
+        PROVINCE_NAME="湖南省"
+        CITY_NAME="长沙市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="01901"
+        ICBCPROCODE="01900"
+        AREANAME="长沙"></ITEM>
+    <ITEM
+        AREACODE="188"
+        PROVINCE_NAME="湖南省"
+        CITY_NAME="株洲市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="01903"
+        ICBCPROCODE="01900"
+        AREANAME="株洲"></ITEM>
+    <ITEM
+        AREACODE="189"
+        PROVINCE_NAME="湖南省"
+        CITY_NAME="湘潭市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="01904"
+        ICBCPROCODE="01900"
+        AREANAME="湘潭"></ITEM>
+    <ITEM
+        AREACODE="190"
+        PROVINCE_NAME="湖南省"
+        CITY_NAME="衡阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="01905"
+        ICBCPROCODE="01900"
+        AREANAME="衡阳"></ITEM>
+    <ITEM
+        AREACODE="191"
+        PROVINCE_NAME="湖南省"
+        CITY_NAME="邵阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="01906"
+        ICBCPROCODE="01900"
+        AREANAME="邵阳"></ITEM>
+    <ITEM
+        AREACODE="192"
+        PROVINCE_NAME="湖南省"
+        CITY_NAME="岳阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="01907"
+        ICBCPROCODE="01900"
+        AREANAME="岳阳"></ITEM>
+    <ITEM
+        AREACODE="193"
+        PROVINCE_NAME="湖南省"
+        CITY_NAME="常德市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="01908"
+        ICBCPROCODE="01900"
+        AREANAME="常德"></ITEM>
+    <ITEM
+        AREACODE="194"
+        PROVINCE_NAME="湖南省"
+        CITY_NAME="张家界市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="01909"
+        ICBCPROCODE="01900"
+        AREANAME="张家界"></ITEM>
+    <ITEM
+        AREACODE="195"
+        PROVINCE_NAME="湖南省"
+        CITY_NAME="益阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="01912"
+        ICBCPROCODE="01900"
+        AREANAME="益阳"></ITEM>
+    <ITEM
+        AREACODE="196"
+        PROVINCE_NAME="湖南省"
+        CITY_NAME="郴州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="01911"
+        ICBCPROCODE="01900"
+        AREANAME="郴州"></ITEM>
+    <ITEM
+        AREACODE="197"
+        PROVINCE_NAME="湖南省"
+        CITY_NAME="永州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="01910"
+        ICBCPROCODE="01900"
+        AREANAME="永州"></ITEM>
+    <ITEM
+        AREACODE="198"
+        PROVINCE_NAME="湖南省"
+        CITY_NAME="怀化市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="01914"
+        ICBCPROCODE="01900"
+        AREANAME="怀化"></ITEM>
+    <ITEM
+        AREACODE="199"
+        PROVINCE_NAME="湖南省"
+        CITY_NAME="娄底市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="01913"
+        ICBCPROCODE="01900"
+        AREANAME="娄底"></ITEM>
+    <ITEM
+        AREACODE="200"
+        PROVINCE_NAME="湖南省"
+        CITY_NAME="湘西州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="01915"
+        ICBCPROCODE="01900"
+        AREANAME="湘西"></ITEM>
+    <ITEM
+        AREACODE="201"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="汕头市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02003"
+        ICBCPROCODE="02000"
+        AREANAME="汕头"></ITEM>
+    <ITEM
+        AREACODE="202"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="韶关市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02005"
+        ICBCPROCODE="02000"
+        AREANAME="韶关"></ITEM>
+    <ITEM
+        AREACODE="203"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="佛山市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02013"
+        ICBCPROCODE="02000"
+        AREANAME="佛山"></ITEM>
+    <ITEM
+        AREACODE="204"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="江门市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02012"
+        ICBCPROCODE="02000"
+        AREANAME="江门"></ITEM>
+    <ITEM
+        AREACODE="205"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="湛江市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02015"
+        ICBCPROCODE="02000"
+        AREANAME="湛江"></ITEM>
+    <ITEM
+        AREACODE="206"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="茂名市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02016"
+        ICBCPROCODE="02000"
+        AREANAME="茂名"></ITEM>
+    <ITEM
+        AREACODE="207"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="肇庆市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02017"
+        ICBCPROCODE="02000"
+        AREANAME="肇庆"></ITEM>
+    <ITEM
+        AREACODE="208"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="惠州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02008"
+        ICBCPROCODE="02000"
+        AREANAME="惠州"></ITEM>
+    <ITEM
+        AREACODE="209"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="梅州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02007"
+        ICBCPROCODE="02000"
+        AREANAME="梅州"></ITEM>
+    <ITEM
+        AREACODE="210"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="汕尾市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02009"
+        ICBCPROCODE="02000"
+        AREANAME="汕尾"></ITEM>
+    <ITEM
+        AREACODE="211"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="河源市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02006"
+        ICBCPROCODE="02000"
+        AREANAME="河源"></ITEM>
+    <ITEM
+        AREACODE="212"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="阳江市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02014"
+        ICBCPROCODE="02000"
+        AREANAME="阳江"></ITEM>
+    <ITEM
+        AREACODE="213"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="清远市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02018"
+        ICBCPROCODE="02000"
+        AREANAME="清远"></ITEM>
+    <ITEM
+        AREACODE="214"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="东莞市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02010"
+        ICBCPROCODE="02000"
+        AREANAME="东莞"></ITEM>
+    <ITEM
+        AREACODE="215"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="中山市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02011"
+        ICBCPROCODE="02000"
+        AREANAME="中山"></ITEM>
+    <ITEM
+        AREACODE="216"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="潮州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02004"
+        ICBCPROCODE="02000"
+        AREANAME="潮州"></ITEM>
+    <ITEM
+        AREACODE="217"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="揭阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02019"
+        ICBCPROCODE="02000"
+        AREANAME="揭阳"></ITEM>
+    <ITEM
+        AREACODE="218"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="云浮市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02020"
+        ICBCPROCODE="02000"
+        AREANAME="云浮"></ITEM>
+    <ITEM
+        AREACODE="219"
+        PROVINCE_NAME="广西区"
+        CITY_NAME="南宁市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02102"
+        ICBCPROCODE="02100"
+        AREANAME="南宁"></ITEM>
+    <ITEM
+        AREACODE="220"
+        PROVINCE_NAME="广西区"
+        CITY_NAME="柳州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02105"
+        ICBCPROCODE="02100"
+        AREANAME="柳州"></ITEM>
+    <ITEM
+        AREACODE="221"
+        PROVINCE_NAME="广西区"
+        CITY_NAME="桂林市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02103"
+        ICBCPROCODE="02100"
+        AREANAME="桂林"></ITEM>
+    <ITEM
+        AREACODE="222"
+        PROVINCE_NAME="广西区"
+        CITY_NAME="梧州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02104"
+        ICBCPROCODE="02100"
+        AREANAME="梧州"></ITEM>
+    <ITEM
+        AREACODE="223"
+        PROVINCE_NAME="广西区"
+        CITY_NAME="北海市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02107"
+        ICBCPROCODE="02100"
+        AREANAME="北海"></ITEM>
+    <ITEM
+        AREACODE="224"
+        PROVINCE_NAME="广西区"
+        CITY_NAME="防城港区"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02106"
+        ICBCPROCODE="02100"
+        AREANAME="防城港"></ITEM>
+    <ITEM
+        AREACODE="225"
+        PROVINCE_NAME="广西区"
+        CITY_NAME="钦州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02115"
+        ICBCPROCODE="02100"
+        AREANAME="钦州"></ITEM>
+    <ITEM
+        AREACODE="226"
+        PROVINCE_NAME="广西区"
+        CITY_NAME="贵港市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02116"
+        ICBCPROCODE="02100"
+        AREANAME="贵港"></ITEM>
+    <ITEM
+        AREACODE="227"
+        PROVINCE_NAME="广西区"
+        CITY_NAME="玉林市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02111"
+        ICBCPROCODE="02100"
+        AREANAME="玉林"></ITEM>
+    <ITEM
+        AREACODE="228"
+        PROVINCE_NAME="广西区"
+        CITY_NAME="百色市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02110"
+        ICBCPROCODE="02100"
+        AREANAME="百色"></ITEM>
+    <ITEM
+        AREACODE="229"
+        PROVINCE_NAME="广西区"
+        CITY_NAME="贺州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02109"
+        ICBCPROCODE="02100"
+        AREANAME="贺州"></ITEM>
+    <ITEM
+        AREACODE="230"
+        PROVINCE_NAME="广西区"
+        CITY_NAME="河池市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02114"
+        ICBCPROCODE="02100"
+        AREANAME="河池"></ITEM>
+    <ITEM
+        AREACODE="231"
+        PROVINCE_NAME="广西区"
+        CITY_NAME="来宾市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02108"
+        ICBCPROCODE="02100"
+        AREANAME="来宾"></ITEM>
+    <ITEM
+        AREACODE="232"
+        PROVINCE_NAME="广西区"
+        CITY_NAME="崇左市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02112"
+        ICBCPROCODE="02100"
+        AREANAME="崇左"></ITEM>
+    <ITEM
+        AREACODE="233"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="海口市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="234"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="三亚市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="235"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="文昌市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="236"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="琼海市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="237"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="万宁市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="238"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="五指山市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="239"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="东方市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="240"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="儋州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="241"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="临高县"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="242"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="澄迈县"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="243"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="定安县"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="244"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="屯昌县"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="245"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="昌江县"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="246"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="白沙县"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="247"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="琼中县"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="248"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="陵水县"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="249"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="保亭县"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="250"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="乐东县"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="251"
+        PROVINCE_NAME="重庆市"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="03100"
+        ICBCPROCODE="03100"
+        AREANAME="重庆"></ITEM>
+    <ITEM
+        AREACODE="252"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="成都市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="04402"
+        ICBCPROCODE="02300"
+        AREANAME="成都"></ITEM>
+    <ITEM
+        AREACODE="253"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="自贡市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02303"
+        ICBCPROCODE="02300"
+        AREANAME="自贡"></ITEM>
+    <ITEM
+        AREACODE="254"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="攀枝花市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02302"
+        ICBCPROCODE="02300"
+        AREANAME="攀枝花"></ITEM>
+    <ITEM
+        AREACODE="255"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="泸州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02304"
+        ICBCPROCODE="02300"
+        AREANAME="泸州"></ITEM>
+    <ITEM
+        AREACODE="256"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="德阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02305"
+        ICBCPROCODE="02300"
+        AREANAME="德阳"></ITEM>
+    <ITEM
+        AREACODE="257"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="绵阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02308"
+        ICBCPROCODE="02300"
+        AREANAME="绵阳"></ITEM>
+    <ITEM
+        AREACODE="258"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="广元市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02309"
+        ICBCPROCODE="02300"
+        AREANAME="广元"></ITEM>
+    <ITEM
+        AREACODE="259"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="遂宁市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02310"
+        ICBCPROCODE="02300"
+        AREANAME="遂宁"></ITEM>
+    <ITEM
+        AREACODE="260"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="内江市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02307"
+        ICBCPROCODE="02300"
+        AREANAME="内江"></ITEM>
+    <ITEM
+        AREACODE="261"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="乐山市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02306"
+        ICBCPROCODE="02300"
+        AREANAME="乐山"></ITEM>
+    <ITEM
+        AREACODE="262"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="南充市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02315"
+        ICBCPROCODE="02300"
+        AREANAME="南充"></ITEM>
+    <ITEM
+        AREACODE="263"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="宜宾市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02314"
+        ICBCPROCODE="02300"
+        AREANAME="宜宾"></ITEM>
+    <ITEM
+        AREACODE="264"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="广安市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02316"
+        ICBCPROCODE="02300"
+        AREANAME="广安"></ITEM>
+    <ITEM
+        AREACODE="265"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="达州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02317"
+        ICBCPROCODE="02300"
+        AREANAME="达州"></ITEM>
+    <ITEM
+        AREACODE="266"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="眉山市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02313"
+        ICBCPROCODE="02300"
+        AREANAME="眉山"></ITEM>
+    <ITEM
+        AREACODE="267"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="雅安市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02319"
+        ICBCPROCODE="02300"
+        AREANAME="雅安"></ITEM>
+    <ITEM
+        AREACODE="268"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="巴中市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02318"
+        ICBCPROCODE="02300"
+        AREANAME="巴中"></ITEM>
+    <ITEM
+        AREACODE="269"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="资阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02312"
+        ICBCPROCODE="02300"
+        AREANAME="资阳"></ITEM>
+    <ITEM
+        AREACODE="270"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="阿坝州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02322"
+        ICBCPROCODE="02300"
+        AREANAME="阿坝"></ITEM>
+    <ITEM
+        AREACODE="271"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="甘孜州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02321"
+        ICBCPROCODE="02300"
+        AREANAME="甘孜"></ITEM>
+    <ITEM
+        AREACODE="272"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="凉山州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02320"
+        ICBCPROCODE="02300"
+        AREANAME="凉山"></ITEM>
+    <ITEM
+        AREACODE="274"
+        PROVINCE_NAME="贵州省"
+        CITY_NAME="贵阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02402"
+        ICBCPROCODE="02400"
+        AREANAME="贵阳"></ITEM>
+    <ITEM
+        AREACODE="275"
+        PROVINCE_NAME="贵州省"
+        CITY_NAME="六盘水市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02410"
+        ICBCPROCODE="02400"
+        AREANAME="六盘水"></ITEM>
+    <ITEM
+        AREACODE="276"
+        PROVINCE_NAME="贵州省"
+        CITY_NAME="遵义市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02403"
+        ICBCPROCODE="02400"
+        AREANAME="遵义"></ITEM>
+    <ITEM
+        AREACODE="277"
+        PROVINCE_NAME="贵州省"
+        CITY_NAME="安顺市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02404"
+        ICBCPROCODE="02400"
+        AREANAME="安顺"></ITEM>
+    <ITEM
+        AREACODE="278"
+        PROVINCE_NAME="贵州省"
+        CITY_NAME="铜仁地区"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02408"
+        ICBCPROCODE="02400"
+        AREANAME="铜仁"></ITEM>
+    <ITEM
+        AREACODE="279"
+        PROVINCE_NAME="贵州省"
+        CITY_NAME="毕节地区"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02406"
+        ICBCPROCODE="02400"
+        AREANAME="毕节"></ITEM>
+    <ITEM
+        AREACODE="280"
+        PROVINCE_NAME="贵州省"
+        CITY_NAME="黔西南州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="281"
+        PROVINCE_NAME="贵州省"
+        CITY_NAME="黔东南州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="282"
+        PROVINCE_NAME="贵州省"
+        CITY_NAME="黔南州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="283"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="昆明市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02502"
+        ICBCPROCODE="02500"
+        AREANAME="昆明"></ITEM>
+    <ITEM
+        AREACODE="284"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="曲靖市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02505"
+        ICBCPROCODE="02500"
+        AREANAME="曲靖"></ITEM>
+    <ITEM
+        AREACODE="285"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="玉溪市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02517"
+        ICBCPROCODE="02500"
+        AREANAME="玉溪"></ITEM>
+    <ITEM
+        AREACODE="286"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="保山市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02510"
+        ICBCPROCODE="02500"
+        AREANAME="保山"></ITEM>
+    <ITEM
+        AREACODE="287"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="昭通市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02504"
+        ICBCPROCODE="02500"
+        AREANAME="昭通"></ITEM>
+    <ITEM
+        AREACODE="288"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="丽江市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02512"
+        ICBCPROCODE="02500"
+        AREANAME="丽江"></ITEM>
+    <ITEM
+        AREACODE="289"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="普洱市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="290"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="临沧市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02518"
+        ICBCPROCODE="02500"
+        AREANAME="临沧"></ITEM>
+    <ITEM
+        AREACODE="291"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="文山州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02506"
+        ICBCPROCODE="02500"
+        AREANAME="文山"></ITEM>
+    <ITEM
+        AREACODE="292"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="红河州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02507"
+        ICBCPROCODE="02500"
+        AREANAME="红河"></ITEM>
+    <ITEM
+        AREACODE="293"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="西双版纳"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="294"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="楚雄州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02516"
+        ICBCPROCODE="02500"
+        AREANAME="楚雄"></ITEM>
+    <ITEM
+        AREACODE="295"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="大理州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02515"
+        ICBCPROCODE="02500"
+        AREANAME="大理"></ITEM>
+    <ITEM
+        AREACODE="296"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="德宏州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02511"
+        ICBCPROCODE="02500"
+        AREANAME="德宏"></ITEM>
+    <ITEM
+        AREACODE="297"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="怒江州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02513"
+        ICBCPROCODE="02500"
+        AREANAME="怒江"></ITEM>
+    <ITEM
+        AREACODE="298"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="迪庆州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02514"
+        ICBCPROCODE="02500"
+        AREANAME="迪庆"></ITEM>
+    <ITEM
+        AREACODE="299"
+        PROVINCE_NAME="西藏区"
+        CITY_NAME="拉萨市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="300"
+        PROVINCE_NAME="西藏区"
+        CITY_NAME="昌都地区"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="301"
+        PROVINCE_NAME="西藏区"
+        CITY_NAME="山南地区"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="302"
+        PROVINCE_NAME="西藏区"
+        CITY_NAME="日喀则地区"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="303"
+        PROVINCE_NAME="西藏区"
+        CITY_NAME="那曲地区"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="304"
+        PROVINCE_NAME="西藏区"
+        CITY_NAME="阿里地区"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="305"
+        PROVINCE_NAME="西藏区"
+        CITY_NAME="林芝地区"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="306"
+        PROVINCE_NAME="陕西省"
+        CITY_NAME="西安市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="03700"
+        ICBCPROCODE="02600"
+        AREANAME="西安"></ITEM>
+    <ITEM
+        AREACODE="307"
+        PROVINCE_NAME="陕西省"
+        CITY_NAME="铜川市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02602"
+        ICBCPROCODE="02600"
+        AREANAME="铜川"></ITEM>
+    <ITEM
+        AREACODE="308"
+        PROVINCE_NAME="陕西省"
+        CITY_NAME="宝鸡市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02603"
+        ICBCPROCODE="02600"
+        AREANAME="宝鸡"></ITEM>
+    <ITEM
+        AREACODE="309"
+        PROVINCE_NAME="陕西省"
+        CITY_NAME="咸阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02604"
+        ICBCPROCODE="02600"
+        AREANAME="咸阳"></ITEM>
+    <ITEM
+        AREACODE="310"
+        PROVINCE_NAME="陕西省"
+        CITY_NAME="渭南市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02605"
+        ICBCPROCODE="02600"
+        AREANAME="渭南"></ITEM>
+    <ITEM
+        AREACODE="311"
+        PROVINCE_NAME="陕西省"
+        CITY_NAME="延安市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02609"
+        ICBCPROCODE="02600"
+        AREANAME="延安"></ITEM>
+    <ITEM
+        AREACODE="312"
+        PROVINCE_NAME="陕西省"
+        CITY_NAME="汉中市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02606"
+        ICBCPROCODE="02600"
+        AREANAME="汉中"></ITEM>
+    <ITEM
+        AREACODE="313"
+        PROVINCE_NAME="陕西省"
+        CITY_NAME="榆林市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02610"
+        ICBCPROCODE="02600"
+        AREANAME="榆林"></ITEM>
+    <ITEM
+        AREACODE="314"
+        PROVINCE_NAME="陕西省"
+        CITY_NAME="安康市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02607"
+        ICBCPROCODE="02600"
+        AREANAME="安康"></ITEM>
+    <ITEM
+        AREACODE="315"
+        PROVINCE_NAME="陕西省"
+        CITY_NAME="商洛市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02608"
+        ICBCPROCODE="02600"
+        AREANAME="商洛"></ITEM>
+    <ITEM
+        AREACODE="316"
+        PROVINCE_NAME="甘肃省"
+        CITY_NAME="兰州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02703"
+        ICBCPROCODE="02700"
+        AREANAME="兰州"></ITEM>
+    <ITEM
+        AREACODE="317"
+        PROVINCE_NAME="甘肃省"
+        CITY_NAME="嘉峪关市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02702"
+        ICBCPROCODE="02700"
+        AREANAME="嘉峪关"></ITEM>
+    <ITEM
+        AREACODE="318"
+        PROVINCE_NAME="甘肃省"
+        CITY_NAME="金昌市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02705"
+        ICBCPROCODE="02700"
+        AREANAME="金昌"></ITEM>
+    <ITEM
+        AREACODE="319"
+        PROVINCE_NAME="甘肃省"
+        CITY_NAME="白银市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02704"
+        ICBCPROCODE="02700"
+        AREANAME="白银"></ITEM>
+    <ITEM
+        AREACODE="320"
+        PROVINCE_NAME="甘肃省"
+        CITY_NAME="天水市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02706"
+        ICBCPROCODE="02700"
+        AREANAME="天水"></ITEM>
+    <ITEM
+        AREACODE="321"
+        PROVINCE_NAME="甘肃省"
+        CITY_NAME="武威市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02710"
+        ICBCPROCODE="02700"
+        AREANAME="武威"></ITEM>
+    <ITEM
+        AREACODE="322"
+        PROVINCE_NAME="甘肃省"
+        CITY_NAME="张掖市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02712"
+        ICBCPROCODE="02700"
+        AREANAME="张掖"></ITEM>
+    <ITEM
+        AREACODE="323"
+        PROVINCE_NAME="甘肃省"
+        CITY_NAME="平凉市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:42"
+        ICBCAREACODE="02708"
+        ICBCPROCODE="02700"
+        AREANAME="平凉"></ITEM>
+    <ITEM
+        AREACODE="324"
+        PROVINCE_NAME="甘肃省"
+        CITY_NAME="酒泉市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02713"
+        ICBCPROCODE="02700"
+        AREANAME="酒泉"></ITEM>
+    <ITEM
+        AREACODE="325"
+        PROVINCE_NAME="甘肃省"
+        CITY_NAME="庆阳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02709"
+        ICBCPROCODE="02700"
+        AREANAME="庆阳"></ITEM>
+    <ITEM
+        AREACODE="326"
+        PROVINCE_NAME="甘肃省"
+        CITY_NAME="定西市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02707"
+        ICBCPROCODE="02700"
+        AREANAME="定西"></ITEM>
+    <ITEM
+        AREACODE="327"
+        PROVINCE_NAME="甘肃省"
+        CITY_NAME="陇南市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02711"
+        ICBCPROCODE="02700"
+        AREANAME="陇南"></ITEM>
+    <ITEM
+        AREACODE="328"
+        PROVINCE_NAME="甘肃省"
+        CITY_NAME="临夏州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02714"
+        ICBCPROCODE="02700"
+        AREANAME="临夏"></ITEM>
+    <ITEM
+        AREACODE="329"
+        PROVINCE_NAME="甘肃省"
+        CITY_NAME="甘南州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02715"
+        ICBCPROCODE="02700"
+        AREANAME="甘南"></ITEM>
+    <ITEM
+        AREACODE="330"
+        PROVINCE_NAME="青海省"
+        CITY_NAME="西宁市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="331"
+        PROVINCE_NAME="青海省"
+        CITY_NAME="海东地区"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="332"
+        PROVINCE_NAME="青海省"
+        CITY_NAME="海北州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="333"
+        PROVINCE_NAME="青海省"
+        CITY_NAME="黄南州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="334"
+        PROVINCE_NAME="青海省"
+        CITY_NAME="海南州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02201"
+        ICBCPROCODE="02201"
+        AREANAME="海南"></ITEM>
+    <ITEM
+        AREACODE="335"
+        PROVINCE_NAME="青海省"
+        CITY_NAME="果洛州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="336"
+        PROVINCE_NAME="青海省"
+        CITY_NAME="玉树州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="337"
+        PROVINCE_NAME="青海省"
+        CITY_NAME="海西州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="338"
+        PROVINCE_NAME="宁夏区"
+        CITY_NAME="银川市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02902"
+        ICBCPROCODE="02900"
+        AREANAME="银川"></ITEM>
+    <ITEM
+        AREACODE="339"
+        PROVINCE_NAME="宁夏区"
+        CITY_NAME="石嘴山市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02904"
+        ICBCPROCODE="02900"
+        AREANAME="石嘴山"></ITEM>
+    <ITEM
+        AREACODE="340"
+        PROVINCE_NAME="宁夏区"
+        CITY_NAME="吴忠市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02903"
+        ICBCPROCODE="02900"
+        AREANAME="吴忠"></ITEM>
+    <ITEM
+        AREACODE="341"
+        PROVINCE_NAME="宁夏区"
+        CITY_NAME="固原市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02905"
+        ICBCPROCODE="02900"
+        AREANAME="固原"></ITEM>
+    <ITEM
+        AREACODE="342"
+        PROVINCE_NAME="宁夏区"
+        CITY_NAME="中卫市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="343"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="乌鲁木齐"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="03002"
+        ICBCPROCODE="03000"
+        AREANAME="乌鲁木齐"></ITEM>
+    <ITEM
+        AREACODE="344"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="克拉玛依"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="03003"
+        ICBCPROCODE="03000"
+        AREANAME="克拉玛依"></ITEM>
+    <ITEM
+        AREACODE="345"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="吐鲁番地区"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="03005"
+        ICBCPROCODE="03000"
+        AREANAME="吐鲁番"></ITEM>
+    <ITEM
+        AREACODE="346"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="哈密地区"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="03011"
+        ICBCPROCODE="03000"
+        AREANAME="哈密"></ITEM>
+    <ITEM
+        AREACODE="347"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="和田地区"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="03015"
+        ICBCPROCODE="03000"
+        AREANAME="和田"></ITEM>
+    <ITEM
+        AREACODE="348"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="阿克苏地区"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="03014"
+        ICBCPROCODE="03000"
+        AREANAME="阿克苏"></ITEM>
+    <ITEM
+        AREACODE="349"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="喀什地区"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="03012"
+        ICBCPROCODE="03000"
+        AREANAME="喀什"></ITEM>
+    <ITEM
+        AREACODE="350"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="石河子"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="03016"
+        ICBCPROCODE="03000"
+        AREANAME="石河子"></ITEM>
+    <ITEM
+        AREACODE="351"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="阿拉尔"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="352"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="图林舒克"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="353"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="五家渠市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="354"
+        PROVINCE_NAME="河北省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="00400"
+        ICBCPROCODE="00400"
+        AREANAME="河北"></ITEM>
+    <ITEM
+        AREACODE="355"
+        PROVINCE_NAME="山西省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="00500"
+        ICBCPROCODE="00500"
+        AREANAME="山西"></ITEM>
+    <ITEM
+        AREACODE="356"
+        PROVINCE_NAME="内蒙古"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="00600"
+        ICBCPROCODE="00600"
+        AREANAME="内蒙古"></ITEM>
+    <ITEM
+        AREACODE="357"
+        PROVINCE_NAME="辽宁省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="00700"
+        ICBCPROCODE="00700"
+        AREANAME="辽宁"></ITEM>
+    <ITEM
+        AREACODE="358"
+        PROVINCE_NAME="吉林省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="00800"
+        ICBCPROCODE="00800"
+        AREANAME="吉林"></ITEM>
+    <ITEM
+        AREACODE="359"
+        PROVINCE_NAME="黑龙江"
+        CITY_NAME=""
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="00900"
+        ICBCPROCODE="00900"
+        AREANAME="黑龙江"></ITEM>
+    <ITEM
+        AREACODE="360"
+        PROVINCE_NAME="江苏省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="01100"
+        ICBCPROCODE="01100"
+        AREANAME="江苏"></ITEM>
+    <ITEM
+        AREACODE="361"
+        PROVINCE_NAME="浙江省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="01200"
+        ICBCPROCODE="01200"
+        AREANAME="浙江"></ITEM>
+    <ITEM
+        AREACODE="362"
+        PROVINCE_NAME="安徽省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="01300"
+        ICBCPROCODE="01300"
+        AREANAME="安徽"></ITEM>
+    <ITEM
+        AREACODE="363"
+        PROVINCE_NAME="福建省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="01400"
+        ICBCPROCODE="01400"
+        AREANAME="福建"></ITEM>
+    <ITEM
+        AREACODE="364"
+        PROVINCE_NAME="江西省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="01500"
+        ICBCPROCODE="01500"
+        AREANAME="江西"></ITEM>
+    <ITEM
+        AREACODE="365"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="01600"
+        ICBCPROCODE="01600"
+        AREANAME="山东"></ITEM>
+    <ITEM
+        AREACODE="366"
+        PROVINCE_NAME="河南省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="01701"
+        ICBCPROCODE="01701"
+        AREANAME="河南"></ITEM>
+    <ITEM
+        AREACODE="367"
+        PROVINCE_NAME="湖北省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="01800"
+        ICBCPROCODE="01800"
+        AREANAME="湖北"></ITEM>
+    <ITEM
+        AREACODE="368"
+        PROVINCE_NAME="湖南省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="01900"
+        ICBCPROCODE="01900"
+        AREANAME="湖南"></ITEM>
+    <ITEM
+        AREACODE="369"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02000"
+        ICBCPROCODE="02000"
+        AREANAME="广东"></ITEM>
+    <ITEM
+        AREACODE="370"
+        PROVINCE_NAME="广西区"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02100"
+        ICBCPROCODE="02100"
+        AREANAME="广西"></ITEM>
+    <ITEM
+        AREACODE="371"
+        PROVINCE_NAME="海南省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02201"
+        ICBCPROCODE="02201"
+        AREANAME="海南"></ITEM>
+    <ITEM
+        AREACODE="372"
+        PROVINCE_NAME="四川省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02300"
+        ICBCPROCODE="02300"
+        AREANAME="四川"></ITEM>
+    <ITEM
+        AREACODE="373"
+        PROVINCE_NAME="贵州省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02400"
+        ICBCPROCODE="02400"
+        AREANAME="贵州"></ITEM>
+    <ITEM
+        AREACODE="374"
+        PROVINCE_NAME="云南省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02500"
+        ICBCPROCODE="02500"
+        AREANAME="云南"></ITEM>
+    <ITEM
+        AREACODE="375"
+        PROVINCE_NAME="西藏区"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="00158"
+        ICBCPROCODE="00158"
+        AREANAME="西藏"></ITEM>
+    <ITEM
+        AREACODE="376"
+        PROVINCE_NAME="陕西省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02600"
+        ICBCPROCODE="02600"
+        AREANAME="陕西"></ITEM>
+    <ITEM
+        AREACODE="377"
+        PROVINCE_NAME="甘肃省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02700"
+        ICBCPROCODE="02700"
+        AREANAME="甘肃"></ITEM>
+    <ITEM
+        AREACODE="378"
+        PROVINCE_NAME="青海省"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02806"
+        ICBCPROCODE="02806"
+        AREANAME="青海"></ITEM>
+    <ITEM
+        AREACODE="379"
+        PROVINCE_NAME="宁夏区"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="02900"
+        ICBCPROCODE="02900"
+        AREANAME="宁夏"></ITEM>
+    <ITEM
+        AREACODE="380"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE="03000"
+        ICBCPROCODE="03000"
+        AREANAME="新疆"></ITEM>
+    <ITEM
+        AREACODE="381"
+        PROVINCE_NAME="中国台湾"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="382"
+        PROVINCE_NAME="中国香港"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="383"
+        PROVINCE_NAME="中国澳门"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="384"
+        PROVINCE_NAME="海外"
+        CITY_NAME="NULL"
+        AREA_LEVEL="1"
+        VERSION_NO="3"
+        UPDATETIME="10/08/2014 14:55:43"
+        ICBCAREACODE=""
+        ICBCPROCODE=""
+        AREANAME=""></ITEM>
+    <ITEM
+        AREACODE="390"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="博州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="07/01/2022 11:28:50"
+        ICBCAREACODE="03009"
+        ICBCPROCODE="03000"
+        AREANAME="博州"></ITEM>
+    <ITEM
+        AREACODE="391"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="昌吉"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="07/01/2022 11:28:50"
+        ICBCAREACODE="03004"
+        ICBCPROCODE="03000"
+        AREANAME="昌吉"></ITEM>
+    <ITEM
+        AREACODE="392"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="第七"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="07/01/2022 11:28:50"
+        ICBCAREACODE="03017"
+        ICBCPROCODE="03000"
+        AREANAME="第七"></ITEM>
+    <ITEM
+        AREACODE="393"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="塔城"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="07/01/2022 11:28:50"
+        ICBCAREACODE="03007"
+        ICBCPROCODE="03000"
+        AREANAME="塔城"></ITEM>
+    <ITEM
+        AREACODE="394"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="伊犁"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="07/01/2022 11:28:50"
+        ICBCAREACODE="03006"
+        ICBCPROCODE="03000"
+        AREANAME="伊犁"></ITEM>
+    <ITEM
+        AREACODE="388"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="阿勒泰"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="07/01/2022 11:28:50"
+        ICBCAREACODE="03008"
+        ICBCPROCODE="03000"
+        AREANAME="阿勒泰"></ITEM>
+    <ITEM
+        AREACODE="389"
+        PROVINCE_NAME="新疆区"
+        CITY_NAME="巴州"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="07/01/2022 11:28:50"
+        ICBCAREACODE="03010"
+        ICBCPROCODE="03000"
+        AREANAME="巴州"></ITEM>
+    <ITEM
+        AREACODE="151"
+        PROVINCE_NAME="山东省"
+        CITY_NAME="菏泽市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/30/2014 10:49:13"
+        ICBCAREACODE="01609"
+        ICBCPROCODE="01600"
+        AREANAME="菏泽"></ITEM>
+    <ITEM
+        AREACODE="387"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="珠海市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/29/2014 08:56:50"
+        ICBCAREACODE="02002"
+        ICBCPROCODE="02000"
+        AREANAME="珠海"></ITEM>
+    <ITEM
+        AREACODE="386"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="深圳市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/29/2014 08:56:50"
+        ICBCAREACODE="04000"
+        ICBCPROCODE="04000"
+        AREANAME="深圳"></ITEM>
+    <ITEM
+        AREACODE="385"
+        PROVINCE_NAME="广东省"
+        CITY_NAME="广州市"
+        AREA_LEVEL="2"
+        VERSION_NO="3"
+        UPDATETIME="10/30/2014 10:49:13"
+        ICBCAREACODE="03602"
+        ICBCPROCODE="02000"
+        AREANAME="广州"></ITEM>
+</Cities>

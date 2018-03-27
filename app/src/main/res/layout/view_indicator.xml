@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="110dp"
+    android:layout_height="48dp"
+    android:background="@drawable/shape_bg_indicator"
+    android:padding="5dp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <com.ISHello.base.ui.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            wheel:matProg_barColor="@color/icbcred2"
+            wheel:matProg_barSpinCycleTime="3000"
+            wheel:matProg_barWidth="2dp"
+            wheel:matProg_circleRadius="22dp"
+            wheel:matProg_progressIndeterminate="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/progress_wheel"
+            android:text="@string/loading"
+            android:textColor="@color/white"
+            android:textSize="13dp"></TextView>
+    </LinearLayout>
+
+
+</RelativeLayout>

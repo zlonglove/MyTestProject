@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loadbk"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/NetWorkButtonTitle"
+        android:textColor="@color/red"
+        android:textSize="@dimen/server_image_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/getWebCodeViewer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="WebCodeViewer"
+            android:text="@string/WebCodeViewer"
+            android:textColor="@color/red" />
+
+        <Button
+            android:id="@+id/MultithreadingDownloading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="MultithreadingDownloadingClick"
+            android:text="@string/MultithreadingDownloading"
+            android:textColor="@color/red" />
+
+        <Button
+            android:id="@+id/MultipleThreadContinuableDownLoadButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="MultipleThreadContinuableDownLoadClick"
+            android:text="@string/MultipleThreadContinuableDownLoadButtonTitle"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="HttpGet"
+            android:text="@string/HttpGet"
+            android:textColor="@color/red" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="HttpPost"
+            android:text="@string/HttpPost"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+</LinearLayout>

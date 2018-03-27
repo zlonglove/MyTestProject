@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RoundProgressBar">
+        <attr name="max" format="integer" />
+        <attr name="fill" format="boolean" />            <!-- 是否填充圆形区域 -->
+        <attr name="Paint_Width" format="integer" />        <!-- 画笔宽度，填充模式下无效，会被重置为0 -->
+        <attr name="Paint_Color" format="integer" />        <!-- 画笔颜色 -->
+        <attr name="Show_Bottom" format="boolean" />        <!-- 是否显示底色 -->
+        <attr name="Inside_Interval" format="integer" /> <!-- 圆形区域向里缩进的距离 -->
+    </declare-styleable>
+
+    <!-- id of parent panel -->
+    <item name="adp_parentPanel" type="id" />
+    <!-- ids of top panel -->
+    <item name="adp_topPanel" type="id" />
+    <item name="adp_titleDividerTop" type="id" />
+    <item name="adp_title_template" type="id" />
+    <item name="adp_icon" type="id" />
+    <item name="adp_alertTitle" type="id" />
+    <item name="adp_titleDivider" type="id" />
+    <!-- ids of content panel and its children -->
+    <item name="adp_contentPanel" type="id" />
+    <item name="adp_scrollView" type="id" />
+    <item name="adp_message" type="id" />
+    <item name="adp_textSpacerNoButtons" type="id" />
+    <!-- ids of custom panel and its children -->
+    <item name="adp_customPanel" type="id" />
+    <item name="adp_custom" type="id" />
+    <!-- ids of button panel and its children -->
+    <item name="adp_buttonPanel" type="id" />
+    <item name="adp_button1" type="id" />
+    <item name="adp_button2" type="id" />
+    <item name="adp_button3" type="id" />
+    <!-- id of dialog's listview -->
+    <item name="adp_select_dialog_listview" type="id" />
+    <!-- ids of progress dialog children -->
+    <item name="adp_progress" type="id" />
+    <item name="adp_progress_number" type="id" />
+    <item name="adp_progress_percent" type="id" />
+
+</resources> 
+

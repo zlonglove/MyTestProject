@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/music"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/serviceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/serviceTitle"
+        android:textColor="@color/red"
+        android:textSize="@dimen/titlesize" />
+
+    <Button
+        android:id="@+id/serviceStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/serviceTitle"
+        android:onClick="serviceStart"
+        android:text="@string/serviceStart" />
+
+    <Button
+        android:id="@+id/serviceStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/serviceStart"
+        android:layout_toRightOf="@id/serviceStart"
+        android:onClick="serviceStop"
+        android:text="@string/serviceStop" />
+
+    <Button
+        android:id="@+id/bindServer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/serviceStop"
+        android:layout_toRightOf="@id/serviceStop"
+        android:onClick="bindServer"
+        android:text="@string/bindServer" />
+
+    <Button
+        android:id="@+id/unbindServer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bindServer"
+        android:layout_toRightOf="@id/bindServer"
+        android:onClick="unbindServer"
+        android:text="@string/unbindServer" />
+
+    <Button
+        android:id="@+id/getCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/unbindServer"
+        android:layout_toRightOf="@id/unbindServer"
+        android:onClick="getCount"
+        android:text="@string/getCount" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/getCount"
+        android:background="@drawable/update"
+        android:onClick="refresh" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/serviceStart"
+        android:onClick="asyncService"
+        android:text="@string/asyncService" />
+
+</RelativeLayout>

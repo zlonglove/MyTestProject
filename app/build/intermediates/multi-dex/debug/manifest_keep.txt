@@ -1,0 +1,3 @@
+# Referenced at /Users/zhanglong/Android/project/FirstAndroidProject/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:79
+-keep class com.ISHello.Application.BaseApplication { <init>(...); }
+

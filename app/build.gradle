@@ -1,0 +1,140 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        applicationId "com.example.ishelloword"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        multiDexEnabled true
+    }
+    signingConfigs {
+        debug {
+            storeFile file('../debug.keystore')
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+
+        }
+        release {
+            storeFile file('../debug.keystore')
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+    sourceSets {
+        main {
+            //java.srcDirs = ['src/main/java']
+
+            //jni源码文件路径
+            //jni.srcDirs = ['src/main/jni']
+
+            //配置本地 .so库。在配置文件中做如下配置，然后在对应位置建立文件夹，加入对应平台的.so文件
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+
+    packagingOptions {
+        exclude 'proguard-project.txt'
+        exclude 'gradle.properties'
+        exclude 'project.properties'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
+    dexOptions {
+        javaMaxHeapSize '8g'
+        preDexLibraries = false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+//我们也可以使用相对路径配置本地仓库，我们可以通过配置项目中存在的静态文件夹作为本地仓库
+repositories {
+    flatDir {
+        dirs 'aars'
+    }
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile rootProject.ext.dependencies.appcompatV7
+    compile rootProject.ext.dependencies.support_v4
+    compile rootProject.ext.dependencies.design
+    compile rootProject.ext.dependencies.recycleview
+    compile files('libs/android-async-http-1.4.4.jar')
+    compile files('libs/AnimationLibrary.jar')
+    compile files('libs/commons-httpclient-3.0.1.jar')
+    compile files('libs/ddmlib.jar')
+    compile files('libs/dom4j-1.6.1.jar')
+    compile files('libs/jaxen-1.1-beta-6.jar')
+    compile files('libs/sqlcipher.jar')
+    //compile files('libs/glide-3.8.0.jar')
+    //api files('libs/gson-2.2.4.jar')
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC1'
+    compile files('libs/httpmime-4.2.3.jar')
+    compile files('libs/fastjson-1.1.26.jar')
+    compile files('libs/android-query-full.0.26.7.jar')
+    compile 'com.android.support:support-annotations:23.1.1'
+    compile 'com.google.android.gms:play-services-appindexing:9.8.0'
+    compile(name: 'openDefault-1.0.0-openDefaultRelease', ext: 'aar')
+    compile(name: 'liblinphone-sdk', ext: 'aar')
+    compile project(':linclibrary')
+    compile project(':jnisdk')
+    compile files('libs/jcore-android_v1.1.2.jar')
+    compile files('libs/jpush-android_v3.0.5.jar')
+    compile project(':keyboard')
+    compile files('libs/AMap_Location_V3.4.0_20170427.jar')
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile project(':musicIndicator')
+    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
+    compile project(':paper-onboarding')
+    compile project(':imageeditor')
+    compile project(':popmenu')
+    compile files('libs/wechat-sdk-android-with-mta-1.3.4.jar')
+    compile files('libs/timeselector-1.1.3-sources.jar')
+    compile files('libs/commons-codec-1.10-sources.jar')
+    compile 'com.yalantis:phoenix:1.2.3'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.android.support:multidex:1.0.0'
+    implementation project(':downloadfile')
+    implementation project(':iosdialog')
+    implementation project(':timeselector')
+    implementation project(':indexbarlayout')
+    implementation project(':MarqueeView')
+    implementation project(':functionGuide')
+    implementation project(':golddrop')
+    implementation project(':rulerlib')
+    implementation project(':CommonUtil')
+    implementation project(':banner')
+    implementation project(':network')
+    implementation project(':rxjava')
+    implementation project(':tabswitch')
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC1'
+}

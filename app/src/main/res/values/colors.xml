@@ -1,0 +1,8 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="icbcred2">#FF727F</color>
+
+    <color name="statusbar_bg">#00000000</color>
+
+</resources>

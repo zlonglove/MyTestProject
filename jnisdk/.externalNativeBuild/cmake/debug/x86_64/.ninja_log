@@ -1,0 +1,13 @@
+# ninja log v5
+1	478	0	CMakeFiles/myproject-jni.dir/src/main/cpp/myproject-jni.cpp.o	b6a1162bb19332bc
+479	550	0	../../../../build/intermediates/cmake/debug/obj/x86_64/libmyproject-jni.so	9a223bbc1dd615be
+2	152	0	CMakeFiles/myproject-jni.dir/src/main/cpp/myproject-jni.cpp.o	b6a1162bb19332bc
+152	233	0	../../../../build/intermediates/cmake/debug/obj/x86_64/libmyproject-jni.so	9a223bbc1dd615be
+2	236	0	CMakeFiles/myproject-jni.dir/src/main/cpp/myproject-jni.cpp.o	b6a1162bb19332bc
+236	339	0	../../../../build/intermediates/cmake/debug/obj/x86_64/libmyproject-jni.so	9a223bbc1dd615be
+3	149	0	CMakeFiles/myproject-jni.dir/src/main/cpp/myproject-jni.cpp.o	b6a1162bb19332bc
+149	229	0	../../../../build/intermediates/cmake/debug/obj/x86_64/libmyproject-jni.so	9a223bbc1dd615be
+4	162	0	CMakeFiles/myproject-jni.dir/src/main/cpp/myproject-jni.cpp.o	b6a1162bb19332bc
+162	235	0	../../../../build/intermediates/cmake/debug/obj/x86_64/libmyproject-jni.so	9a223bbc1dd615be
+3	151	0	CMakeFiles/myproject-jni.dir/src/main/cpp/myproject-jni.cpp.o	b6a1162bb19332bc
+151	229	0	../../../../build/intermediates/cmake/debug/obj/x86_64/libmyproject-jni.so	9a223bbc1dd615be

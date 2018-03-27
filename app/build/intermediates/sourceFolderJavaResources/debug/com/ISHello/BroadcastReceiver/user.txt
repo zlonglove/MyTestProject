@@ -1,0 +1,491 @@
+BroadcastReceiver简介 
+BroadcastReceiver理解为广播接收者，它用于接收程序所发出的Broadcast的Intent。它在一端监听接收广播消息，然后再做出处理。它的本质上就是属于一个监听器。启动BroadcastRecevicer的方式有两种：sendBroadcast()和sendOrderedBroadcast()，两者的区别就是前者是发送一个普通的广播，后者是发送一个有序的广播。
+
+开发广播接收才的步骤：
+
+1、  继承BroadcastReceiver类，重写onReceiver(Context context,Intent intent)方法
+
+2、  在AndroidMainfest.xml中注册，同样也可以在代码中实现注册
+
+3、  通过sendBroadcast()或sendOrderedBroadcast()启动对应的BroadcastReceiver
+
+下面分别介绍：
+
+实现广播消息处理机制的方式
+
+继承BroadcastReceiver，覆盖onReceive
+
+[java] view plaincopyprint?
+public class MyReceiver extends BroadcastReceiver {  
+     public MyReceiver() {  
+      System.out.println("--myReceiver constructor--");  
+    }  
+    public void onReceive(Context context, Intent intent) {  
+       System.out.println("--onReceive--");  
+       //取到信息   
+       String receiveMsg = intent.getStringExtra("msg");  
+       Toast.makeText(context, receiveMsg, Toast.LENGTH_LONG).show();  
+    }  
+  
+}  
+
+public class MyReceiver extends BroadcastReceiver {
+     public MyReceiver() {
+      System.out.println("--myReceiver constructor--");
+    }
+    public void onReceive(Context context, Intent intent) {
+       System.out.println("--onReceive--");
+       //取到信息
+       String receiveMsg = intent.getStringExtra("msg");
+       Toast.makeText(context, receiveMsg, Toast.LENGTH_LONG).show();
+    }
+
+}
+
+注册BroadcastReceiver的两种方式：
+
+方式一：AndroidMainfest.xml中注册：
+
+[html] view plaincopyprint?
+<receiver android:name=".MyReceiver">  
+           <intent-filter>  
+              <action android:name="com.jiahui.activity.MY_ACTION" />  
+           </intent-filter>  
+       </receiver>  
+
+<receiver android:name=".MyReceiver">
+           <intent-filter>
+              <action android:name="com.jiahui.activity.MY_ACTION" />
+           </intent-filter>
+       </receiver>
+
+方式二：应用程序代码中注册
+
+ 
+
+[java] view plaincopyprint?
+myReceiver2 = new MyReceiver2();  
+              IntentFilter intentFilter = new IntentFilter();  
+              Intent intent=new Intent();   
+              intentFilter.addAction(SMS_ACTION);  
+              registerReceiver(myReceiver2, intentFilter);  
+
+myReceiver2 = new MyReceiver2();
+              IntentFilter intentFilter = new IntentFilter();
+              Intent intent=new Intent(); 
+              intentFilter.addAction(SMS_ACTION);
+              registerReceiver(myReceiver2, intentFilter);
+
+ 
+
+
+两种注册方式的区别：
+
+1)第一种是常驻型，也就是说当应用程序关闭后，如果有信息广播来，程序也会被系统调用自动运行。
+
+2)第二种不是常驻型广播，也就是说广播跟随程序的生命周期。
+
+ 
+
+广播的类型：
+
+广播被分为两种不同的类型：“普通广播（Normal broadcasts）”和“有序广播（Ordered broadcasts）”。普通广播是完全异步的，可以在同一时刻（逻辑上）被所有接收者接收到，消息传递的效率比较高，但缺点是：接收者不能将处理结果传递给下一个接收者，并且无法终止广播Intent的传播；然而有序广播是按照接收者声明的优先级别（声明在intent-filter元素的android:priority属性中，数越大优先级别越高,取值范围:-1000到1000。也可以调用IntentFilter对象的setPriority()进行设置），被接收者依次接收广播。如：A的级别高于B,B的级别高于C,那么，广播先传给A，再传给B，最后传给C。A得到广播后，可以往广播里存入数据，当广播传给B时,B可以从广播中得到A存入的数据。
+
+Context.sendBroadcast()
+
+   发送的是普通广播，所有订阅者都有机会获得并进行处理。
+
+Context.sendOrderedBroadcast()
+
+   发送的是有序广播，系统会根据接收者声明的优先级别按顺序逐个执行接收者，前面的接收者有权终止广播(BroadcastReceiver.abortBroadcast())，如果广播被前面的接收者终止，后面的接收者就再也无法获取到广播。对于有序广播，前面的接收者可以将处理结果存放进广播Intent，然后传给下一个接收者。
+
+ 
+
+再总结说说两种广播的区别比较：
+
+普通广播：异步，数据不共享，传递效率高
+
+有序广播：同步，数据可以达到共享，传递效率低
+
+说了这么一大堆，是不是都晕，那就上实例吧
+
+实例1：发送普通广播
+
+1、 写一个继承于BroadcastReceiver的类，并重写onReceiver方法
+
+[java] view plaincopyprint?
+package com.jiahui.broadcast;  
+  
+import android.content.BroadcastReceiver;  
+import android.content.Context;  
+import android.content.Intent;  
+import android.widget.Toast;  
+  
+public class MyBroadcastReceiver extends BroadcastReceiver {  
+  
+    @Override  
+    public void onReceive(Context context, Intent intent) {  
+        Toast.makeText(  
+                context,  
+                "接收到的Intent的Action为" + intent.getAction() + "\n传递的消息内容为"  
+                        + intent.getStringExtra("msg"), Toast.LENGTH_LONG)  
+                .show();  
+  
+    }  
+  
+}  
+
+package com.jiahui.broadcast;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.widget.Toast;
+
+public class MyBroadcastReceiver extends BroadcastReceiver {
+
+	@Override
+	public void onReceive(Context context, Intent intent) {
+		Toast.makeText(
+				context,
+				"接收到的Intent的Action为" + intent.getAction() + "\n传递的消息内容为"
+						+ intent.getStringExtra("msg"), Toast.LENGTH_LONG)
+				.show();
+
+	}
+
+}
+
+2、 在AndroidMainfest.xml中注册
+
+[html] view plaincopyprint?
+<receiver android:name=".MyBroadcastReceiver" >  
+      <intent-filter >  
+          <action android:name="com.jiahui.broadcast.mybroadcast" />  
+      </intent-filter>  
+  </receiver>  
+
+      <receiver android:name=".MyBroadcastReceiver" >
+            <intent-filter >
+                <action android:name="com.jiahui.broadcast.mybroadcast" />
+            </intent-filter>
+        </receiver>
+3、 在Activity中发送广播
+
+[java] view plaincopyprint?
+package com.jiahui.broadcast;  
+  
+import android.app.Activity;  
+import android.content.Intent;  
+import android.os.Bundle;  
+import android.view.View;  
+import android.widget.Button;  
+  
+public class BroadcastDemo1Activity extends Activity {  
+  
+    public void onCreate(Bundle savedInstanceState) {  
+        super.onCreate(savedInstanceState);  
+        setContentView(R.layout.main);  
+  
+        Button btnSend = (Button) this.findViewById(R.id.btnSend);  
+  
+        btnSend.setOnClickListener(new View.OnClickListener() {  
+  
+            @Override  
+            public void onClick(View v) {  
+  
+                Intent intent = new Intent();  
+                // 指定发送特定的BroadcastReceiver   
+                intent.setAction("com.jiahui.broadcast.mybroadcast");  
+  
+                // 带一些消息内容过去   
+                intent.putExtra("msg", "我发过来的数据哦");  
+  
+                sendBroadcast(intent);  
+  
+            }  
+        });  
+  
+    }  
+}  
+
+package com.jiahui.broadcast;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class BroadcastDemo1Activity extends Activity {
+
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
+
+		Button btnSend = (Button) this.findViewById(R.id.btnSend);
+
+		btnSend.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				Intent intent = new Intent();
+				// 指定发送特定的BroadcastReceiver
+				intent.setAction("com.jiahui.broadcast.mybroadcast");
+
+				// 带一些消息内容过去
+				intent.putExtra("msg", "我发过来的数据哦");
+
+				sendBroadcast(intent);
+
+			}
+		});
+
+	}
+}
+实现效果：
+
+ 
+
+实例2：发送有序广播
+
+写两个BroadcastReceiver类
+
+MyReceiver01.java:
+
+[java] view plaincopyprint?
+package com.jiahui.broadcast;  
+  
+import android.content.BroadcastReceiver;  
+import android.content.Context;  
+import android.content.Intent;  
+import android.os.Bundle;  
+import android.widget.Toast;  
+  
+public class MyReceiver1 extends BroadcastReceiver {  
+  
+    @Override  
+    public void onReceive(Context context, Intent intent) {  
+  
+        System.out.println("---MyReceiver1----onReceive---");  
+        String receiverMsg = intent.getStringExtra("msg");  
+        System.out.println("receiverMsg:" + receiverMsg);  
+        Toast.makeText(  
+  
+                context,  
+                "接收到的Intnet的action" + intent.getAction() + "\n发过来的消息内容："  
+                        + receiverMsg, 5000).show();  
+  
+        Bundle bundle = new Bundle();  
+        bundle.putString("first", "第一个广播接收者给的数据");  
+        // 放入下一个结果中，让下一个广播接收者收到消息   
+        setResultExtras(bundle);  
+  
+    }  
+}  
+
+package com.jiahui.broadcast;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Toast;
+
+public class MyReceiver1 extends BroadcastReceiver {
+
+	@Override
+	public void onReceive(Context context, Intent intent) {
+
+		System.out.println("---MyReceiver1----onReceive---");
+		String receiverMsg = intent.getStringExtra("msg");
+		System.out.println("receiverMsg:" + receiverMsg);
+		Toast.makeText(
+
+				context,
+				"接收到的Intnet的action" + intent.getAction() + "\n发过来的消息内容："
+						+ receiverMsg, 5000).show();
+
+		Bundle bundle = new Bundle();
+		bundle.putString("first", "第一个广播接收者给的数据");
+		// 放入下一个结果中，让下一个广播接收者收到消息
+		setResultExtras(bundle);
+
+	}
+}
+
+ MyReceiver02.java
+
+[java] view plaincopyprint?
+package com.jiahui.broadcast;  
+  
+import android.content.BroadcastReceiver;  
+import android.content.Context;  
+import android.content.Intent;  
+import android.os.Bundle;  
+import android.widget.Toast;  
+  
+public class MyReceiver2 extends BroadcastReceiver {  
+  
+    @Override  
+    public void onReceive(Context context, Intent intent) {  
+        System.out.println("---MyReceiver2----onReceive---");  
+        // 取到结果   
+        Bundle bundle = getResultExtras(true);  
+  
+        String receiverMsg = bundle.getString("first");  
+  
+        System.out.println("receiverMsg:" + receiverMsg);  
+  
+        Toast.makeText(  
+  
+                context,  
+                "接收到的Intnet的action" + intent.getAction() + "\n发过来的消息内容："  
+                        + receiverMsg, 5000).show();  
+  
+    }  
+  
+}  
+
+package com.jiahui.broadcast;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Toast;
+
+public class MyReceiver2 extends BroadcastReceiver {
+
+	@Override
+	public void onReceive(Context context, Intent intent) {
+		System.out.println("---MyReceiver2----onReceive---");
+		// 取到结果
+		Bundle bundle = getResultExtras(true);
+
+		String receiverMsg = bundle.getString("first");
+
+		System.out.println("receiverMsg:" + receiverMsg);
+
+		Toast.makeText(
+
+				context,
+				"接收到的Intnet的action" + intent.getAction() + "\n发过来的消息内容："
+						+ receiverMsg, 5000).show();
+
+	}
+
+}
+在Androidmainfest.xml中文件注册，同时设置为优先级
+
+[html] view plaincopyprint?
+<receiver android:name=".MyReceiver1" >  
+           <intent-filter android:priority="20" >  
+               <!-- 设置广播接收者的优先级 -->  
+               <action android:name="com.jiahui.broadcast.myreceiver" />  
+           </intent-filter>  
+       </receiver>  
+       <receiver android:name=".MyReceiver2" >  
+           <intent-filter android:priority="10" >  
+               <!-- 设置广播接收者的优先级 -->  
+               <action android:name="com.jiahui.broadcast.myreceiver" />  
+           </intent-filter>  
+       </receiver>  
+
+ <receiver android:name=".MyReceiver1" >
+            <intent-filter android:priority="20" >
+                <!-- 设置广播接收者的优先级 -->
+                <action android:name="com.jiahui.broadcast.myreceiver" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".MyReceiver2" >
+            <intent-filter android:priority="10" >
+                <!-- 设置广播接收者的优先级 -->
+                <action android:name="com.jiahui.broadcast.myreceiver" />
+            </intent-filter>
+        </receiver>
+注意：这里两个广播接收者设置的action是一样
+
+开发Activity在Activity中发送有序广播消息
+
+[java] view plaincopyprint?
+package com.jiahui.broadcast;  
+  
+import android.app.Activity;  
+import android.content.Intent;  
+import android.os.Bundle;  
+import android.view.View;  
+import android.widget.Button;  
+  
+public class BroadcastDemo2Activity extends Activity {  
+  
+    public void onCreate(Bundle savedInstanceState) {  
+        super.onCreate(savedInstanceState);  
+        setContentView(R.layout.main);  
+  
+        Button btnSend = (Button) this.findViewById(R.id.btnSend);  
+  
+        btnSend.setOnClickListener(new View.OnClickListener() {  
+            @Override  
+            public void onClick(View v) {  
+  
+                Intent intent = new Intent();  
+                intent.setAction("com.jiahui.broadcast.myreceiver");  
+  
+                intent.putExtra("msg", "发给第一个接收者的数据");  
+                // 发送有序广播   
+                sendOrderedBroadcast(intent, null);  
+            }  
+        });  
+    }  
+}  
+
+package com.jiahui.broadcast;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class BroadcastDemo2Activity extends Activity {
+
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
+
+		Button btnSend = (Button) this.findViewById(R.id.btnSend);
+
+		btnSend.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				Intent intent = new Intent();
+				intent.setAction("com.jiahui.broadcast.myreceiver");
+
+				intent.putExtra("msg", "发给第一个接收者的数据");
+				// 发送有序广播
+				sendOrderedBroadcast(intent, null);
+			}
+		});
+	}
+}
+ 
+
+实现效果：
+
+
+
+当一段时间我们就可以看到又会弹出一个信息如下图：
+
+
+
+也可以通过控制台监视：
+
+
+
+开发BroadcastReceiver的一些注意事项：
+
+BroadcastReceiver的生命周期比较短，一些比较费时的操作不应该放在onReceiver里完成。如果在onReceiver()的方法不能在10秒内执行完成，将会产生程序无响应也就是我们熟悉的ANR（Application not Response）。但是如果非得要在这里面执行一些费时的操作我们可以在这个onReceiver去启动一个Service来完成这样的一个费时操作。
+

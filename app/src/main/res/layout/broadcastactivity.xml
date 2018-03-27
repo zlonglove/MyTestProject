@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/music"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/serviceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:layout_centerHorizontal="true"
+        android:text="@string/broadCastTitle"
+        android:textSize="@dimen/titlesize" />
+
+    <TextView
+        android:id="@+id/freshTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:textSize="25dp"
+        android:layout_toRightOf="@id/serviceTitle"
+        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@id/serviceTitle" />
+
+    <Button
+        android:id="@+id/broadCastStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/serviceTitle"
+        android:layout_alignParentLeft="true"
+        android:text="@string/broadCastNormalSend"
+        android:onClick="broadNormalCastSend" />
+
+    <Button
+        android:id="@+id/broadCastOrderedSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/broadCastStart"
+        android:layout_alignBottom="@id/broadCastStart"
+        android:text="@string/broadCastOrderedSend"
+        android:onClick="broadOrderedCastSend" />
+</RelativeLayout>

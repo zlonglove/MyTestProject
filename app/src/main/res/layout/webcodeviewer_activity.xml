@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/webCodeViewer_path"
+        android:textColor="@color/yellow"
+        android:textSize="@dimen/server_image_title" />
+
+    <EditText
+        android:id="@+id/webCodeViewer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="@string/default_webCodeViewer_address" />
+
+    <Button
+        android:id="@+id/showWebViewerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/showWebView"
+        android:onClick="showWebView" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightyellow"
+            android:id="@+id/webView" />
+    </ScrollView>
+
+</LinearLayout>

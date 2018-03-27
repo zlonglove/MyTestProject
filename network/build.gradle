@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation rootProject.ext.dependencies.appcompatV7
+    implementation rootProject.ext.dependencies.retrofit
+    compile rootProject.ext.dependencies.retrofit_adapter_rxjava2
+    implementation project(':CommonUtil')
+    compile rootProject.ext.dependencies.gson
+    implementation files('libs/simple-xml-core.jar')
+    compile rootProject.ext.dependencies.rxjava
+    compile rootProject.ext.dependencies.rxjava_android
+    compile rootProject.ext.dependencies.retrofit_converter_gson
+}

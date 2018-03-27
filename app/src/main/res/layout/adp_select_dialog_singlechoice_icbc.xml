@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.icbc.component.widget.CheckedTextViewCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:checkMark="?android:attr/listChoiceIndicatorSingle"
+    android:ellipsize="marquee"
+    android:gravity="center_vertical|start"
+    android:minHeight="?attr/adpListItemMinHeight"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:textAlignment="viewStart"
+    android:textAppearance="?attr/adpListMultiChoiceTextAppearance"
+    android:textColor="?attr/adpListItemTextColor" />
