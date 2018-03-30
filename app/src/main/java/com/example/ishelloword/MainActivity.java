@@ -124,6 +124,7 @@ import im.icbc.com.linclibrary.PhoneInfo;
 import im.icbc.com.popmenu.PopMenu;
 import im.icbc.com.popmenu.PopMenuItem;
 import im.icbc.com.popmenu.PopMenuItemListener;
+import zlonglove.cn.aidl.activity.AidlActivity;
 import zlonglove.cn.network.activity.OkHttpTestActivity;
 import zlonglove.cn.rxjava.RxJavaActivity;
 import zlonglove.cn.tabswitch.ui.BottomNavigationActivity;
@@ -633,6 +634,9 @@ public class MainActivity extends BaseActivity {
                     case 22:
                         gotoResideMenuActivity();
                         break;
+                    case 23:
+                        gotoAidlActivity();
+                        break;
                     default:
                         break;
                 }
@@ -885,6 +889,12 @@ public class MainActivity extends BaseActivity {
 
     public void gotoResideMenuActivity() {
         Intent intent = new Intent(MainActivity.this, ResideMenuActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
+
+    public void gotoAidlActivity() {
+        Intent intent = new Intent(MainActivity.this, AidlActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }

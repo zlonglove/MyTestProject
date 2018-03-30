@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="zlonglove.cn.aidl">
+
+    <application>
+        <activity
+            android:name=".activity.AidlActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.AidlService"
+            android:exported="false"
+            android:process=":aidl"></service>
+
+        <provider
+            android:name=".provider.CommonProvider"
+            android:authorities="zlonglove.cn.provider.commondb"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":aidl" />
+    </application>
+
+</manifest>

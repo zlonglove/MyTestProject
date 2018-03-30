@@ -116,7 +116,6 @@ dependencies {
     compile files('libs/commons-codec-1.10-sources.jar')
     compile 'com.yalantis:phoenix:1.2.3'
     compile rootProject.ext.dependencies.eventbus
-
     compile rootProject.ext.dependencies.multidex
     implementation project(':downloadfile')
     implementation project(':iosdialog')
@@ -131,4 +130,5 @@ dependencies {
     implementation project(':network')
     implementation project(':rxjava')
     implementation project(':tabswitch')
+    implementation project(':aidl')
 }

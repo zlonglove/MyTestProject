@@ -79,4 +79,5 @@ public class Constants {
     public static final String CrashFileDir = SdcardUtils.getSDCardPathWithFileSeparators() + "crash/";
     public static final String NETWORK_CONNECTION_CHANGE = "android.net.conn.CONNECTIVITY_CHANGE";
 
+    public static final String PUSH_PROCESS = "com.example.ishelloword:aidl";
 }

@@ -79,5 +79,6 @@
         <item>页签切换模块</item>
         <item>DialogActivity</item>
         <item>ResideMenu</item>
+        <item>进程通讯</item>
     </string-array>
 </resources>

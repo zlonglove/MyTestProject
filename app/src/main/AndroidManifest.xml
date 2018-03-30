@@ -622,6 +622,18 @@
             </intent-filter>
         </service>
 
+        <service
+            android:name="zlonglove.cn.aidl.service.AidlService"
+            android:exported="false"
+            android:process=":aidl"></service>
+
+        <provider
+            android:name="zlonglove.cn.aidl.provider.CommonProvider"
+            android:authorities="zlonglove.cn.provider.commondb"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":aidl" />
+
         <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
         <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
         <service
@@ -851,16 +863,6 @@
         </activity>
         <activity
             android:name="com.ISHello.IOSDialog.iosDialogActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
-            android:theme="@style/V7AppTheme"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.ISHello.BarIndexLayout.barIndexLayoutActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/V7AppTheme"

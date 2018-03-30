@@ -7,6 +7,7 @@ import android.content.IntentFilter;
 import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
+import com.ISHello.Constants.Constants;
 import com.ISHello.Exception.CrashHandler;
 import com.ISHello.GesturePassword.Utils.LockPatternUtils;
 import com.ISHello.ImageLoader.implement.ImageLoader;
@@ -50,13 +51,15 @@ public class BaseApplication extends MultiDexApplication {
         mLockPatternUtils = new LockPatternUtils(this);
         CrashHandler handler = CrashHandler.getInstance();
         handler.init(this);
-        Log.d(TAG, "--->Process Name==" + ProcessUtil.getProcessName(getApplicationContext()));
+        final String ProcessName = ProcessUtil.getProcessName(getApplicationContext());
+        Log.i(TAG, "--->Process Name==" + ProcessName);
         // 在Appliction里面设置我们的异常处理器为UncaughtExceptionHandler处理器
-        if (OTHER_PROCESS.equals(ProcessUtil.getProcessName(this))) {
+        if (OTHER_PROCESS.equals(ProcessName)) {
             Log.i(TAG, "--->myProcess Process init");
             //ProcessCore.initialize(this);
+        } else if (Constants.PUSH_PROCESS.equals(ProcessName)) {
+            Log.i(TAG, "--->AIDL Process init");
         }
-
         receiver = new LockScreenReceiver();
         filter = new IntentFilter();
         filter.addAction(Intent.ACTION_SCREEN_OFF);
