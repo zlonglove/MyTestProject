@@ -5,8 +5,7 @@
         android:allowBackup="true"
         android:supportsRtl="true">
         <activity
-            android:name=".activity.barIndexLayoutActivity"
-            android:theme="@style/AppTheme">
+            android:name=".activity.barIndexLayoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 

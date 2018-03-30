@@ -103,8 +103,11 @@ import com.in.zlonglove.commonutil.ui.dialog.IDialogResultListener;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.lsp.RulerTestActivity;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
+import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.ui.marqueeview.MarqueeViewActivity;
-import com.yalantis.phoenix.PullToRefreshView;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
@@ -148,7 +151,7 @@ public class MainActivity extends BaseActivity {
 
     private Dialog NoLinkDialog;
     private PopMenu mPopMenu;
-    private PullToRefreshView mPullToRefreshView;
+    private SmartRefreshLayout mPullToRefreshView;
     private List<String> listData;
 
     @Override
@@ -643,19 +646,29 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        mPullToRefreshView = (PullToRefreshView) findViewById(R.id.pull_to_refresh_main);
-        mPullToRefreshView.setOnRefreshListener(new PullToRefreshView.OnRefreshListener() {
+        mPullToRefreshView = (SmartRefreshLayout) findViewById(R.id.pull_to_refresh_main);
+        mPullToRefreshView.setOnRefreshListener(new OnRefreshListener() {
             @Override
-            public void onRefresh() {
-                mPullToRefreshView.postDelayed(new Runnable() {
+            public void onRefresh(RefreshLayout refreshlayout) {
+                Log.i(TAG, "--->onRefresh()");
+                handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        mPullToRefreshView.setRefreshing(false);
-                        if (mPopMenu != null && !mPopMenu.isShowing()) {
-                            mPopMenu.show();
-                        }
+                        refreshlayout.finishRefresh();
                     }
-                }, 2000);
+                }, 5000);
+            }
+        });
+
+        mPullToRefreshView.setOnLoadmoreListener(new OnLoadmoreListener() {
+            @Override
+            public void onLoadmore(RefreshLayout refreshlayout) {
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        refreshlayout.finishLoadmoreWithNoMoreData();
+                    }
+                }, 3000);
             }
         });
     }

@@ -6,8 +6,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true">
         <activity
-            android:name=".activity.JNIActivity"
-            android:theme="@style/AppTheme">
+            android:name=".activity.JNIActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 

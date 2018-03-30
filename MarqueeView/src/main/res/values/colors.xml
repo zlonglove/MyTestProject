@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <color name="colorPrimary">#ff5555</color>
-    <color name="colorPrimaryDark">#ff5555</color>
-    <color name="colorAccent">#ff5555</color>
-
+    
     <color name="white">#FFFFFF</color>  <!-- 白色 -->
     <color name="yellow">#FFFF00</color> <!-- 黄色 -->
     <color name="gold">#FFD700</color>   <!-- 金色 -->

@@ -5,12 +5,10 @@
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/PayKeyboardAppTheme">
+        android:supportsRtl="true">
         <activity
             android:name=".safePay.PayKeyboardActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/PayKeyboardAppTheme">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 

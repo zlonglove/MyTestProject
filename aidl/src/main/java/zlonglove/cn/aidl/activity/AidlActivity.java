@@ -10,8 +10,10 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 
 import zlonglove.cn.aidl.R;
@@ -21,7 +23,7 @@ import zlonglove.cn.aidl.service.AidlService;
 
 public class AidlActivity extends AppCompatActivity {
     private final String TAG = AidlActivity.class.getSimpleName();
-
+    private Toolbar toolbar;
     private IMyAidlInterface iMyAidlInterface;
 
     private Button aidlInsert;
@@ -35,13 +37,14 @@ public class AidlActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_aidl);
-        setTitle("进程间通讯");
         findViews();
         initView();
     }
 
     private void findViews() {
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         aidlInsert = (Button) findViewById(R.id.aidl_insert);
         aidlModify = (Button) findViewById(R.id.aidl_modify);
         aidlDelete = (Button) findViewById(R.id.aidl_delete);
@@ -49,6 +52,15 @@ public class AidlActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        //设置导航图标要在setSupportActionBar方法之后
+        setSupportActionBar(toolbar);
+        //toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         aidlInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

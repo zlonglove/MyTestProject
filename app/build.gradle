@@ -114,7 +114,7 @@ dependencies {
     compile files('libs/wechat-sdk-android-with-mta-1.3.4.jar')
     compile files('libs/timeselector-1.1.3-sources.jar')
     compile files('libs/commons-codec-1.10-sources.jar')
-    compile 'com.yalantis:phoenix:1.2.3'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
     compile rootProject.ext.dependencies.eventbus
     compile rootProject.ext.dependencies.multidex
     implementation project(':downloadfile')

@@ -7,8 +7,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true">
         <activity
-            android:name=".ui.BottomNavigationActivity"
-            android:theme="@style/AppTheme">
+            android:name=".ui.BottomNavigationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 

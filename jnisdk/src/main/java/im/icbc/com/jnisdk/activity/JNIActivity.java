@@ -4,8 +4,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 
 import java.util.ArrayList;
@@ -18,10 +20,12 @@ import im.icbc.com.jnisdk.Student;
 public class JNIActivity extends AppCompatActivity {
     private final String TAG = JNIActivity.class.getSimpleName();
     private Button onStartButton;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_jni);
         Log.i(TAG, "--->CPU_ABI==" + Build.CPU_ABI);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -34,12 +38,20 @@ public class JNIActivity extends AppCompatActivity {
                 onStartClick();
             }
         });
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void getSupportABIList() {
-        String[] supportAbiList=Build.SUPPORTED_ABIS;
-        for (String supportAbi:supportAbiList) {
+        String[] supportAbiList = Build.SUPPORTED_ABIS;
+        for (String supportAbi : supportAbiList) {
             Log.i(TAG, "--->Support abis==" + supportAbi);
         }
     }
