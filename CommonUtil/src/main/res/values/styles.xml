@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <!--无ActionBar的AppTheme-->
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
     <style name="CommonUtil_Base_AlertDialog" parent="Base.Theme.AppCompat.Light.Dialog">
 
         <!--不设置在6.0以上会出现，宽度不充满屏幕的情况-->
