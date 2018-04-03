@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCodeBaseActivity
+        versionName rootProject.ext.android.versionName
+    }
+
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile rootProject.ext.dependencies.appcompatV7
+
+    provided 'com.android.support:support-annotations:25.3.1'
+    provided('com.android.support:support-v4:25.3.1') {
+        exclude group: 'com.android.support'
+    }
+    provided('com.android.support:recyclerview-v7:25.3.1') {
+        exclude group: 'com.android.support'
+    }
+    provided('com.android.support:design:25.3.1') {
+        exclude group: 'com.android.support'
+    }
+}

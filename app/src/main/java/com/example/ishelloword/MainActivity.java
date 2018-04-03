@@ -105,7 +105,7 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.lsp.RulerTestActivity;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
-import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
+import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.ui.marqueeview.MarqueeViewActivity;
 
@@ -660,13 +660,13 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        mPullToRefreshView.setOnLoadmoreListener(new OnLoadmoreListener() {
+        mPullToRefreshView.setOnLoadMoreListener(new OnLoadMoreListener() {
             @Override
-            public void onLoadmore(RefreshLayout refreshlayout) {
+            public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        refreshlayout.finishLoadmoreWithNoMoreData();
+                        mPullToRefreshView.finishLoadMoreWithNoMoreData();
                     }
                 }, 3000);
             }
