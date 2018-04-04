@@ -153,6 +153,7 @@ public class MainActivity extends BaseActivity {
     private PopMenu mPopMenu;
     private SmartRefreshLayout mPullToRefreshView;
     private List<String> listData;
+    private TextView main_toolbar_title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -560,6 +561,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initUI() {
+        main_toolbar_title = (TextView) findViewById(R.id.main_toolbar_title);
         listData = new ArrayList<>();
         listData = Arrays.asList(getResources().getStringArray(R.array.main_item_table));
         ListView listView = (ListView) findViewById(R.id.list_view_main);
@@ -650,25 +652,17 @@ public class MainActivity extends BaseActivity {
         mPullToRefreshView.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
-                Log.i(TAG, "--->onRefresh()");
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        refreshlayout.finishRefresh();
-                    }
-                }, 5000);
+                Log.i(TAG, "--->onRefresh()==" + Thread.currentThread().getName());
+                refreshlayout.finishRefresh(2000, true);//传入false表示刷新失败
+                main_toolbar_title.setText("刷新");
             }
         });
 
         mPullToRefreshView.setOnLoadMoreListener(new OnLoadMoreListener() {
             @Override
             public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mPullToRefreshView.finishLoadMoreWithNoMoreData();
-                    }
-                }, 3000);
+                Log.i(TAG, "--->onLoadMore()==" + Thread.currentThread().getName());
+                refreshLayout.finishLoadMore(2000, true, true);
             }
         });
     }

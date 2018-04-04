@@ -14,11 +14,20 @@ import com.ISHello.ImageLoader.implement.ImageLoader;
 import com.ISHello.ImageLoader.implement.ImageLoaderConfiguration;
 import com.ISHello.utils.ContextUtils;
 import com.ISHello.utils.ProcessUtil;
+import com.example.ishelloword.R;
 import com.in.zlonglove.commonutil.BuildConfig;
 import com.in.zlonglove.commonutil.Utils;
 import com.in.zlonglove.commonutil.klog.KLog;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreator;
+import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreator;
+import com.scwang.smartrefresh.layout.api.RefreshFooter;
+import com.scwang.smartrefresh.layout.api.RefreshHeader;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
+import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 
 import cn.jpush.android.api.JPushInterface;
 
@@ -37,6 +46,34 @@ public class BaseApplication extends MultiDexApplication {
 
     LockScreenReceiver receiver;
     IntentFilter filter;
+
+    /**
+     *  static 代码段可以防止内存泄露
+     */
+    static {
+        /**
+         * 设置全局的Header构建器
+         */
+        SmartRefreshLayout.setDefaultRefreshHeaderCreator(new DefaultRefreshHeaderCreator() {
+            @Override
+            public RefreshHeader createRefreshHeader(Context context, RefreshLayout layout) {
+                layout.setPrimaryColorsId(R.color.colorPrimary, android.R.color.white);//全局设置主题颜色
+                return new ClassicsHeader(context);//.setTimeFormat(new DynamicTimeFormat("更新于 %s"));//指定为经典Header,默认是贝塞尔雷达Header
+            }
+        });
+        /**
+         * 设置全局的Footer构建器
+         */
+        SmartRefreshLayout.setDefaultRefreshFooterCreator(new DefaultRefreshFooterCreator() {
+            @Override
+            public RefreshFooter createRefreshFooter(Context context, RefreshLayout layout) {
+                /**
+                 * 指定为经典Footer，默认是 BallPulseFooter
+                 */
+                return new ClassicsFooter(context).setDrawableSize(20);
+            }
+        });
+    }
 
     public static BaseApplication getInstance() {
         return instance;
@@ -107,15 +144,15 @@ public class BaseApplication extends MultiDexApplication {
         //config.tasksProcessingOrder(QueueProcessingType.LIFO);
         //config.writeDebugLogs(); // Remove for release app
 
-        // Initialize ImageLoader with configuration.
+        //Initialize ImageLoader with configuration.
         ImageLoader.getInstance().init(config.build());
     }
 
     public void initImageLoader(Context context) {
         // This configuration tuning is custom. You can tune every option, you may tune some of them,
         // or you can create default configuration by
-        //  ImageLoaderConfiguration.createDefault(this);
-        // method.
+        // ImageLoaderConfiguration.createDefault(this);
+
         com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder config = new com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder(context);
         config.threadPriority(Thread.NORM_PRIORITY - 2);
         config.denyCacheImageMultipleSizesInMemory();

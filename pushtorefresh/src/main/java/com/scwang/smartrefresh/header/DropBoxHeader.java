@@ -36,8 +36,6 @@ import zlonglove.cn.pushtorefresh.R;
  */
 
 public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
-
-    //<editor-fold desc="Field">
     protected Path mPath;
     protected Paint mPaint;
     protected BoxBody mBoxBody;
@@ -52,9 +50,7 @@ public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
     protected ValueAnimator mReboundAnimator;
     protected ValueAnimator mDropOutAnimator;
     protected RefreshState mState;
-    //</editor-fold>
 
-    //<editor-fold desc="View">
     public DropBoxHeader(Context context) {
         this(context, null);
     }
@@ -247,7 +243,6 @@ public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
         super.dispatchDraw(canvas);
     }
 
-    //</editor-fold>
 
     //<editor-fold desc="路径绘制">
     private int generateSideLength() {
