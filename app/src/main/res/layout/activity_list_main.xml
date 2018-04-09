@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:text="首页"
             android:textColor="#ffffff"
-            android:textSize="11sp" />
+            android:textSize="18sp" />
     </android.support.v7.widget.Toolbar>
 
     <com.scwang.smartrefresh.layout.SmartRefreshLayout

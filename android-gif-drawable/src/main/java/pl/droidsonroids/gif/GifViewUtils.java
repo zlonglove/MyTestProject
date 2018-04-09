@@ -59,7 +59,7 @@ final class GifViewUtils {
 				}
 				return true;
 			} catch (IOException | Resources.NotFoundException ignored) {
-				//ignored
+				ignored.printStackTrace();
 			}
 		}
 		return false;
@@ -71,7 +71,7 @@ final class GifViewUtils {
 				imageView.setImageDrawable(new GifDrawable(imageView.getContext().getContentResolver(), uri));
 				return true;
 			} catch (IOException ignored) {
-				//ignored
+				ignored.printStackTrace();
 			}
 		}
 		return false;
