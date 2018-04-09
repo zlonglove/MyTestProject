@@ -1,3 +1,0 @@
-/Users/zhanglong/Android/project/FirstAndroidProject/android-gif-drawable/.externalNativeBuild/cmake/debug/mips/CMakeFiles/edit_cache.dir
-/Users/zhanglong/Android/project/FirstAndroidProject/android-gif-drawable/.externalNativeBuild/cmake/debug/mips/CMakeFiles/rebuild_cache.dir
-/Users/zhanglong/Android/project/FirstAndroidProject/android-gif-drawable/.externalNativeBuild/cmake/debug/mips/CMakeFiles/pl_droidsonroids_gif.dir
