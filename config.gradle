@@ -40,6 +40,7 @@ ext {
             rxjava                  : "io.reactivex.rxjava2:rxjava:${rootProject.rxjava}",
             rxjava_android          : "io.reactivex.rxjava2:rxandroid:${rootProject.rxjava_android}",
             eventbus                : "org.greenrobot:eventbus:${rootProject.eventbus}",
-            multidex                : "com.android.support:multidex:${rootProject.multidex}"
+            multidex                : "com.android.support:multidex:${rootProject.multidex}",
+            annotations             : "com.android.support:support-annotations:${rootProject.supportLibraryVersion}"
     ]
 }

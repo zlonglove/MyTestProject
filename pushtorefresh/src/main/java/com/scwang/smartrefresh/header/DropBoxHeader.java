@@ -215,12 +215,12 @@ public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
 
             final float percent1 = Math.min(mDropOutPercent, 1);
             Rect bounds1 = mDrawable1.getBounds();
-            bounds1.offsetTo(width / 2 - bounds1.width() / 2, (int)((body.boxCenterY - bounds1.height() / 2 + bounds1.height()) * percent1) - bounds1.height());
+            bounds1.offsetTo(width / 2 - bounds1.width() / 2, (int) ((body.boxCenterY - bounds1.height() / 2 + bounds1.height()) * percent1) - bounds1.height());
             mDrawable1.draw(canvas);
 
             final float percent2 = Math.min(Math.max(mDropOutPercent - 1, 0), 1);
             Rect bounds2 = mDrawable2.getBounds();
-            bounds2.offsetTo(width / 2 - bounds2.width() / 2, (int)((body.boxCenterY - bounds2.height() / 2 + bounds2.height()) * percent2) - bounds2.height());
+            bounds2.offsetTo(width / 2 - bounds2.width() / 2, (int) ((body.boxCenterY - bounds2.height() / 2 + bounds2.height()) * percent2) - bounds2.height());
             mDrawable2.draw(canvas);
 
             final float percent3 = Math.min(Math.max(mDropOutPercent - 2, 0), 1);
@@ -379,8 +379,9 @@ public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
      * @param colors 对应Xml中配置的 srlPrimaryColor srlAccentColor
      * @deprecated 请使用 {@link RefreshLayout#setPrimaryColorsId(int...)}
      */
-    @Override@Deprecated
-    public void setPrimaryColors(@ColorInt int ... colors) {
+    @Override
+    @Deprecated
+    public void setPrimaryColors(@ColorInt int... colors) {
         if (colors.length > 0) {
             final View thisView = this;
             thisView.setBackgroundColor(colors[0]);
