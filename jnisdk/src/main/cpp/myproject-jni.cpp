@@ -242,13 +242,11 @@ Java_im_icbc_com_jnisdk_Native_JNI_setStudentInfo(JNIEnv *env, jobject thiz, job
         return;
     }
     jfieldID ageFieldID = env->GetFieldID(stu_cls, "age", "I");
-    jfieldID nameFieldID = env->GetFieldID(stu_cls, "name",
-                                           "Ljava/lang/String;");
+    jfieldID nameFieldID = env->GetFieldID(stu_cls, "name", "Ljava/lang/String;");
     jint age = env->GetIntField(obj, ageFieldID);
     jstring name = (jstring) env->GetObjectField(obj, nameFieldID);
 
-    jmethodID toStringMethodID = env->GetMethodID(stu_cls, "toString",
-                                                  "()Ljava/lang/String;");
+    jmethodID toStringMethodID = env->GetMethodID(stu_cls, "toString", "()Ljava/lang/String;");
     jstring toString = (jstring) env->CallObjectMethod(obj, toStringMethodID);
 
     const char *c_name = env->GetStringUTFChars(name, NULL);
@@ -482,8 +480,7 @@ void *callBack(void *arg) {
         (env)->CallVoidMethod(globalObject, mid, param);
 
 
-        mid = env->GetStaticMethodID(globalClass, "callBackFromJNI",
-                                     "(ILjava/lang/String;Ljava/lang/String;)V");
+        mid = env->GetStaticMethodID(globalClass, "callBackFromJNI", "(ILjava/lang/String;Ljava/lang/String;)V");
         if (mid == NULL) {
             LOGE("%s get callBackFromJNI() method ID error", LOG);
             goto err;
