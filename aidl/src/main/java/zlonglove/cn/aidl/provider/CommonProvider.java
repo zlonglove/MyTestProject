@@ -54,7 +54,7 @@ public class CommonProvider extends ContentProvider {
     @Nullable
     @Override
     public Cursor query(@NonNull Uri uri, @Nullable String[] projection, @Nullable String selection, @Nullable String[] selectionArgs, @Nullable String sortOrder) {
-       Log.i(TAG,"--->query() Uri=="+uri.toString());
+        Log.i(TAG, "--->query() Uri==" + uri.toString());
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
         switch (sUriMatcher.match(uri)) {
             case COLLECTION_INDICATOR:
@@ -89,7 +89,7 @@ public class CommonProvider extends ContentProvider {
     @Nullable
     @Override
     public String getType(@NonNull Uri uri) {
-        Log.i(TAG,"--->getType() Uri=="+uri.toString());
+        Log.i(TAG, "--->getType() Uri==" + uri.toString());
         switch (sUriMatcher.match(uri)) {
             case COLLECTION_INDICATOR:
                 return CommonProviderMetaData.NoteTableMetaData.CONTENT_TYPE;
@@ -122,6 +122,7 @@ public class CommonProvider extends ContentProvider {
 
     @Override
     public int delete(@NonNull Uri uri, @Nullable String selection, @Nullable String[] selectionArgs) {
+        Log.i(TAG, "--->delete() uri==" + uri.toString());
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
         int count = -1;
         /*switch (sUriMatcher.match(uri)) {

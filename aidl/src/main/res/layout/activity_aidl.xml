@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:text="进程间通讯"
             android:textColor="#ffffff"
-            android:textSize="11sp" />
+            android:textSize="18sp" />
     </android.support.v7.widget.Toolbar>
 
     <Button

@@ -80,5 +80,6 @@
         <item>DialogActivity</item>
         <item>ResideMenu</item>
         <item>进程通讯</item>
+        <item>文件选择器</item>
     </string-array>
 </resources>

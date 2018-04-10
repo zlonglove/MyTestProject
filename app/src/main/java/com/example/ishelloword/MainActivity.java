@@ -68,6 +68,7 @@ import com.ISHello.IOSDialog.iosDialogActivity;
 import com.ISHello.ISNotification.ISNotification;
 import com.ISHello.ImageEditor.ImageEditorActivity;
 import com.ISHello.Manager.ThreadPoolManager;
+import com.ISHello.Map.CheckPermissionsActivity;
 import com.ISHello.Map.Location_Activity;
 import com.ISHello.Module.BarInfoModel;
 import com.ISHello.Module.CityModule;
@@ -83,7 +84,6 @@ import com.ISHello.Update.ISUpdateActivity;
 import com.ISHello.UserInfo.ISUserInfo;
 import com.ISHello.ViewPage.ViewPagerActivity;
 import com.ISHello.XmlManager.xmlManager;
-import com.ISHello.base.base.BaseActivity;
 import com.ISHello.getPackageInfo.ISPackageInfo;
 import com.ISHello.logger.Logger;
 import com.ISHello.preference.FragmentPreferences;
@@ -100,6 +100,8 @@ import com.in.zlonglove.commonutil.StringUtils;
 import com.in.zlonglove.commonutil.ui.dialog.CommonDialogFragment;
 import com.in.zlonglove.commonutil.ui.dialog.DialogFragmentHelper;
 import com.in.zlonglove.commonutil.ui.dialog.IDialogResultListener;
+import com.leon.lfilepickerlibrary.LFilePicker;
+import com.leon.lfilepickerlibrary.utils.Constant;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.lsp.RulerTestActivity;
@@ -135,7 +137,7 @@ import zlonglove.cn.tabswitch.ui.BottomNavigationActivity;
 /**
  * @author zhanglong
  */
-public class MainActivity extends BaseActivity {
+public class MainActivity extends CheckPermissionsActivity {
     private final String TAG = "MainActivity";
     private AsyncHttpClient asyncHttpClient;
 
@@ -154,6 +156,7 @@ public class MainActivity extends BaseActivity {
     private SmartRefreshLayout mPullToRefreshView;
     private List<String> listData;
     private TextView main_toolbar_title;
+    private int REQUESTCODE_FROM_ACTIVITY = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -642,6 +645,9 @@ public class MainActivity extends BaseActivity {
                     case 23:
                         gotoAidlActivity();
                         break;
+                    case 24:
+                        gotoFilePicker();
+                        break;
                     default:
                         break;
                 }
@@ -904,6 +910,33 @@ public class MainActivity extends BaseActivity {
         Intent intent = new Intent(MainActivity.this, AidlActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
+
+    public void gotoFilePicker() {
+        //返回图标风格
+        final int BACKICON_STYLEONE = 0;
+        final int BACKICON_STYLETWO = 1;
+        final int BACKICON_STYLETHREE = 2;
+        //图标风格
+        final int ICON_STYLE_YELLOW = 0;
+        final int ICON_STYLE_BLUE = 1;
+        final int ICON_STYLE_GREEN = 2;
+
+        new LFilePicker()
+                .withActivity(this)
+                .withRequestCode(REQUESTCODE_FROM_ACTIVITY)
+                .withTitle("文件选择")
+                .withIconStyle(ICON_STYLE_GREEN)
+                .withBackIcon(BACKICON_STYLETHREE)
+                .withMutilyMode(false)
+                .withMaxNum(2)
+                .withStartPath("/storage/emulated/0/Download")//指定初始显示路径
+                .withNotFoundBooks("至少选择一个文件")
+                .withIsGreater(false)//过滤文件大小 小于指定大小的文件
+                .withFileSize(500 * 1024)//指定文件大小为500K
+                .withChooseMode(false)//文件夹选择模式
+                //.withFileFilter(new String[]{"txt", "png", "docx"})
+                .start();
     }
 
     public void gotoFileDownload() {
@@ -1417,5 +1450,22 @@ public class MainActivity extends BaseActivity {
                 Log.e(TAG, "--->onFailure==" + statusCode + " message==" + e.getMessage());
             }
         };
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            if (requestCode == REQUESTCODE_FROM_ACTIVITY) {
+                List<String> list = data.getStringArrayListExtra(Constant.RESULT_INFO);
+                //for (String s : list) {
+                //    Toast.makeText(getApplicationContext(), s, Toast.LENGTH_SHORT).show();
+                //}
+//                Toast.makeText(getApplicationContext(), "选中了" + list.size() + "个文件", Toast.LENGTH_SHORT).show();
+                String path = data.getStringExtra("path");
+                Toast.makeText(getApplicationContext(), "选中的路径为" + path, Toast.LENGTH_SHORT).show();
+                Log.i("LeonFilePicker", path);
+            }
+        }
     }
 }

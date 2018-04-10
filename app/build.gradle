@@ -134,4 +134,5 @@ dependencies {
     implementation project(':aidl')
     implementation project(':pushtorefresh')
     implementation project(':android-gif-drawable')
+    implementation project(':lfilepickerlibrary')
 }
