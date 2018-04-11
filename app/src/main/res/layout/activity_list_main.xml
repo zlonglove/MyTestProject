@@ -44,15 +44,15 @@
             app:srlTextSizeTitle="16sp"
             app:srlTextTimeMarginTop="2dp" />-->
 
-        <!--<com.scwang.smartrefresh.header.DropBoxHeader
+        <com.scwang.smartrefresh.header.DropBoxHeader
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />-->
+            android:layout_height="wrap_content" />
 
-        <pl.droidsonroids.gif.GifImageView
+        <!--<pl.droidsonroids.gif.GifImageView
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/gif_header_repast" />
+            android:src="@drawable/gif_header_repast" />-->
 
         <ListView
             android:id="@+id/list_view_main"
