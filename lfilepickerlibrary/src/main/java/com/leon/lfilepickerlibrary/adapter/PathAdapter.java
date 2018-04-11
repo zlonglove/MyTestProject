@@ -54,7 +54,7 @@ public class PathAdapter extends RecyclerView.Adapter<PathAdapter.PathViewHolder
 
     @Override
     public PathViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = View.inflate(mContext, R.layout.file_picker_list_item, null);
+        View view = View.inflate(mContext, R.layout.item_file_picker_list, null);
         PathViewHolder pathViewHolder = new PathViewHolder(view);
         return pathViewHolder;
     }

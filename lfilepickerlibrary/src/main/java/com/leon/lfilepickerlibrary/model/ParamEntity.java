@@ -3,7 +3,6 @@ package com.leon.lfilepickerlibrary.model;
 import java.io.Serializable;
 
 /**
- * 作者：Leon
  * 时间：2017/3/21 14:50
  */
 public class ParamEntity implements Serializable {

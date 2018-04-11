@@ -10,7 +10,6 @@ import com.leon.lfilepickerlibrary.model.ParamEntity;
 import com.leon.lfilepickerlibrary.ui.LFilePickerActivity;
 
 /**
- * 作者：Leon
  * 时间：2017/3/20 16:57
  */
 public class LFilePicker {
