@@ -16,6 +16,7 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 
+import com.ISHello.base.base.BaseActivity;
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
@@ -33,10 +34,7 @@ import com.example.ishelloword.R;
  * @文件名称: Hight_Accuracy_Activity.java
  * @类型名称: Hight_Accuracy_Activity
  */
-public class Location_Activity extends CheckPermissionsActivity
-        implements
-        OnCheckedChangeListener,
-        OnClickListener {
+public class Location_Activity extends BaseActivity implements OnCheckedChangeListener, OnClickListener {
     private RadioGroup rgLocationMode;
     private EditText etInterval;
     private EditText etHttpTimeout;
