@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,6 +27,9 @@ import com.leon.lfilepickerlibrary.widget.EmptyRecyclerView;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class LFilePickerActivity extends AppCompatActivity {
@@ -75,6 +79,8 @@ public class LFilePickerActivity extends AppCompatActivity {
         mRecylerView.setAdapter(mPathAdapter);
         mRecylerView.setmEmptyView(mEmptyView);
         initListener();
+
+        intComparator();
     }
 
     /**
@@ -336,4 +342,22 @@ public class LFilePickerActivity extends AppCompatActivity {
         }
     }
 
+    private void intComparator() {
+        List<Integer> list = Arrays.asList(1, 3, 2, 5, 9, 7, 6, 4, 8);
+        Collections.sort(list, new intComparator());
+        Log.i(TAG, "--->" + list.toString());
+    }
+
+    public class intComparator implements Comparator<Integer> {
+        @Override
+        public int compare(Integer o1, Integer o2) {
+            if (o1 == o2) {
+                return 0;
+            } else if (o1 > o2) {
+                return 1;//升序,1[o1和o2交换，大的数值o2换到前面]
+            } else {
+                return -1;
+            }
+        }
+    }
 }

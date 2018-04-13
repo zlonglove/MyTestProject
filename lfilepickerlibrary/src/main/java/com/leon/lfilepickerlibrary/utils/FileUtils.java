@@ -1,18 +1,15 @@
 package com.leon.lfilepickerlibrary.utils;
 
-import android.util.Log;
 
 import java.io.File;
 import java.io.FileFilter;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
 /**
- * Created by Dimorinny on 24.10.15.
  */
 public class FileUtils {
     public static List<File> getFileListByDirPath(String path, FileFilter filter) {

@@ -7,7 +7,6 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * 作者：Leon
  * 时间：2017/3/17 13:44
  */
 public class EmptyRecyclerView extends RecyclerView {

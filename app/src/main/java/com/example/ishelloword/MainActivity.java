@@ -102,6 +102,7 @@ import com.in.zlonglove.commonutil.ui.dialog.DialogFragmentHelper;
 import com.in.zlonglove.commonutil.ui.dialog.IDialogResultListener;
 import com.leon.lfilepickerlibrary.LFilePicker;
 import com.leon.lfilepickerlibrary.utils.Constant;
+import com.leon.lfilepickerlibrary.utils.FileUtils;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.lsp.RulerTestActivity;
@@ -913,6 +914,8 @@ public class MainActivity extends CheckPermissionsActivity {
     }
 
     public void gotoFilePicker() {
+        String size = FileUtils.getReadableFileSize(1024);
+        Log.i(TAG, "--->size==" + size);
         //返回图标风格
         final int BACKICON_STYLEONE = 0;
         final int BACKICON_STYLETWO = 1;
@@ -921,20 +924,20 @@ public class MainActivity extends CheckPermissionsActivity {
         final int ICON_STYLE_YELLOW = 0;
         final int ICON_STYLE_BLUE = 1;
         final int ICON_STYLE_GREEN = 2;
-
+        String startPath = Environment.getExternalStorageDirectory().getPath();
         new LFilePicker()
                 .withActivity(this)
                 .withRequestCode(REQUESTCODE_FROM_ACTIVITY)
                 .withTitle("文件选择")
-                .withIconStyle(ICON_STYLE_GREEN)
+                .withIconStyle(ICON_STYLE_YELLOW)
                 .withBackIcon(BACKICON_STYLETHREE)
-                .withMutilyMode(false)
+                .withMutilyMode(true)
                 .withMaxNum(2)
-                .withStartPath("/storage/emulated/0/Download")//指定初始显示路径
+                .withStartPath(startPath + "/Download")//指定初始显示路径
                 .withNotFoundBooks("至少选择一个文件")
                 .withIsGreater(false)//过滤文件大小 小于指定大小的文件
                 .withFileSize(500 * 1024)//指定文件大小为500K
-                .withChooseMode(false)//文件夹选择模式
+                .withChooseMode(true)//文件夹选择模式
                 //.withFileFilter(new String[]{"txt", "png", "docx"})
                 .start();
     }
