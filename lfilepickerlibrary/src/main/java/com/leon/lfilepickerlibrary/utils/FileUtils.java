@@ -12,14 +12,21 @@ import java.util.List;
 /**
  */
 public class FileUtils {
+    /**
+     * 获取当前路径下的符合FileFilter的文件列表，并进行排序
+     *
+     * @param path   路径
+     * @param filter 过滤器
+     * @return
+     */
     public static List<File> getFileListByDirPath(String path, FileFilter filter) {
         File directory = new File(path);
         File[] files = directory.listFiles(filter);
-        List<File> result = new ArrayList<>();
         if (files == null) {
             return new ArrayList<>();
         }
 
+        List<File> result = new ArrayList<>();
         for (int i = 0; i < files.length; i++) {
             result.add(files[i]);
         }
@@ -62,8 +69,11 @@ public class FileUtils {
     /**
      * 根据地址获取当前地址下的所有目录和文件，并且排序,同时过滤掉不符合大小要求的文件
      *
-     * @param path
-     * @return List<File>
+     * @param path       路径
+     * @param filter     文件过滤
+     * @param isGreater  设置文件大小过滤方式：true：大于 ；false：小于，同时包含指定大小在内
+     * @param targetSize 过滤文件大小
+     * @return List<File> 返回符合条件的文件列表
      */
     public static List<File> getFileList(String path, FileFilter filter, boolean isGreater, long targetSize) {
         List<File> list = FileUtils.getFileListByDirPath(path, filter);

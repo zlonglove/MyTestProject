@@ -19,7 +19,6 @@ import java.io.FileFilter;
 import java.util.List;
 
 /**
- * 作者：Leon
  * 时间：2017/3/15 15:47
  */
 public class PathAdapter extends RecyclerView.Adapter<PathAdapter.PathViewHolder> {
