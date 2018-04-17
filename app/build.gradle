@@ -136,4 +136,5 @@ dependencies {
     implementation project(':pushtorefresh')
     implementation project(':android-gif-drawable')
     implementation project(':lfilepickerlibrary')
+    implementation project(':recyclerview')
 }

@@ -25,11 +25,6 @@ public class PathAdapter extends RecyclerView.Adapter<PathAdapter.PathViewHolder
     public interface OnItemClickListener {
         void click(int position);
     }
-
-    public interface OnCancelChoosedListener {
-        void cancelChoosed(CheckBox checkBox);
-    }
-
     private final String TAG = "FilePickerLeon";
     private List<File> mListData;
     private Context mContext;

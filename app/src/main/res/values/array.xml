@@ -81,5 +81,6 @@
         <item>ResideMenu</item>
         <item>进程通讯</item>
         <item>文件选择器</item>
+        <item>Recycler框架</item>
     </string-array>
 </resources>

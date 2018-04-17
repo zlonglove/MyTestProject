@@ -132,6 +132,7 @@ import im.icbc.com.popmenu.PopMenuItem;
 import im.icbc.com.popmenu.PopMenuItemListener;
 import zlonglove.cn.aidl.activity.AidlActivity;
 import zlonglove.cn.network.activity.OkHttpTestActivity;
+import zlonglove.cn.recyclerview.activity.RecyclerActivity;
 import zlonglove.cn.rxjava.RxJavaActivity;
 import zlonglove.cn.tabswitch.ui.BottomNavigationActivity;
 
@@ -649,6 +650,9 @@ public class MainActivity extends CheckPermissionsActivity {
                     case 24:
                         gotoFilePicker();
                         break;
+                    case 25:
+                        gotoRecycler();
+                        break;
                     default:
                         break;
                 }
@@ -940,6 +944,12 @@ public class MainActivity extends CheckPermissionsActivity {
                 .withChooseMode(true)//文件夹选择模式
                 //.withFileFilter(new String[]{"txt", "png", "docx"})
                 .start();
+    }
+
+    public void gotoRecycler(){
+        Intent intent = new Intent(MainActivity.this, RecyclerActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
     public void gotoFileDownload() {
