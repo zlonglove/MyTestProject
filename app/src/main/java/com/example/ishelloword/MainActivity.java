@@ -140,7 +140,7 @@ import zlonglove.cn.tabswitch.ui.BottomNavigationActivity;
  * @author zhanglong
  */
 public class MainActivity extends CheckPermissionsActivity {
-    private final String TAG = "MainActivity";
+    private final String TAG = "DropActivity";
     private AsyncHttpClient asyncHttpClient;
 
     enum Orientation {
@@ -1116,7 +1116,7 @@ public class MainActivity extends CheckPermissionsActivity {
      */
     public void UI(View view) {
         // LogUtil.log(TAG, "--->UI Button Click");
-        // Intent intent = new Intent(MainActivity.this, UIActivity.class);
+        // Intent intent = new Intent(DropActivity.this, UIActivity.class);
         // intent.setAction("android.intent.action.VIEW");
         // Uri uri =
         // Uri.parse("com.zhy.sample://params?startType=SHAREINJECT&data=123");

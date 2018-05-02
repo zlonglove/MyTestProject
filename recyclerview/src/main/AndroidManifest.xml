@@ -4,6 +4,7 @@
 
     <application>
         <activity android:name=".activity.RecyclerActivity"></activity>
+        <activity android:name="org.loader.dropedittext.DropActivity"></activity>
     </application>
 
 </manifest>

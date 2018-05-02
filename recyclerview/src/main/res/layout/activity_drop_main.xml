@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:drop="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    android:orientation="horizontal">
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="the dropMode is flower_parent :"
+        android:textColor="@android:color/white" />-->
+
+    <org.loader.view.DropEditText
+        android:id="@+id/drop_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        drop:drawableRight="@drawable/drop"
+        drop:dropMode="flow_parent"
+        drop:hint="DropEditText" />
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dip"
+        android:text="the dropMode is wrap_content :"
+        android:textColor="@android:color/white" />-->
+
+    <org.loader.view.DropEditText
+        android:id="@+id/drop_edit2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        drop:drawableRight="@drawable/drop"
+        drop:dropMode="wrap_content"
+        drop:hint="DropEditText" />
+
+</LinearLayout>

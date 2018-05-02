@@ -43,6 +43,7 @@ public class RecyclerActivity extends AppCompatActivity {
     }
 
     private void init() {
+        setTitle("Recycler测试");
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getBaseContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(linearLayoutManager);
@@ -55,7 +56,13 @@ public class RecyclerActivity extends AppCompatActivity {
             @Override
             public void onItemClick(View view, RecyclerView.ViewHolder holder, int position) {
                 Toast.makeText(RecyclerActivity.this, mStrings[position], Toast.LENGTH_SHORT).show();
+            }
+        });
+        adapter.setOnItemLongClickListener(new CommonAdapter.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(View view, RecyclerView.ViewHolder holder, int position) {
                 mRecyclerView.setAdapter(multiSetting());
+                return true;
             }
         });
         mRecyclerView.setAdapter(adapter);
