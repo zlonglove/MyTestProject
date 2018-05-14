@@ -5,6 +5,7 @@
     <application>
         <activity android:name=".activity.AdRecyclerViewActivity" />
         <activity android:name=".activity.AdRecyclerEditActivity"></activity>
+        <activity android:name=".activity.AdRecyclerSingleEditActivity"></activity>
     </application>
 
 </manifest>

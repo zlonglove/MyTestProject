@@ -72,7 +72,6 @@ public class AdRecyclerEditActivity extends AppCompatActivity implements MenuHea
         mListHeaderWrapper.setOnChildItemClickListener(new HeaderChildItemClickListener());
         mListHeaderWrapper.setOnDeleteClickListener(this);
         mListHeaderWrapper.addHeader(new EditItem(MenuHelper.GROUP_FAVORITE, getString(R.string.favorite), mFavList));
-        //mListHeaderWrapper.addHeader(new EditItem(MenuHelper.GROUP_FAVORITE, getString(R.string.favorite), mFavList));
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         mRecyclerView.setAdapter(mListHeaderWrapper);
     }

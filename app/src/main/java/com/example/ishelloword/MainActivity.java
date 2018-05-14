@@ -131,7 +131,7 @@ import im.icbc.com.popmenu.PopMenu;
 import im.icbc.com.popmenu.PopMenuItem;
 import im.icbc.com.popmenu.PopMenuItemListener;
 import zlonglove.cn.adrecyclerview.activity.AdRecyclerEditActivity;
-import zlonglove.cn.adrecyclerview.activity.AdRecyclerViewActivity;
+import zlonglove.cn.adrecyclerview.activity.AdRecyclerSingleEditActivity;
 import zlonglove.cn.aidl.activity.AidlActivity;
 import zlonglove.cn.network.activity.OkHttpTestActivity;
 import zlonglove.cn.recyclerview.activity.RecyclerActivity;
@@ -961,7 +961,7 @@ public class MainActivity extends CheckPermissionsActivity {
     }
 
     public void gotoAdRecycler(){
-        Intent intent = new Intent(MainActivity.this, AdRecyclerViewActivity.class);
+        Intent intent = new Intent(MainActivity.this, AdRecyclerSingleEditActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }

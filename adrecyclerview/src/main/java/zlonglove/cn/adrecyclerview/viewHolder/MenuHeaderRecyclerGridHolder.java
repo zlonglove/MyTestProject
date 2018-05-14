@@ -15,9 +15,7 @@ import zlonglove.cn.adrecyclerview.R;
  *     注意，一定要继承{@link AbstractDraggableItemViewHolder}或者照着这个类实现{@link com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemViewHolder}
  *     才能有拖拽效果
  * <p>
- * 作者:陈俊森
  * 创建时间:2017年11月03日 17:07
- * 邮箱:chenjunsen@outlook.com
  *
  * @version 1.0
  */
