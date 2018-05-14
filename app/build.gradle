@@ -137,4 +137,5 @@ dependencies {
     implementation project(':android-gif-drawable')
     implementation project(':lfilepickerlibrary')
     implementation project(':recyclerview')
+    implementation project(':adrecyclerview')
 }

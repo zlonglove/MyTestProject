@@ -1,0 +1,242 @@
+{
+  "favorite": [
+    {
+      "name": "长剑",
+      "icon": "ic_cold_2",
+      "desc": "寒冰长剑，无坚不摧",
+      "group": "cold_weapon"
+    },
+    {
+      "name": "狙击枪",
+      "icon": "ic_modern_5",
+      "desc": "百步，哦，不!我是万里穿杨",
+      "group": "modern_weapon"
+    },
+    {
+      "name": "左瞧瞧",
+      "icon": "ic_person_3",
+      "desc": "隔壁小梦的毽子飞到我家屋顶了，我去给她拿下来",
+      "group": "person"
+    },
+    {
+      "name": "跳跃",
+      "icon": "ic_person_15",
+      "desc": "旋转，跳跃，我闭着眼",
+      "group": "person"
+    },
+    {
+      "name": "医药包",
+      "icon": "ic_misc_2",
+      "desc": "受伤了怎么办,那就赶紧用我啊",
+      "group": "misc"
+    }
+  ],
+  "cold_weapon": [
+    {
+      "name": "匕首",
+      "icon": "ic_cold_1",
+      "desc": "传说的匕首,杀人于无形",
+      "group": "cold_weapon"
+    },
+    {
+      "name": "大锤",
+      "icon": "ic_cold_3",
+      "desc": "对，我不是那个王大锤，我是真的可以杀人的",
+      "group": "cold_weapon"
+    },
+    {
+      "name": "弓",
+      "icon": "ic_cold_4",
+      "desc": "大漠苍穹，金戈铁马,射大雕必备神器",
+      "group": "cold_weapon"
+    },
+    {
+      "name": "弩",
+      "icon": "ic_cold_5",
+      "desc": "冷兵器时代的冲锋枪",
+      "group": "cold_weapon"
+    },
+    {
+      "name": "矛",
+      "icon": "ic_cold_6",
+      "desc": "以子之矛,灭子之心。",
+      "group": "cold_weapon"
+    },
+    {
+      "name": "法杖",
+      "icon": "ic_cold_7",
+      "desc": "来自艾泽拉斯的勇气召唤",
+      "group": "cold_weapon"
+    }
+  ],
+  "modern_weapon": [
+    {
+      "name": "手枪",
+      "icon": "ic_modern_1",
+      "desc": "沙鹰的力量，等你见识到了，已经晚了",
+      "group": "modern_weapon"
+    },
+    {
+      "name": "霰弹枪",
+      "icon": "ic_modern_2",
+      "desc": "我读xian弹枪,不读san弹枪",
+      "group": "modern_weapon"
+    },
+    {
+      "name": "冲锋枪",
+      "icon": "ic_modern_3",
+      "desc": "古时候的弩是俺的祖先,但是俺的威力是他的1000倍",
+      "group": "modern_weapon"
+    },
+    {
+      "name": "自动步枪",
+      "icon": "ic_modern_4",
+      "desc": "威力与实力并存,人手一把，所向披靡",
+      "group": "modern_weapon"
+    },
+    {
+      "name": "火箭筒",
+      "icon": "ic_modern_6",
+      "desc": "没有事情是我一发炮弹不能解决的，如果有,那就再来一发",
+      "group": "modern_weapon"
+    }
+  ],
+  "misc": [
+    {
+      "name": "电池",
+      "icon": "ic_misc_1",
+      "desc": "妈妈再也不用担心我没电了",
+      "group": "misc"
+    },
+    {
+      "name": "化学药剂",
+      "icon": "ic_misc_3",
+      "desc": "毁尸灭迹,必备神药",
+      "group": "misc"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "盾",
+      "icon": "ic_eqt_1",
+      "desc": "我不仅扛魔,扛物理伤害,还能为你遮风挡雨",
+      "group": "equipment"
+    },
+    {
+      "name": "护甲",
+      "icon": "ic_eqt_2",
+      "desc": "百分百防御,天地无敌",
+      "group": "equipment"
+    },
+    {
+      "name": "钢盔",
+      "icon": "ic_eqt_3",
+      "desc": "我是硬,但是我内心温柔",
+      "group": "equipment"
+    },
+    {
+      "name": "护腕",
+      "icon": "ic_eqt_4",
+      "desc": "骑马,搬家，扛木头,哪里需要，哪里有我",
+      "group": "equipment"
+    },
+    {
+      "name": "靴子",
+      "icon": "ic_eqt_5",
+      "desc": "速度杠杠的。。。。。",
+      "group": "equipment"
+    },
+    {
+      "name": "背包",
+      "icon": "ic_eqt_6",
+      "desc": "看看有什么,咦,牛奶，番茄还有起司面包",
+      "group": "equipment"
+    }
+  ],
+  "person": [
+    {
+      "name": "爬梯子",
+      "icon": "ic_person_1",
+      "desc": "隔壁小梦的毽子飞到我家屋顶了，我去给她拿下来",
+      "group": "person"
+    },
+    {
+      "name": "右瞧瞧",
+      "icon": "ic_person_2",
+      "desc": "隔壁小梦的毽子飞到我家屋顶了，我去给她拿下来",
+      "group": "person"
+    },
+    {
+      "name": "360度旋转",
+      "icon": "ic_person_4",
+      "desc": "隔壁小梦的毽子飞到我家屋顶了，我去给她拿下来",
+      "group": "person"
+    },
+    {
+      "name": "顺时针",
+      "icon": "ic_person_5",
+      "desc": "隔壁小梦的毽子飞到我家屋顶了，我去给她拿下来",
+      "group": "person"
+    },
+    {
+      "name": "逆时针",
+      "icon": "ic_person_6",
+      "desc": "隔壁小梦的毽子飞到我家屋顶了，我去给她拿下来",
+      "group": "person"
+    },
+    {
+      "name": "往右",
+      "icon": "ic_person_7",
+      "desc": "隔壁小梦的毽子飞到我家屋顶了，我去给她拿下来",
+      "group": "person"
+    },
+    {
+      "name": "往左",
+      "icon": "ic_person_8",
+      "desc": "隔壁小梦的毽子飞到我家屋顶了，我去给她拿下来",
+      "group": "person"
+    },
+    {
+      "name": "往下",
+      "icon": "ic_person_9",
+      "desc": "隔壁小梦的毽子飞到我家屋顶了，我去给她拿下来",
+      "group": "person"
+    },
+    {
+      "name": "往上",
+      "icon": "ic_person_10",
+      "desc": "向前进，向前进",
+      "group": "person"
+    },
+    {
+      "name": "匍匐前进",
+      "icon": "ic_person_11",
+      "desc": "前面有个碉堡，我要炸了它",
+      "group": "person"
+    },
+    {
+      "name": "半跪",
+      "icon": "ic_person_12",
+      "desc": "请接受我的求婚，MyLove",
+      "group": "person"
+    },
+    {
+      "name": "行走",
+      "icon": "ic_person_13",
+      "desc": "我走的都比你跑的快",
+      "group": "person"
+    },
+    {
+      "name": "奔跑",
+      "icon": "ic_person_14",
+      "desc": "自由奔跑速度是方向,追逐雷和闪电的力量",
+      "group": "person"
+    },
+    {
+      "name": "瞬息移动",
+      "icon": "ic_person_16",
+      "desc": "虚无缥缈，凌波微步",
+      "group": "person"
+    }
+  ]
+}

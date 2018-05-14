@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">adRecyclerView</string>
+    <string name="favorite">最爱</string>
+    <string name="cold_weapon">冷兵器</string>
+    <string name="modern_weapon">现代武器</string>
+    <string name="misc">道具</string>
+    <string name="equipment">装备</string>
+    <string name="person">动作</string>
+</resources>

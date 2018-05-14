@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="zlonglove.cn.adrecyclerview">
+
+    <application>
+        <activity android:name=".activity.AdRecyclerViewActivity" />
+        <activity android:name=".activity.AdRecyclerEditActivity"></activity>
+    </application>
+
+</manifest>

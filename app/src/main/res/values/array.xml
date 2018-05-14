@@ -82,5 +82,7 @@
         <item>进程通讯</item>
         <item>文件选择器</item>
         <item>Recycler框架</item>
+        <item>高级Recycler</item>
+        <item>滑动Recycler</item>
     </string-array>
 </resources>

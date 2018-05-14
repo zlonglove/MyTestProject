@@ -1,0 +1,10 @@
+<resources>
+
+    <dimen name="width_menu_image_grid_func">40dp</dimen>
+    <dimen name="height_menu_image_grid_func">40dp</dimen>
+
+    <dimen name="height_menu_item_grid">60dp</dimen>
+    <dimen name="height_menu_item_grid_func">75dp</dimen>
+    <dimen name="height_menu_item_pager">150dp</dimen>
+
+</resources>
