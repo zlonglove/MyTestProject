@@ -51,13 +51,13 @@ public class AdRecyclerEditActivity extends AppCompatActivity implements MenuHea
     }
 
     private void initEvents() {
-        mFavList = MenuHelper.parseJSONData();
+        mFavList = MenuHelper.parseFavorite();
 
-        mColdList = MenuHelper.parseJSONData();
-        mModernList = MenuHelper.parseJSONData();
-        mMiscList = MenuHelper.parseJSONData();
-        mPersonList = MenuHelper.parseJSONData();
-        mEqtList = MenuHelper.parseJSONData();
+        mColdList = MenuHelper.parseColdWeapon();
+        mModernList = MenuHelper.parseModernWeapon();
+        mMiscList = MenuHelper.parseMisc();
+        mPersonList = MenuHelper.parsePerson();
+        mEqtList = MenuHelper.parseEquipment();
 
         mEditList = new ArrayList<>();
         mEditList.add(new EditItem(MenuHelper.GROUP_COLD_WEAPON, getString(R.string.cold_weapon), mColdList));
@@ -68,10 +68,12 @@ public class AdRecyclerEditActivity extends AppCompatActivity implements MenuHea
 
         mListAdapter = new MenuRecyclerListAdapter(mEditList);
         mListAdapter.setChildItemClickListener(new ListChildItemClickListener());
+
         mListHeaderWrapper = new MenuRecyclerListHeaderWrapper(mListAdapter);
         mListHeaderWrapper.setOnChildItemClickListener(new HeaderChildItemClickListener());
         mListHeaderWrapper.setOnDeleteClickListener(this);
         mListHeaderWrapper.addHeader(new EditItem(MenuHelper.GROUP_FAVORITE, getString(R.string.favorite), mFavList));
+
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         mRecyclerView.setAdapter(mListHeaderWrapper);
     }
@@ -79,9 +81,9 @@ public class AdRecyclerEditActivity extends AppCompatActivity implements MenuHea
     @Override
     protected void onDestroy() {
         mListHeaderWrapper.releaseDragManager();
-        /*if (mListHeaderWrapper.isHasDragChanged() || hasChangedListData) {
-            sendBroadcast(new Intent(Common.Notification.NOTIFY_REFRESH_MAIN_LIST_DATA));
-        }*/
+        if (mListHeaderWrapper.isHasDragChanged() || hasChangedListData) {
+            //sendBroadcast(new Intent(Common.Notification.NOTIFY_REFRESH_MAIN_LIST_DATA));
+        }
         super.onDestroy();
     }
 
@@ -102,13 +104,12 @@ public class AdRecyclerEditActivity extends AppCompatActivity implements MenuHea
     }
 
     private class ListChildItemClickListener implements OnRecyclerItemClickListener<MenuItem> {
-
         @Override
         public void onItemClick(View v, MenuItem item, int position, int segment) {
             Toast.makeText(AdRecyclerEditActivity.this, "往最爱里面添加" + item.getName(), Toast.LENGTH_SHORT).show();
             /*MenuHelper.addPreferFavoriteItem(item);
             MenuHelper.deleteItem(item.getGroup(), item);*/
-            //notifyFavDataAdded(item);
+            notifyFavDataAdded(item);
         }
     }
 

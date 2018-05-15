@@ -73,13 +73,13 @@ public class MenuRecyclerListHeaderWrapper extends BaseHeaderFooterRecyclerAdapt
         mDragDropManager.setInitiateOnLongPress(true);
         mDragDropManager.setOnItemDragEventListener(null);
         mDragDropManager.setInitiateOnMove(false);
-        mDragDropManager.setLongPressTimeout(750);
+        mDragDropManager.setLongPressTimeout(500);
         mDragDropManager.setOnItemDragEventListener(this);
         // setup dragging item effects (NOTE: DraggableItemAnimator is required)
-//        dragDropManager.setDragStartItemAnimationDuration(250);
-//        dragDropManager.setDraggingItemAlpha(0.8f);
+        //dragDropManager.setDragStartItemAnimationDuration(250);
+        //dragDropManager.setDraggingItemAlpha(0.8f);
         mDragDropManager.setDraggingItemScale(1.1f);
-//        dragDropManager.setDraggingItemRotation(15.0f);
+        //dragDropManager.setDraggingItemRotation(15.0f);
         dragAdapter =mDragDropManager.createWrappedAdapter(adapter);
         headerViewHolder.recyclerView.setAdapter(dragAdapter);
         headerViewHolder.recyclerView.setLayoutManager(new GridLayoutManager(headerViewHolder.recyclerView.getContext(),4));

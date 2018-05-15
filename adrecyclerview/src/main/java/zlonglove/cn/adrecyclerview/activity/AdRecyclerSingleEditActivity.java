@@ -10,18 +10,20 @@ import android.widget.Toast;
 import com.h6ah4i.android.widget.advrecyclerview.animator.DraggableItemAnimator;
 import com.h6ah4i.android.widget.advrecyclerview.animator.GeneralItemAnimator;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.RecyclerViewDragDropManager;
+import com.h6ah4i.android.widget.advrecyclerview.utils.WrapperAdapterUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import zlonglove.cn.adrecyclerview.R;
 import zlonglove.cn.adrecyclerview.adapter.MenuHeaderRecyclerGridAdapter;
+import zlonglove.cn.adrecyclerview.base.BaseRecyclerItem;
 import zlonglove.cn.adrecyclerview.base.OnRecyclerItemClickListener;
 import zlonglove.cn.adrecyclerview.entity.MenuItem;
 import zlonglove.cn.adrecyclerview.helper.MenuHelper;
 import zlonglove.cn.adrecyclerview.tools.ContextUtil;
 
-public class AdRecyclerSingleEditActivity extends AppCompatActivity implements OnRecyclerItemClickListener<MenuItem> {
+public class AdRecyclerSingleEditActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
 
@@ -48,7 +50,12 @@ public class AdRecyclerSingleEditActivity extends AppCompatActivity implements O
     private void initEvents() {
         initData();
         adapter = new MenuHeaderRecyclerGridAdapter(mFavList, mRecyclerView, true);
-        adapter.setOnRecyclerItemClickListener(this);
+        adapter.setOnRecyclerItemClickListener(new OnRecyclerItemClickListener() {
+            @Override
+            public void onItemClick(View v, BaseRecyclerItem item, int position, int segment) {
+                Toast.makeText(AdRecyclerSingleEditActivity.this, item.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
         adapter.setOnDeleteClickListener(new MenuHeaderRecyclerGridAdapter.OnDeleteClickListener() {
             @Override
             public void onDeleteClick(View v, MenuItem item, int position) {
@@ -100,11 +107,6 @@ public class AdRecyclerSingleEditActivity extends AppCompatActivity implements O
 
     }
 
-    @Override
-    public void onItemClick(View v, MenuItem item, int position, int segment) {
-        Toast.makeText(this, item.toString(), Toast.LENGTH_SHORT).show();
-    }
-
     /**
      * 初始化数据列表
      */
@@ -114,17 +116,33 @@ public class AdRecyclerSingleEditActivity extends AppCompatActivity implements O
         } else {
             mFavList = new ArrayList<>();
         }
-        mFavList.addAll(MenuHelper.parseJSONData());
+        mFavList.addAll(MenuHelper.parseFavorite());
     }
 
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        if (mDragDropManager != null) {
+            mDragDropManager.release();
+            mDragDropManager = null;
+        }
+
+        if (mRecyclerView != null) {
+            mRecyclerView.setItemAnimator(null);
+            mRecyclerView.setAdapter(null);
+            mRecyclerView = null;
+        }
+
+        if (dragAdapter != null) {
+            WrapperAdapterUtils.releaseAll(dragAdapter);
+            dragAdapter = null;
+        }
+        adapter = null;
     }
 
     private void notifyFavDataRemoved(MenuItem item) {
-        if(adapter!=null){
+        if (adapter != null) {
             adapter.getRecyclerItems().remove(item);
             adapter.notifyDataSetChanged();
         }

@@ -66,7 +66,7 @@ public class AdRecyclerViewActivity extends AppCompatActivity implements OnRecyc
         } else {
             mFavList = new ArrayList<>();
         }
-        mFavList.addAll(MenuHelper.parseJSONData());
+        mFavList.addAll(MenuHelper.parseFavorite());
         MenuItem add = new MenuItem();
         add.setName("添加");
         add.setIcon("add");
