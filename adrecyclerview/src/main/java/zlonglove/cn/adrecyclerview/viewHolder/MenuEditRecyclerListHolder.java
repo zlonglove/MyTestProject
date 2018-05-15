@@ -10,9 +10,7 @@ import zlonglove.cn.adrecyclerview.R;
 /**
  * 描述:编辑页面的列表Holder
  * <p>
- * 作者:陈俊森
  * 创建时间:2017年11月03日 17:41
- * 邮箱:chenjunsen@outlook.com
  *
  * @version 1.0
  */

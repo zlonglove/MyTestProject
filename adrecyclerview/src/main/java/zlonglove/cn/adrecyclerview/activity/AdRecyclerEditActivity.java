@@ -1,5 +1,6 @@
 package zlonglove.cn.adrecyclerview.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -41,6 +42,10 @@ public class AdRecyclerEditActivity extends AppCompatActivity implements MenuHea
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContextUtil.init(getApplicationContext());
+        if (!MenuHelper.hasEverInit()) {
+            MenuHelper.init();
+        }
+        setTitle("编辑");
         setContentView(R.layout.activity_ad_recycler_edit);
         initView();
         initEvents();
@@ -51,13 +56,13 @@ public class AdRecyclerEditActivity extends AppCompatActivity implements MenuHea
     }
 
     private void initEvents() {
-        mFavList = MenuHelper.parseFavorite();
+        mFavList = MenuHelper.getPreferFavoriteList();
 
-        mColdList = MenuHelper.parseColdWeapon();
-        mModernList = MenuHelper.parseModernWeapon();
-        mMiscList = MenuHelper.parseMisc();
-        mPersonList = MenuHelper.parsePerson();
-        mEqtList = MenuHelper.parseEquipment();
+        mColdList = MenuHelper.getPreferColdWeaponList();
+        mModernList = MenuHelper.getPreferModernWeaponList();
+        mMiscList = MenuHelper.getPreferMiscList();
+        mPersonList = MenuHelper.getPreferPersonList();
+        mEqtList = MenuHelper.getPreferEquipmentList();
 
         mEditList = new ArrayList<>();
         mEditList.add(new EditItem(MenuHelper.GROUP_COLD_WEAPON, getString(R.string.cold_weapon), mColdList));
@@ -73,6 +78,7 @@ public class AdRecyclerEditActivity extends AppCompatActivity implements MenuHea
         mListHeaderWrapper.setOnChildItemClickListener(new HeaderChildItemClickListener());
         mListHeaderWrapper.setOnDeleteClickListener(this);
         mListHeaderWrapper.addHeader(new EditItem(MenuHelper.GROUP_FAVORITE, getString(R.string.favorite), mFavList));
+        //mListHeaderWrapper.addFooter(new EditItem(MenuHelper.GROUP_FAVORITE, getString(R.string.favorite), mFavList));
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         mRecyclerView.setAdapter(mListHeaderWrapper);
@@ -82,7 +88,7 @@ public class AdRecyclerEditActivity extends AppCompatActivity implements MenuHea
     protected void onDestroy() {
         mListHeaderWrapper.releaseDragManager();
         if (mListHeaderWrapper.isHasDragChanged() || hasChangedListData) {
-            //sendBroadcast(new Intent(Common.Notification.NOTIFY_REFRESH_MAIN_LIST_DATA));
+            sendBroadcast(new Intent("refreshMainListData"));
         }
         super.onDestroy();
     }
@@ -90,8 +96,8 @@ public class AdRecyclerEditActivity extends AppCompatActivity implements MenuHea
     @Override
     public void onDeleteClick(View v, MenuItem item, int position) {
         Toast.makeText(AdRecyclerEditActivity.this, "从最爱里面移除" + item.getName(), Toast.LENGTH_SHORT).show();
-        /*MenuHelper.deletePreferFavoriteItem(item);
-        MenuHelper.addItem(item.getGroup(), item);*/
+        MenuHelper.deletePreferFavoriteItem(item);
+        MenuHelper.addItem(item.getGroup(), item);
         notifyFavDataRemoved(item);
     }
 
@@ -107,8 +113,8 @@ public class AdRecyclerEditActivity extends AppCompatActivity implements MenuHea
         @Override
         public void onItemClick(View v, MenuItem item, int position, int segment) {
             Toast.makeText(AdRecyclerEditActivity.this, "往最爱里面添加" + item.getName(), Toast.LENGTH_SHORT).show();
-            /*MenuHelper.addPreferFavoriteItem(item);
-            MenuHelper.deleteItem(item.getGroup(), item);*/
+            MenuHelper.addPreferFavoriteItem(item);
+            MenuHelper.deleteItem(item.getGroup(), item);
             notifyFavDataAdded(item);
         }
     }

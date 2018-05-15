@@ -8,9 +8,7 @@ import zlonglove.cn.adrecyclerview.base.BaseRecyclerItem;
 /**
  * 描述:列表子item实体类
  * <p>
- * 作者:cjs
  * 创建时间:2017年11月03日 11:51
- * 邮箱:chenjunsen@outlook.com
  *
  * @version 1.0
  */

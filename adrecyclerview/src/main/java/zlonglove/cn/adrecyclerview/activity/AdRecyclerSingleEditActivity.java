@@ -38,6 +38,9 @@ public class AdRecyclerSingleEditActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContextUtil.init(getApplicationContext());
+        if(!MenuHelper.hasEverInit()){
+            MenuHelper.init();
+        }
         setContentView(R.layout.activity_ad_recycler_view);
         initView();
         initEvents();
@@ -116,7 +119,7 @@ public class AdRecyclerSingleEditActivity extends AppCompatActivity {
         } else {
             mFavList = new ArrayList<>();
         }
-        mFavList.addAll(MenuHelper.parseFavorite());
+        mFavList.addAll(MenuHelper.getPreferFavoriteList());
     }
 
 

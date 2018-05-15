@@ -58,6 +58,7 @@ public class MenuRecyclerListHeaderWrapper extends BaseHeaderFooterRecyclerAdapt
 
     @Override
     public MenuEditRecyclerListHolder createFooterViewHolder(ViewGroup parent, int viewType) {
+        //return new MenuEditRecyclerListHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.header_menu_edit_recycler,parent,false));
         return null;
     }
 
@@ -91,6 +92,30 @@ public class MenuRecyclerListHeaderWrapper extends BaseHeaderFooterRecyclerAdapt
 
     @Override
     public void bindFooterViewHolder(MenuEditRecyclerListHolder footerViewHolder, EditItem footerItem) {
+        /*footerViewHolder.tv_group_name.setText(footerItem.getGroup());
+        adapter=new MenuHeaderRecyclerGridAdapter(footerItem.getMenuItemList(),footerViewHolder.recyclerView,true);
+        adapter.setOnRecyclerItemClickListener(mOnChildItemClickListener);
+        adapter.setOnDeleteClickListener(mOnDeleteClickListener);
+        mDragDropManager=new RecyclerViewDragDropManager();
+        mDragDropManager.setItemMoveMode(itemMoveMode);
+        // Start dragging after long press
+        mDragDropManager.setInitiateOnLongPress(true);
+        mDragDropManager.setOnItemDragEventListener(null);
+        mDragDropManager.setInitiateOnMove(false);
+        mDragDropManager.setLongPressTimeout(500);
+        mDragDropManager.setOnItemDragEventListener(this);
+        // setup dragging item effects (NOTE: DraggableItemAnimator is required)
+        //dragDropManager.setDragStartItemAnimationDuration(250);
+        //dragDropManager.setDraggingItemAlpha(0.8f);
+        mDragDropManager.setDraggingItemScale(1.1f);
+        //dragDropManager.setDraggingItemRotation(15.0f);
+        dragAdapter =mDragDropManager.createWrappedAdapter(adapter);
+        footerViewHolder.recyclerView.setAdapter(dragAdapter);
+        footerViewHolder.recyclerView.setLayoutManager(new GridLayoutManager(footerViewHolder.recyclerView.getContext(),4));
+        GeneralItemAnimator itemAnimator=new DraggableItemAnimator();
+        footerViewHolder.recyclerView.setItemAnimator(itemAnimator);
+
+        mDragDropManager.attachRecyclerView(footerViewHolder.recyclerView);*/
 
     }
 
