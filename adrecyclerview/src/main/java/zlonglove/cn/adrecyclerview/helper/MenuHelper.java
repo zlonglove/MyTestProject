@@ -90,7 +90,7 @@ public class MenuHelper {
      */
     private static final String PREFERENCE_MENU_DATA_NAME = "menu_data";
     /**
-     * 是否已经进行过初始化的字段名
+     * 是否已经进行过初始化的字段名,初始化标志
      */
     private static final String PREFERENCE_HAS_EVER_INIT = "has_ever_init";
 
