@@ -141,13 +141,14 @@ public class MenuHelper {
     private static List<MenuItem> getPreferMenuListData(String group) {
         String jsonStr = getMenuDataConfig().getString(group, "");
         JSONArray array = JSONArray.parseArray(jsonStr);
-        List<MenuItem> list = new ArrayList<>();
+        /*List<MenuItem> list = new ArrayList<>();
         for (int i = 0; i < array.size(); i++) {
             JSONObject jsonObject = (JSONObject) array.get(i);
             MenuItem item = JSON.toJavaObject(jsonObject, MenuItem.class);
             list.add(item);
         }
-        return list;
+        return list;*/
+        return array.toJavaList(MenuItem.class);
     }
 
     /**
