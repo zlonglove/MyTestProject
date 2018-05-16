@@ -130,7 +130,6 @@ import im.icbc.com.linclibrary.PhoneInfo;
 import im.icbc.com.popmenu.PopMenu;
 import im.icbc.com.popmenu.PopMenuItem;
 import im.icbc.com.popmenu.PopMenuItemListener;
-import zlonglove.cn.adrecyclerview.activity.AdRecyclerEditActivity;
 import zlonglove.cn.adrecyclerview.activity.AdRecyclerViewActivity;
 import zlonglove.cn.aidl.activity.AidlActivity;
 import zlonglove.cn.network.activity.OkHttpTestActivity;
@@ -658,9 +657,6 @@ public class MainActivity extends CheckPermissionsActivity {
                     case 26:
                         gotoAdRecycler();
                         break;
-                    case 27:
-                        gotoAdEditRecycler();
-                        break;
                     default:
                         break;
                 }
@@ -962,12 +958,6 @@ public class MainActivity extends CheckPermissionsActivity {
 
     public void gotoAdRecycler(){
         Intent intent = new Intent(MainActivity.this, AdRecyclerViewActivity.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
-    }
-
-    public void gotoAdEditRecycler(){
-        Intent intent = new Intent(MainActivity.this, AdRecyclerEditActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
