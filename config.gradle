@@ -2,10 +2,10 @@ ext {
     isBuildApp = false
 
     android = [
-            compileSdkVersion: 25,
-            buildToolsVersion: '26.0.2',
+            compileSdkVersion: 27,
+            buildToolsVersion: '27.0.3',
             minSdkVersion    : 16,
-            targetSdkVersion : 22,
+            targetSdkVersion : 27,
             versionCode      : 1,
             versionName      : '1.0.0',
     ]
@@ -13,7 +13,7 @@ ext {
 
     libsVersion = [
             //App dependencies version
-            supportLibraryVersion = "25.3.1",
+            supportLibraryVersion = "27.0.2",
             glideVersion = "4.0.0-RC1",
             gsonVersion = "2.8.2",
             retrofit = "2.3.0",

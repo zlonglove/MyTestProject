@@ -1,6 +1,7 @@
 package zlonglove.cn.adrecyclerview.base;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemAdapter;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.ItemDraggableRange;
@@ -16,8 +17,9 @@ import java.util.List;
  *
  * @version 1.0
  */
-public abstract class BaseDraggableRecyclerAdapter<VH extends RecyclerView.ViewHolder,RI extends BaseRecyclerItem> extends BaseSimpleRecyclerAdapter<VH,RI> implements DraggableItemAdapter<VH> {
-    static final int INVALID_POSITION=-1;
+public abstract class BaseDraggableRecyclerAdapter<VH extends RecyclerView.ViewHolder, RI extends BaseRecyclerItem> extends BaseSimpleRecyclerAdapter<VH, RI> implements DraggableItemAdapter<VH> {
+    private final String TAG = BaseDraggableRecyclerAdapter.class.getSimpleName();
+    static final int INVALID_POSITION = -1;
     private int mItemMoveMode = RecyclerViewDragDropManager.ITEM_MOVE_MODE_DEFAULT;
     private RI mLastRemovedData;
     private int mLastRemovedPosition = INVALID_POSITION;
@@ -25,12 +27,13 @@ public abstract class BaseDraggableRecyclerAdapter<VH extends RecyclerView.ViewH
 
     /**
      * 可以拖拽的RecyclerView适配器
+     *
      * @param recyclerItems 数据列表
-     * @param recyclerView 与改适配器匹配的RecyclerView
+     * @param recyclerView  与改适配器匹配的RecyclerView
      */
     public BaseDraggableRecyclerAdapter(List<RI> recyclerItems, RecyclerView recyclerView) {
         super(recyclerItems);
-        mRecyclerView=recyclerView;
+        mRecyclerView = recyclerView;
     }
 
     public int getItemMoveMode() {
@@ -39,8 +42,9 @@ public abstract class BaseDraggableRecyclerAdapter<VH extends RecyclerView.ViewH
 
     /**
      * 设置drag的动作模式:<br>
-     *     1.{@link RecyclerViewDragDropManager#ITEM_MOVE_MODE_DEFAULT}默认模式，插入式地移动<br>
-     *     2.{@link RecyclerViewDragDropManager#ITEM_MOVE_MODE_SWAP}两两对调
+     * 1.{@link RecyclerViewDragDropManager#ITEM_MOVE_MODE_DEFAULT}默认模式，插入式地移动<br>
+     * 2.{@link RecyclerViewDragDropManager#ITEM_MOVE_MODE_SWAP}两两对调
+     *
      * @param itemMoveMode
      */
     public void setItemMoveMode(int itemMoveMode) {
@@ -57,10 +61,10 @@ public abstract class BaseDraggableRecyclerAdapter<VH extends RecyclerView.ViewH
         if (fromPosition == toPosition) {
             return;
         }
-        if(mItemMoveMode== RecyclerViewDragDropManager.ITEM_MOVE_MODE_DEFAULT){
+        if (mItemMoveMode == RecyclerViewDragDropManager.ITEM_MOVE_MODE_DEFAULT) {
             moveItem(fromPosition, toPosition);
             notifyItemMoved(fromPosition, toPosition);
-        }else{
+        } else {
             swapItem(fromPosition, toPosition);
             mRecyclerView.post(new Runnable() {
                 @Override
@@ -74,9 +78,8 @@ public abstract class BaseDraggableRecyclerAdapter<VH extends RecyclerView.ViewH
     /**
      * 重写该方法来设置可以Drag的Item的范围，默认是所有的都可以drag
      *
-     * @param holder The ViewHolder which is associated to item user is attempt to start dragging.
+     * @param holder   The ViewHolder which is associated to item user is attempt to start dragging.
      * @param position The position of the item within the adapter's data set.
-     *
      * @return null: no constraints (= new ItemDraggableRange(0, getItemCount() - 1)), otherwise: the range specified item can be drag-sortable.
      */
     @Override
@@ -89,7 +92,20 @@ public abstract class BaseDraggableRecyclerAdapter<VH extends RecyclerView.ViewH
         return true;
     }
 
+    @Override
+    public void onItemDragStarted(int position) {
+        Log.i(TAG, "onItemDragStarted(position = " + position);
+        notifyDataSetChanged();
+    }
+
+    @Override
+    public void onItemDragFinished(int fromPosition, int toPosition, boolean result) {
+        Log.i(TAG, "onItemDragFinished(fromPosition = " + fromPosition + ", toPosition = " + toPosition + ")" + ", result = " + result);
+        notifyDataSetChanged();
+    }
+
     private void moveItem(int fromPosition, int toPosition) {
+        Log.d(TAG, "onMoveItem(fromPosition = " + fromPosition + ", toPosition = " + toPosition + ")");
         if (fromPosition == toPosition) {
             return;
         }

@@ -124,12 +124,12 @@ public class MenuRecyclerListHeaderWrapper extends BaseHeaderFooterRecyclerAdapt
 
     @Override
     public void onItemDragStarted(int position) {
-
+        Log.i(TAG, "--->onItemDragStarted()" + position);
     }
 
     @Override
     public void onItemDragPositionChanged(int fromPosition, int toPosition) {
-
+        Log.i(TAG, "--->onItemDragPositionChanged()" + fromPosition + "->" + toPosition);
     }
 
     @Override
