@@ -9,6 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.network.common.api.CommonApi;
+import com.network.common.api.base.Constant;
+
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -50,7 +53,7 @@ public class OkHttpTestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ok_http_test);
-        infoText = (TextView) findViewById(R.id.info);
+        /*infoText = (TextView) findViewById(R.id.info);
         get_pic_show_image = (ImageView) findViewById(R.id.get_pic_show_image);
         getNewsList(getWeekDate().get(0), new InfoCallback<StoryList>() {
             @Override
@@ -68,7 +71,19 @@ public class OkHttpTestActivity extends AppCompatActivity {
         });
 
         getPicFromNet(picUrl);
-        getCitys("http://v.juhe.cn/weather/");
+        getCitys("http://v.juhe.cn/weather/");*/
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        CommonApi.getSingleInstance().getNewestBannerList(Constant.BANNER_URL);
+        CommonApi.getSingleInstance().getHotGoodsBannerList(Constant.LAPIN_BANNER_URL);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
     }
 
     public void getNewsList(String date, final InfoCallback<StoryList> callback) {

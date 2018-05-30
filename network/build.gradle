@@ -29,8 +29,13 @@ dependencies {
     compile rootProject.ext.dependencies.retrofit_adapter_rxjava2
     implementation project(':CommonUtil')
     compile rootProject.ext.dependencies.gson
-    implementation files('libs/simple-xml-core.jar')
     compile rootProject.ext.dependencies.rxjava
     compile rootProject.ext.dependencies.rxjava_android
     compile rootProject.ext.dependencies.retrofit_converter_gson
+    compile 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    compile('com.squareup.retrofit2:converter-simplexml:2.3.0') {
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+    }
 }
