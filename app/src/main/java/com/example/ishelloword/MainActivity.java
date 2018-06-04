@@ -64,9 +64,11 @@ import com.ISHello.GsonModule.ProductsList;
 import com.ISHello.GsonModule.UserInfo;
 import com.ISHello.Handler.LooperThread;
 import com.ISHello.Handler.ThreadLocalTest;
+import com.ISHello.HtmlParse.LinkFetcher;
 import com.ISHello.IOSDialog.iosDialogActivity;
 import com.ISHello.ISNotification.ISNotification;
 import com.ISHello.ImageEditor.ImageEditorActivity;
+import com.ISHello.Manager.IcbcWifiManager;
 import com.ISHello.Manager.ThreadPoolManager;
 import com.ISHello.Map.CheckPermissionsActivity;
 import com.ISHello.Map.Location_Activity;
@@ -120,6 +122,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Map;
 
 import im.icbc.cn.keyboard.safePay.PayKeyboardActivity;
 import im.icbc.com.downloadfile.DownloadActivity;
@@ -130,6 +133,7 @@ import im.icbc.com.linclibrary.PhoneInfo;
 import im.icbc.com.popmenu.PopMenu;
 import im.icbc.com.popmenu.PopMenuItem;
 import im.icbc.com.popmenu.PopMenuItemListener;
+import io.reactivex.functions.Consumer;
 import zlonglove.cn.adrecyclerview.activity.AdRecyclerViewActivity;
 import zlonglove.cn.aidl.activity.AidlActivity;
 import zlonglove.cn.network.activity.OkHttpTestActivity;
@@ -657,6 +661,13 @@ public class MainActivity extends CheckPermissionsActivity {
                     case 26:
                         gotoAdRecycler();
                         break;
+                    case 27:
+                        wifiAutoConnect();
+                        break;
+                    case 28:
+                        //gotoHtmlParse("https://www.baidu.com");
+                        gotoHtmlParse("https://mp.weixin.qq.com/");
+                        break;
                     default:
                         break;
                 }
@@ -950,16 +961,47 @@ public class MainActivity extends CheckPermissionsActivity {
                 .start();
     }
 
-    public void gotoRecycler(){
+    public void gotoRecycler() {
         Intent intent = new Intent(MainActivity.this, RecyclerActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
-    public void gotoAdRecycler(){
+    public void gotoAdRecycler() {
         Intent intent = new Intent(MainActivity.this, AdRecyclerViewActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
+
+    public void wifiAutoConnect() {
+        /*WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+        WifiConnect wifiConnect = new WifiConnect(wifiManager);
+        boolean connectStatus = wifiConnect.Connect("TAIYUE_5G", "123456789", WIFICIPHER_WPA);*/
+        IcbcWifiManager icbcWifiManager = new IcbcWifiManager(this);
+        icbcWifiManager.connect("TAIYUE", "123456789", IcbcWifiManager.WifiCipherType.WIFICIPHER_WPA);
+    }
+
+    public void gotoHtmlParse(String url) {
+        LinkFetcher linkFetcher = new LinkFetcher();
+        linkFetcher.loadUrl(url, new LinkFetcher.OnLinkListener() {
+            @Override
+            public void onLinkDataReady(String title, String image) {
+                LogUtil.log(TAG, "title==" + title + " image==" + image);
+            }
+        });
+
+        linkFetcher.loadUrl(url, new Consumer<Map>() {
+            @Override
+            public void accept(Map map) throws Exception {
+                if (map.get("code").equals("1")) {
+                    LogUtil.log(TAG, "title==" + map.get("title").toString()
+                            + " img==" + map.get("url").toString()
+                            + " url==" + map.get("url").toString());
+                } else {
+                    Toast.makeText(getApplicationContext(), "解析网址失败,请检查是否包含http://", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
     }
 
     public void gotoFileDownload() {

@@ -83,5 +83,7 @@
         <item>文件选择器</item>
         <item>Recycler框架</item>
         <item>高级Recycler</item>
+        <item>WiFi自动连接</item>
+        <item>Html解析</item>
     </string-array>
 </resources>

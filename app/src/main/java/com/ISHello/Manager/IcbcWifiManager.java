@@ -1,23 +1,22 @@
 package com.ISHello.Manager;
 
-import java.util.List;
-
 import android.content.Context;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
-import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiConfiguration.AuthAlgorithm;
 import android.net.wifi.WifiConfiguration.KeyMgmt;
+import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.text.TextUtils;
 import android.util.Log;
+
+import java.util.List;
 
 /**
  * @author kfzx-zhanglong
  * @category IcbcWifiManager icbcWifiManager = new IcbcWifiManager(this);
  * icbcWifiManager.connect("AndroidAP", "zlonglove1988",
  * WifiCipherType.WIFICIPHER_WPA);
- * @see 调用案例
  */
 public class IcbcWifiManager {
     private WifiManager wifiManager;
@@ -117,6 +116,7 @@ public class IcbcWifiManager {
         config.allowedPairwiseCiphers.clear();
         config.allowedProtocols.clear();
         config.SSID = "\"" + SSID + "\"";
+        config.status = WifiConfiguration.Status.ENABLED;
         // NoPassword
         if (Type == WifiCipherType.WIFICIPHER_NOPASS) {
             config.wepKeys[0] = "\"" + "\"";
@@ -182,14 +182,14 @@ public class IcbcWifiManager {
 
         @Override
         public void run() {
-            //openWifi();
-            // 开启wifi功能需要一段时间(3-5秒左右)，所以要等到wifi
-            //while (!(wifiManager.getWifiState() == WifiManager.WIFI_STATE_ENABLED)) {
-            //	try {
-            //		Thread.sleep(100);
-            //	} catch (InterruptedException ie) {
-            //	}
-            //}
+            openWifi();
+            //开启wifi功能需要一段时间(3-5秒左右)，所以要等到wifi
+            while (!(wifiManager.getWifiState() == WifiManager.WIFI_STATE_ENABLED)) {
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException ie) {
+                }
+            }
             /**
              * 扫描wifi
              */
@@ -205,14 +205,16 @@ public class IcbcWifiManager {
             WifiConfiguration tempConfig = isExsits(ssid);
 
             if (tempConfig != null) {
-                wifiManager.removeNetwork(tempConfig.networkId);
+                boolean removeStatus = wifiManager.removeNetwork(tempConfig.networkId);
+                Log.i(TAG, "--->removeNetwork status=" + removeStatus);
             }
 
             int netID = wifiManager.addNetwork(wifiConfig);
+            Log.i(TAG, "--->addNetwork netID==" + netID);
             boolean enabled = wifiManager.enableNetwork(netID, true);
             Log.i(TAG, "--->enableNetwork status enable=" + enabled);
             boolean connected = wifiManager.reconnect();
-            Log.i(TAG, "--->enableNetwork connected=" + connected);
+            Log.i(TAG, "--->reconnect connected=" + connected);
         }
     }
 
