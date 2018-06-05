@@ -22,7 +22,7 @@ import java.util.Random;
  */
 public class KeyboardUtil {
     private Activity mActivity;
-    private boolean  mIfRandom;
+    private boolean mIfRandom;
 
     private DandroidKeyBoardView mKeyboardView;
     private Keyboard mKeyboardNumber;//数字键盘
@@ -139,7 +139,7 @@ public class KeyboardUtil {
      */
     public static void hideSystemSofeKeyboard(Context context, EditText editText) {
         int sdkInt = Build.VERSION.SDK_INT;
-        if (sdkInt >= 11) {
+        if (sdkInt >= Build.VERSION_CODES.HONEYCOMB) {
             try {
                 Class<EditText> cls = EditText.class;
                 Method setShowSoftInputOnFocus;
@@ -192,8 +192,7 @@ public class KeyboardUtil {
         // 查找出0-9的数字键
         List<Keyboard.Key> newkeyList = new ArrayList<Keyboard.Key>();
         for (int i = 0; i < keyList.size(); i++) {
-            if (keyList.get(i).label != null
-                    && isNumber(keyList.get(i).label.toString())) {
+            if (keyList.get(i).label != null && isNumber(keyList.get(i).label.toString())) {
                 newkeyList.add(keyList.get(i));
             }
         }
@@ -217,10 +216,8 @@ public class KeyboardUtil {
         }
         for (int i = 0; i < newkeyList.size(); i++) {
             newkeyList.get(i).label = resultList.get(i).getLable();
-            newkeyList.get(i).codes[0] = resultList.get(i)
-                    .getCode();
+            newkeyList.get(i).codes[0] = resultList.get(i).getCode();
         }
-
         mKeyboardView.setKeyboard(mKeyboardNumber);
     }
 

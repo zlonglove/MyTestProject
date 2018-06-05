@@ -18,6 +18,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.Toolbar;
 import android.util.Config;
 import android.util.Log;
 import android.view.Gravity;
@@ -188,6 +189,12 @@ public class MainActivity extends CheckPermissionsActivity {
         LogUtil.log(TAG, "--->MaxMemory==" + ISTools.Instance(this).getMaxMemoryM() + "M");
 
         setContentView(R.layout.activity_list_main);
+
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (mToolbar!=null){
+            setSupportActionBar(mToolbar);
+        }
+
         initUI();
 
         LooperThread looperThread = new LooperThread();
@@ -1007,7 +1014,7 @@ public class MainActivity extends CheckPermissionsActivity {
         });
     }
 
-    public void gotoSystemKeyboard(){
+    public void gotoSystemKeyboard() {
         Intent intent = new Intent(MainActivity.this, SystemKeyboardActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
