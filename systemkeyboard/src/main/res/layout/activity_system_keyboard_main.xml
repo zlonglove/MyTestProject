@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/rl_hint_pig_meat_open_order_goods_price"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_info1"
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="单价"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_hint_pig_meat_open_order_goods_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tv_info1"
+            android:background="#ffffff"
+            android:gravity="right|center_vertical"
+            android:hint="输入价格"
+            android:inputType="numberDecimal"
+            android:maxLength="8"
+            android:paddingLeft="3dp"
+            android:paddingTop="3dp"
+            android:textColor="#666666"
+            android:textColorHint="#c9c9c9"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/rl_hint_pig_meat_open_order_goods_price"
+        android:background="#F1F1F1" />
+
+    <RelativeLayout
+        android:id="@+id/rl_hint_pig_meat_open_order_goods_number"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/line"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="商品号"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_hint_pig_meat_open_order_goods_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tv_code"
+            android:background="#ffffff"
+            android:gravity="right|center_vertical"
+            android:hint="输入商品号"
+            android:inputType="numberDecimal"
+            android:maxLength="8"
+            android:paddingLeft="3dp"
+            android:paddingTop="3dp"
+            android:textColor="#666666"
+            android:textColorHint="#c9c9c9"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <include
+        layout="@layout/include_keyboardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

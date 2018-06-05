@@ -10,6 +10,9 @@ import android.net.wifi.WifiManager;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.ISHello.utils.LogUtil;
+
+import java.lang.reflect.Method;
 import java.util.List;
 
 /**
@@ -202,25 +205,64 @@ public class IcbcWifiManager {
                 return;
             }
 
-            WifiConfiguration tempConfig = isExsits(ssid);
+            WifiConfiguration exsitsConfig = isExsits(ssid);
 
-            if (tempConfig != null) {
-                boolean removeStatus = wifiManager.removeNetwork(tempConfig.networkId);
+            if (exsitsConfig != null) {
+                Log.i(TAG, "--->removeNetwork networkId=" + exsitsConfig.networkId);
+                boolean removeStatus = wifiManager.removeNetwork(exsitsConfig.networkId);
                 Log.i(TAG, "--->removeNetwork status=" + removeStatus);
             }
 
             int netID = wifiManager.addNetwork(wifiConfig);
             Log.i(TAG, "--->addNetwork netID==" + netID);
+
             boolean enabled = wifiManager.enableNetwork(netID, true);
             Log.i(TAG, "--->enableNetwork status enable=" + enabled);
-            boolean connected = wifiManager.reconnect();
-            Log.i(TAG, "--->reconnect connected=" + connected);
+
+            /*boolean disconnect = wifiManager.disconnect();
+            Log.i(TAG, "--->disconnect status=" + disconnect);*/
+
+            //boolean connected = wifiManager.reconnect();
+            //Log.i(TAG, "--->reconnect connected=" + connected);
+
+            connectByNetworkId(wifiManager, netID);
+        }
+    }
+
+    public  void connectByConfig(WifiManager manager, WifiConfiguration config) {
+        if (manager == null) {
+            return;
+        }
+        try {
+            Method connect = manager.getClass().getDeclaredMethod("connect", WifiConfiguration.class, Class.forName("android.net.wifi.WifiManager$ActionListener"));
+            if (connect != null) {
+                connect.setAccessible(true);
+                connect.invoke(manager, config, null);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // 使用 networkId 连接.
+    public void connectByNetworkId(WifiManager manager, int networkId) {
+        if (manager == null) {
+            return;
+        }
+        try {
+            Method connect = manager.getClass().getDeclaredMethod("connect", int.class, Class.forName("android.net.wifi.WifiManager$ActionListener"));
+            if (connect != null) {
+                connect.setAccessible(true);
+                connect.invoke(manager, networkId, null);
+            }
+        } catch (Exception e) {
+            LogUtil.log(TAG, e.getMessage());
+            e.printStackTrace();
         }
     }
 
     private boolean isHexWepKey(String wepKey) {
         final int len = wepKey.length();
-
         // WEP-40, WEP-104, and some vendors using 256-bit WEP (WEP-232?)
         if (len != 10 && len != 26 && len != 58) {
             return false;

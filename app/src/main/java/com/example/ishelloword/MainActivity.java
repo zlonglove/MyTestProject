@@ -139,6 +139,7 @@ import zlonglove.cn.aidl.activity.AidlActivity;
 import zlonglove.cn.network.activity.OkHttpTestActivity;
 import zlonglove.cn.recyclerview.activity.RecyclerActivity;
 import zlonglove.cn.rxjava.RxJavaActivity;
+import zlonglove.cn.systemkeyboard.SystemKeyboardActivity;
 import zlonglove.cn.tabswitch.ui.BottomNavigationActivity;
 
 /**
@@ -452,7 +453,6 @@ public class MainActivity extends CheckPermissionsActivity {
         /********************************************************************************************************************/
         PhoneInfo phoneInfo = new PhoneInfo(getApplicationContext());
         Logger.e(phoneInfo.getCpuInfo()[0]);
-        LogUtil.log(phoneInfo.toString());
         /********************************************************************************************************************/
 
         /**
@@ -667,6 +667,9 @@ public class MainActivity extends CheckPermissionsActivity {
                     case 28:
                         //gotoHtmlParse("https://www.baidu.com");
                         gotoHtmlParse("https://mp.weixin.qq.com/");
+                        break;
+                    case 29:
+                        gotoSystemKeyboard();
                         break;
                     default:
                         break;
@@ -1002,6 +1005,12 @@ public class MainActivity extends CheckPermissionsActivity {
                 }
             }
         });
+    }
+
+    public void gotoSystemKeyboard(){
+        Intent intent = new Intent(MainActivity.this, SystemKeyboardActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
     public void gotoFileDownload() {
