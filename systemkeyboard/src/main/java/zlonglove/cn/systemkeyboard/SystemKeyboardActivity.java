@@ -16,8 +16,8 @@ public class SystemKeyboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_system_keyboard_main);
-        et_price = findViewById(R.id.et_hint_pig_meat_open_order_goods_price);
-        et_orginal_price = findViewById(R.id.et_hint_pig_meat_open_order_goods_number);
+        et_price = (EditText) findViewById(R.id.et_hint_pig_meat_open_order_goods_price);
+        et_orginal_price = (EditText) findViewById(R.id.et_hint_pig_meat_open_order_goods_number);
         final KeyboardUtil keyboardUtil = new KeyboardUtil(this);
         keyboardUtil.attachTo(et_price);
         et_price.setOnTouchListener(new View.OnTouchListener() {
