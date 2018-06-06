@@ -101,8 +101,12 @@
            	 //这里的packageName是URI中scheme字段
 			 Intent intent=new Intent(Intent.ACTION_VIEW, uri);
 			 startActivity(intent);
-			   的方式启动本Activity
-			   在MainActivity中可以通过getIntent().getScheme()方法获取scheme
+			 的方式启动本Activity
+
+             网页可通过下面的形式唤起
+			 <a href="packageName://params?startType=SHAREINJECT&data=123">打开app</a>
+
+			 在MainActivity中可以通过getIntent().getScheme()方法获取scheme
 			 getIntent().getDataString()获取全部参数
 			 getIntent().getData().getQuery()//startType=SHAREINJECT&data=123
 			 getIntent().getData().getQueryParameter("startType")//SHAREINJECT

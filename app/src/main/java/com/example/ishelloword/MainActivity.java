@@ -172,14 +172,14 @@ public class MainActivity extends CheckPermissionsActivity {
         super.onCreate(savedInstanceState);
         //setFullScreen(true);
         LogUtil.log(TAG, "----->onCreate");
-        if (getIntent() != null) {
-            /*LogUtil.log(TAG, "--->getScheme==" + getIntent().getScheme());
+        if (getIntent() != null && getIntent().getData() != null) {
+            LogUtil.log(TAG, "--->getScheme==" + getIntent().getScheme());
             getIntent().getDataString();//获取全部参数
             getIntent().getData().getQuery();//startType=SHAREINJECT&data=123
             getIntent().getData().getQueryParameter("startType");//SHAREINJECT
             getIntent().getData().getQueryParameter("data");//123
-            LogUtil.log(TAG, "--->getQueryParameter" + getIntent().getData().getQueryParameter("startType"));
-            LogUtil.log(TAG, "--->getQueryParameter" + getIntent().getData().getQueryParameter("data"));*/
+            LogUtil.log(TAG, "--->getQueryParameter==" + getIntent().getData().getQueryParameter("startType"));
+            LogUtil.log(TAG, "--->getQueryParameter==" + getIntent().getData().getQueryParameter("data"));
         }
         setTitle("主页");
         LogUtil.log(TAG, "--->The sdk version==" + ISTools.Instance(this).getVersion());
@@ -191,9 +191,19 @@ public class MainActivity extends CheckPermissionsActivity {
         setContentView(R.layout.activity_list_main);
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        if (mToolbar!=null){
+        if (mToolbar != null) {
             setSupportActionBar(mToolbar);
+            mToolbar.setNavigationOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                }
+            });
         }
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
 
         initUI();
 
@@ -1297,6 +1307,13 @@ public class MainActivity extends CheckPermissionsActivity {
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         LogUtil.log(TAG, "--->onNewIntent(Intent intent)");
+        if (intent != null && intent.getData() != null) {
+            LogUtil.log(TAG, "Scheme==" + intent.getScheme());//com.example.ishelloword
+            LogUtil.log(TAG, intent.getDataString());//获取全部参数 com.example.ishelloword://params?startType=SHAREINJECT&data=123
+            LogUtil.log(TAG, intent.getData().getQuery());//startType=SHAREINJECT&data=123
+            LogUtil.log(TAG, intent.getData().getQueryParameter("startType"));//SHAREINJECT
+            LogUtil.log(TAG, intent.getData().getQueryParameter("data"));//123
+        }
     }
 
     @Override
