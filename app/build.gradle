@@ -81,43 +81,43 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile rootProject.ext.dependencies.appcompatV7
-    compile rootProject.ext.dependencies.support_v4
-    compile rootProject.ext.dependencies.design
-    compile rootProject.ext.dependencies.recycleview
-    compile files('libs/android-async-http-1.4.4.jar')
-    compile files('libs/AnimationLibrary.jar')
-    compile files('libs/commons-httpclient-3.0.1.jar')
-    compile files('libs/ddmlib.jar')
-    compile files('libs/dom4j-1.6.1.jar')
-    compile files('libs/jaxen-1.1-beta-6.jar')
-    compile files('libs/sqlcipher.jar')
-    compile files('libs/httpmime-4.2.3.jar')
-    compile files('libs/android-query-full.0.26.7.jar')
-    compile 'com.android.support:support-annotations:23.1.1'
-    compile 'com.google.android.gms:play-services-appindexing:9.8.0'
-    compile(name: 'openDefault-1.0.0-openDefaultRelease', ext: 'aar')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.ext.dependencies.appcompatV7
+    implementation rootProject.ext.dependencies.support_v4
+    implementation rootProject.ext.dependencies.design
+    implementation rootProject.ext.dependencies.recycleview
+    implementation files('libs/android-async-http-1.4.4.jar')
+    implementation files('libs/AnimationLibrary.jar')
+    implementation files('libs/commons-httpclient-3.0.1.jar')
+    implementation files('libs/ddmlib.jar')
+    implementation files('libs/dom4j-1.6.1.jar')
+    implementation files('libs/jaxen-1.1-beta-6.jar')
+    implementation files('libs/sqlcipher.jar')
+    implementation files('libs/httpmime-4.2.3.jar')
+    implementation files('libs/android-query-full.0.26.7.jar')
+    implementation 'com.android.support:support-annotations:23.1.1'
+    implementation 'com.google.android.gms:play-services-appindexing:9.8.0'
+    implementation(name: 'openDefault-1.0.0-openDefaultRelease', ext: 'aar')
     //compile(name: 'sdk-release', ext: 'aar')
     //compile(name: 'android-gif-drawable-1.2.12', ext: 'aar')
-    compile project(':linclibrary')
-    compile project(':jnisdk')
-    compile files('libs/jcore-android_v1.1.2.jar')
-    compile files('libs/jpush-android_v3.0.5.jar')
-    compile project(':keyboard')
-    compile files('libs/AMap_Location_V3.4.0_20170427.jar')
-    compile files('libs/universal-image-loader-1.9.5.jar')
-    compile project(':musicIndicator')
-    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
-    compile project(':paper-onboarding')
-    compile project(':imageeditor')
-    compile project(':popmenu')
-    compile files('libs/wechat-sdk-android-with-mta-1.3.4.jar')
-    compile files('libs/timeselector-1.1.3-sources.jar')
-    compile files('libs/commons-codec-1.10-sources.jar')
+    implementation project(':linclibrary')
+    implementation project(':jnisdk')
+    implementation files('libs/jcore-android_v1.1.2.jar')
+    implementation files('libs/jpush-android_v3.0.5.jar')
+    implementation project(':keyboard')
+    implementation files('libs/AMap_Location_V3.4.0_20170427.jar')
+    implementation files('libs/universal-image-loader-1.9.5.jar')
+    implementation project(':musicIndicator')
+    implementation 'me.imid.swipebacklayout.lib:library:1.0.0'
+    implementation project(':paper-onboarding')
+    implementation project(':imageeditor')
+    implementation project(':popmenu')
+    implementation files('libs/wechat-sdk-android-with-mta-1.3.4.jar')
+    implementation files('libs/timeselector-1.1.3-sources.jar')
+    implementation files('libs/commons-codec-1.10-sources.jar')
     //compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
-    compile rootProject.ext.dependencies.eventbus
-    compile rootProject.ext.dependencies.multidex
+    implementation rootProject.ext.dependencies.eventbus
+    implementation rootProject.ext.dependencies.multidex
     implementation project(':downloadfile')
     implementation project(':iosdialog')
     implementation project(':timeselector')

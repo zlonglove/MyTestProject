@@ -171,22 +171,21 @@ public class MainActivity extends CheckPermissionsActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setFullScreen(true);
-        LogUtil.log(TAG, "----->onCreate");
+        LogUtil.log(TAG, "onCreate");
         if (getIntent() != null && getIntent().getData() != null) {
-            LogUtil.log(TAG, "--->getScheme==" + getIntent().getScheme());
+            LogUtil.log(TAG, "getScheme==" + getIntent().getScheme());
             getIntent().getDataString();//获取全部参数
             getIntent().getData().getQuery();//startType=SHAREINJECT&data=123
             getIntent().getData().getQueryParameter("startType");//SHAREINJECT
             getIntent().getData().getQueryParameter("data");//123
-            LogUtil.log(TAG, "--->getQueryParameter==" + getIntent().getData().getQueryParameter("startType"));
-            LogUtil.log(TAG, "--->getQueryParameter==" + getIntent().getData().getQueryParameter("data"));
+            LogUtil.log(TAG, "getQueryParameter==" + getIntent().getData().getQueryParameter("startType"));
+            LogUtil.log(TAG, "getQueryParameter==" + getIntent().getData().getQueryParameter("data"));
         }
-        setTitle("主页");
-        LogUtil.log(TAG, "--->The sdk version==" + ISTools.Instance(this).getVersion());
-        LogUtil.log(TAG, "--->The javaheap==" + ISTools.Instance(this).getJavaHeap());
-        LogUtil.log(TAG, "--->The GLES Version==" + ISTools.Instance(this).getGlEsVersion());
-        LogUtil.log(TAG, "---Is Support OpenGLES 2.0==" + ISTools.Instance(this).isGlEs2Supported());
-        LogUtil.log(TAG, "--->MaxMemory==" + ISTools.Instance(this).getMaxMemoryM() + "M");
+        LogUtil.log(TAG, "The sdk version==" + ISTools.Instance(this).getVersion());
+        LogUtil.log(TAG, "The javaheap==" + ISTools.Instance(this).getJavaHeap());
+        LogUtil.log(TAG, "The GLES Version==" + ISTools.Instance(this).getGlEsVersion());
+        LogUtil.log(TAG, "Is Support OpenGLES 2.0==" + ISTools.Instance(this).isGlEs2Supported());
+        LogUtil.log(TAG, "MaxMemory==" + ISTools.Instance(this).getMaxMemoryM() + "M");
 
         setContentView(R.layout.activity_list_main);
 
@@ -709,6 +708,9 @@ public class MainActivity extends CheckPermissionsActivity {
             public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
                 Log.i(TAG, "--->onLoadMore()==" + Thread.currentThread().getName());
                 refreshLayout.finishLoadMore(2000, true, true);
+                if (!mPopMenu.isShowing()) {
+                    mPopMenu.show();
+                }
             }
         });
     }
@@ -1268,7 +1270,7 @@ public class MainActivity extends CheckPermissionsActivity {
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
-        LogUtil.log(TAG, "----->onConfigurationChanged()");
+        LogUtil.log(TAG, "onConfigurationChanged()");
         if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             LogUtil.log(TAG, "----->这是横屏");
         } else if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
@@ -1294,19 +1296,19 @@ public class MainActivity extends CheckPermissionsActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        LogUtil.log(TAG, "----->onStart()");
+        LogUtil.log(TAG, "onStart()");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        LogUtil.log(TAG, "----->onRestart()");
+        LogUtil.log(TAG, "onRestart()");
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        LogUtil.log(TAG, "--->onNewIntent(Intent intent)");
+        LogUtil.log(TAG, "onNewIntent(Intent intent)");
         if (intent != null && intent.getData() != null) {
             LogUtil.log(TAG, "Scheme==" + intent.getScheme());//com.example.ishelloword
             LogUtil.log(TAG, intent.getDataString());//获取全部参数 com.example.ishelloword://params?startType=SHAREINJECT&data=123
@@ -1319,19 +1321,19 @@ public class MainActivity extends CheckPermissionsActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        LogUtil.log(TAG, "----->onResume()");
+        LogUtil.log(TAG, "onResume()");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        LogUtil.log(TAG, "----->onPause()");
+        LogUtil.log(TAG, "onPause()");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        LogUtil.log(TAG, "----->onStop()");
+        LogUtil.log(TAG, "onStop()");
     }
 
     @Override
@@ -1345,25 +1347,25 @@ public class MainActivity extends CheckPermissionsActivity {
             unbindService(connection);
         }
         dismisDialog();
-        LogUtil.log(TAG, "----->onDestroy()");
+        LogUtil.log(TAG, "onDestroy()");
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        LogUtil.log(TAG, "----->onRestoreInstanceState()");
+        LogUtil.log(TAG, "onRestoreInstanceState()");
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        LogUtil.log(TAG, "----->onSaveInstanceState()");
+        LogUtil.log(TAG, "onSaveInstanceState()");
     }
 
     // 屏蔽Home键
     @Override
     public void onAttachedToWindow() {
-        LogUtil.log(TAG, "---->onAttachedToWindow()");
+        LogUtil.log(TAG, "onAttachedToWindow()");
         super.onAttachedToWindow();
     }
 
@@ -1389,13 +1391,13 @@ public class MainActivity extends CheckPermissionsActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (event.isLongPress()) {
-            LogUtil.log(TAG, "--->onKeyDown() longPress keycode==" + keyCode);
+            LogUtil.log(TAG, "onKeyDown() longPress keycode==" + keyCode);
             return true;
         }
-        LogUtil.log(TAG, "--->onKeyDown() keycode==" + keyCode);
+        LogUtil.log(TAG, "onKeyDown() keycode==" + keyCode);
         switch (keyCode) {
             case KeyEvent.KEYCODE_HOME: {
-                LogUtil.log(TAG, "---->HOME Click");
+                LogUtil.log(TAG, "HOME Click");
                 //finish();
                 //Process.killProcess(Process.myPid());
                 //Process.killProcess(Process.myPid());
@@ -1403,7 +1405,7 @@ public class MainActivity extends CheckPermissionsActivity {
             }
 
             case KeyEvent.KEYCODE_BACK: {
-                LogUtil.log(TAG, "---->KEY_BACK");
+                LogUtil.log(TAG, "KEY_BACK");
                 if (isExit == false) {
                     isExit = true;
                     showToast(R.string.exit, Toast.LENGTH_SHORT);
@@ -1419,14 +1421,14 @@ public class MainActivity extends CheckPermissionsActivity {
 
     @Override
     public boolean onKeyLongPress(int keyCode, KeyEvent event) {
-        LogUtil.log(TAG, "--->onKeyLongPress keyCode==" + keyCode);
+        LogUtil.log(TAG, "onKeyLongPress keyCode==" + keyCode);
         // TODO Auto-generated method stub
         return super.onKeyLongPress(keyCode, event);
     }
 
     @Override
     protected Dialog onCreateDialog(int paramType) {
-        LogUtil.log(TAG, "--->start onCreateDialog() id : " + paramType);
+        LogUtil.log(TAG, "start onCreateDialog() id : " + paramType);
         DefineDialog localMessageDialog = new DefineDialog(this);
         localMessageDialog.setContentView(getLayoutInflater().inflate(R.layout.message_dialog, null));
         switch (paramType) {
@@ -1436,14 +1438,14 @@ public class MainActivity extends CheckPermissionsActivity {
                 localMessageDialog.setPriorityListener(new DefineDialog.PriorityListener() {
                     @Override
                     public void dismissDialog(Dialog dialog) {
-                        LogUtil.log(TAG, "--->MessageDialog Click Back");
+                        LogUtil.log(TAG, "MessageDialog Click Back");
                         dialog.dismiss();
                     }
                 });
                 DialogInterface.OnClickListener local1 = new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        LogUtil.log(TAG, "--->MessageDialog Ok Click");
+                        LogUtil.log(TAG, "MessageDialog Ok Click");
                         dialog.cancel();
                         AppManager.getAppManager().appExit(getBaseContext());
                     }
@@ -1451,7 +1453,7 @@ public class MainActivity extends CheckPermissionsActivity {
                 DialogInterface.OnClickListener local2 = new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        LogUtil.log(TAG, "--->MessageDialog Cancel Click");
+                        LogUtil.log(TAG, "MessageDialog Cancel Click");
                         dialog.dismiss();
                     }
                 };

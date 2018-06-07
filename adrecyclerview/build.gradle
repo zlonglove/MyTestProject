@@ -21,8 +21,8 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    compile rootProject.ext.dependencies.appcompatV7
-    compile rootProject.ext.dependencies.recycleview
-    compile files('libs/fastjson-1.2.38.jar')
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api rootProject.ext.dependencies.appcompatV7
+    api rootProject.ext.dependencies.recycleview
+    api files('libs/fastjson-1.2.38.jar')
 }

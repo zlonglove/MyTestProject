@@ -24,6 +24,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    compile rootProject.ext.dependencies.appcompatV7
-    compile rootProject.ext.dependencies.recycleview
+    api rootProject.ext.dependencies.appcompatV7
+    api rootProject.ext.dependencies.recycleview
 }

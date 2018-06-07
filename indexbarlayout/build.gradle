@@ -20,8 +20,8 @@ android {
 }
 
 dependencies {
-    compile rootProject.ext.dependencies.appcompatV7
-    compile rootProject.ext.dependencies.recycleview
-    compile rootProject.ext.dependencies.gson
-    compile rootProject.ext.dependencies.glide
+    api rootProject.ext.dependencies.appcompatV7
+    api rootProject.ext.dependencies.recycleview
+    api rootProject.ext.dependencies.gson
+    api rootProject.ext.dependencies.glide
 }
