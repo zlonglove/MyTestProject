@@ -41,6 +41,23 @@
 
     <style name="AppCompatTheme.ActionOverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
         <item name="overlapAnchor">false</item>
+
+        <item name="android:src">@drawable/ic_more_vert_white_24dp</item>
+
+        <!--<item name="android:colorBackground">#717070</item>
+        <item name="android:textColorPrimary">@color/white</item>-->
+
+        <!-- 弹出层背景颜色 -->
+        <item name="android:popupBackground">@color/material_deep_teal_500</item>
+
+        <!-- 弹出层垂直方向上的偏移，负值会覆盖toolbar -->
+        <item name="android:dropDownVerticalOffset">5dp</item>
+
+        <!-- 弹出层水平方向上的偏移，即距离屏幕左边的距离，负值会导致右边出现空隙 -->
+        <item name="android:dropDownHorizontalOffset">-2dp</item>
+
+        <!--文字颜色-->
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="AppCompatTheme.Widget.Button" parent="Widget.AppCompat.Button.Colored">

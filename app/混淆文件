@@ -107,7 +107,7 @@
 -keep class sun.misc.Unsafe { *; }
 
 #xUtils
--keep class * extends java.lang.annotation.Annotation {*;}
+-keep class * extends java.lang.annotation.Annotation{*;}
 -keep class com.otb.designerassist.activity.** {*;}
 
 #ButterKnife
