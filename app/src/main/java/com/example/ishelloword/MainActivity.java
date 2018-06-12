@@ -1,17 +1,14 @@
 package com.example.ishelloword;
 
 import android.app.Dialog;
-import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.pm.ActivityInfo;
-import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.media.AudioManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -19,7 +16,6 @@ import android.os.IBinder;
 import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.Toolbar;
-import android.util.Config;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -83,6 +79,7 @@ import com.ISHello.ScreenInfo.ISScreenInfo;
 import com.ISHello.Serializable.Parcelable.ObjectTranDemo;
 import com.ISHello.Sort.sort;
 import com.ISHello.Tools.ISTools;
+import com.ISHello.TouchEvent.TouchEventActivity;
 import com.ISHello.Update.ISUpdateActivity;
 import com.ISHello.UserInfo.ISUserInfo;
 import com.ISHello.ViewPage.ViewPagerActivity;
@@ -687,6 +684,9 @@ public class MainActivity extends CheckPermissionsActivity {
                     case 29:
                         gotoSystemKeyboard();
                         break;
+                    case 30:
+                        gotoTouchEvent();
+                        break;
                     default:
                         break;
                 }
@@ -699,7 +699,13 @@ public class MainActivity extends CheckPermissionsActivity {
             public void onRefresh(RefreshLayout refreshlayout) {
                 Log.i(TAG, "--->onRefresh()==" + Thread.currentThread().getName());
                 refreshlayout.finishRefresh(2000, true);//传入false表示刷新失败
-                main_toolbar_title.setText("刷新");
+                main_toolbar_title.setText("刷新中...");
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        main_toolbar_title.setText("首页");
+                    }
+                }, 2000);
             }
         });
 
@@ -713,20 +719,6 @@ public class MainActivity extends CheckPermissionsActivity {
                 }
             }
         });
-    }
-
-    public void viewUrl(String url, String mimeType) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setDataAndType(Uri.parse(url), mimeType);
-        if (getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
-            try {
-                startActivity(intent);
-            } catch (ActivityNotFoundException e) {
-                if (Config.LOGD) {
-                    Log.d(TAG, "activity not found for " + mimeType + " over " + Uri.parse(url).getScheme(), e);
-                }
-            }
-        }
     }
 
     class SampleAdapter extends BaseAdapter {
@@ -1028,6 +1020,12 @@ public class MainActivity extends CheckPermissionsActivity {
 
     public void gotoSystemKeyboard() {
         Intent intent = new Intent(MainActivity.this, SystemKeyboardActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
+
+    public void gotoTouchEvent() {
+        Intent intent = new Intent(MainActivity.this, TouchEventActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }

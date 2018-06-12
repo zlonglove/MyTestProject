@@ -2,9 +2,10 @@ package com.ISHello.TouchEvent;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.RelativeLayout;
+
+import com.ISHello.utils.LogUtil;
 
 /**
  * Created by zhanglong on 2017/3/27.
@@ -34,13 +35,13 @@ public class MyRelativeLayout extends RelativeLayout {
     public boolean dispatchTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                //Log.i(TAG, "--->dispatchTouchEvent ACTION_DOWN");
+                LogUtil.log(TAG, "--->dispatchTouchEvent ACTION_DOWN");
                 break;
             case MotionEvent.ACTION_MOVE:
-                //Log.i(TAG, "--->dispatchTouchEvent ACTION_MOVE");
+                //LogUtil.log((TAG, "--->dispatchTouchEvent ACTION_MOVE");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.i(TAG, "--->dispatchTouchEvent ACTION_UP");
+                LogUtil.log(TAG, "--->dispatchTouchEvent ACTION_UP");
                 break;
             default:
                 break;
@@ -58,13 +59,13 @@ public class MyRelativeLayout extends RelativeLayout {
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                //Log.i(TAG, "--->onInterceptTouchEvent ACTION_DOWN");
+                LogUtil.log(TAG, "--->onInterceptTouchEvent ACTION_DOWN");
                 break;
             case MotionEvent.ACTION_MOVE:
-                //Log.i(TAG, "--->onInterceptTouchEvent ACTION_MOVE");
+                // LogUtil.log(TAG, "--->onInterceptTouchEvent ACTION_MOVE");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.i(TAG, "--->onInterceptTouchEvent ACTION_UP");
+                LogUtil.log(TAG, "--->onInterceptTouchEvent ACTION_UP");
                 break;
             default:
                 break;
@@ -77,13 +78,14 @@ public class MyRelativeLayout extends RelativeLayout {
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                //Log.i(TAG, "--->onTouchEvent ACTION_DOWN");
+                LogUtil.log(TAG, "--->onTouchEvent ACTION_DOWN");
+                //getParent().requestDisallowInterceptTouchEvent(true);
                 break;
             case MotionEvent.ACTION_MOVE:
-                //Log.i(TAG, "--->onTouchEvent ACTION_MOVE");
+                // LogUtil.log(TAG, "--->onTouchEvent ACTION_MOVE");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.i(TAG, "--->onTouchEvent ACTION_UP");
+                LogUtil.log(TAG, "--->onTouchEvent ACTION_UP");
                 break;
             default:
                 break;

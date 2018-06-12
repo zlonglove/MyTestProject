@@ -1,14 +1,15 @@
 package com.ISHello.TouchEvent;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.ISHello.base.base.BaseActivity;
 import com.example.ishelloword.R;
 
-public class TouchEventActivity extends BaseActivity implements View.OnClickListener, View.OnTouchListener {
+public class TouchEventActivity extends BaseActivity implements View.OnClickListener {
     private final String TAG = "TouchEventActivity";
     private MyTextView myTextView;
 
@@ -16,12 +17,13 @@ public class TouchEventActivity extends BaseActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_touch_event);
+        setTitle("触摸事件分发");
         myTextView = (MyTextView) findViewById(R.id.my_text_view);
-        myTextView.setOnClickListener(this);
-        myTextView.setOnTouchListener(this);
+        //myTextView.setOnClickListener(this);
+        ((ViewGroup) getWindow().getDecorView().findViewById(android.R.id.content)).getChildAt(0).setBackgroundColor(Color.GREEN);
     }
 
-    @Override
+   /* @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
@@ -43,7 +45,7 @@ public class TouchEventActivity extends BaseActivity implements View.OnClickList
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                //Log.i(TAG, "--->onTouchEvent ACTION_DOWN");
+                Log.i(TAG, "--->onTouchEvent ACTION_DOWN");
                 break;
             case MotionEvent.ACTION_MOVE:
                 //Log.i(TAG, "--->onTouchEvent ACTION_MOVE");
@@ -55,7 +57,7 @@ public class TouchEventActivity extends BaseActivity implements View.OnClickList
                 break;
         }
         return super.onTouchEvent(event);
-    }
+    }*/
 
     @Override
     public void onClick(View v) {
@@ -64,29 +66,5 @@ public class TouchEventActivity extends BaseActivity implements View.OnClickList
                 Log.i(TAG, "--->MyTextView onClick");
                 break;
         }
-    }
-
-    @Override
-    public boolean onTouch(View v, MotionEvent event) {
-        switch (v.getId()) {
-            case R.id.my_text_view:
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        //Log.i(TAG, "--->onTouch ACTION_DOWN");
-                        break;
-                    case MotionEvent.ACTION_MOVE:
-                        //Log.i(TAG, "--->onTouch ACTION_MOVE");
-                        break;
-                    case MotionEvent.ACTION_UP:
-                        Log.i(TAG, "--->onTouch ACTION_UP");
-                        break;
-                    default:
-                        break;
-                }
-                break;
-            default:
-                break;
-        }
-        return false;
     }
 }

@@ -86,5 +86,6 @@
         <item>WiFi自动连接</item>
         <item>Html解析</item>
         <item>KeyBoard</item>
+        <item>TouchEvent</item>
     </string-array>
 </resources>

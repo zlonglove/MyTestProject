@@ -1,15 +1,18 @@
 package com.ISHello.TouchEvent;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.TextView;
+
+import com.ISHello.utils.LogUtil;
 
 /**
  * Created by zhanglong on 2017/3/27.
  */
 
+@SuppressLint("AppCompatCustomView")
 public class MyTextView extends TextView {
     private final String TAG = "MyTextView";
 
@@ -34,13 +37,13 @@ public class MyTextView extends TextView {
     public boolean dispatchTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                //Log.i(TAG, "--->dispatchTouchEvent ACTION_DOWN");
+                LogUtil.log(TAG, "--->dispatchTouchEvent ACTION_DOWN");
                 break;
             case MotionEvent.ACTION_MOVE:
-                //Log.i(TAG, "--->dispatchTouchEvent ACTION_MOVE");
+                // LogUtil.log(TAG, "--->dispatchTouchEvent ACTION_MOVE");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.i(TAG, "--->dispatchTouchEvent ACTION_UP");
+                LogUtil.log(TAG, "--->dispatchTouchEvent ACTION_UP");
                 break;
             default:
                 break;
@@ -52,23 +55,24 @@ public class MyTextView extends TextView {
      * MyTextView的onTOuchEvent默认返回true，消耗了touch事件，MyRelativeLayout中的onTouchEvent将不会被调用。
      *
      * @param event
-     * @return
+     * @return 返回值表明View是否响应或者消费了这个事件
      */
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                //Log.i(TAG, "--->onTouchEvent ACTION_DOWN");
+                LogUtil.log(TAG, "--->onTouchEvent ACTION_DOWN");
                 break;
             case MotionEvent.ACTION_MOVE:
-                //Log.i(TAG, "--->onTouchEvent ACTION_MOVE");
+                // LogUtil.log(TAG, "--->onTouchEvent ACTION_MOVE");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.i(TAG, "--->onTouchEvent ACTION_UP");
+                LogUtil.log(TAG, "--->onTouchEvent ACTION_UP");
                 break;
             default:
                 break;
         }
         return super.onTouchEvent(event);
+        //return true;
     }
 }
