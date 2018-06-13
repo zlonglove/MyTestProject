@@ -678,8 +678,8 @@ public class MainActivity extends CheckPermissionsActivity {
                         wifiAutoConnect();
                         break;
                     case 28:
-                        //gotoHtmlParse("https://www.baidu.com");
-                        gotoHtmlParse("https://mp.weixin.qq.com/");
+                        gotoHtmlParse("https://www.baidu.com");
+                        //gotoHtmlParse("https://mp.weixin.qq.com/");
                         break;
                     case 29:
                         gotoSystemKeyboard();
@@ -1009,7 +1009,7 @@ public class MainActivity extends CheckPermissionsActivity {
             public void accept(Map map) throws Exception {
                 if (map.get("code").equals("1")) {
                     LogUtil.log(TAG, "title==" + map.get("title").toString()
-                            + " img==" + map.get("url").toString()
+                            + " img==" + map.get("img").toString()
                             + " url==" + map.get("url").toString());
                 } else {
                     Toast.makeText(getApplicationContext(), "解析网址失败,请检查是否包含http://", Toast.LENGTH_LONG).show();

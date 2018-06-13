@@ -1,5 +1,7 @@
 package com.ISHello.HtmlParse;
 
+import android.text.TextUtils;
+
 import com.ISHello.utils.LogUtil;
 
 import org.jsoup.Jsoup;
@@ -88,8 +90,13 @@ public class LinkFetcher {
                     Document document = Jsoup.parse(new URL(url.trim()), 5000);
                     String title = document.head().getElementsByTag("title").text();
                     Elements imgs = document.getElementsByTag("img");//取得所有Img标签的值
-                    if (imgs.size() > 0) {
-                        imgStr = imgs.get(0).attr("abs:src");//默认取第一个为图片
+                    if (imgs != null) {
+                        for (int i = 0; i < imgs.size(); i++) {
+                            imgStr = imgs.get(i).attr("abs:src");//默认取第一个为图片
+                            if (!TextUtils.isEmpty(imgStr)) {
+                                break;
+                            }
+                        }
                     }
                     map = new HashMap();
                     map.put("code", "1");
