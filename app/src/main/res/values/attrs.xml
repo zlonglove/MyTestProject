@@ -104,4 +104,12 @@
         <attr name="shhEnableFadeAnimation" format="boolean" />
     </declare-styleable>
 
+    <declare-styleable name="RectangleBoxEditText">
+        <attr name="boxStokeColor" format="color|reference"/>
+        <attr name="boxBackgroundColor" format="color|reference"/>
+        <attr name="numberTextColor" format="color|reference"/>
+        <attr name="boxCount" format="integer"/>
+        <attr name="boxPadding" format="dimension"/>
+    </declare-styleable>
+
 </resources>

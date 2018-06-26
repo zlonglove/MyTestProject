@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.ISHello.TouchEvent.MyRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_touch_event"
     android:layout_width="match_parent"
@@ -13,5 +14,32 @@
         android:layout_height="wrap_content"
         android:background="@color/red"
         android:text="MyTextView" />
+
+    <Button
+        android:id="@+id/touch_event_button"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/my_text_view"
+        android:text="Button" />
+
+    <com.ISHello.RectEdittext.RectangleBoxEditText
+        android:id="@+id/et_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:digits="0123456789"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:inputType="number"
+        android:maxLength="4"
+        android:maxLines="1"
+        app:boxBackgroundColor="#a1a1a1"
+        app:boxCount="4"
+        app:boxPadding="10dp"
+        app:boxStokeColor="#ffeca0"
+        app:numberTextColor="#353535" />
 
 </com.ISHello.TouchEvent.MyRelativeLayout>
