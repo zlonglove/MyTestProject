@@ -29,7 +29,7 @@ public class KeyboardUtil {
     private EditText mEditText;
 
     public KeyboardUtil(Activity activity) {
-        this(activity, false);
+        this(activity, true);
     }
 
     public KeyboardUtil(Activity activity, boolean ifRandom) {
@@ -92,13 +92,15 @@ public class KeyboardUtil {
                 }
             } else if (primaryCode == Keyboard.KEYCODE_CANCEL) {// 隐藏键盘
                 hideKeyboard();
-                if (mOnCancelClick != null) {
-                    mOnCancelClick.onCancellClick();
-                }
             } else if (primaryCode == Keyboard.KEYCODE_DONE) {// 隐藏键盘
                 //hideKeyboard();
                 if (mOnOkClick != null) {
                     mOnOkClick.onOkClick();
+                }
+            } else if (primaryCode == 58) {
+                //hideKeyboard();
+                if (mOnAccountClick != null) {
+                    mOnAccountClick.onAccountClick();
                 }
             } else {
                 editable.insert(start, Character.toString((char) primaryCode));
@@ -166,19 +168,19 @@ public class KeyboardUtil {
         void onOkClick();
     }
 
-    public interface onCancelClick {
-        void onCancellClick();
+    public interface onAccountClick {
+        void onAccountClick();
     }
 
     public OnOkClick mOnOkClick = null;
-    public onCancelClick mOnCancelClick;
+    public onAccountClick mOnAccountClick;
 
     public void setOnOkClick(OnOkClick onOkClick) {
         mOnOkClick = onOkClick;
     }
 
-    public void setOnCancelClick(onCancelClick onCancelClick) {
-        mOnCancelClick = onCancelClick;
+    public void setOnAccountClick(onAccountClick onAccountClick) {
+        mOnAccountClick = onAccountClick;
     }
 
 
