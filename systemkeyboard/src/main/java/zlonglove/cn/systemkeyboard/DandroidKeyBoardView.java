@@ -53,14 +53,12 @@ public class DandroidKeyBoardView extends KeyboardView {
     }
 
     private void drawKeyBackground(int drawableId, Canvas canvas, Key key) {
-        Drawable npd = mContext.getResources().getDrawable(
-                drawableId);
+        Drawable npd = mContext.getResources().getDrawable(drawableId);
         int[] drawableState = key.getCurrentDrawableState();
         if (key.codes[0] != 0) {
             npd.setState(drawableState);
         }
-        npd.setBounds(key.x, key.y, key.x + key.width, key.y
-                + key.height);
+        npd.setBounds(key.x, key.y, key.x + key.width, key.y + key.height);
         npd.draw(canvas);
     }
 

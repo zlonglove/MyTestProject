@@ -87,5 +87,6 @@
         <item>Html解析</item>
         <item>KeyBoard</item>
         <item>TouchEvent</item>
+        <item>录屏</item>
     </string-array>
 </resources>

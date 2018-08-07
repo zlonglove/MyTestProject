@@ -111,6 +111,7 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.ui.marqueeview.MarqueeViewActivity;
+import com.ws.mediaprojectionmediamuxer.RecodeActivity;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
@@ -687,6 +688,9 @@ public class MainActivity extends CheckPermissionsActivity {
                     case 30:
                         gotoTouchEvent();
                         break;
+                    case 31:
+                        gotoRecode();
+                        break;
                     default:
                         break;
                 }
@@ -1026,6 +1030,12 @@ public class MainActivity extends CheckPermissionsActivity {
 
     public void gotoTouchEvent() {
         Intent intent = new Intent(MainActivity.this, TouchEventActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
+
+    public void gotoRecode() {
+        Intent intent = new Intent(MainActivity.this, RecodeActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }

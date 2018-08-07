@@ -29,7 +29,7 @@ public class KeyboardUtil {
     private EditText mEditText;
 
     public KeyboardUtil(Activity activity) {
-        this(activity, true);
+        this(activity, false);
     }
 
     public KeyboardUtil(Activity activity, boolean ifRandom) {

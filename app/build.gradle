@@ -139,4 +139,5 @@ dependencies {
     implementation project(':adrecyclerview')
     implementation files('libs/jsoup-1.11.3.jar')
     implementation project(':systemkeyboard')
+    implementation project(':mediaprojectionmediamuxer')
 }
