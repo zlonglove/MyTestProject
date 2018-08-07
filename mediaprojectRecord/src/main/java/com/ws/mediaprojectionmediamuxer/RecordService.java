@@ -20,7 +20,6 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.Surface;
 import android.view.View;
 import android.view.WindowManager;
@@ -133,7 +132,7 @@ public class RecordService extends Service {
             }
         });
 
-        mCaptureIv.setOnTouchListener(new View.OnTouchListener() {
+       /* mCaptureIv.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 params.x = (int) (motionEvent.getRawX() - mCaptureIv.getMeasuredWidth() / 2);
@@ -141,7 +140,7 @@ public class RecordService extends Service {
                 wm.updateViewLayout(mCaptureLl, params);
                 return false;
             }
-        });
+        });*/
 
     }
 
