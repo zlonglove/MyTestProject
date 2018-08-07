@@ -689,7 +689,7 @@ public class MainActivity extends CheckPermissionsActivity {
                         gotoTouchEvent();
                         break;
                     case 31:
-                        gotoRecode();
+                        gotoRecord();
                         break;
                     default:
                         break;
@@ -1034,7 +1034,7 @@ public class MainActivity extends CheckPermissionsActivity {
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
-    public void gotoRecode() {
+    public void gotoRecord() {
         Intent intent = new Intent(MainActivity.this, RecodeActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
