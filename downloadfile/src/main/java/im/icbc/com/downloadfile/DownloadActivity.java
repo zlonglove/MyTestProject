@@ -76,12 +76,20 @@ public class DownloadActivity extends CheckPermissionsActivity {
         IntentFilter filter = new IntentFilter();
         filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
         registerReceiver(mNetWorkChangeReceiver, filter);
+
         final DownloadState startstate = new StartDownloadState();
         final DownloadState pausestate = new StopDownloadState();
+
         final DownLoaderController controller = new DownLoaderController();
-        final String filename = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "test.apk";
-        final int threadCount = 1;
-        Log.d(TAG, "file name: " + filename);
+
+        // 获取输入地址的最后一个"/"出现的位置
+        int lastIndex = Constant.downloadUrl.lastIndexOf("/");
+        // 获取文件名及格式
+        String filename = Constant.downloadUrl.substring(lastIndex + 1, Constant.downloadUrl.length());
+        Log.i(TAG,"--->文件名为:" + filename);
+        final String filepath = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + filename;
+        final int threadCount = 5;
+
         btn_pauseDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,7 +98,7 @@ public class DownloadActivity extends CheckPermissionsActivity {
                     return;
                 }
                 controller.setDownloadState(pausestate);
-                controller.stopDownload(DownloadActivity.this, mHandler, Constant.downloadUrl, filename, threadCount);
+                controller.stopDownload(DownloadActivity.this, mHandler, Constant.downloadUrl, filepath, threadCount);
             }
         });
         btn_startDownload.setOnClickListener(new View.OnClickListener() {
@@ -101,7 +109,7 @@ public class DownloadActivity extends CheckPermissionsActivity {
                     return;
                 }
                 controller.setDownloadState(startstate);
-                controller.startDownload(DownloadActivity.this, mHandler, Constant.downloadUrl, filename, threadCount);
+                controller.startDownload(DownloadActivity.this, mHandler, Constant.downloadUrl, filepath, threadCount);
             }
         });
         btn_clearDownload.setOnClickListener(new View.OnClickListener() {
@@ -114,7 +122,7 @@ public class DownloadActivity extends CheckPermissionsActivity {
 
     @Override
     protected void onDestroy() {
-        Log.i(TAG,"--->onDestory()");
+        Log.i(TAG, "--->onDestory()");
         super.onDestroy();
         if (mNetWorkChangeReceiver != null) {
             unregisterReceiver(mNetWorkChangeReceiver);

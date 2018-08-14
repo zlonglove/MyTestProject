@@ -12,7 +12,8 @@ import im.icbc.com.downloadfile.downloadutils.bean.DownloadInfo;
 
 
 /**
- * Created by Jim on 2017/7/20.
+ * Created on 2017/7/20.
+ * @author zhanglong
  */
 
 public class DBManager {
@@ -75,7 +76,7 @@ public class DBManager {
         db.close();
     }
 
-    public void updataInfos(int threadId, int compeleteSize, String urlstr) {
+    public void updataInfos(int threadId, long compeleteSize, String urlstr) {
         SQLiteDatabase db = helper.getWritableDatabase();
         String sql = "update downloadinfo set compelete_size=? where thread_id=? and url=?";
         Object[] bindArgs = {compeleteSize, threadId, urlstr};

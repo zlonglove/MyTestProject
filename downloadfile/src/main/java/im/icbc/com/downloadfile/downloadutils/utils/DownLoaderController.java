@@ -7,7 +7,8 @@ import im.icbc.com.downloadfile.downloadutils.state.DownloadState;
 
 
 /**
- * Created by Jim on 2017/7/20.
+ * Created on 2017/7/20.
+ * @author zhanglong
  */
 
 public class DownLoaderController {

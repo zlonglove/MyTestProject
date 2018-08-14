@@ -4,7 +4,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Created by Jim on 2017/7/24.
+ * Created by on 2017/7/24.
+ * @author zhanglong
  */
 
 public class ThreadPoolsUtil {

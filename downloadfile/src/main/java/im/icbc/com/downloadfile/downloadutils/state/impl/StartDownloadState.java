@@ -12,41 +12,43 @@ import im.icbc.com.downloadfile.downloadutils.state.DownloadState;
 import im.icbc.com.downloadfile.downloadutils.utils.ThreadPoolsUtil;
 
 /**
- * Created by Jim on 2017/7/20.
+ * Created  on 2017/7/20.
+ * @author zhanglong
  */
 
 public class StartDownloadState implements DownloadState {
 
-    private final String TAG=StartDownloadState.this.getClass().getSimpleName();
+    private final String TAG = StartDownloadState.this.getClass().getSimpleName();
+
     @Override
     public void startDownload(final Context context, final Handler handler, final String downloadurl, final String filename, final int threadcount) {
         ThreadPoolsUtil.getInstance().getFixedThreadPool().execute(new Runnable() {
             @Override
             public void run() {
-                int filesize=getDownloadFilesize(downloadurl);
-                Log.i(TAG,"--->Download File Size=="+filesize);
-                FileDownloader.getInstance().init(context,handler,downloadurl,filesize,filename,threadcount).startDownload();
+                int filesize = getDownloadFilesize(downloadurl);
+                Log.i(TAG, "--->Download File Size==" + filesize);
+                FileDownloader.getInstance().init(context, handler, downloadurl, filesize, filename, threadcount).startDownload();
 
             }
         });
     }
 
-    private int getDownloadFilesize(String downloadurl){
-        HttpURLConnection connection=null;
-        int filesize=-1;
+    private int getDownloadFilesize(String downloadurl) {
+        HttpURLConnection connection = null;
+        int filesize = -1;
         try {
-            URL url=new URL(downloadurl);
-            connection= (HttpURLConnection) url.openConnection();
+            URL url = new URL(downloadurl);
+            connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setConnectTimeout(5000);
             connection.setReadTimeout(5000);
             connection.setRequestProperty("Accept-Encoding", "identity");
-            filesize=connection.getContentLength();
+            filesize = connection.getContentLength();
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
-                if (connection!=null){
+                if (connection != null) {
                     connection.disconnect();
                 }
             } catch (Exception e) {

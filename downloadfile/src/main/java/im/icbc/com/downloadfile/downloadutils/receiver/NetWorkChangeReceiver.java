@@ -12,7 +12,9 @@ import im.icbc.com.downloadfile.downloadutils.utils.NetWorkUtil;
 
 
 /**
- * Created by Jim on 2017/7/25.
+ * Created on 2017/7/25.
+ *
+ * @author zhanglong
  */
 
 public class NetWorkChangeReceiver extends BroadcastReceiver {
@@ -20,11 +22,11 @@ public class NetWorkChangeReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.d("TAG","run in onReceive");
+        Log.d("TAG", "run in onReceive");
         if (intent.getAction().equals(ConnectivityManager.CONNECTIVITY_ACTION)) {
-            if (!NetWorkUtil.isNetworkAvailable(context)){
-                Toast.makeText(context,"暂停下载，网络不可用", Toast.LENGTH_SHORT).show();
-                Log.d("TAG","暂停所有");
+            if (!NetWorkUtil.isNetworkAvailable(context)) {
+                Toast.makeText(context, "暂停下载，网络不可用", Toast.LENGTH_SHORT).show();
+                Log.d("TAG", "暂停所有");
                 FileDownloader.getInstance().pauseAll();
             }
 

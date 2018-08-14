@@ -1,18 +1,19 @@
 package im.icbc.com.downloadfile.downloadutils.bean;
 
 /**
- * Created by Jim on 2017/7/20.
+ * Created by on 2017/7/20.
+ * @author zhanglong
  */
 
 public class DownloadInfo {
     private int threadId;// 下载器id
-    private int startPos;// 开始点
-    private int endPos;// 结束点
-    private int compeleteSize;// 完成度
+    private long startPos;// 开始点
+    private long endPos;// 结束点
+    private long compeleteSize;// 完成度
     private String url;// 下载器网络标识
 
-    public DownloadInfo(int threadId, int startPos, int endPos,
-                        int compeleteSize, String url) {
+    public DownloadInfo(int threadId, long startPos, long endPos,
+                        long compeleteSize, String url) {
         this.threadId = threadId;
         this.startPos = startPos;
         this.endPos = endPos;
@@ -39,27 +40,27 @@ public class DownloadInfo {
         this.threadId = threadId;
     }
 
-    public int getStartPos() {
+    public long getStartPos() {
         return startPos;
     }
 
-    public void setStartPos(int startPos) {
+    public void setStartPos(long startPos) {
         this.startPos = startPos;
     }
 
-    public int getEndPos() {
+    public long getEndPos() {
         return endPos;
     }
 
-    public void setEndPos(int endPos) {
+    public void setEndPos(long endPos) {
         this.endPos = endPos;
     }
 
-    public int getCompeleteSize() {
+    public long getCompeleteSize() {
         return compeleteSize;
     }
 
-    public void setCompeleteSize(int compeleteSize) {
+    public void setCompeleteSize(long compeleteSize) {
         this.compeleteSize = compeleteSize;
     }
 

@@ -17,7 +17,9 @@ import im.icbc.com.downloadfile.downloadutils.constant.Constant;
 import im.icbc.com.downloadfile.downloadutils.db.DBManager;
 
 /**
- * Created by Jim on 2017/7/25.
+ * Created on 2017/7/25.
+ *
+ * @author zhanglong
  */
 
 public class DownloadTask implements Runnable {
@@ -77,22 +79,38 @@ public class DownloadTask implements Runnable {
         HttpURLConnection connection = null;
         BufferedInputStream inputStream = null;
         DownloadInfo info = new DownloadInfo();
-        Log.i(TAG, "is has info: " + DBManager.getInstance(mContext).isHasInfos(mDownloadurl));
         if (DBManager.getInstance(mContext).isHasInfos(mDownloadurl)) {     //判断是否存在未完成的该任务
             info = DBManager.getInstance(mContext).getInfo(mDownloadurl, threadId);
         }
         try {
             URL url = new URL(mDownloadurl);
-            int compeltesize = info.getCompeleteSize();
-            Log.i(TAG, "first completesize is: " + compeltesize);
-            int startPos = info.getStartPos();      //本地数据库中的保存的开始位置跟结束位置
-            int endPos = info.getEndPos();
+            long compeltesize = info.getCompeleteSize();
+            long startPos = info.getStartPos();      //本地数据库中的保存的开始位置跟结束位置
+            long endPos = info.getEndPos();
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
-            connection.setConnectTimeout(10000);
-            connection.setReadTimeout(10000);
-            connection.setRequestProperty("Connection", "Keep-Alive");
-            connection.setRequestProperty("Range", "bytes=" + startPos + compeltesize + "-" + endPos);
+
+            connection.setRequestProperty(
+                    "Accept",
+                    "image/gif, image/jpeg, image/pjpeg, image/pjpeg, "
+                            + "application/x-shockwave-flash, application/xaml+xml, "
+                            + "application/vnd.ms-xpsdocument, application/x-ms-xbap, "
+                            + "application/x-ms-application, application/vnd.ms-excel, "
+                            + "application/vnd.ms-powerpoint, application/msword, */*");
+            connection.setRequestProperty("Accept-Language", "zh-CN");
+            connection.setRequestProperty("Charset", "UTF-8");
+
+            long hasStartPos = startPos + compeltesize;
+            connection.setRequestProperty("Range", "bytes=" + hasStartPos + "-" + endPos);
+            if (hasStartPos >= endPos) {
+                sendMessage(Constant.DOWNLOAD_COMPLETE, -1, -1, mDownloadurl);
+                return;
+            }
+            Log.i(TAG, "Range: " + connection.getRequestProperty("Range") + "/thread==" + info.getThreadId());
+            connection.connect();
+
+            int mResponseCode = connection.getResponseCode();
+            Log.i(TAG, "ResponseCode: " + mResponseCode + " threadId==" + info.getThreadId());
             inputStream = new BufferedInputStream(connection.getInputStream());
             mRandomAccessFile = new RandomAccessFile(mFilename, "rw");
             mRandomAccessFile.seek(startPos + compeltesize);         //上次的最后的写入位置
@@ -117,6 +135,7 @@ public class DownloadTask implements Runnable {
             }
         } catch (Exception e) {
             sendMessage(Constant.DOWNLOAD_FAIL, -1, -1, mDownloadurl);
+            Log.e(TAG, "--->Thread " + info.getThreadId() + " request error," + e.getMessage());
             e.printStackTrace();
         } finally {
             try {

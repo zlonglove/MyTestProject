@@ -4,7 +4,8 @@ import android.content.Context;
 import android.os.Handler;
 
 /**
- * Created by Jim on 2017/7/20.
+ * Created on 2017/7/20.
+ * @author zhanglong
  */
 
 public interface DownloadState {

@@ -16,7 +16,8 @@ import im.icbc.com.downloadfile.downloadutils.db.DBManager;
 import im.icbc.com.downloadfile.downloadutils.utils.ThreadPoolsUtil;
 
 /**
- * Created by Jim on 2017/7/21.
+ * Created on 2017/7/21.
+ * @author zhanglong
  */
 
 public class FileDownloader {
@@ -45,9 +46,7 @@ public class FileDownloader {
         return sFileDownloader;
     }
 
-    public synchronized FileDownloader init(Context context, Handler handler,
-                                            String downloadurl, int filesize,
-                                            String filename, int threadCount) {
+    public synchronized FileDownloader init(Context context, Handler handler, String downloadurl, int filesize, String filename, int threadCount) {
         Log.d(TAG, "Run in init");
         this.context = context;
         this.handler = handler;
