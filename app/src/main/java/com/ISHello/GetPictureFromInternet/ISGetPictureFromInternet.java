@@ -22,6 +22,9 @@ import com.ISHello.Cache.DiskLrcCache.ISDiskLruCacheUtils;
 import com.ISHello.CustomToast.CustomToast;
 import com.ISHello.NetWork.ISAndroidHandler;
 import com.ISHello.NetWork.ISNetWork;
+import com.ISHello.badgeview.BGABadgeImageView;
+import com.ISHello.badgeview.BGABadgeable;
+import com.ISHello.badgeview.BGADragDismissDelegate;
 import com.ISHello.base.base.BaseActivity;
 import com.androidquery.AQuery;
 import com.example.ishelloword.R;
@@ -51,6 +54,8 @@ public class ISGetPictureFromInternet extends BaseActivity {
     private static final int LOAD_IMAGE_REQUEST_CODE = 1;
     private ISNetWorkClient client;
     private String filePath = null;
+
+    private BGABadgeImageView bgaBadgeImageView;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -147,6 +152,17 @@ public class ISGetPictureFromInternet extends BaseActivity {
                 if (hasFocus) {
                     Log.i(TAG, "--->onFocus()");
                     mLoginPassword.openKeyBoard();
+                }
+            }
+        });
+
+        bgaBadgeImageView = (BGABadgeImageView) findViewById(R.id.iv_badgeview);
+        bgaBadgeImageView.showTextBadge("10");
+        bgaBadgeImageView.setDragDismissDelegage(new BGADragDismissDelegate() {
+            @Override
+            public void onDismiss(BGABadgeable badgeable) {
+                if (!badgeable.isShowBadge()) {
+                    badgeable.showCirclePointBadge();
                 }
             }
         });

@@ -113,15 +113,13 @@ public class DownloadTask implements Runnable {
             Log.i(TAG, "ResponseCode: " + mResponseCode + " threadId==" + info.getThreadId());
             inputStream = new BufferedInputStream(connection.getInputStream());
             mRandomAccessFile = new RandomAccessFile(mFilename, "rw");
-            mRandomAccessFile.seek(startPos + compeltesize);         //上次的最后的写入位置
-            Log.i(TAG, "seek position: " + startPos + "  thread id: " + threadId);
+            mRandomAccessFile.seek(hasStartPos);         //上次的最后的写入位置
             byte[] buffer = new byte[8 * 1024];
             int length = 0;
             while ((length = inputStream.read(buffer)) != -1) {
                 if (FileDownloader.getInstance().getDownloadState(mDownloadurl) == Constant.DOWNLOAD_STATE_PAUSE) { //下载任务被暂停
                     return;
                 }
-//                Log.d(TAG, "write file length: " + length);
                 mRandomAccessFile.write(buffer, 0, length);
                 compeltesize += length;
                 Log.i(TAG, "save completesize is: " + compeltesize + " threadid: " + threadId);
