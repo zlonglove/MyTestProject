@@ -884,6 +884,18 @@
         <activity android:name="com.ISHello.EventBus.EventBusA" />
         <activity android:name="com.ISHello.EventBus.EventBusB"></activity>
 
+        <activity
+            android:name="com.ISHello.IndexablerecyclerView.MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.ISHello.IndexablerecyclerView.city.PickCityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ISHello.IndexablerecyclerView.contact.PickContactActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

@@ -120,13 +120,13 @@
 
 
     <com.ISHello.badgeview.BGABadgeImageView
-        android:src="@mipmap/ic_launcher_round"
         android:id="@+id/iv_badgeview"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="1dp"
+        android:layout_marginTop="10dp"
         android:padding="2dp"
+        android:src="@mipmap/ic_launcher_round"
         app:badge_bgColor="#ff0000"
         app:badge_dragable="true"
         app:badge_gravity="rightTop"

@@ -2,4 +2,4 @@ include ':app', ':linclibrary', ':jnisdk', ':keyboard', ':musicIndicator', ':gol
         ':paper-onboarding', ':imageeditor', ':popmenu', ':downloadfile',
         ':iosdialog', ':timeselector', ':indexbarlayout', ':MarqueeView',
         ':functionGuide', ':rulerlib', ':CommonUtil', ':banner',
-        ':android-gif-drawable', ':lfilepickerlibrary', ':mediaprojectRecord'
+        ':android-gif-drawable', ':lfilepickerlibrary', ':mediaprojectRecord', ':indexablerecyclerview'

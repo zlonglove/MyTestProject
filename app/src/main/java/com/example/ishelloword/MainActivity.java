@@ -691,6 +691,9 @@ public class MainActivity extends CheckPermissionsActivity {
                     case 31:
                         gotoRecord();
                         break;
+                    case 32:
+                        gotoIndexablerecyclerView();
+                        break;
                     default:
                         break;
                 }
@@ -1040,6 +1043,11 @@ public class MainActivity extends CheckPermissionsActivity {
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
+    public void gotoIndexablerecyclerView(){
+        Intent intent = new Intent(MainActivity.this, com.ISHello.IndexablerecyclerView.MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
     public void gotoFileDownload() {
         Intent intent = new Intent(MainActivity.this, DownloadActivity.class);
         startActivity(intent);

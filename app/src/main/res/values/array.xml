@@ -88,5 +88,6 @@
         <item>KeyBoard</item>
         <item>TouchEvent</item>
         <item>录屏</item>
+        <item>字母排序索引</item>
     </string-array>
 </resources>
