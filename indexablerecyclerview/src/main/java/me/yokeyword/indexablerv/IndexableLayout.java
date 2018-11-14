@@ -42,7 +42,7 @@ import me.yokeyword.indexablerv.database.IndexBarDataObserver;
 
 /**
  * RecyclerView + IndexBar
- * Created by YoKey on 16/10/6.
+ * @author
  */
 public class IndexableLayout extends FrameLayout {
     // 快速排序，只比对首字母(默认)

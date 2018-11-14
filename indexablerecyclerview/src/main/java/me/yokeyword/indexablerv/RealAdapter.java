@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 /**
- * Created by YoKey on 16/10/6.
+ * @author
  */
 class RealAdapter<T extends IndexableEntity> extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private ArrayList<EntityWrapper<T>> mDatasList = new ArrayList<>();

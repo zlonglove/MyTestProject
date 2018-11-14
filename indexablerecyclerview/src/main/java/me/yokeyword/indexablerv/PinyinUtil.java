@@ -5,7 +5,7 @@ import com.github.promeg.pinyinhelper.Pinyin;
 import java.util.regex.Pattern;
 
 /**
- * Created by YoKey on 16/3/20.
+ * @author
  */
 public class PinyinUtil {
     private static final String PATTERN_POLYPHONE = "^#[a-zA-Z]+#.+";
@@ -15,7 +15,9 @@ public class PinyinUtil {
      * Chinese character -> Pinyin
      */
     public static String getPingYin(String inputString) {
-        if (inputString == null) return "";
+        if (inputString == null) {
+            return "";
+        }
         return Pinyin.toPinyin(inputString, "").toLowerCase();
     }
 

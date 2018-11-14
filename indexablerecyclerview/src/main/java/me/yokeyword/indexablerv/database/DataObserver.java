@@ -1,7 +1,7 @@
 package me.yokeyword.indexablerv.database;
 
 /**
- * Created by YoKey on 16/10/13.
+ * @author
  */
 public class DataObserver {
     /**

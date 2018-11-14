@@ -13,7 +13,7 @@ import me.yokeyword.indexablerv.database.IndexBarDataObservable;
 import me.yokeyword.indexablerv.database.IndexBarDataObserver;
 
 /**
- * Created by YoKey on 16/10/16.
+ * @author
  */
 
 abstract class AbstractHeaderFooterAdapter<T> {

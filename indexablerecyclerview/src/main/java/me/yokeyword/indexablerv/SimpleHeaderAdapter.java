@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 该HeaderAdapter 接收一个IndexableAdapter, 使其布局以及点击事件和IndexableAdapter一致
- * Created by YoKey on 16/10/8.
+ * @author
  */
 public class SimpleHeaderAdapter<T extends IndexableEntity> extends IndexableHeaderAdapter<T> {
     private IndexableAdapter<T> mAdapter;

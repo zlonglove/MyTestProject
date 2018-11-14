@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * HeaderView Adapter
- * Created by YoKey on 16/10/8.
+ * @author
  */
 public abstract class IndexableHeaderAdapter<T> extends AbstractHeaderFooterAdapter<T>{
 

@@ -10,7 +10,7 @@ import me.yokeyword.indexablerv.database.DataObservable;
 import me.yokeyword.indexablerv.database.DataObserver;
 
 /**
- * Created by YoKey on 16/10/6.
+ * @author
  */
 public abstract class IndexableAdapter<T extends IndexableEntity> {
     static final int TYPE_ALL = 0;

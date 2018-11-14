@@ -5,7 +5,7 @@ import android.support.annotation.NonNull;
 import java.util.Comparator;
 
 /**
- * Created by YoKey on 16/10/7.
+ * @author
  */
 class PinyinComparator<T extends IndexableEntity> implements Comparator<EntityWrapper<T>> {
 

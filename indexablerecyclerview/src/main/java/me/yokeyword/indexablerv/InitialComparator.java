@@ -3,7 +3,7 @@ package me.yokeyword.indexablerv;
 import java.util.Comparator;
 
 /**
- * Created by YoKey on 16/10/14.
+ * @author
  */
 class InitialComparator<T extends IndexableEntity> implements Comparator<EntityWrapper<T>> {
     @Override

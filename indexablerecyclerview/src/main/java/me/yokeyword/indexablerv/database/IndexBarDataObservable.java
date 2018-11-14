@@ -3,7 +3,7 @@ package me.yokeyword.indexablerv.database;
 import android.database.Observable;
 
 /**
- * Created by Sun on 16/10/13.
+ * @author
  */
 public class IndexBarDataObservable extends Observable<IndexBarDataObserver> {
 
