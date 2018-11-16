@@ -698,8 +698,8 @@ public class IndexableLayout extends FrameLayout {
             for (int i = 0; i < datas.size(); i++) {
                 EntityWrapper<T> entity = new EntityWrapper<>();
                 T item = datas.get(i);
-                String indexName = item.getFieldIndexBy();
-                String pinyin = PinyinUtil.getPingYin(indexName);
+                String chineseName = item.getFieldIndexBy();
+                String pinyin = PinyinUtil.getPingYin(chineseName);
                 entity.setPinyin(pinyin);
 
                 // init EntityWrapper
@@ -709,7 +709,7 @@ public class IndexableLayout extends FrameLayout {
                 } else if (PinyinUtil.matchingPolyphone(pinyin)) {
                     entity.setIndex(PinyinUtil.gePolyphoneInitial(pinyin).toUpperCase());
                     entity.setPinyin(PinyinUtil.getPolyphoneRealPinyin(pinyin));
-                    String hanzi = PinyinUtil.getPolyphoneRealHanzi(indexName);
+                    String hanzi = PinyinUtil.getPolyphoneRealHanzi(chineseName);
                     entity.setIndexByField(hanzi);
                     // 把多音字的真实indexField重新赋值
                     item.setFieldIndexBy(hanzi);

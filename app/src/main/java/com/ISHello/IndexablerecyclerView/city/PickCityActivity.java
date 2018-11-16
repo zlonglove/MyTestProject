@@ -11,9 +11,10 @@ import android.widget.Toast;
 
 
 import com.ISHello.IndexablerecyclerView.ToastUtil;
+import com.ISHello.IndexablerecyclerView.utils.PinyinDictImp;
+import com.ISHello.utils.LogUtil;
 import com.example.ishelloword.R;
 import com.github.promeg.pinyinhelper.Pinyin;
-import com.github.promeg.tinypinyin.lexicons.android.cncity.CnCityDict;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -51,8 +52,9 @@ public class PickCityActivity extends AppCompatActivity {
         indexableLayout.setLayoutManager(new GridLayoutManager(this, 1));
 
         // 多音字处理
-        Pinyin.init(Pinyin.newConfig().with(CnCityDict.getInstance(this)));
-
+        Pinyin.init(Pinyin.newConfig().with(PinyinDictImp.getInstance(this)));
+        LogUtil.log(Pinyin.toPinyin("六安", ""));
+        LogUtil.log(Pinyin.toPinyin("六", ""));
         // 添加自定义多音字词典
 //        Pinyin.init(Pinyin.newConfig()
 //                .with(new PinyinMapDict() {
