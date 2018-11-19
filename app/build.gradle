@@ -141,4 +141,5 @@ dependencies {
     implementation project(':systemkeyboard')
     implementation project(':mediaprojectRecord')
     implementation project(':indexablerecyclerview')
+    implementation project(':pickerview')
 }

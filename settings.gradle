@@ -1,5 +1,7 @@
-include ':app', ':linclibrary', ':jnisdk', ':keyboard', ':musicIndicator', ':golddrop', ':network', ':rxjava', ':tabswitch', ':aidl', ':pushtorefresh', ':recyclerview', ':adrecyclerview', ':systemkeyboard',
+include ':app', ':linclibrary', ':jnisdk', ':keyboard', ':musicIndicator', ':golddrop', ':network', ':rxjava',
+        ':tabswitch', ':aidl', ':pushtorefresh', ':recyclerview', ':adrecyclerview', ':systemkeyboard',
         ':paper-onboarding', ':imageeditor', ':popmenu', ':downloadfile',
         ':iosdialog', ':timeselector', ':indexbarlayout', ':MarqueeView',
         ':functionGuide', ':rulerlib', ':CommonUtil', ':banner',
-        ':android-gif-drawable', ':lfilepickerlibrary', ':mediaprojectRecord', ':indexablerecyclerview'
+        ':android-gif-drawable', ':lfilepickerlibrary', ':mediaprojectRecord',
+        ':indexablerecyclerview', ':wheelview', ':pickerview'

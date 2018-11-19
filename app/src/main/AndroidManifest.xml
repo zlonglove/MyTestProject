@@ -86,8 +86,8 @@
             android:excludeFromRecents="false"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:theme="@style/AppCompatTheme.Main"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatTheme.Main">
 
             <!-- android:screenOrientation="landscape" -->
             <intent-filter>
@@ -624,11 +624,10 @@
                 <action android:name="cn.jpush.android.intent.PUSH_TIME" />
             </intent-filter>
         </service>
-
         <service
             android:name="zlonglove.cn.aidl.service.AidlService"
             android:exported="false"
-            android:process=":aidl"></service>
+            android:process=":aidl" />
 
         <provider
             android:name="zlonglove.cn.aidl.provider.CommonProvider"
@@ -882,20 +881,25 @@
             </intent-filter>
         </activity>
         <activity android:name="com.ISHello.EventBus.EventBusA" />
-        <activity android:name="com.ISHello.EventBus.EventBusB"></activity>
-
+        <activity android:name="com.ISHello.EventBus.EventBusB" />
         <activity
             android:name="com.ISHello.IndexablerecyclerView.MainActivity"
-            android:screenOrientation="portrait">
-        </activity>
-
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name="com.ISHello.IndexablerecyclerView.city.PickCityActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.ISHello.IndexablerecyclerView.contact.PickContactActivity"
             android:screenOrientation="portrait" />
-
+        <activity
+            android:name="com.ISHello.PickView.PickViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -72,6 +72,7 @@ import com.ISHello.Map.Location_Activity;
 import com.ISHello.Module.BarInfoModel;
 import com.ISHello.Module.CityModule;
 import com.ISHello.NetWork.NetWorkActivity;
+import com.ISHello.PickView.PickViewActivity;
 import com.ISHello.Process.UserManager;
 import com.ISHello.RemoteCalls.RemoteCallsClient;
 import com.ISHello.ResideMenu.ResideMenuActivity;
@@ -694,6 +695,9 @@ public class MainActivity extends CheckPermissionsActivity {
                     case 32:
                         gotoIndexablerecyclerView();
                         break;
+                    case 33:
+                        gotoPickView();
+                        break;
                     default:
                         break;
                 }
@@ -1048,6 +1052,13 @@ public class MainActivity extends CheckPermissionsActivity {
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
+
+    public void gotoPickView(){
+        Intent intent = new Intent(MainActivity.this, PickViewActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
+
     public void gotoFileDownload() {
         Intent intent = new Intent(MainActivity.this, DownloadActivity.class);
         startActivity(intent);
