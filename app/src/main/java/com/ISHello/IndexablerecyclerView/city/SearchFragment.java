@@ -13,8 +13,8 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
-import com.ISHello.IndexablerecyclerView.ToastUtil;
 import com.example.ishelloword.R;
+import com.in.zlonglove.commonutil.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,7 +78,7 @@ public class SearchFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     int position = holder.getAdapterPosition();
-                    ToastUtil.showShort(getActivity(), "选择了" + items.get(position).getName());
+                    ToastUtils.showShortToast( "选择了" + items.get(position).getName());
                 }
             });
             return holder;

@@ -7,17 +7,19 @@ import android.view.View;
 
 import com.ISHello.IndexablerecyclerView.city.PickCityActivity;
 import com.ISHello.IndexablerecyclerView.contact.PickContactActivity;
+import com.ISHello.base.base.BaseActivity;
 import com.example.ishelloword.R;
 
 
 /**
  * @author
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("IndexablerecyclerView");
         setContentView(R.layout.activity_indexable_recycler);
 
         findViewById(R.id.btn_pick_city).setOnClickListener(new View.OnClickListener() {

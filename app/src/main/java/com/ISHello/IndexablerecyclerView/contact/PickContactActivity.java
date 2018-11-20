@@ -3,7 +3,6 @@ package com.ISHello.IndexablerecyclerView.contact;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,8 +11,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ISHello.IndexablerecyclerView.ToastUtil;
+import com.ISHello.base.base.BaseActivity;
 import com.example.ishelloword.R;
+import com.in.zlonglove.commonutil.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,7 +28,7 @@ import me.yokeyword.indexablerv.SimpleHeaderAdapter;
 /**
  * @author
  */
-public class PickContactActivity extends AppCompatActivity {
+public class PickContactActivity extends BaseActivity {
     private ContactAdapter mAdapter;
     private MenuHeaderAdapter mMenuHeaderAdapter;
     private BannerHeaderAdapter mBannerHeaderAdapter;
@@ -61,9 +61,9 @@ public class PickContactActivity extends AppCompatActivity {
             @Override
             public void onItemClick(View v, int originalPosition, int currentPosition, UserEntity entity) {
                 if (originalPosition >= 0) {
-                    ToastUtil.showShort(PickContactActivity.this, "选中:" + entity.getNick() + "  当前位置:" + currentPosition + "  原始所在数组位置:" + originalPosition);
+                    ToastUtils.showShortToast("选中:" + entity.getNick() + "  当前位置:" + currentPosition + "  原始所在数组位置:" + originalPosition);
                 } else {
-                    ToastUtil.showShort(PickContactActivity.this, "选中Header/Footer:" + entity.getNick() + "  当前位置:" + currentPosition);
+                    ToastUtils.showShortToast("选中Header/Footer:" + entity.getNick() + "  当前位置:" + currentPosition);
                 }
             }
         });
@@ -71,7 +71,7 @@ public class PickContactActivity extends AppCompatActivity {
         mAdapter.setOnItemTitleClickListener(new IndexableAdapter.OnItemTitleClickListener() {
             @Override
             public void onItemClick(View v, int currentPosition, String indexTitle) {
-                ToastUtil.showShort(PickContactActivity.this, "选中:" + indexTitle + "  当前位置:" + currentPosition);
+                ToastUtils.showShortToast("选中:" + indexTitle + "  当前位置:" + currentPosition);
             }
         });
 
@@ -91,7 +91,7 @@ public class PickContactActivity extends AppCompatActivity {
         mMenuHeaderAdapter.setOnItemHeaderClickListener(new IndexableHeaderAdapter.OnItemHeaderClickListener<MenuEntity>() {
             @Override
             public void onItemClick(View v, int currentPosition, MenuEntity entity) {
-                ToastUtil.showShort(PickContactActivity.this, entity.getMenuTitle());
+                ToastUtils.showShortToast(entity.getMenuTitle());
             }
         });
 
@@ -104,6 +104,12 @@ public class PickContactActivity extends AppCompatActivity {
         mBannerHeaderAdapter = new BannerHeaderAdapter(null, null, bannerList);
         // 添加 Banner
         indexableLayout.addHeaderAdapter(mBannerHeaderAdapter);
+        mBannerHeaderAdapter.setOnItemHeaderClickListener(new IndexableHeaderAdapter.OnItemHeaderClickListener() {
+            @Override
+            public void onItemClick(View v, int currentPosition, Object entity) {
+                ToastUtils.showShortToast("点击了Banner");
+            }
+        });
 
         // FooterView
         indexableLayout.addFooterAdapter(new SimpleFooterAdapter<>(mAdapter, "尾", "我是FooterView", initFavDatas()));
@@ -121,6 +127,7 @@ public class PickContactActivity extends AppCompatActivity {
 
         /**
          * 每个HeaderView的类型应当不同
+         *
          * @return
          */
         @Override
@@ -171,12 +178,12 @@ public class PickContactActivity extends AppCompatActivity {
         public RecyclerView.ViewHolder onCreateContentViewHolder(ViewGroup parent) {
             View view = LayoutInflater.from(PickContactActivity.this).inflate(R.layout.header_contact_banner, parent, false);
             VH holder = new VH(view);
-            holder.img.setOnClickListener(new View.OnClickListener() {
+           /* holder.img.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     ToastUtil.showShort(PickContactActivity.this, "---点击了Banner---");
                 }
-            });
+            });*/
             return holder;
         }
 

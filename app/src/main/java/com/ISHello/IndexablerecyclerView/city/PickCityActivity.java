@@ -2,7 +2,6 @@ package com.ISHello.IndexablerecyclerView.city;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.SearchView;
 import android.view.View;
@@ -10,11 +9,12 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 
-import com.ISHello.IndexablerecyclerView.ToastUtil;
 import com.ISHello.IndexablerecyclerView.utils.PinyinDictImp;
+import com.ISHello.base.base.BaseActivity;
 import com.ISHello.utils.LogUtil;
 import com.example.ishelloword.R;
 import com.github.promeg.pinyinhelper.Pinyin;
+import com.in.zlonglove.commonutil.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,7 +29,7 @@ import me.yokeyword.indexablerv.SimpleHeaderAdapter;
  * 选择城市
  * @author
  */
-public class PickCityActivity extends AppCompatActivity {
+public class PickCityActivity extends BaseActivity {
     private List<CityEntity> mDatas;
     private SearchFragment mSearchFragment;
     private SearchView mSearchView;
@@ -101,9 +101,9 @@ public class PickCityActivity extends AppCompatActivity {
             @Override
             public void onItemClick(View v, int originalPosition, int currentPosition, CityEntity entity) {
                 if (originalPosition >= 0) {
-                    ToastUtil.showShort(PickCityActivity.this, "选中:" + entity.getName() + "  当前位置:" + currentPosition + "  原始所在数组位置:" + originalPosition);
+                    ToastUtils.showShortToast( "选中:" + entity.getName() + "  当前位置:" + currentPosition + "  原始所在数组位置:" + originalPosition);
                 } else {
-                    ToastUtil.showShort(PickCityActivity.this, "选中Header:" + entity.getName() + "  当前位置:" + currentPosition);
+                    ToastUtils.showShortToast( "选中Header:" + entity.getName() + "  当前位置:" + currentPosition);
                 }
             }
         });
@@ -111,7 +111,7 @@ public class PickCityActivity extends AppCompatActivity {
         adapter.setOnItemTitleClickListener(new IndexableAdapter.OnItemTitleClickListener() {
             @Override
             public void onItemClick(View v, int currentPosition, String indexTitle) {
-                ToastUtil.showShort(PickCityActivity.this, "选中:" + indexTitle + "  当前位置:" + currentPosition);
+                ToastUtils.showShortToast( "选中:" + indexTitle + "  当前位置:" + currentPosition);
             }
         });
 

@@ -16,6 +16,7 @@ import com.ISHello.utils.ContextUtils;
 import com.ISHello.utils.ProcessUtil;
 import com.example.ishelloword.R;
 import com.in.zlonglove.commonutil.BuildConfig;
+import com.in.zlonglove.commonutil.ToastUtils;
 import com.in.zlonglove.commonutil.Utils;
 import com.in.zlonglove.commonutil.klog.KLog;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
@@ -110,6 +111,7 @@ public class BaseApplication extends MultiDexApplication {
 
         KLog.init(BuildConfig.LOG_DEBUG);
         Utils.init(getApplicationContext());
+        ToastUtils.init(true);
     }
 
     @Override
