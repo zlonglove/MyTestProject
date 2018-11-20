@@ -41,7 +41,9 @@ public class PickContactActivity extends AppCompatActivity {
         IndexableLayout indexableLayout = (IndexableLayout) findViewById(R.id.indexableLayout);
 
         indexableLayout.setLayoutManager(new LinearLayoutManager(this));
-//        indexableLayout.setLayoutManager(new GridLayoutManager(this, 3));
+        //indexableLayout.setLayoutManager(new GridLayoutManager(this, 3));
+
+        //Pinyin.init(Pinyin.newConfig().with(PinyinDictImp.getInstance(this)));
 
         // setAdapter
         mAdapter = new ContactAdapter(this);
@@ -73,10 +75,16 @@ public class PickContactActivity extends AppCompatActivity {
             }
         });
 
-        // 添加我关心的人
+        /**
+         * 添加我关心的人
+         * 如果想添加的HeaderView，和主适配器的布局完全一致，则可以使用
+         */
         indexableLayout.addHeaderAdapter(new SimpleHeaderAdapter<>(mAdapter, "☆", "我关心的", initFavDatas()));
 
-        // 构造函数里3个参数,分别对应 (IndexBar的字母索引, IndexTitle, 数据源), 不想显示哪个就传null, 数据源传null时,代表add一个普通的View
+
+        /**
+         * 构造函数里3个参数,分别对应 (IndexBar的字母索引, IndexTitle, 数据源), 不想显示哪个就传null, 数据源传null时,代表add一个普通的View
+         */
         mMenuHeaderAdapter = new MenuHeaderAdapter("↑", null, initMenuDatas());
         // 添加菜单
         indexableLayout.addHeaderAdapter(mMenuHeaderAdapter);
@@ -87,7 +95,10 @@ public class PickContactActivity extends AppCompatActivity {
             }
         });
 
-        // 这里BannerView只有一个Item, 添加一个长度为1的任意List作为第三个参数
+
+        /**
+         *  这里BannerView只有一个Item, 添加一个长度为1的任意List作为第三个参数
+         */
         List<String> bannerList = new ArrayList<>();
         bannerList.add("");
         mBannerHeaderAdapter = new BannerHeaderAdapter(null, null, bannerList);
@@ -102,12 +113,16 @@ public class PickContactActivity extends AppCompatActivity {
      * 自定义的MenuHeader
      */
     class MenuHeaderAdapter extends IndexableHeaderAdapter<MenuEntity> {
-        private static final int TYPE = 1;
+        private static final int TYPE = 3;
 
         public MenuHeaderAdapter(String index, String indexTitle, List<MenuEntity> datas) {
             super(index, indexTitle, datas);
         }
 
+        /**
+         * 每个HeaderView的类型应当不同
+         * @return
+         */
         @Override
         public int getItemViewType() {
             return TYPE;

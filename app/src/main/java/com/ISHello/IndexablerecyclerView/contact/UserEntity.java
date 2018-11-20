@@ -3,7 +3,6 @@ package com.ISHello.IndexablerecyclerView.contact;
 import me.yokeyword.indexablerv.IndexableEntity;
 
 /**
- * Created by YoKey on 16/10/8.
  */
 public class UserEntity implements IndexableEntity {
     private String nick;
