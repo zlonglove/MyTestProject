@@ -358,4 +358,9 @@
         <item name="android:windowExitAnimation">@anim/payment_keyboard_exit</item>
     </style>
 
+    <!-- 分享对话框动画 -->
+    <style name="sharebottomsheetdialog_animation">
+        <item name="android:windowEnterAnimation">@anim/translate_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/translate_dialog_out</item>
+    </style>
 </resources>

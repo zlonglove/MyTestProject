@@ -27,6 +27,7 @@ import me.yokeyword.indexablerv.SimpleHeaderAdapter;
 
 /**
  * 选择城市
+ *
  * @author
  */
 public class PickCityActivity extends BaseActivity {
@@ -101,9 +102,9 @@ public class PickCityActivity extends BaseActivity {
             @Override
             public void onItemClick(View v, int originalPosition, int currentPosition, CityEntity entity) {
                 if (originalPosition >= 0) {
-                    ToastUtils.showShortToast( "选中:" + entity.getName() + "  当前位置:" + currentPosition + "  原始所在数组位置:" + originalPosition);
+                    ToastUtils.showShortToast("选中:" + entity.getName() + "  当前位置:" + currentPosition + "  原始所在数组位置:" + originalPosition);
                 } else {
-                    ToastUtils.showShortToast( "选中Header:" + entity.getName() + "  当前位置:" + currentPosition);
+                    ToastUtils.showShortToast("选中Header:" + entity.getName() + "  当前位置:" + currentPosition);
                 }
             }
         });
@@ -111,7 +112,7 @@ public class PickCityActivity extends BaseActivity {
         adapter.setOnItemTitleClickListener(new IndexableAdapter.OnItemTitleClickListener() {
             @Override
             public void onItemClick(View v, int currentPosition, String indexTitle) {
-                ToastUtils.showShortToast( "选中:" + indexTitle + "  当前位置:" + currentPosition);
+                ToastUtils.showShortToast("选中:" + indexTitle + "  当前位置:" + currentPosition);
             }
         });
 

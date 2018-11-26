@@ -26,6 +26,8 @@ import me.yokeyword.indexablerv.SimpleFooterAdapter;
 import me.yokeyword.indexablerv.SimpleHeaderAdapter;
 
 /**
+ * 选择联系人
+ *
  * @author
  */
 public class PickContactActivity extends BaseActivity {
@@ -181,7 +183,7 @@ public class PickContactActivity extends BaseActivity {
            /* holder.img.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ToastUtil.showShort(PickContactActivity.this, "---点击了Banner---");
+                    ToastUtil.showShort(PickContactActivity.this, "点击了Banner");
                 }
             });*/
             return holder;

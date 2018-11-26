@@ -6,21 +6,24 @@
     android:background="@android:color/white"
     android:orientation="vertical">
 
-    <android.support.v7.widget.SearchView
-        android:id="@+id/searchview"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="8dp"
-        android:background="#f3f3f3"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:textColor="#757575"
-        app:iconifiedByDefault="false"
-        app:queryBackground="@null"
-        app:queryHint="请输入关键字" />
+        android:layout_height="wrap_content"
+        android:background="#FFC8C8C8">
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/searchview"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/shape_city_search_corners"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textColor="#FFC9C9C9"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@null"
+            app:queryHint="搜索" />
+    </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"

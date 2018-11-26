@@ -51,6 +51,7 @@ import com.ISHello.CustomToast.CustomToast;
 import com.ISHello.DAO.WealthBarInfoDAO;
 import com.ISHello.DateAndTime.DateTimeActivity;
 import com.ISHello.DefineDialog.DefineDialog;
+import com.ISHello.DefineDialog.ShareDialog;
 import com.ISHello.DialogTheme.ThemeDialogActivity;
 import com.ISHello.Encryption.Des;
 import com.ISHello.EventBus.EventBusA;
@@ -98,6 +99,7 @@ import com.app.guide.library.FunctionGuideActivity;
 import com.example.updateversion.LaunchAppServices;
 import com.in.zlonglove.commonutil.AppApplicationMgr;
 import com.in.zlonglove.commonutil.StringUtils;
+import com.in.zlonglove.commonutil.ToastUtils;
 import com.in.zlonglove.commonutil.ui.dialog.CommonDialogFragment;
 import com.in.zlonglove.commonutil.ui.dialog.DialogFragmentHelper;
 import com.in.zlonglove.commonutil.ui.dialog.IDialogResultListener;
@@ -583,6 +585,8 @@ public class MainActivity extends CheckPermissionsActivity {
         LogUtil.log(permissionList);
         LogUtil.log(StringUtils.buffer("a", "b"));
         /********************************************************************************************************************/
+
+        gotoShareDialog();
     }
 
     private void initUI() {
@@ -1003,7 +1007,7 @@ public class MainActivity extends CheckPermissionsActivity {
         WifiConnect wifiConnect = new WifiConnect(wifiManager);
         boolean connectStatus = wifiConnect.Connect("TAIYUE_5G", "123456789", WIFICIPHER_WPA);*/
         IcbcWifiManager icbcWifiManager = new IcbcWifiManager(this);
-        icbcWifiManager.connect("TAIYUE", "123456789", IcbcWifiManager.WifiCipherType.WIFICIPHER_WPA);
+        icbcWifiManager.connect("ICBC_WJB", "", IcbcWifiManager.WifiCipherType.WIFICIPHER_NOPASS);
     }
 
     public void gotoHtmlParse(String url) {
@@ -1047,16 +1051,56 @@ public class MainActivity extends CheckPermissionsActivity {
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
-    public void gotoIndexablerecyclerView(){
+    public void gotoIndexablerecyclerView() {
         Intent intent = new Intent(MainActivity.this, com.ISHello.IndexablerecyclerView.MainActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
-    public void gotoPickView(){
+    public void gotoPickView() {
         Intent intent = new Intent(MainActivity.this, PickViewActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
+
+    private void gotoShareDialog() {
+        //显示分享底部区域
+        ShareDialog shareDialog = ShareDialog.getInstance();
+        shareDialog.setOnShareClickLitener(new ShareDialog.OnShareClickLitener() {
+            @Override
+            public void onShareToQQ() {
+                openShare("QQ");
+            }
+
+            @Override
+            public void onShareToQZone() {
+                openShare("QZone");
+            }
+
+            @Override
+            public void onShareToWX() {
+                openShare("WX");
+            }
+
+            @Override
+            public void onShareToWXCircle() {
+                openShare("WXCircle");
+            }
+
+            @Override
+            public void onShareToSina() {
+                openShare("Sina");
+            }
+        });
+        shareDialog.show(getSupportFragmentManager(), "Share");
+    }
+
+    /**
+     * 在这里可以配合友盟分享，通过switch语句，根据type判断平台。执行分享代码
+     * @param type
+     */
+    private void openShare(String type) {
+        ToastUtils.showShortToast(type);
     }
 
     public void gotoFileDownload() {
