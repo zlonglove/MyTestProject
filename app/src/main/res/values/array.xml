@@ -90,5 +90,6 @@
         <item>录屏</item>
         <item>字母排序索引</item>
         <item>PickView</item>
+        <item>组合下拉选择</item>
     </string-array>
 </resources>

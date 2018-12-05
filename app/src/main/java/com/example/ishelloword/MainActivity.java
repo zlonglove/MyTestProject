@@ -53,6 +53,7 @@ import com.ISHello.DateAndTime.DateTimeActivity;
 import com.ISHello.DefineDialog.DefineDialog;
 import com.ISHello.DefineDialog.ShareDialog;
 import com.ISHello.DialogTheme.ThemeDialogActivity;
+import com.ISHello.DropDownMenu.ui.DropDownMenuActivity;
 import com.ISHello.Encryption.Des;
 import com.ISHello.EventBus.EventBusA;
 import com.ISHello.File.ISFile;
@@ -702,6 +703,9 @@ public class MainActivity extends CheckPermissionsActivity {
                     case 33:
                         gotoPickView();
                         break;
+                    case 34:
+                        gotoDropDownMenu();
+                        break;
                     default:
                         break;
                 }
@@ -1063,6 +1067,12 @@ public class MainActivity extends CheckPermissionsActivity {
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
+    public void gotoDropDownMenu() {
+        Intent intent = new Intent(MainActivity.this, DropDownMenuActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
+
     private void gotoShareDialog() {
         //显示分享底部区域
         ShareDialog shareDialog = ShareDialog.getInstance();
@@ -1097,6 +1107,7 @@ public class MainActivity extends CheckPermissionsActivity {
 
     /**
      * 在这里可以配合友盟分享，通过switch语句，根据type判断平台。执行分享代码
+     *
      * @param type
      */
     private void openShare(String type) {

@@ -851,6 +851,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name="im.icbc.com.downloadfile.DownloadActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -861,6 +862,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name="com.ISHello.IOSDialog.iosDialogActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -870,6 +872,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name="com.ISHello.Banner2.BannerActivity2"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -880,17 +883,22 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity android:name="com.ISHello.EventBus.EventBusA" />
+
         <activity android:name="com.ISHello.EventBus.EventBusB" />
+
         <activity
             android:name="com.ISHello.IndexablerecyclerView.MainActivity"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name="com.ISHello.IndexablerecyclerView.city.PickCityActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name="com.ISHello.IndexablerecyclerView.contact.PickContactActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name="com.ISHello.PickView.PickViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -900,6 +908,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.ISHello.DropDownMenu.ui.DropDownMenuActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
