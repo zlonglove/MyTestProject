@@ -22,7 +22,7 @@ import java.util.List;
 public class DropDownMenuActivity extends AppCompatActivity {
 
     private DropDownMenu mDropDownMenu;
-    private String headers[] = {"城市城市城市城市", "年龄", "性别", "星座"};
+    private String headers[] = {"城市", "年龄", "性别", "星座"};
     private List<View> popupViews = new ArrayList<>();
 
     private GirdDropDownAdapter cityAdapter;

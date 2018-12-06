@@ -911,6 +911,7 @@
 
         <activity
             android:name="com.ISHello.DropDownMenu.ui.DropDownMenuActivity"
+            android:label="按条件下拉选择"
             android:screenOrientation="portrait" />
     </application>
 
