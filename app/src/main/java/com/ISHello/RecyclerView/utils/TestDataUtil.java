@@ -4,15 +4,12 @@ import com.ISHello.RecyclerView.Bean.TallyDetailBean;
 import com.google.gson.Gson;
 
 /**
- * Created by Administrator on 2017/10/24 0024.
  */
 
 public class TestDataUtil {
-
-
     //明细假数据
-    public static TallyDetailBean getTallyDetailBean(){
-        String str= "{\n" +
+    public static TallyDetailBean getTallyDetailBean() {
+        String str = "{\n" +
                 "    \"status\":1,\n" +
                 "    \"t_income\":\"88,929.42\",\n" +
                 "    \"t_outcome\":\"18,270.36\",\n" +

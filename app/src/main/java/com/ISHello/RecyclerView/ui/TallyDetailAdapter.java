@@ -13,13 +13,11 @@ import android.widget.Toast;
 import com.ISHello.RecyclerView.Bean.TallyDetailBean;
 import com.ISHello.RecyclerView.View.SwipeMenuView;
 import com.ISHello.RecyclerView.stickyheader.StickyHeaderGridAdapter;
-import com.bumptech.glide.Glide;
 import com.example.ishelloword.R;
 import com.in.zlonglove.commonutil.GlideUtils;
 
 import java.util.List;
 
-import static com.in.zlonglove.commonutil.GlideUtils.LOAD_BITMAP;
 
 /**
  * 悬浮头部项

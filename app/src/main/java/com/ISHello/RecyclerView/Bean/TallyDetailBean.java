@@ -3,7 +3,6 @@ package com.ISHello.RecyclerView.Bean;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/10/23 0023.
  */
 
 public class TallyDetailBean extends BaseBean {
