@@ -5,8 +5,6 @@ import android.widget.ImageView;
 
 import com.ISHello.base.base.BaseActivity;
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
-import com.bumptech.glide.request.RequestOptions;
 import com.example.ishelloword.R;
 
 public class ShowWebImageActivity extends BaseActivity {
@@ -22,8 +20,6 @@ public class ShowWebImageActivity extends BaseActivity {
 
         imageView = (ImageView) findViewById(R.id.show_webimage_imageview);
         Glide.with(this).load(imagePath)
-                .transition(new DrawableTransitionOptions().crossFade())
-                .apply(new RequestOptions().centerCrop())
                 .into(imageView);
     }
 }

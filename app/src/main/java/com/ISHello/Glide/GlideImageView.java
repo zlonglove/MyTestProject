@@ -8,8 +8,6 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
-import com.bumptech.glide.request.RequestOptions;
 
 import java.io.File;
 
@@ -45,8 +43,8 @@ public class GlideImageView extends ImageView {
         try {
             Glide.with(getContext())
                     .load(url)
-                    .transition(new DrawableTransitionOptions().crossFade())
-                    .apply(new RequestOptions().placeholder(placeholder).error(error))
+                    .crossFade()
+                    .placeholder(placeholder).error(error)
                     .into(this);
         } catch (Exception e) {
             this.setImageResource(placeholder);
@@ -62,8 +60,8 @@ public class GlideImageView extends ImageView {
         try {
             Glide.with(getContext())
                     .load(url)
-                    .transition(new DrawableTransitionOptions().crossFade())
-                    .apply(new RequestOptions().placeholder(placeholder).error(error).centerCrop())
+                    .crossFade()
+                    .placeholder(placeholder).error(error).centerCrop()
                     .into(this);
         } catch (Exception e) {
             this.setImageResource(placeholder);
@@ -78,7 +76,7 @@ public class GlideImageView extends ImageView {
     public void loadLocalImage(String path, @DrawableRes int placeholder, @DrawableRes int error) {
         Glide.with(getContext())
                 .load("file://" + path)
-                .apply(new RequestOptions().placeholder(placeholder).error(error))
+                .placeholder(placeholder).error(error)
                 .into(this);
     }
 
@@ -103,7 +101,7 @@ public class GlideImageView extends ImageView {
     public void loadLocalImageWidthResize(String path, int width, int height, @DrawableRes int placeholder, @DrawableRes int error) {
         Glide.with(getContext())
                 .load("file://" + path)
-                .apply(new RequestOptions().placeholder(placeholder).error(error).override(width,height))
+                .placeholder(placeholder).error(error).override(width, height)
                 .into(this);
     }
 
@@ -118,7 +116,7 @@ public class GlideImageView extends ImageView {
         try {
             Glide.with(getContext())
                     .load(file)
-                    .apply(new RequestOptions().placeholder(placeholder).error(error).override(width,height))
+                    .placeholder(placeholder).error(error).override(width, height)
                     .into(this);
         } catch (Exception e) {
             this.setImageResource(placeholder);
@@ -134,7 +132,7 @@ public class GlideImageView extends ImageView {
         try {
             Glide.with(getContext())
                     .load(url)
-                    .apply(new RequestOptions().placeholder(placeholder).error(error).fitCenter())
+                    .placeholder(placeholder).error(error).fitCenter()
                     .into(this);
         } catch (Exception e) {
             this.setImageResource(placeholder);
@@ -151,7 +149,7 @@ public class GlideImageView extends ImageView {
             Glide.with(getContext())
                     .load(url)
                     .load(url)
-                    .apply(new RequestOptions().placeholder(placeholder).error(error).fitCenter())
+                    .placeholder(placeholder).error(error).fitCenter()
                     .into(this);
         } catch (Exception e) {
             this.setImageResource(placeholder);

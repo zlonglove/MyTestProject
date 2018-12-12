@@ -76,6 +76,7 @@ import com.ISHello.Module.CityModule;
 import com.ISHello.NetWork.NetWorkActivity;
 import com.ISHello.PickView.PickViewActivity;
 import com.ISHello.Process.UserManager;
+import com.ISHello.RecyclerView.ui.StickHeaderActivity;
 import com.ISHello.RemoteCalls.RemoteCallsClient;
 import com.ISHello.ResideMenu.ResideMenuActivity;
 import com.ISHello.ScreenInfo.ISScreenInfo;
@@ -706,6 +707,9 @@ public class MainActivity extends CheckPermissionsActivity {
                     case 34:
                         gotoDropDownMenu();
                         break;
+                    case 35:
+                        gotoStickHeader();
+                        break;
                     default:
                         break;
                 }
@@ -1069,6 +1073,12 @@ public class MainActivity extends CheckPermissionsActivity {
 
     public void gotoDropDownMenu() {
         Intent intent = new Intent(MainActivity.this, DropDownMenuActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
+
+    public void gotoStickHeader() {
+        Intent intent = new Intent(MainActivity.this, StickHeaderActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }

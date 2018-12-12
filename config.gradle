@@ -14,7 +14,7 @@ ext {
     libsVersion = [
             //App dependencies version
             supportLibraryVersion = "27.0.2",
-            glideVersion = "4.0.0-RC1",
+            glideVersion = "3.7.0",
             gsonVersion = "2.8.2",
             retrofit = "2.3.0",
             rxjava = "2.1.10",

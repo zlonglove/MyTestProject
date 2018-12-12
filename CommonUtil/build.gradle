@@ -33,7 +33,7 @@ dependencies {
     //Picasso图片加载
     api 'com.squareup.picasso:picasso:2.5.2'
     //Glide图片加载
-    api 'com.github.bumptech.glide:glide:3.7.0'
+    compileOnly rootProject.ext.dependencies.glide
     //编码工具类用到
     api files('libs/BASE64Decoder.jar')
     api 'com.github.zhaokaiqiang.klog:library:1.6.0'

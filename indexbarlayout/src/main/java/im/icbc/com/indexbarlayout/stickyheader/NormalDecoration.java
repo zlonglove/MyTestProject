@@ -11,11 +11,6 @@ import android.util.SparseArray;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.bumptech.glide.request.transition.Transition;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -252,7 +247,7 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
     }
 
 
-    public void loadImage(final String url, final int pos, ImageView imageView) {
+   /* public void loadImage(final String url, final int pos, ImageView imageView) {
 
         if (getImg(url) != null) {
             Log.i("qdx", "Glide 加载完图片" + pos);
@@ -271,7 +266,7 @@ public abstract class NormalDecoration extends RecyclerView.ItemDecoration {
             });
         }
 
-    }
+    }*/
 
     private Map<String, Drawable> imgDrawableMap = new HashMap<>();
 

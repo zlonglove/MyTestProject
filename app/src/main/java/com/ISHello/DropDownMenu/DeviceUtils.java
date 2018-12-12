@@ -45,6 +45,4 @@ public class DeviceUtils {
             return point;
         }
     }
-
-
 }

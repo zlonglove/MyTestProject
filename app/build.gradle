@@ -142,4 +142,5 @@ dependencies {
     implementation project(':mediaprojectRecord')
     implementation project(':indexablerecyclerview')
     implementation project(':pickerview')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 }
