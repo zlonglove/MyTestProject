@@ -1,4 +1,4 @@
-include ':app', ':linclibrary', ':jnisdk', ':keyboard', ':musicIndicator', ':golddrop', ':network', ':rxjava',
+include ':app', ':linclibrary', ':jnisdk', ':keyboard', ':musicIndicator', ':golddrop', ':network', ':rxjava', ':voice',
         ':tabswitch', ':aidl', ':pushtorefresh', ':recyclerview', ':adrecyclerview', ':systemkeyboard',
         ':paper-onboarding', ':imageeditor', ':popmenu', ':downloadfile',
         ':iosdialog', ':timeselector', ':indexbarlayout', ':MarqueeView',

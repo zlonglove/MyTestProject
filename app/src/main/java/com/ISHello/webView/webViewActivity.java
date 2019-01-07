@@ -103,8 +103,6 @@ public class webViewActivity extends BaseActivity implements DownloadListener {
     }
 
     private void initViews() {
-        creditKeyboardBinder = new CreditKeyboardBinder(this);
-        creditKeyboardBinder.registerEditText(editText);
         loadingDialog = ICBCDialog.getProgressDialog(this, ICBCDialog.ProgressDialogType.ICBC3DLogo);
         webView.setDownloadListener(this);//文件下载
         mMethod = getIntent().getStringExtra("method");
@@ -152,7 +150,8 @@ public class webViewActivity extends BaseActivity implements DownloadListener {
         javaCallAlert.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                webView.loadUrl("javascript: " + "javacallAlert()");
+                //webView.loadUrl("javascript: " + "javacallAlert()");
+                webView.loadUrl("javascript: " + "javaCallScriptArgs" + "('" + "i am args" + "')");//带参数调用
             }
         });
 
@@ -162,6 +161,15 @@ public class webViewActivity extends BaseActivity implements DownloadListener {
             } else {
                 getLoadWebview(mUrl);
             }
+        }
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            creditKeyboardBinder = new CreditKeyboardBinder(this);
+            creditKeyboardBinder.registerEditText(editText);
         }
     }
 
@@ -236,6 +244,9 @@ public class webViewActivity extends BaseActivity implements DownloadListener {
 
         webView.addJavascriptInterface(new ImageLoadingInterface(this), "imagelistener");
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WebView.setWebContentsDebuggingEnabled(true);
+        }
         initWebTextSelected();
     }
 

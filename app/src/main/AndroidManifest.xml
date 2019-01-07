@@ -907,7 +907,8 @@
         <activity
             android:name="com.ISHello.RecyclerView.ui.StickHeaderActivity"
             android:label="StickHeaderRecycler"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ISHello.Voice.VoiceActivity"></activity>
     </application>
 
 </manifest>

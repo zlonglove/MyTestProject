@@ -92,5 +92,6 @@
         <item>PickView</item>
         <item>组合下拉选择</item>
         <item>StickHeaderRecycler</item>
+        <item>Recode</item>
     </string-array>
 </resources>

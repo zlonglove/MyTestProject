@@ -87,6 +87,7 @@ import com.ISHello.TouchEvent.TouchEventActivity;
 import com.ISHello.Update.ISUpdateActivity;
 import com.ISHello.UserInfo.ISUserInfo;
 import com.ISHello.ViewPage.ViewPagerActivity;
+import com.ISHello.Voice.VoiceActivity;
 import com.ISHello.XmlManager.xmlManager;
 import com.ISHello.getPackageInfo.ISPackageInfo;
 import com.ISHello.logger.Logger;
@@ -710,6 +711,9 @@ public class MainActivity extends CheckPermissionsActivity {
                     case 35:
                         gotoStickHeader();
                         break;
+                    case 36:
+                        gotoRecode();
+                        break;
                     default:
                         break;
                 }
@@ -1079,6 +1083,12 @@ public class MainActivity extends CheckPermissionsActivity {
 
     public void gotoStickHeader() {
         Intent intent = new Intent(MainActivity.this, StickHeaderActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
+
+    public void gotoRecode() {
+        Intent intent = new Intent(MainActivity.this, VoiceActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
