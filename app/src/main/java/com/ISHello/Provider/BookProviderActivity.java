@@ -12,7 +12,7 @@ public class BookProviderActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_provider);
-        Uri uri = Uri.parse("content://cn.zlonglove.com.book.provider");
+        Uri uri = Uri.parse("content://cn.zlonglove.com.Book.provider");
         getContentResolver().query(uri, null, null, null, null);
         getContentResolver().query(uri, null, null, null, null);
         getContentResolver().query(uri, null, null, null, null);

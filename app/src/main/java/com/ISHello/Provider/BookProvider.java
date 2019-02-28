@@ -15,8 +15,8 @@ import android.util.Log;
  */
 public class BookProvider extends ContentProvider {
     private final String TAG = "BookProvider";
-    private static final String AUTHORITY = "cn.zlonglove.com.book.provider";
-    private static final Uri BOOK_CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/book");
+    private static final String AUTHORITY = "cn.zlonglove.com.Book.provider";
+    private static final Uri BOOK_CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/Book");
     private static final Uri USER_CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/user");
 
     private static final int BOOK_URI_CODE = 0;
@@ -25,7 +25,7 @@ public class BookProvider extends ContentProvider {
     private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
     static {
-        sUriMatcher.addURI(AUTHORITY, "book", BOOK_URI_CODE);
+        sUriMatcher.addURI(AUTHORITY, "Book", BOOK_URI_CODE);
         sUriMatcher.addURI(AUTHORITY, "user", USER_URI_CODE);
     }
 

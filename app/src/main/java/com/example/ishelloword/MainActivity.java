@@ -79,6 +79,9 @@ import com.ISHello.Process.UserManager;
 import com.ISHello.RecyclerView.ui.StickHeaderActivity;
 import com.ISHello.RemoteCalls.RemoteCallsClient;
 import com.ISHello.ResideMenu.ResideMenuActivity;
+import com.ISHello.Retrofit.CallBack;
+import com.ISHello.Retrofit.RetrofitHelper;
+import com.ISHello.Retrofit.bean.Book;
 import com.ISHello.ScreenInfo.ISScreenInfo;
 import com.ISHello.Serializable.Parcelable.ObjectTranDemo;
 import com.ISHello.Sort.sort;
@@ -123,6 +126,7 @@ import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -133,11 +137,12 @@ import im.icbc.cn.keyboard.safePay.PayKeyboardActivity;
 import im.icbc.com.downloadfile.DownloadActivity;
 import im.icbc.com.golddrop.GoldAnimationActivity;
 import im.icbc.com.indexbarlayout.activity.barIndexLayoutActivity;
-import im.icbc.com.jnisdk.activity.JNIActivity;
 import im.icbc.com.linclibrary.PhoneInfo;
 import im.icbc.com.popmenu.PopMenu;
 import im.icbc.com.popmenu.PopMenuItem;
 import im.icbc.com.popmenu.PopMenuItemListener;
+import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import zlonglove.cn.adrecyclerview.activity.AdRecyclerViewActivity;
 import zlonglove.cn.aidl.activity.AidlActivity;
@@ -151,7 +156,7 @@ import zlonglove.cn.tabswitch.ui.BottomNavigationActivity;
  * @author zhanglong
  */
 public class MainActivity extends CheckPermissionsActivity {
-    private final String TAG = "DropActivity";
+    private final String TAG = "MainActivity";
     private AsyncHttpClient asyncHttpClient;
 
     enum Orientation {
@@ -590,6 +595,58 @@ public class MainActivity extends CheckPermissionsActivity {
         /********************************************************************************************************************/
 
         gotoShareDialog();
+        getBookSearch();
+    }
+
+    private void getBookSearch() {
+        /*RetrofitHelper.getInstance().getBookSearch(new CallBack<Book>() {
+            @Override
+            public void onSuccess(Book callBack) {
+                //Toast.makeText(MainActivity.this, callBack.getTotal(), Toast.LENGTH_SHORT).show();
+                CustomToast.makeText(MainActivity.this, callBack.getTotal() + "", Toast.LENGTH_SHORT);
+                LogUtil.log("--->getBookSearch() Total==" + callBack.getTotal());
+            }
+
+            @Override
+            public void onError() {
+                Log.e(TAG, "--->getBookSearch Fail");
+            }
+        });
+
+        RetrofitHelper.getInstance().getBookSearchMapParams(new CallBack<Book>() {
+            @Override
+            public void onSuccess(Book callBack) {
+                LogUtil.log("--->getBookSearchMapParams() Total==" + callBack.getTotal());
+            }
+
+            @Override
+            public void onError() {
+                Log.e(TAG, "--->getBookSearchMapParams() Fail");
+            }
+        });*/
+
+        String url = "http://download.sdk.mob.com/apkbus.apk";
+        RetrofitHelper.getInstance().download(url, "", new Observer<InputStream>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(InputStream o) {
+                LogUtil.log("--->onNext()");
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                LogUtil.log("--->onError()" + e.getMessage());
+            }
+
+            @Override
+            public void onComplete() {
+                LogUtil.log("--->onComplete()");
+            }
+        });
     }
 
     private void initUI() {
@@ -606,7 +663,7 @@ public class MainActivity extends CheckPermissionsActivity {
                         gotoLocation();
                         break;
                     case 1:
-                        gotoJNIActivity();
+                        //gotoJNIActivity();
                         break;
                     case 2:
                         GesturePassword();
@@ -1239,9 +1296,9 @@ public class MainActivity extends CheckPermissionsActivity {
     }
 
     public void gotoJNIActivity() {
-        Intent intent = new Intent(MainActivity.this, JNIActivity.class);
+        /*Intent intent = new Intent(MainActivity.this, JNIActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);*/
     }
 
     public void gotoGetPic() {
