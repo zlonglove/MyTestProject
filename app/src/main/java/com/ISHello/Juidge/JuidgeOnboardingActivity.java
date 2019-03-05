@@ -27,7 +27,7 @@ public class JuidgeOnboardingActivity extends BaseActivity {
         engine.setOnChangeListener(new PaperOnboardingOnChangeListener() {
             @Override
             public void onPageChanged(int oldElementIndex, int newElementIndex) {
-                showToast("Swiped from " + oldElementIndex + " to " + newElementIndex, Toast.LENGTH_SHORT);
+                //showToast("Swiped from " + oldElementIndex + " to " + newElementIndex, Toast.LENGTH_SHORT);
             }
         });
 
@@ -35,7 +35,7 @@ public class JuidgeOnboardingActivity extends BaseActivity {
             @Override
             public void onRightOut() {
                 // Probably here will be your exit action
-                showToast("Swiped out right", Toast.LENGTH_SHORT);
+                //showToast("Swiped out right", Toast.LENGTH_SHORT);
                 Intent intent = new Intent(JuidgeOnboardingActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();

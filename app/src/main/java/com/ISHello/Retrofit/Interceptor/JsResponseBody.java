@@ -53,7 +53,7 @@ public class JsResponseBody extends ResponseBody {
                 Log.e("download", "read: " + (int) (totalBytesRead * 100 / responseBody.contentLength()));
                 if (null != downloadListener) {
                     if (bytesRead != -1) {
-                        downloadListener.onProgress((int) (totalBytesRead));
+                        downloadListener.onProgress(responseBody.contentLength(), totalBytesRead);
                     }
                 }
                 return bytesRead;

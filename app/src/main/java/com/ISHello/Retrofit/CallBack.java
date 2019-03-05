@@ -4,4 +4,5 @@ package com.ISHello.Retrofit;
 public interface CallBack<T> {
     void onSuccess(T callBack);
     void onError(String info);
+    void onProgress(long totalSize, long downSize);
 }

@@ -79,9 +79,7 @@ import com.ISHello.Process.UserManager;
 import com.ISHello.RecyclerView.ui.StickHeaderActivity;
 import com.ISHello.RemoteCalls.RemoteCallsClient;
 import com.ISHello.ResideMenu.ResideMenuActivity;
-import com.ISHello.Retrofit.CallBack;
-import com.ISHello.Retrofit.RetrofitHelper;
-import com.ISHello.Retrofit.bean.Book;
+import com.ISHello.Retrofit.RetrofitDownLoadActivity;
 import com.ISHello.ScreenInfo.ISScreenInfo;
 import com.ISHello.Serializable.Parcelable.ObjectTranDemo;
 import com.ISHello.Sort.sort;
@@ -126,7 +124,6 @@ import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 
 import java.io.File;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -141,8 +138,6 @@ import im.icbc.com.linclibrary.PhoneInfo;
 import im.icbc.com.popmenu.PopMenu;
 import im.icbc.com.popmenu.PopMenuItem;
 import im.icbc.com.popmenu.PopMenuItemListener;
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import zlonglove.cn.adrecyclerview.activity.AdRecyclerViewActivity;
 import zlonglove.cn.aidl.activity.AidlActivity;
@@ -225,23 +220,23 @@ public class MainActivity extends CheckPermissionsActivity {
         int type = packageInfo.checkAppType(packageInfo.getPackageName());
         switch (type) {
             case ISPackageInfo.USER_APP:
-                showToast(R.string.user_app, Toast.LENGTH_SHORT);
+                //showToast(R.string.user_app, Toast.LENGTH_SHORT);
                 break;
 
             case ISPackageInfo.SYSTEM_APP:
-                showToast(R.string.system_app, Toast.LENGTH_SHORT);
+                //showToast(R.string.system_app, Toast.LENGTH_SHORT);
                 break;
 
             case ISPackageInfo.SYSTEM_UPDATE_APP:
-                showToast("SYSTEM_UPDATE_APP", Toast.LENGTH_SHORT);
+                //showToast("SYSTEM_UPDATE_APP", Toast.LENGTH_SHORT);
                 break;
 
             case ISPackageInfo.SYSTEM_REF_APP:
-                showToast("SYSTEM_REF_APP", Toast.LENGTH_SHORT);
+                //showToast("SYSTEM_REF_APP", Toast.LENGTH_SHORT);
                 break;
 
             case ISPackageInfo.UNKNOW_APP:
-                showToast("UNKNOW_APP", Toast.LENGTH_SHORT);
+                //showToast("UNKNOW_APP", Toast.LENGTH_SHORT);
                 break;
 
             default:
@@ -381,7 +376,7 @@ public class MainActivity extends CheckPermissionsActivity {
         /********************************************************************************************************************/
         String jssonNameString = "{\"name\": \"王五\",\"gender\": \"man\",\"age\": 15,\"height\": \"140cm\"}";
         UserInfo info = UserInfo.objectFromData(jssonNameString);
-        CustomToast.makeText(MainActivity.this, info.getName(), Toast.LENGTH_SHORT);
+        //CustomToast.makeText(MainActivity.this, info.getName(), Toast.LENGTH_SHORT);
 
         String productString = "{\n" +
                 "    \"name\": \"王五\",\n" +
@@ -624,29 +619,6 @@ public class MainActivity extends CheckPermissionsActivity {
                 Log.e(TAG, "--->getBookSearchMapParams() Fail");
             }
         });*/
-
-        String url = "http://download.sdk.mob.com/apkbus.apk";
-        RetrofitHelper.getInstance().download(url, "", new Observer<InputStream>() {
-            @Override
-            public void onSubscribe(Disposable d) {
-
-            }
-
-            @Override
-            public void onNext(InputStream o) {
-                LogUtil.log("--->onNext()");
-            }
-
-            @Override
-            public void onError(Throwable e) {
-                LogUtil.log("--->onError()" + e.getMessage());
-            }
-
-            @Override
-            public void onComplete() {
-                LogUtil.log("--->onComplete()");
-            }
-        });
     }
 
     private void initUI() {
@@ -770,6 +742,9 @@ public class MainActivity extends CheckPermissionsActivity {
                         break;
                     case 36:
                         gotoRecode();
+                        break;
+                    case 37:
+                        gotoRetrofitDownLoad();
                         break;
                     default:
                         break;
@@ -1146,6 +1121,12 @@ public class MainActivity extends CheckPermissionsActivity {
 
     public void gotoRecode() {
         Intent intent = new Intent(MainActivity.this, VoiceActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
+
+    private void gotoRetrofitDownLoad() {
+        Intent intent = new Intent(MainActivity.this, RetrofitDownLoadActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
