@@ -77,6 +77,7 @@ import com.ISHello.NetWork.NetWorkActivity;
 import com.ISHello.PickView.PickViewActivity;
 import com.ISHello.Process.UserManager;
 import com.ISHello.RecyclerView.ui.StickHeaderActivity;
+import com.ISHello.RemoteCalls.AIDL.BookManagerActivity;
 import com.ISHello.RemoteCalls.RemoteCallsClient;
 import com.ISHello.ResideMenu.ResideMenuActivity;
 import com.ISHello.Retrofit.RetrofitDownLoadActivity;
@@ -619,6 +620,9 @@ public class MainActivity extends CheckPermissionsActivity {
                 Log.e(TAG, "--->getBookSearchMapParams() Fail");
             }
         });*/
+        Intent intent = new Intent(MainActivity.this, BookManagerActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
     private void initUI() {

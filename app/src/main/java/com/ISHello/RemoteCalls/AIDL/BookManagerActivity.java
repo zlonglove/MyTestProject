@@ -1,6 +1,5 @@
 package com.ISHello.RemoteCalls.AIDL;
 
-import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
@@ -9,21 +8,34 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.ISHello.Parcelable.Book;
 import com.ISHello.Parcelable.BookAidlInterface;
+import com.ISHello.base.base.BaseActivity;
 import com.example.ishelloword.R;
 
 import java.util.List;
 
-public class BookManagerActivity extends Activity {
+public class BookManagerActivity extends BaseActivity {
     private final String TAG = "BookManagerActivity";
+    private TextView book_show;
     private BookAidlInterface bookAidlInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_manager);
+        setTitle("AIDL");
+        findViews();
+        init();
+    }
+
+    private void findViews() {
+        book_show = findViewById(R.id.book_show);
+    }
+
+    private void init() {
         startService();
     }
 
@@ -39,6 +51,7 @@ public class BookManagerActivity extends Activity {
                 bookAidlInterface.addBook(newBook);
                 List<Book> newList = bookAidlInterface.getBookList();
                 Log.i(TAG, "--->bookList==" + newList.toString());
+                book_show.setText(newList.toString());
             }
         } catch (RemoteException e) {
             e.printStackTrace();
