@@ -100,7 +100,8 @@ public class CustomWebChromeClient extends WebChromeClient {
         try {
             if (view instanceof CustomWebView) {
                 CustomWebView ICBCWebView = (CustomWebView) view;
-                if (ICBCWebView.handleJsInterface(view, url, message, defaultValue, result)) {
+                /*if (ICBCWebView.handleJsInterface(view, url, message, defaultValue, result)) {*/
+                if (handleOldJsInterface(view, url, message, defaultValue, result)) {
                     return true;
                 } else {
                     return handleOldJsInterface(view, url, message, defaultValue, result);
@@ -186,6 +187,7 @@ public class CustomWebChromeClient extends WebChromeClient {
                         if (!TextUtils.isEmpty(callBackName)) {
                             view.loadUrl("javascript:" + callBackName + "('" + callBackName + "')");
                         }
+                        //result.confirm(callBackName);
                     }
                 }
             }

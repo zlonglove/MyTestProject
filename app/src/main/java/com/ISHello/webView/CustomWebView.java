@@ -355,7 +355,7 @@ public class CustomWebView extends WebView {
 
     public boolean handleJsInterface(WebView view, String url, String message, String defaultValue, JsPromptResult result) {
         try {
-            org.json.JSONObject jsonObj = new org.json.JSONObject(message);
+            org.json.JSONObject jsonObj = new org.json.JSONObject(defaultValue);
             String interfaceName = jsonObj.getString(KEY_INTERFACE_NAME);
             String methodName = jsonObj.getString(KEY_FUNCTION_NAME);
             JSONArray argsArray = jsonObj.getJSONArray(KEY_ARG_ARRAY);
