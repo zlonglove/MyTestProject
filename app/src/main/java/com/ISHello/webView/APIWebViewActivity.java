@@ -45,13 +45,12 @@ public class APIWebViewActivity extends BaseActivity implements View.OnClickList
 
     FrameLayout mRootLayout;
     WebView mWebView;
-    Button mButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_api_webview);
-
+        setTitle("APIWeb");
         findViewById(R.id.call_js_function).setOnClickListener(this);
 
         //添加webView到布局中
