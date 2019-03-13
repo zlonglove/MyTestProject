@@ -61,8 +61,8 @@ import java.util.Set;
  *
  * @author zhanglong
  */
-public class webViewActivity extends BaseActivity implements DownloadListener {
-    private final String TAG = "webViewActivity";
+public class WebViewActivity extends BaseActivity implements DownloadListener {
+    private final String TAG = "WebViewActivity";
     private EditText editText;
     private Button button;
     private Button jsButton;
@@ -283,7 +283,7 @@ public class webViewActivity extends BaseActivity implements DownloadListener {
             @Override
             public void onClick(String title, String selectText) {
                 if (title.equals("APIWeb")) {
-                    Intent intent = new Intent(webViewActivity.this, APIWebViewActivity.class);
+                    Intent intent = new Intent(WebViewActivity.this, APIWebViewActivity.class);
                     startActivity(intent);
                     return;
                 }
@@ -319,7 +319,7 @@ public class webViewActivity extends BaseActivity implements DownloadListener {
      */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        Log.i("webViewActivity", "--->onKeyDown");
+        Log.i("WebViewActivity", "--->onKeyDown");
         if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()) {
             webView.goBack();
             return true;
@@ -493,7 +493,7 @@ public class webViewActivity extends BaseActivity implements DownloadListener {
             if (username != null && password != null) {
                 handler.proceed(username, password);
             } else {
-                webViewActivity.this.showHttpAuthentication(handler, host, realm);
+                WebViewActivity.this.showHttpAuthentication(handler, host, realm);
             }
         }
 
@@ -516,7 +516,7 @@ public class webViewActivity extends BaseActivity implements DownloadListener {
      * Displays an http-authentication dialog.
      */
     void showHttpAuthentication(final HttpAuthHandler handler, String host, String realm) {
-        mHttpAuthenticationDialog = new HttpAuthenticationDialog(webViewActivity.this, host, realm);
+        mHttpAuthenticationDialog = new HttpAuthenticationDialog(WebViewActivity.this, host, realm);
         mHttpAuthenticationDialog.setOkListener(new HttpAuthenticationDialog.OkListener() {
             public void onOk(String host, String realm, String username, String password) {
                 setHttpAuthUsernamePassword(host, realm, username, password);
@@ -632,7 +632,7 @@ public class webViewActivity extends BaseActivity implements DownloadListener {
             aQuery.id(R.id.navbar_left_btn).clicked(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    webViewActivity.this.finish();
+                    WebViewActivity.this.finish();
                 }
             });
             errorPopupWindow = new PopupWindow(error_layout, android.view.ViewGroup.LayoutParams.MATCH_PARENT, root.getMeasuredHeight(), true);
