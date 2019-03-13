@@ -99,7 +99,7 @@ import com.ISHello.utils.FileLogUtil;
 import com.ISHello.utils.LogUtil;
 import com.ISHello.utils.NetworkUtils;
 import com.ISHello.utils.SdcardUtils;
-import com.ISHello.webView.webViewActivity;
+import com.ISHello.webView.WebViewActivity;
 import com.app.guide.library.FunctionGuideActivity;
 import com.example.updateversion.LaunchAppServices;
 import com.in.zlonglove.commonutil.AppApplicationMgr;
@@ -981,7 +981,7 @@ public class MainActivity extends CheckPermissionsActivity {
 
     public void openWebView() {
         LogUtil.log(TAG, "--->openWebView Button Click");
-        Intent intent = new Intent(MainActivity.this, webViewActivity.class);
+        Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }

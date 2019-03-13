@@ -186,7 +186,7 @@
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.ISHello.webView.webViewActivity"
+            android:name="com.ISHello.webView.WebViewActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
