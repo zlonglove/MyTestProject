@@ -41,6 +41,7 @@ import com.Hello.Contacts.CursorsActivity;
 import com.Hello.Tabactivity.ISTabActivity;
 import com.ISHello.AIDL.PlayerProxy;
 import com.ISHello.AIDL.mp3RemoteService;
+import com.ISHello.Activity.HomeActivity;
 import com.ISHello.AndroidThread.AndroidThread;
 import com.ISHello.AppManager.AppManager;
 import com.ISHello.Banner2.BannerActivity2;
@@ -591,7 +592,7 @@ public class MainActivity extends CheckPermissionsActivity {
         /********************************************************************************************************************/
 
         gotoShareDialog();
-        getBookSearch();
+        //getBookSearch();
     }
 
     private void getBookSearch() {
@@ -620,7 +621,7 @@ public class MainActivity extends CheckPermissionsActivity {
                 Log.e(TAG, "--->getBookSearchMapParams() Fail");
             }
         });*/
-        Intent intent = new Intent(MainActivity.this, BookManagerActivity.class);
+        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
@@ -636,7 +637,8 @@ public class MainActivity extends CheckPermissionsActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i) {
                     case 0:
-                        gotoLocation();
+                        //gotoLocation();
+                        getBookSearch();
                         break;
                     case 1:
                         //gotoJNIActivity();

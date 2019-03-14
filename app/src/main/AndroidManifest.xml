@@ -912,6 +912,10 @@
         <activity
             android:name="com.ISHello.Retrofit.RetrofitDownLoadActivity"
             android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.ISHello.Activity.HomeActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

@@ -25,4 +25,10 @@ dependencies {
 
     implementation rootProject.ext.dependencies.appcompatV7
     implementation rootProject.ext.dependencies.design
+
+    // 标题栏：https://github.com/getActivity/TitleBar
+    implementation 'com.hjq:titlebar:latest.integration'
+
+    // 状态栏沉浸：https://github.com/gyf-dev/ImmersionBar
+    implementation 'com.gyf.immersionbar:immersionbar:2.3.3'
 }
