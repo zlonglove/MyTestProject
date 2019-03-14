@@ -280,7 +280,7 @@ public class RxJavaActivity extends AppCompatActivity {
      * 同时将传输的数据进行一些灵活的操作，方便Observer获得想要的数据形式
      */
     private void mapTest() {
-        Observable.create(new ObservableOnSubscribe<Integer>() {
+        /*Observable.create(new ObservableOnSubscribe<Integer>() {
             @Override
             public void subscribe(ObservableEmitter<Integer> e) throws Exception {
                 e.onNext(100);
@@ -298,7 +298,44 @@ public class RxJavaActivity extends AppCompatActivity {
             public void accept(String s) throws Exception {
                 Log.i(TAG, "--->" + s);
             }
-        });
+        });*/
+
+        /*Observable.just(student1, student2, student2)
+                //使用map进行转换，参数1：转换前的类型，参数2：转换后的类型
+                .map(new Function<Student, String>() {
+                    @Override
+                    public String apply(Student i) {
+                        String name = i.getName();//获取Student对象中的name
+                        return name;//返回name
+                    }
+                })
+                .subscribe(new Consumer<String>() {
+                    @Override
+                    public void accept(String s) {
+                        nameList.add(s);
+                    }
+                });*/
+
+        //多次使用map，想用几个用几个
+        Observable.just("Hello", "World")
+                .map(new Function<String, Integer>() {//将String类型的转化为Integer类型的哈希码
+                    @Override
+                    public Integer apply(String s) {
+                        return s.hashCode();
+                    }
+                })
+                .map(new Function<Integer, String>() {//将转化后得到的Integer类型的哈希码再转化为String类型
+                    @Override
+                    public String apply(Integer integer) {
+                        return integer.intValue() + "";
+                    }
+                })
+                .subscribe(new Consumer<String>() {
+                    @Override
+                    public void accept(String s) {
+                        Log.i(TAG, s);
+                    }
+                });
     }
 
     /**
