@@ -1,4 +1,4 @@
-package zlonglove.cn.base.test.common;
+package com.ISHello.baseModule.common;
 
 
 import com.gyf.barlibrary.ImmersionBar;
@@ -13,6 +13,7 @@ import zlonglove.cn.base.BaseLazyFragment;
  */
 public abstract class UILazyFragment extends BaseLazyFragment {
     private ImmersionBar mImmersionBar; // 状态栏沉浸
+
     @Override
     protected void initFragment() {
         initImmersion();
@@ -24,10 +25,10 @@ public abstract class UILazyFragment extends BaseLazyFragment {
     protected void initImmersion() {
         // 初始化沉浸式状态栏
         if (isStatusBarEnabled()) {
-            //statusBarConfig().init();
+            statusBarConfig().init();
             // 设置标题栏
             if (getTitleBarId() > 0) {
-                //ImmersionBar.setTitleBar(mActivity, findViewById(getTitleBarId()));
+                ImmersionBar.setTitleBar(mActivity, findViewById(getTitleBarId()));
             }
         }
     }
@@ -49,13 +50,13 @@ public abstract class UILazyFragment extends BaseLazyFragment {
     /**
      * 初始化沉浸式
      */
-    /*private ImmersionBar statusBarConfig() {
+    private ImmersionBar statusBarConfig() {
         //在BaseActivity里初始化
         mImmersionBar = ImmersionBar.with(this)
                 .statusBarDarkFont(statusBarDarkFont())    //默认状态栏字体颜色为黑色
                 .keyboardEnable(true);  //解决软键盘与底部输入框冲突问题，默认为false，还有一个重载方法，可以指定软键盘mode
         return mImmersionBar;
-    }*/
+    }
 
     /**
      * 获取状态栏字体颜色
@@ -76,7 +77,7 @@ public abstract class UILazyFragment extends BaseLazyFragment {
         super.setUserVisibleHint(isVisibleToUser);
         if (isVisibleToUser && isStatusBarEnabled() && isLazyLoad()) {
             // 重新初始化状态栏
-            //statusBarConfig().init();
+            statusBarConfig().init();
         }
     }
 }

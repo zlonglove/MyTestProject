@@ -41,7 +41,7 @@ import com.Hello.Contacts.CursorsActivity;
 import com.Hello.Tabactivity.ISTabActivity;
 import com.ISHello.AIDL.PlayerProxy;
 import com.ISHello.AIDL.mp3RemoteService;
-import com.ISHello.Activity.HomeActivity;
+import com.ISHello.baseModule.HomeActivity;
 import com.ISHello.AndroidThread.AndroidThread;
 import com.ISHello.AppManager.AppManager;
 import com.ISHello.Banner2.BannerActivity2;
@@ -78,7 +78,6 @@ import com.ISHello.NetWork.NetWorkActivity;
 import com.ISHello.PickView.PickViewActivity;
 import com.ISHello.Process.UserManager;
 import com.ISHello.RecyclerView.ui.StickHeaderActivity;
-import com.ISHello.RemoteCalls.AIDL.BookManagerActivity;
 import com.ISHello.RemoteCalls.RemoteCallsClient;
 import com.ISHello.ResideMenu.ResideMenuActivity;
 import com.ISHello.Retrofit.RetrofitDownLoadActivity;
@@ -591,8 +590,8 @@ public class MainActivity extends CheckPermissionsActivity {
         LogUtil.log(StringUtils.buffer("a", "b"));
         /********************************************************************************************************************/
 
-        gotoShareDialog();
-        //getBookSearch();
+        //gotoShareDialog();
+        getBookSearch();
     }
 
     private void getBookSearch() {
@@ -637,8 +636,7 @@ public class MainActivity extends CheckPermissionsActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i) {
                     case 0:
-                        //gotoLocation();
-                        getBookSearch();
+                        gotoLocation();
                         break;
                     case 1:
                         //gotoJNIActivity();

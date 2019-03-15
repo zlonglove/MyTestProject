@@ -1,4 +1,4 @@
-package zlonglove.cn.base.test.widget;
+package com.ISHello.baseModule.widget;
 
 import android.content.Context;
 import android.support.design.widget.CollapsingToolbarLayout;

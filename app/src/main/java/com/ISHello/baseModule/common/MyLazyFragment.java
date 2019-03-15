@@ -1,4 +1,4 @@
-package zlonglove.cn.base.test.common;
+package com.ISHello.baseModule.common;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hjq.bar.TitleBar;
+
 
 /**
  * @author : zl

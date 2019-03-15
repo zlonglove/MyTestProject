@@ -39,6 +39,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected void initActivity() {
         initLayout();
+        findViews();
         initView();
         initData();
     }
@@ -49,6 +50,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
+    protected abstract void findViews();
     // 引入布局
     protected abstract int getLayoutId();
 

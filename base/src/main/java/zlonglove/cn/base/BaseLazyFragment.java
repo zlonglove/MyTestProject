@@ -64,7 +64,7 @@ public abstract class BaseLazyFragment extends Fragment {
         if (parent != null) {
             parent.removeView(mRootView);
         }
-
+        findViews();
         return mRootView;
     }
 
@@ -151,6 +151,9 @@ public abstract class BaseLazyFragment extends Fragment {
         initView();
         initData();
     }
+
+    //布局View初始化
+    protected abstract void findViews();
 
     //引入布局
     protected abstract int getLayoutId();

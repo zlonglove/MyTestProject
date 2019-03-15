@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <zlonglove.cn.base.test.widget.NoScrollViewPager
+    <com.ISHello.baseModule.widget.NoScrollViewPager
         android:id="@+id/vp_home_pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -18,7 +18,6 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         app:itemTextColor="@drawable/txt_home_bottom_nav_selector"
-        app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_home_bottom_nav" />
 
 </LinearLayout>

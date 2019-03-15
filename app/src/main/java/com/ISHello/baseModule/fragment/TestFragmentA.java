@@ -1,13 +1,13 @@
-package zlonglove.cn.base.test.fragment;
+package com.ISHello.baseModule.fragment;
 
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
+import com.ISHello.baseModule.common.MyLazyFragment;
+import com.ISHello.baseModule.widget.XCollapsingToolbarLayout;
 import com.gyf.barlibrary.ImmersionBar;
 
 import zlonglove.cn.base.R;
-import zlonglove.cn.base.test.common.MyLazyFragment;
-import zlonglove.cn.base.test.widget.XCollapsingToolbarLayout;
 
 /**
  * @author : zl
@@ -16,12 +16,11 @@ import zlonglove.cn.base.test.widget.XCollapsingToolbarLayout;
  * @desc : 项目炫酷效果示例
  */
 public class TestFragmentA extends MyLazyFragment implements XCollapsingToolbarLayout.OnScrimsListener {
+    private XCollapsingToolbarLayout mCollapsingToolbarLayout;
+    private Toolbar mToolbar;
 
-    XCollapsingToolbarLayout mCollapsingToolbarLayout;
-    Toolbar mToolbar;
-
-    TextView mAddressView;
-    TextView mSearchView;
+    private TextView mAddressView;
+    private TextView mSearchView;
 
     public static TestFragmentA newInstance() {
         return new TestFragmentA();
@@ -37,12 +36,17 @@ public class TestFragmentA extends MyLazyFragment implements XCollapsingToolbarL
         return R.id.tb_test_a_bar;
     }
 
+
     @Override
-    protected void initView() {
+    protected void findViews() {
         mCollapsingToolbarLayout = findViewById(R.id.ctl_test_bar);
         mToolbar = findViewById(R.id.t_test_title);
         mAddressView = findViewById(R.id.tv_test_address);
         mSearchView = findViewById(R.id.tv_test_search);
+    }
+
+    @Override
+    protected void initView() {
         // 给这个ToolBar设置顶部内边距，才能和TitleBar进行对齐
         ImmersionBar.setTitleBar(getFragmentActivity(), mToolbar);
 

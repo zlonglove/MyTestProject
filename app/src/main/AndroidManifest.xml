@@ -914,8 +914,9 @@
             android:screenOrientation="portrait"></activity>
 
         <activity
-            android:name="com.ISHello.Activity.HomeActivity"
-            android:screenOrientation="portrait"></activity>
+            android:name="com.ISHello.baseModule.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeActivityTheme"></activity>
     </application>
 
 </manifest>

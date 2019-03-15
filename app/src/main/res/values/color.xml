@@ -196,4 +196,8 @@
 
     <color name="text_black3">#333333</color>
 
+    <color name="windowBackground">#F4F4F4</color>
+    <color name="textColor">#333333</color>
+    <color name="textColorHint">#757575</color>
+
 </resources>

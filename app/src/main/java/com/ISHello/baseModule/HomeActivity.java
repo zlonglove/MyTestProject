@@ -1,16 +1,24 @@
-package com.ISHello.Activity;
+package com.ISHello.baseModule;
 
+import android.annotation.SuppressLint;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.design.internal.BottomNavigationItemView;
+import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
 
+
+import com.ISHello.baseModule.common.MyActivity;
+import com.ISHello.baseModule.common.MyLazyFragment;
+import com.ISHello.baseModule.fragment.TestFragmentA;
 import com.example.ishelloword.R;
 
-import zlonglove.cn.base.BaseActivity;
+import java.lang.reflect.Field;
+
+import im.icbc.cn.keyboard.utils.LogUtils;
 import zlonglove.cn.base.BaseFragmentAdapter;
-import zlonglove.cn.base.test.common.MyLazyFragment;
-import zlonglove.cn.base.test.fragment.TestFragmentA;
 
 
 /**
@@ -19,10 +27,9 @@ import zlonglove.cn.base.test.fragment.TestFragmentA;
  * @time : 2018/10/18
  * @desc : 主页界面
  */
-public class HomeActivity extends BaseActivity implements ViewPager.OnPageChangeListener, BottomNavigationView.OnNavigationItemSelectedListener {
-
-    ViewPager mViewPager;
-    BottomNavigationView mBottomNavigationView;
+public class HomeActivity extends MyActivity implements ViewPager.OnPageChangeListener, BottomNavigationView.OnNavigationItemSelectedListener {
+    private ViewPager mViewPager;
+    private BottomNavigationView mBottomNavigationView;
 
     private BaseFragmentAdapter<MyLazyFragment> mPagerAdapter;
 
@@ -37,14 +44,25 @@ public class HomeActivity extends BaseActivity implements ViewPager.OnPageChange
     }
 
     @Override
-    protected void initView() {
+    protected void findViews() {
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+            //getSupportActionBar().setDisplayShowTitleEnabled(false);
+        }
         mViewPager = findViewById(R.id.vp_home_pager);
         mBottomNavigationView = findViewById(R.id.bv_home_navigation);
+    }
+
+    @Override
+    protected void initView() {
         mViewPager.addOnPageChangeListener(this);
 //        mViewPager.setPageTransformer(true, new ZoomFadePageTransformer());
 
         // 不使用图标默认变色
         mBottomNavigationView.setItemIconTintList(null);
+        if (Build.VERSION.SDK_INT < 28) {
+            disableShiftMode(mBottomNavigationView);
+        }
         mBottomNavigationView.setOnNavigationItemSelectedListener(this);
     }
 
@@ -126,7 +144,7 @@ public class HomeActivity extends BaseActivity implements ViewPager.OnPageChange
 
     @Override
     public void onBackPressed() {
-
+        super.onBackPressed();
     }
 
     @Override
@@ -137,4 +155,24 @@ public class HomeActivity extends BaseActivity implements ViewPager.OnPageChange
         super.onDestroy();
     }
 
+    @SuppressLint("RestrictedApi")
+    public void disableShiftMode(BottomNavigationView view) {
+        BottomNavigationMenuView menuView = (BottomNavigationMenuView) view.getChildAt(0);
+        try {
+            Field shiftingMode = menuView.getClass().getDeclaredField("mShiftingMode");
+            shiftingMode.setAccessible(true);
+            shiftingMode.setBoolean(menuView, false);
+            shiftingMode.setAccessible(false);
+            for (int i = 0; i < menuView.getChildCount(); i++) {
+                BottomNavigationItemView item = (BottomNavigationItemView) menuView.getChildAt(i);
+                //去除动画
+                item.setShiftingMode(false); //api 28之前
+                item.setChecked(item.getItemData().isChecked());
+            }
+        } catch (NoSuchFieldException e) {
+            LogUtils.e("Unable to get shift mode field");
+        } catch (IllegalAccessException e) {
+            LogUtils.e("Unable to change value of shift mode");
+        }
+    }
 }
