@@ -73,6 +73,7 @@ public final class AddressDialog {
             super(activity);
 
             setContentView(R.layout.dialog_address);
+
             setGravity(Gravity.BOTTOM);
             setAnimStyle(BaseDialog.AnimStyle.LEFT);
 
