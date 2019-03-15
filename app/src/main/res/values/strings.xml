@@ -339,4 +339,6 @@
     <string name="share_wx">微信</string>
     <string name="share_wx_circle">朋友圈</string>
     <string name="share_sina">新浪</string>
+
+    <string name="dialog_select_hint">请选择</string>
 </resources>

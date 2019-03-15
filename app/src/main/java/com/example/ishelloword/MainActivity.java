@@ -41,6 +41,7 @@ import com.Hello.Contacts.CursorsActivity;
 import com.Hello.Tabactivity.ISTabActivity;
 import com.ISHello.AIDL.PlayerProxy;
 import com.ISHello.AIDL.mp3RemoteService;
+import com.ISHello.DefineDialog.AddressDialog;
 import com.ISHello.baseModule.HomeActivity;
 import com.ISHello.AndroidThread.AndroidThread;
 import com.ISHello.AppManager.AppManager;
@@ -620,9 +621,10 @@ public class MainActivity extends CheckPermissionsActivity {
                 Log.e(TAG, "--->getBookSearchMapParams() Fail");
             }
         });*/
-        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+
+        /*Intent intent = new Intent(MainActivity.this, HomeActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);*/
     }
 
     private void initUI() {

@@ -1,12 +1,14 @@
 package com.ISHello.IOSDialog;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.ISHello.DefineDialog.AddressDialog;
+import com.ISHello.base.base.BaseActivity;
 import com.example.ishelloword.R;
 
 import im.icbc.com.iosdialog.HintDialog;
@@ -14,7 +16,7 @@ import im.icbc.com.iosdialog.IOSLoadingDialog;
 import im.icbc.com.iosdialog.LoadingDialog;
 import im.icbc.com.iosdialog.PhotoDialog;
 
-public class iosDialogActivity extends AppCompatActivity {
+public class iosDialogActivity extends BaseActivity {
     private iosDialogActivity selfActivity = iosDialogActivity.this;
 
     private HintDialog hintDialog = new HintDialog(); // 提示框
@@ -25,6 +27,7 @@ public class iosDialogActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ios_dialog);
+        setTitle("自定义Dialog");
         initView();
     }
 
@@ -120,6 +123,27 @@ public class iosDialogActivity extends AppCompatActivity {
                     }
                 });
                 photoDialog.show(selfActivity.getFragmentManager(), "");
+            }
+        });
+
+        findViewById(R.id.btn_area_select).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AddressDialog.Builder(iosDialogActivity.this)
+                        .setTitle("选择地区")
+                        //.setIgnoreArea() // 不选择县级区域
+                        .setListener(new AddressDialog.OnListener() {
+
+                            @Override
+                            public void onSelected(Dialog dialog, String province, String city, String area) {
+                                showToast(province + city + area, Toast.LENGTH_LONG);
+                            }
+
+                            @Override
+                            public void onCancel(Dialog dialog) {
+                                showToast("取消了", Toast.LENGTH_LONG);
+                            }
+                        }).show();
             }
         });
     }

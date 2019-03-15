@@ -44,4 +44,10 @@
         android:layout_height="wrap_content"
         android:text="仿IOS拍照选取相册" />
 
+    <Button
+        android:id="@+id/btn_area_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="地区对话框" />
+
 </LinearLayout>
