@@ -144,4 +144,9 @@ dependencies {
     implementation project(':pickerview')
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation project(':voice')
+    implementation project(':base')
+    // 标题栏：https://github.com/getActivity/TitleBar
+    implementation 'com.hjq:titlebar:latest.integration'
+// 状态栏沉浸：https://github.com/gyf-dev/ImmersionBar
+    implementation 'com.gyf.immersionbar:immersionbar:2.3.3'
 }

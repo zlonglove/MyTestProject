@@ -4,4 +4,4 @@ include ':app', ':linclibrary', ':jnisdk', ':keyboard', ':musicIndicator', ':gol
         ':iosdialog', ':timeselector', ':indexbarlayout', ':MarqueeView',
         ':functionGuide', ':rulerlib', ':CommonUtil', ':banner',
         ':android-gif-drawable', ':lfilepickerlibrary', ':mediaprojectRecord',
-        ':indexablerecyclerview', ':wheelview', ':pickerview'
+        ':indexablerecyclerview', ':wheelview', ':pickerview', ':base'

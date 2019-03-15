@@ -19,6 +19,7 @@ import java.util.ArrayList;
  */
 public class PickViewActivity extends BaseActivity {
     private OptionsPickerView pvOptions;
+    
     private ArrayList<ProvinceBean> options1Items = new ArrayList<>();
     private ArrayList<ArrayList<String>> options2Items = new ArrayList<>();
     private TextView tv_pick_view;
@@ -27,6 +28,7 @@ public class PickViewActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pick_view);
+        setTitle("地区选择");
         findView();
         getOptionData();
         initOptionPicker();

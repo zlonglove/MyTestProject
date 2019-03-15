@@ -94,5 +94,6 @@
         <item>StickHeaderRecycler</item>
         <item>Recode</item>
         <item>Retrofit文件下载</item>
+        <item>HomeActivity</item>
     </string-array>
 </resources>

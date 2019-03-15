@@ -41,8 +41,6 @@ import com.Hello.Contacts.CursorsActivity;
 import com.Hello.Tabactivity.ISTabActivity;
 import com.ISHello.AIDL.PlayerProxy;
 import com.ISHello.AIDL.mp3RemoteService;
-import com.ISHello.DefineDialog.AddressDialog;
-import com.ISHello.baseModule.HomeActivity;
 import com.ISHello.AndroidThread.AndroidThread;
 import com.ISHello.AppManager.AppManager;
 import com.ISHello.Banner2.BannerActivity2;
@@ -92,6 +90,7 @@ import com.ISHello.UserInfo.ISUserInfo;
 import com.ISHello.ViewPage.ViewPagerActivity;
 import com.ISHello.Voice.VoiceActivity;
 import com.ISHello.XmlManager.xmlManager;
+import com.ISHello.baseModule.HomeActivity;
 import com.ISHello.getPackageInfo.ISPackageInfo;
 import com.ISHello.logger.Logger;
 import com.ISHello.preference.FragmentPreferences;
@@ -752,6 +751,9 @@ public class MainActivity extends CheckPermissionsActivity {
                     case 37:
                         gotoRetrofitDownLoad();
                         break;
+                    case 38:
+                        gotoHomeActivity();
+                        break;
                     default:
                         break;
                 }
@@ -1137,6 +1139,11 @@ public class MainActivity extends CheckPermissionsActivity {
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
+    private void gotoHomeActivity(){
+        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
     private void gotoShareDialog() {
         //显示分享底部区域
         ShareDialog shareDialog = ShareDialog.getInstance();
