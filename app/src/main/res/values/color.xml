@@ -200,4 +200,7 @@
     <color name="textColor">#333333</color>
     <color name="textColorHint">#757575</color>
 
+
+    <color name="dialog_bg">#ffffff</color>
+    <color name="dialog_bg_press">#f0f0f0</color>
 </resources>

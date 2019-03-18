@@ -4,17 +4,23 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
 
 import com.ISHello.DefineDialog.AddressDialog;
+import com.ISHello.DefineDialog.MenuBottomDialog;
 import com.ISHello.base.base.BaseActivity;
 import com.example.ishelloword.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import im.icbc.com.iosdialog.HintDialog;
 import im.icbc.com.iosdialog.IOSLoadingDialog;
 import im.icbc.com.iosdialog.LoadingDialog;
 import im.icbc.com.iosdialog.PhotoDialog;
+import zlonglove.cn.base.BaseDialog;
 
 public class iosDialogActivity extends BaseActivity {
     private iosDialogActivity selfActivity = iosDialogActivity.this;
@@ -144,6 +150,35 @@ public class iosDialogActivity extends BaseActivity {
                                 showToast("取消了", Toast.LENGTH_LONG);
                             }
                         }).show();
+            }
+        });
+
+        findViewById(R.id.btn_bottom_menu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                List<String> data = new ArrayList<>();
+                for (int i = 0; i < 10; i++) {
+                    data.add("我是数据" + i);
+                }
+                new MenuBottomDialog.Builder(iosDialogActivity.this)
+                        .setCancel("取消") // 设置 null 表示不显示取消按钮
+                        //.setAutoDismiss(false) // 设置点击按钮后不关闭对话框
+                        .setList(data)
+                        .setListener(new MenuBottomDialog.OnListener() {
+
+                            @Override
+                            public void onSelected(Dialog dialog, int position, String text) {
+                                showToast("位置：" + position + "，文本：" + text, Toast.LENGTH_SHORT);
+                            }
+
+                            @Override
+                            public void onCancel(Dialog dialog) {
+                                showToast("取消了", Toast.LENGTH_SHORT);
+                            }
+                        })
+                        .setGravity(Gravity.BOTTOM)
+                        .setAnimStyle(BaseDialog.AnimStyle.BOTTOM)
+                        .show();
             }
         });
     }

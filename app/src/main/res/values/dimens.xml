@@ -4,4 +4,5 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="action_bar_size">48dp</dimen>
+    <dimen name="dialog_menu_round_size">12dp</dimen>
 </resources>

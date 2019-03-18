@@ -50,4 +50,10 @@
         android:layout_height="wrap_content"
         android:text="地区对话框" />
 
+    <Button
+        android:id="@+id/btn_bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="底部选择框" />
+
 </LinearLayout>
