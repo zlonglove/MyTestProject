@@ -23,8 +23,6 @@ import im.icbc.com.iosdialog.PhotoDialog;
 import zlonglove.cn.base.BaseDialog;
 
 public class iosDialogActivity extends BaseActivity {
-    private iosDialogActivity selfActivity = iosDialogActivity.this;
-
     private HintDialog hintDialog = new HintDialog(); // 提示框
     private HintDialog singleHintDialog = new HintDialog(); // 单个提示框
     private PhotoDialog photoDialog = new PhotoDialog(); // 拍照 选择相册
@@ -42,7 +40,7 @@ public class iosDialogActivity extends BaseActivity {
         findViewById(R.id.btn_alert_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new AlertDialog.Builder(selfActivity).setTitle("测试标题").setMessage("Hello Word~!").setPositiveButton("哈喽", new DialogInterface.OnClickListener() {
+                new AlertDialog.Builder(iosDialogActivity.this).setTitle("测试标题").setMessage("Hello Word~!").setPositiveButton("哈喽", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
@@ -55,7 +53,7 @@ public class iosDialogActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 LoadingDialog loadingDialog = new LoadingDialog().setOnTouchOutside(true);
-                loadingDialog.show(selfActivity.getFragmentManager(), "loadingDialog");
+                loadingDialog.show(iosDialogActivity.this.getFragmentManager(), "loadingDialog");
             }
         });
         // 高仿IOS加载框
@@ -63,7 +61,7 @@ public class iosDialogActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 IOSLoadingDialog iosLoadingDialog = new IOSLoadingDialog().setOnTouchOutside(true).setHintMsg("正在加载");
-                iosLoadingDialog.show(selfActivity.getFragmentManager(), "iosLoadingDialog");
+                iosLoadingDialog.show(iosDialogActivity.this.getFragmentManager(), "iosLoadingDialog");
             }
         });
         // 提示框
@@ -75,17 +73,17 @@ public class iosDialogActivity extends BaseActivity {
                     @Override
                     public void onClick() {
                         hintDialog.dismiss();
-                        Toast.makeText(selfActivity, "点击确定", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(iosDialogActivity.this, "点击确定", Toast.LENGTH_SHORT).show();
                     }
                 });
                 hintDialog.setOnCancelClickListener(new HintDialog.HintCancelCallback() {
                     @Override
                     public void onClick() {
                         hintDialog.dismiss();
-                        Toast.makeText(selfActivity, "点击取消", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(iosDialogActivity.this, "点击取消", Toast.LENGTH_SHORT).show();
                     }
                 });
-                hintDialog.show(selfActivity.getFragmentManager(), "hintDialog");
+                hintDialog.show(iosDialogActivity.this.getFragmentManager(), "hintDialog");
             }
         });
         // 单个提示框
@@ -97,10 +95,10 @@ public class iosDialogActivity extends BaseActivity {
                     @Override
                     public void onClick() {
                         singleHintDialog.dismiss();
-                        Toast.makeText(selfActivity, "点击确认~", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(iosDialogActivity.this, "点击确认~", Toast.LENGTH_SHORT).show();
                     }
                 });
-                singleHintDialog.show(selfActivity.getFragmentManager(), "singleHintDialog");
+                singleHintDialog.show(iosDialogActivity.this.getFragmentManager(), "singleHintDialog");
             }
         });
         // 拍照 选取相册
@@ -111,24 +109,24 @@ public class iosDialogActivity extends BaseActivity {
                     @Override
                     public void onClick() {
                         photoDialog.dismiss();
-                        Toast.makeText(selfActivity, "点击拍照", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(iosDialogActivity.this, "点击拍照", Toast.LENGTH_SHORT).show();
                     }
                 });
                 photoDialog.setOnChoosePhotoClickListener(new PhotoDialog.ChoosePhotoCallback() {
                     @Override
                     public void onClick() {
                         photoDialog.dismiss();
-                        Toast.makeText(selfActivity, "点击选取相册", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(iosDialogActivity.this, "点击选取相册", Toast.LENGTH_SHORT).show();
                     }
                 });
                 photoDialog.setOnCancleClickListener(new PhotoDialog.PhoneCancelCallback() {
                     @Override
                     public void onClick() {
                         photoDialog.dismiss();
-                        Toast.makeText(selfActivity, "点击取消", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(iosDialogActivity.this, "点击取消", Toast.LENGTH_SHORT).show();
                     }
                 });
-                photoDialog.show(selfActivity.getFragmentManager(), "");
+                photoDialog.show(iosDialogActivity.this.getFragmentManager(), "");
             }
         });
 

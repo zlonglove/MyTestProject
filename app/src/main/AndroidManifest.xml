@@ -147,7 +147,6 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name="com.DialogActivity.DialogActivity"
-            android:screenOrientation="portrait"
             android:theme="@style/AppDialogNoTitle" />
         <activity
             android:name="com.ISHello.Service.ServerActivity"
@@ -863,11 +862,7 @@
         </activity>
         <activity
             android:name="com.ISHello.IOSDialog.iosDialogActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.ISHello.Banner2.BannerActivity2"
