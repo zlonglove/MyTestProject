@@ -5,4 +5,9 @@
     android:layout_height="match_parent"
     tools:context="zlonglove.cn.rxjava.RxJavaActivity">
 
+    <TextView
+        android:id="@+id/tv_rxjava_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

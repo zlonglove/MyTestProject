@@ -3,6 +3,7 @@ package zlonglove.cn.rxjava;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +15,10 @@ import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.BiFunction;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
@@ -23,54 +26,73 @@ import zlonglove.cn.rxjava.bean.Student;
 
 public class RxJavaActivity extends AppCompatActivity {
     private final String TAG = RxJavaActivity.class.getSimpleName();
+    private TextView mRxjavaInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rx_java);
+        setTitle("Rxjava");
+        findViews();
+        init();
+    }
 
-        //创建一个观察者
-        Observer<Student> observer = new Observer<Student>() {
-            //事件队列异常。在事件处理过程中出异常时，onError() 会被触发,同时队列自动终止，不允许再有事件发出
-            @Override
-            public void onError(Throwable e) {
-                Log.i(TAG, "--->Error");
-            }
+    private void findViews() {
+        mRxjavaInfo = findViewById(R.id.tv_rxjava_info);
+    }
 
-            //事件队列完结时调用该方法。RxJava 不仅把每个事件单独处理，还会把它们看做一个队列
-            @Override
-            public void onComplete() {
-                Log.i(TAG, "--->onComplete");
-                Log.i(TAG, "--->" + Thread.currentThread().getName());
-            }
-
-            //RxJava2.0中新增的,传递参数为Disposable,Disposable相当于RxJava1.x中的Subscription,用于解除订阅
-            @Override
-            public void onSubscribe(Disposable d) {
-                Log.i(TAG, "--->Disposable");
-            }
-
-            @Override
-            public void onNext(Student student) {
-                //进行UI刷新动作
-                Log.i(TAG, "--->" + student.toString());
-                Log.i(TAG, "--->" + Thread.currentThread().getName());
-            }
-
-        };
-
-        getStudentInfo(observer);
+    private void init() {
         /*justTest();
         mapTest();
         fromIterable();
         defer();
         interval();
         repeat();
-        flatMap();*/
         doOnNext();
+        flatMap();*/
+        //getStudentInfo();
+        zipTest();
     }
 
-    private void getStudentInfo(Observer<Student> observer) {
+    private void getStudentInfo() {
+
+        //创建一个观察者
+        Observer<Student> observer = new Observer<Student>() {
+            //事件队列异常。在事件处理过程中出异常时，onError() 会被触发,同时队列自动终止，不允许再有事件发出
+            @Override
+            public void onError(Throwable e) {
+                Log.i(TAG, "--->Error()" + e.getMessage());
+            }
+
+            //事件队列完结时调用该方法。RxJava 不仅把每个事件单独处理，还会把它们看做一个队列
+            @Override
+            public void onComplete() {
+                Log.i(TAG, "--->onComplete()");
+                Log.i(TAG, "--->" + Thread.currentThread().getName());
+            }
+
+            //RxJava2.0中新增的,传递参数为Disposable,Disposable相当于RxJava1.x中的Subscription,用于解除订阅
+            @Override
+            public void onSubscribe(Disposable d) {
+                Log.i(TAG, "--->Disposable()");
+            }
+
+            @Override
+            public void onNext(Student student) {
+                //进行UI刷新动作
+                Log.i(TAG, "--->" + student.toString());
+                mRxjavaInfo.setText(Thread.currentThread().getName() + "/" + student.toString());
+            }
+        };
+
+        Consumer consumer = new Consumer<Student>() {
+            @Override
+            public void accept(Student student) throws Exception {
+                Log.i(TAG, "--->" + student.toString());
+                Log.i(TAG, "--->" + Thread.currentThread().getName());
+            }
+        };
+
         //使用Observable.create()创建被观察者
         Observable.create(new ObservableOnSubscribe<Student>() {
             @Override
@@ -82,11 +104,18 @@ public class RxJavaActivity extends AppCompatActivity {
                 student.setSex("male");
 
                 e.onNext(student);
+                //e.onError(new Exception("发生错误了"));
                 e.onComplete();
             }
-        }).subscribeOn(Schedulers.io())//指定subscribe()发生在IO线程
+        }).subscribeOn(Schedulers.newThread())//指定subscribe()发生在规的新线程
                 .observeOn(AndroidSchedulers.mainThread())//指定Subscriber的回调发生在主线程
                 .subscribe(observer);
+        /**
+         * Schedulers.io() 代表io操作的线程, 通常用于网络,读写文件等io密集型的操作；
+         * Schedulers.computation() 代表CPU计算密集型的操作, 例如需要大量计算的操作；
+         * Schedulers.newThread() 代表一个常规的新线程；
+         * AndroidSchedulers.mainThread() 代表Android的主线程
+         */
     }
 
     /**
@@ -367,7 +396,7 @@ public class RxJavaActivity extends AppCompatActivity {
      * doOnNext
      * doOnNext()允许我们在每次输出一个元素之前做一些额外的事情
      */
-    private void doOnNext(){
+    private void doOnNext() {
         List<String> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             list.add("Hello" + i);
@@ -380,15 +409,71 @@ public class RxJavaActivity extends AppCompatActivity {
         }).take(5).doOnNext(new Consumer<Object>() {
             @Override
             public void accept(Object o) throws Exception {
-                Log.i(TAG,"--->doOnNext 准备工作");
+                Log.i(TAG, "--->doOnNext 准备工作");
             }
         }).subscribe(new Consumer<Object>() {
             @Override
             public void accept(Object s) throws Exception {
-                Log.i(TAG,"--->doOnNext "+s);
+                Log.i(TAG, "--->doOnNext " + s);
             }
         });
 
+    }
+
+    private void zipTest() {
+        Observable<Integer> observable1 = Observable.create(new ObservableOnSubscribe<Integer>() {
+            @Override
+            public void subscribe(ObservableEmitter<Integer> emitter) throws Exception {
+                Log.i(TAG,"emit 1");
+                emitter.onNext(1);
+                Log.i(TAG,"emit 2");
+                emitter.onNext(2);
+                Log.i(TAG,"emit 3");
+                emitter.onNext(3);
+                Log.i(TAG,"emit 4");
+                emitter.onNext(4);
+                emitter.onComplete();
+            }
+        }).subscribeOn(Schedulers.io());
+
+        Observable<String> observable2 = Observable.create(new ObservableOnSubscribe<String>() {
+            @Override
+            public void subscribe(ObservableEmitter<String> emitter) throws Exception {
+                Log.i(TAG,"emit A");
+                emitter.onNext("A");
+                Log.i(TAG,"emit B");
+                emitter.onNext("B");
+                Log.i(TAG,"emit C");
+                emitter.onNext("C");
+                emitter.onComplete();
+            }
+        }).subscribeOn(Schedulers.io());
+        Observable.zip(observable1, observable2, new BiFunction<Integer, String, String>() {
+            @Override
+            public String apply(Integer integer, String s) throws Exception {
+                return integer + s;
+            }
+        }).subscribe(new Observer<String>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+                Log.i(TAG,"onSubscribe()");
+            }
+
+            @Override
+            public void onNext(String s) {
+                Log.i(TAG,s);
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+                Log.i(TAG,"onComplete()");
+            }
+        });
     }
 
 }
