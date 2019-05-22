@@ -19,6 +19,12 @@ public abstract class BaseFragment extends Fragment {
     private final String TAG = BaseFragment.class.getSimpleName();
     protected BaseActivity mActivity;
 
+    /**
+     * onAttach()回调将在Fragment与其Activity关联之后调用
+     * 需要使用Activity的引用或者使用Activity作为其他操作的上下文，将在此回调方法中实现
+     *
+     * @param context
+     */
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
