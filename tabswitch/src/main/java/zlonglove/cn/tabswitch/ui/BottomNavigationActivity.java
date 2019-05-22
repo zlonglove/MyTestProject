@@ -67,7 +67,7 @@ public class BottomNavigationActivity extends BaseActivity {
 
         mFragments.add(newsFragment);
         mFragments.add(getGirlsFragment());
-        mFragments.add(new NewsFragment());
+        mFragments.add(getReservedFragment());
 
         mPager = (NoScrollViewPager) findViewById(R.id.container_pager);
         mAdapter = new FragmentAdapter(getSupportFragmentManager(), mFragments);
@@ -117,6 +117,10 @@ public class BottomNavigationActivity extends BaseActivity {
 
     private BaseFragment getGirlsFragment() {
         return GirlsFragment.newInstance();
+    }
+
+    private BaseFragment getReservedFragment() {
+        return ReservedFragment.newInstance("1", "2");
     }
 
 }

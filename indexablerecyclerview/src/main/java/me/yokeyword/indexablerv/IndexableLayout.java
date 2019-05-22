@@ -42,6 +42,7 @@ import me.yokeyword.indexablerv.database.IndexBarDataObserver;
 
 /**
  * RecyclerView + IndexBar
+ *
  * @author
  */
 public class IndexableLayout extends FrameLayout {
@@ -93,39 +94,6 @@ public class IndexableLayout extends FrameLayout {
     private Comparator mComparator;
     private Handler mHandler;
 
-    private HeaderFooterDataObserver<EntityWrapper> mHeaderFooterDataSetObserver = new HeaderFooterDataObserver<EntityWrapper>() {
-        @Override
-        public void onChanged() {
-            if (mRealAdapter == null) {
-                return;
-            }
-            mRealAdapter.notifyDataSetChanged();
-        }
-
-        @Override
-        public void onAdd(boolean header, EntityWrapper preData, EntityWrapper data) {
-            if (mRealAdapter == null) {
-                return;
-            }
-            mRealAdapter.addHeaderFooterData(header, preData, data);
-        }
-
-        @Override
-        public void onRemove(boolean header, EntityWrapper data) {
-            if (mRealAdapter == null) {
-                return;
-            }
-            mRealAdapter.removeHeaderFooterData(header, data);
-        }
-    };
-
-    private IndexBarDataObserver mIndexBarDataSetObserver = new IndexBarDataObserver() {
-        @Override
-        public void onChanged() {
-            mIndexBar.setDatas(mShowAllLetter, mRealAdapter.getItems());
-        }
-    };
-
     public IndexableLayout(Context context) {
         this(context, null);
     }
@@ -139,25 +107,66 @@ public class IndexableLayout extends FrameLayout {
         init(context, attrs);
     }
 
+    private void init(Context context, AttributeSet attrs) {
+        this.mContext = context;
+        this.mExecutorService = Executors.newSingleThreadExecutor();
+        PADDING_RIGHT_OVERLAY = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80, getResources().getDisplayMetrics());
+
+        if (attrs != null) {
+            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.IndexableRecyclerView);
+            mBarTextColor = a.getColor(R.styleable.IndexableRecyclerView_indexBar_textColor, ContextCompat.getColor(context, R.color.default_indexBar_textColor));
+            mBarTextSize = a.getDimension(R.styleable.IndexableRecyclerView_indexBar_textSize, getResources().getDimension(R.dimen.default_indexBar_textSize));
+            mBarFocusTextColor = a.getColor(R.styleable.IndexableRecyclerView_indexBar_selectedTextColor, ContextCompat.getColor(context, R.color.default_indexBar_selectedTextColor));
+            mBarTextSpace = a.getDimension(R.styleable.IndexableRecyclerView_indexBar_textSpace, getResources().getDimension(R.dimen.default_indexBar_textSpace));
+            mBarBg = a.getDrawable(R.styleable.IndexableRecyclerView_indexBar_background);
+            mBarWidth = a.getDimension(R.styleable.IndexableRecyclerView_indexBar_layout_width, getResources().getDimension(R.dimen.default_indexBar_layout_width));
+            a.recycle();
+        }
+
+        if (mContext instanceof Activity) {
+            ((Activity) mContext).getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+        }
+
+        mRecy = new RecyclerView(context);
+        /**
+         * 设置无竖直滚动条
+         */
+        mRecy.setVerticalScrollBarEnabled(false);
+        /**
+         * 设置去掉光晕效果
+         */
+        mRecy.setOverScrollMode(View.OVER_SCROLL_NEVER);
+        addView(mRecy, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+
+        mIndexBar = new IndexBar(context);
+        mIndexBar.init(mBarBg, mBarTextColor, mBarFocusTextColor, mBarTextSize, mBarTextSpace);
+        LayoutParams params = new LayoutParams((int) mBarWidth, LayoutParams.WRAP_CONTENT);
+        params.gravity = Gravity.END | Gravity.CENTER_VERTICAL;
+        addView(mIndexBar, params);
+
+        mRealAdapter = new RealAdapter();
+        mRecy.setHasFixedSize(true);
+        mRecy.setAdapter(mRealAdapter);
+
+        initListener();
+    }
+
     /**
      * set RealAdapter
      * {@link #setLayoutManager(RecyclerView.LayoutManager)}
      */
     public <T extends IndexableEntity> void setAdapter(final IndexableAdapter<T> adapter) {
-
         if (mLayoutManager == null) {
             throw new NullPointerException("You must set the LayoutManager first");
         }
-
         this.mIndexableAdapter = adapter;
-
         if (mDataSetObserver != null) {
             adapter.unregisterDataSetObserver(mDataSetObserver);
         }
         mDataSetObserver = new DataObserver() {
-
             @Override
             public void onInited() {
+                //adapter.setDatas()调用后回调此函数
                 onSetListener(IndexableAdapter.TYPE_ALL);
                 onDataChanged();
             }
@@ -193,6 +202,39 @@ public class IndexableLayout extends FrameLayout {
             initStickyView(adapter);
         }
     }
+
+    private HeaderFooterDataObserver<EntityWrapper> mHeaderFooterDataSetObserver = new HeaderFooterDataObserver<EntityWrapper>() {
+        @Override
+        public void onChanged() {
+            if (mRealAdapter == null) {
+                return;
+            }
+            mRealAdapter.notifyDataSetChanged();
+        }
+
+        @Override
+        public void onAdd(boolean header, EntityWrapper preData, EntityWrapper data) {
+            if (mRealAdapter == null) {
+                return;
+            }
+            mRealAdapter.addHeaderFooterData(header, preData, data);
+        }
+
+        @Override
+        public void onRemove(boolean header, EntityWrapper data) {
+            if (mRealAdapter == null) {
+                return;
+            }
+            mRealAdapter.removeHeaderFooterData(header, data);
+        }
+    };
+
+    private IndexBarDataObserver mIndexBarDataSetObserver = new IndexBarDataObserver() {
+        @Override
+        public void onChanged() {
+            mIndexBar.setDatas(mShowAllLetter, mRealAdapter.getItems());
+        }
+    };
 
     /**
      * add HeaderView Adapter
@@ -319,44 +361,6 @@ public class IndexableLayout extends FrameLayout {
      */
     public void setIndexBarVisibility(boolean visible) {
         mIndexBar.setVisibility(visible ? VISIBLE : GONE);
-    }
-
-    private void init(Context context, AttributeSet attrs) {
-        this.mContext = context;
-        this.mExecutorService = Executors.newSingleThreadExecutor();
-        PADDING_RIGHT_OVERLAY = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80, getResources().getDisplayMetrics());
-
-        if (attrs != null) {
-            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.IndexableRecyclerView);
-            mBarTextColor = a.getColor(R.styleable.IndexableRecyclerView_indexBar_textColor, ContextCompat.getColor(context, R.color.default_indexBar_textColor));
-            mBarTextSize = a.getDimension(R.styleable.IndexableRecyclerView_indexBar_textSize, getResources().getDimension(R.dimen.default_indexBar_textSize));
-            mBarFocusTextColor = a.getColor(R.styleable.IndexableRecyclerView_indexBar_selectedTextColor, ContextCompat.getColor(context, R.color.default_indexBar_selectedTextColor));
-            mBarTextSpace = a.getDimension(R.styleable.IndexableRecyclerView_indexBar_textSpace, getResources().getDimension(R.dimen.default_indexBar_textSpace));
-            mBarBg = a.getDrawable(R.styleable.IndexableRecyclerView_indexBar_background);
-            mBarWidth = a.getDimension(R.styleable.IndexableRecyclerView_indexBar_layout_width, getResources().getDimension(R.dimen.default_indexBar_layout_width));
-            a.recycle();
-        }
-
-        if (mContext instanceof Activity) {
-            ((Activity) mContext).getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
-        }
-
-        mRecy = new RecyclerView(context);
-        mRecy.setVerticalScrollBarEnabled(false);
-        mRecy.setOverScrollMode(View.OVER_SCROLL_NEVER);
-        addView(mRecy, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-
-        mIndexBar = new IndexBar(context);
-        mIndexBar.init(mBarBg, mBarTextColor, mBarFocusTextColor, mBarTextSize, mBarTextSpace);
-        LayoutParams params = new LayoutParams((int) mBarWidth, LayoutParams.WRAP_CONTENT);
-        params.gravity = Gravity.END | Gravity.CENTER_VERTICAL;
-        addView(mIndexBar, params);
-
-        mRealAdapter = new RealAdapter();
-        mRecy.setHasFixedSize(true);
-        mRecy.setAdapter(mRealAdapter);
-
-        initListener();
     }
 
     /**
@@ -680,6 +684,7 @@ public class IndexableLayout extends FrameLayout {
 
     /**
      * List<T> -> List<Indexable<T>
+     * 数据处理
      */
     private <T extends IndexableEntity> ArrayList<EntityWrapper<T>> transform(final List<T> datas) {
         try {

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.IdRes;
 import android.support.annotation.Keep;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 
 import com.in.zlonglove.commonutil.Utils;
 
@@ -11,18 +12,18 @@ import com.in.zlonglove.commonutil.Utils;
 /**
  * <p>Fragment的基类</p>
  *
- * @author 张华洋
  * @name BaseFragment
  */
 @Keep
 public abstract class BaseFragment extends Fragment {
-
+    private final String TAG = BaseFragment.class.getSimpleName();
     protected BaseActivity mActivity;
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         this.mActivity = (BaseActivity) context;
+        Log.d(TAG, "--->onAttach()");
     }
 
 

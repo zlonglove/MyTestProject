@@ -61,13 +61,27 @@ class RealAdapter<T extends IndexableEntity> extends RecyclerView.Adapter<Recycl
         notifyDataSetChanged();
     }
 
+    /**
+     * data = {CityEntity@6299}
+     * id = 0
+     * name = "澳门特别行政区"
+     * pinyin = "aomentebiexingzhengqu"
+     * <p>
+     * headerFooterType = 0
+     * index = "A"
+     * indexByField = "澳门特别行政区"
+     * indexTitle = "A"
+     * itemType = 1
+     * originalPosition = 5
+     * pinyin = "aomentebiexingzhengqu"
+     *
+     * @param datas
+     */
     void setDatas(ArrayList<EntityWrapper<T>> datas) {
         if (mDatas != null && mDatasList.size() > mHeaderDatasList.size() + mFooterDatasList.size()) {
             mDatasList.removeAll(mDatas);
         }
-
         this.mDatas = datas;
-
         mDatasList.addAll(mHeaderDatasList.size(), datas);
         notifyDataSetChanged();
     }
