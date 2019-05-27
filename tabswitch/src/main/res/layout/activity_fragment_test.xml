@@ -54,12 +54,12 @@
 
             </LinearLayout>
 
-            <!--<TextView
+            <TextView
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="#D8D8D8" />-->
+                android:background="#D8D8D8" />
 
             <LinearLayout
                 android:id="@+id/ll_save"
