@@ -1,8 +1,10 @@
 package com.ISHello.baserecyclerviewadapterhelper;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -41,18 +43,23 @@ public class BaserecyclerviewadapterActivity extends BaseActivity {
     private int mNextRequestPage = 1;
     private static final int PAGE_SIZE = 6;
 
+    private SwipeRefreshLayout mSwipeRefreshLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_baserecyclerviewadapter);
-        setTitle("Base Recycler View Adapter");
+        setTitle("Pull TO Refresh Use");
         initView();
         initData();
         initAdapter();
+        initRefreshLayout();
     }
 
     private void initView() {
         mRecyclerView = (RecyclerView) findViewById(R.id.rv_list);
+        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeLayout);
+        mSwipeRefreshLayout.setColorSchemeColors(Color.rgb(47, 223, 189));
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
     }
 
@@ -78,18 +85,51 @@ public class BaserecyclerviewadapterActivity extends BaseActivity {
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 /*Intent intent = new Intent(HomeActivity.this, ACTIVITY[position]);
                 startActivity(intent);*/
-                ToastUtils.showShortToast(TITLE[position]);
+                //ToastUtils.showShortToast(TITLE[position]);
+                HomeItem item = (HomeItem) homeAdapter.getData().get(position);
+                ToastUtils.showShortToast(item.getTitle());
             }
         });
         homeAdapter.setEnableLoadMore(true);
         homeAdapter.setOnLoadMoreListener(new BaseQuickAdapter.RequestLoadMoreListener() {
             @Override
             public void onLoadMoreRequested() {
-                Log.i("zhanglong","--->onLoadMoreRequested()"+mNextRequestPage);
+                Log.i("zhanglong", "--->onLoadMoreRequested()" + mNextRequestPage);
                 loadMore();
             }
         });
         mRecyclerView.setAdapter(homeAdapter);
+    }
+
+    private void initRefreshLayout() {
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refresh();
+            }
+        });
+    }
+
+    private void refresh() {
+        /**
+         * 这里的作用是防止下拉刷新的时候还可以上拉加载
+         */
+        homeAdapter.setEnableLoadMore(false);
+        new Request(0, new RequestCallBack() {
+            @Override
+            public void success(List<HomeItem> data) {
+                refreshData(data);
+                homeAdapter.setEnableLoadMore(true);
+                mSwipeRefreshLayout.setRefreshing(false);
+            }
+
+            @Override
+            public void fail(Exception e) {
+                Toast.makeText(BaserecyclerviewadapterActivity.this, "Simulation network error", Toast.LENGTH_LONG).show();
+                homeAdapter.setEnableLoadMore(true);
+                mSwipeRefreshLayout.setRefreshing(false);
+            }
+        }).start();
     }
 
     private void loadMore() {
@@ -129,6 +169,10 @@ public class BaserecyclerviewadapterActivity extends BaseActivity {
         }
     }
 
+    private void refreshData(List data) {
+        homeAdapter.setNewData(data);
+    }
+
     interface RequestCallBack {
         void success(List<HomeItem> data);
 
@@ -153,7 +197,10 @@ public class BaserecyclerviewadapterActivity extends BaseActivity {
         @Override
         public void run() {
             try {
-                Thread.sleep(500);
+                /**
+                 * test code
+                 */
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
             }
 
