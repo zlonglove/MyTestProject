@@ -42,6 +42,7 @@ ext {
             eventbus                : "org.greenrobot:eventbus:${rootProject.eventbus}",
             multidex                : "com.android.support:multidex:${rootProject.multidex}",
             annotations             : "com.android.support:support-annotations:${rootProject.supportLibraryVersion}",
-            gridlayout              : "com.android.support:gridlayout-v7:${rootProject.supportLibraryVersion}"
+            gridlayout              : "com.android.support:gridlayout-v7:${rootProject.supportLibraryVersion}",
+            cardview                : "com.android.support:cardview-v7:${rootProject.supportLibraryVersion}"
     ]
 }
