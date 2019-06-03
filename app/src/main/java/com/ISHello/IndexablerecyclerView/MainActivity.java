@@ -7,6 +7,7 @@ import android.view.View;
 import com.ISHello.IndexablerecyclerView.city.PickCityActivity;
 import com.ISHello.IndexablerecyclerView.contact.PickContactActivity;
 import com.ISHello.base.base.BaseActivity;
+import com.ISHello.baserecyclerviewadapterhelper.BaserecyclerviewadapterActivity;
 import com.example.ishelloword.R;
 
 
@@ -31,6 +32,12 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, PickContactActivity.class));
+            }
+        });
+        findViewById(R.id.btn_baserecyclerviewadapterhelper).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, BaserecyclerviewadapterActivity.class));
             }
         });
     }

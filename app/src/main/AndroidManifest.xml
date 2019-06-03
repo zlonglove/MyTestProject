@@ -862,7 +862,7 @@
         </activity>
         <activity
             android:name="com.ISHello.IOSDialog.iosDialogActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.ISHello.Banner2.BannerActivity2"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -909,7 +909,8 @@
             android:name="com.ISHello.baseModule.HomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/HomeActivityTheme" />
-        <activity android:name="com.ISHello.ViewStub.ViewStubTestActivitiy"></activity>
+        <activity android:name="com.ISHello.ViewStub.ViewStubTestActivitiy" />
+        <activity android:name="com.ISHello.baserecyclerviewadapterhelper.BaserecyclerviewadapterActivity"></activity>
     </application>
 
 </manifest>
