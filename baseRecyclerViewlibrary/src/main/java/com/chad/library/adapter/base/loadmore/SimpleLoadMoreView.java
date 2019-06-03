@@ -4,7 +4,7 @@ package com.chad.library.adapter.base.loadmore;
 import com.chad.library.R;
 
 /**
- * Created by BlingBling on 2016/10/11.
+ * @author
  */
 
 public final class SimpleLoadMoreView extends LoadMoreView {
