@@ -10,7 +10,7 @@ import android.util.Log;
 
 
 /**
- * @author kfzx-zhangsl
+ * @author
  */
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class JobSchedulerManager {

@@ -13,8 +13,7 @@ import android.util.Log;
 
 /**
  * 代替AlarmManager 完成5分钟一次的心跳工作
- *
- * @author kfzx-zhangsl
+ * @author
  */
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class AlarmJobService extends JobService {
