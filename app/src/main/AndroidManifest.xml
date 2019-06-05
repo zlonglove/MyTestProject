@@ -911,6 +911,9 @@
             android:theme="@style/HomeActivityTheme" />
         <activity android:name="com.ISHello.ViewStub.ViewStubTestActivitiy" />
         <activity android:name="com.ISHello.baserecyclerviewadapterhelper.BaserecyclerviewadapterActivity"></activity>
+        <service
+            android:name="com.ISHello.Service.AlarmJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
     </application>
 
 </manifest>

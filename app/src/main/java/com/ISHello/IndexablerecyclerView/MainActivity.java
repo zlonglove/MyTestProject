@@ -1,11 +1,14 @@
 package com.ISHello.IndexablerecyclerView;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
 import com.ISHello.IndexablerecyclerView.city.PickCityActivity;
 import com.ISHello.IndexablerecyclerView.contact.PickContactActivity;
+import com.ISHello.Service.AlarmJobService;
+import com.ISHello.Service.JobSchedulerManager;
 import com.ISHello.base.base.BaseActivity;
 import com.ISHello.baserecyclerviewadapterhelper.BaserecyclerviewadapterActivity;
 import com.example.ishelloword.R;
@@ -40,5 +43,11 @@ public class MainActivity extends BaseActivity {
                 startActivity(new Intent(MainActivity.this, BaserecyclerviewadapterActivity.class));
             }
         });
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            Intent startServiceIntent = new Intent(this, AlarmJobService.class);
+            startService(startServiceIntent);
+            JobSchedulerManager.createAlarmJobInfo2start(this);
+        }
     }
 }

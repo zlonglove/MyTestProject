@@ -175,7 +175,6 @@ public class BaserecyclerviewadapterActivity extends BaseActivity {
 
     interface RequestCallBack {
         void success(List<HomeItem> data);
-
         void fail(Exception e);
     }
 
