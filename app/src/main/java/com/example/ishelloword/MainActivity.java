@@ -84,6 +84,7 @@ import com.ISHello.ScreenInfo.ISScreenInfo;
 import com.ISHello.Serializable.Parcelable.ObjectTranDemo;
 import com.ISHello.Sort.sort;
 import com.ISHello.Tools.ISTools;
+import com.ISHello.TouchEvent.TouchEvent1Activity;
 import com.ISHello.TouchEvent.TouchEventActivity;
 import com.ISHello.Update.ISUpdateActivity;
 import com.ISHello.UserInfo.ISUserInfo;
@@ -1092,7 +1093,7 @@ public class MainActivity extends CheckPermissionsActivity {
     }
 
     public void gotoTouchEvent() {
-        Intent intent = new Intent(MainActivity.this, TouchEventActivity.class);
+        Intent intent = new Intent(MainActivity.this, TouchEvent1Activity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }

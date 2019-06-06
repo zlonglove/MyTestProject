@@ -910,10 +910,13 @@
             android:screenOrientation="portrait"
             android:theme="@style/HomeActivityTheme" />
         <activity android:name="com.ISHello.ViewStub.ViewStubTestActivitiy" />
-        <activity android:name="com.ISHello.baserecyclerviewadapterhelper.BaserecyclerviewadapterActivity"></activity>
+        <activity android:name="com.ISHello.baserecyclerviewadapterhelper.BaserecyclerviewadapterActivity" />
+
         <service
             android:name="com.ISHello.Service.AlarmJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity android:name="com.ISHello.TouchEvent.TouchEvent1Activity"></activity>
     </application>
 
 </manifest>
