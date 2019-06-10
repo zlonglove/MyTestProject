@@ -55,6 +55,7 @@ import com.ISHello.DefineDialog.ShareDialog;
 import com.ISHello.DialogTheme.ThemeDialogActivity;
 import com.ISHello.DropDownMenu.ui.DropDownMenuActivity;
 import com.ISHello.Encryption.Des;
+import com.ISHello.Entity.BuryPointEntity;
 import com.ISHello.EventBus.EventBusA;
 import com.ISHello.File.ISFile;
 import com.ISHello.GesturePassword.UnlockGesturePasswordActivity;
@@ -85,13 +86,13 @@ import com.ISHello.Serializable.Parcelable.ObjectTranDemo;
 import com.ISHello.Sort.sort;
 import com.ISHello.Tools.ISTools;
 import com.ISHello.TouchEvent.TouchEvent1Activity;
-import com.ISHello.TouchEvent.TouchEventActivity;
 import com.ISHello.Update.ISUpdateActivity;
 import com.ISHello.UserInfo.ISUserInfo;
 import com.ISHello.ViewPage.ViewPagerActivity;
 import com.ISHello.Voice.VoiceActivity;
 import com.ISHello.XmlManager.xmlManager;
 import com.ISHello.baseModule.HomeActivity;
+import com.ISHello.databaseNew.BuryPointDao;
 import com.ISHello.getPackageInfo.ISPackageInfo;
 import com.ISHello.logger.Logger;
 import com.ISHello.preference.FragmentPreferences;
@@ -129,6 +130,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -591,8 +593,18 @@ public class MainActivity extends CheckPermissionsActivity {
         LogUtil.log(StringUtils.buffer("a", "b"));
         /********************************************************************************************************************/
 
+        /********************************************************************************************************************/
         //gotoShareDialog();
         getBookSearch();
+        /********************************************************************************************************************/
+
+        /********************************************************************************************************************/
+        BuryPointDao buryPointDao = new BuryPointDao();
+        HashMap<String, String> map = buryPointDao.getBuryPointInfo("SubMenuActivity_tv_titlemenu_tofavor");
+        LogUtil.log(map);
+        BuryPointEntity buryPointEntity=buryPointDao.getBuryPointEntity("SubMenuActivity_tv_titlemenu_tofavor");
+        LogUtil.log(buryPointEntity.toString());
+
     }
 
     private void getBookSearch() {
@@ -1140,11 +1152,12 @@ public class MainActivity extends CheckPermissionsActivity {
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
-    private void gotoHomeActivity(){
+    private void gotoHomeActivity() {
         Intent intent = new Intent(MainActivity.this, HomeActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
+
     private void gotoShareDialog() {
         //显示分享底部区域
         ShareDialog shareDialog = ShareDialog.getInstance();

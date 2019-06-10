@@ -1,5 +1,6 @@
 package com.ISHello.baserecyclerviewadapterhelper;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.ISHello.LaunchMode.SecondActivity;
 import com.ISHello.base.base.BaseActivity;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.example.ishelloword.R;
@@ -88,6 +90,8 @@ public class BaserecyclerviewadapterActivity extends BaseActivity {
                 //ToastUtils.showShortToast(TITLE[position]);
                 HomeItem item = (HomeItem) homeAdapter.getData().get(position);
                 ToastUtils.showShortToast(item.getTitle());
+                Intent intent=new Intent(BaserecyclerviewadapterActivity.this,SecondActivity.class);
+                startActivity(intent);
             }
         });
         homeAdapter.setEnableLoadMore(true);

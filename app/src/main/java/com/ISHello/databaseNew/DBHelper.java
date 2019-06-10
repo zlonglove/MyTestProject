@@ -103,6 +103,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
     /**
      * 读取数据库文件（.sql），并执行sql语句
+     *
+     * @param db
+     * @param schemaName
      */
     private void executeSchema(SQLiteDatabase db, String schemaName) {
         BufferedReader in = null;

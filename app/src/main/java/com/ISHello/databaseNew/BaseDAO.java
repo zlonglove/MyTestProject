@@ -281,7 +281,8 @@ public class BaseDAO<T> {
                 if (classz == Integer.TYPE) { // int
                     f[i].set(t, c.getInt(columnIndex));
                 } else if (classz == String.class) { // String
-                    f[i].set(t, c.getString(columnIndex));
+                    String value = c.getString(columnIndex);
+                    f[i].set(t, value);
                 } else if (classz == Long.TYPE) { // long
                     f[i].set(t, c.getLong(columnIndex));
                 } else if (classz == byte[].class) { // byte

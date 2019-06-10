@@ -2,13 +2,15 @@ package com.ISHello.databaseNew;
 
 import android.database.Cursor;
 
+import com.ISHello.Entity.BuryPointEntity;
+
 import java.util.HashMap;
 
 /**
  * Created by kfzx-zhanglong on 2016/11/2.
  * Company ICBC
  */
-public class BuryPointDao extends BaseDAO<Void> {
+public class BuryPointDao extends BaseDAO<BuryPointEntity> {
     //埋点映射表
     private static String TABLE_NAME = "BuryPoint";
 
@@ -30,10 +32,10 @@ public class BuryPointDao extends BaseDAO<Void> {
             Cursor c = query(TABLE_NAME, new String[]{AREANO_COLUMN, AREANONAME_COLUMN, BUTTONNO_COLUMN, BUTTONNAME_COLUMN},
                     BURYPOINTID_COLUMN + " = ?", new String[]{buryPointId});
             if (c.moveToNext()) {
-                result.put(AREANO_COLUMN, c.getString(0));
-                result.put(AREANONAME_COLUMN, c.getString(1));
-                result.put(BUTTONNO_COLUMN, c.getString(2));
-                result.put(BUTTONNAME_COLUMN, c.getString(3));
+                result.put(AREANO_COLUMN, c.getString(c.getColumnIndex(AREANO_COLUMN)));
+                result.put(AREANONAME_COLUMN, c.getString(c.getColumnIndex(AREANONAME_COLUMN)));
+                result.put(BUTTONNO_COLUMN, c.getString(c.getColumnIndex(BUTTONNO_COLUMN)));
+                result.put(BUTTONNAME_COLUMN, c.getString(c.getColumnIndex(BUTTONNAME_COLUMN)));
             }
             c.close();
             commit();
@@ -43,5 +45,21 @@ public class BuryPointDao extends BaseDAO<Void> {
             close();
         }
         return result;
+    }
+
+    public BuryPointEntity getBuryPointEntity(String buryPointId) {
+        BuryPointEntity buryPointEntity = null;
+        open();
+        beginTransaction();
+        try {
+            buryPointEntity = queryObject(BuryPointEntity.class, TABLE_NAME, new String[]{BURYPOINTID_COLUMN, AREANO_COLUMN, AREANONAME_COLUMN, BUTTONNO_COLUMN, BUTTONNAME_COLUMN},
+                    BURYPOINTID_COLUMN + " = ?", new String[]{buryPointId});
+            commit();
+        } catch (Exception e) {
+            rollback();
+        } finally {
+            close();
+        }
+        return buryPointEntity;
     }
 }
