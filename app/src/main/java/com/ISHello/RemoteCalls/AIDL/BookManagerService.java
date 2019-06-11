@@ -18,10 +18,10 @@ public class BookManagerService extends Service {
     private CopyOnWriteArrayList<Book> mBookList = new CopyOnWriteArrayList<Book>();
     private Binder mBinder = new BookAidlInterface.Stub() {
 
-        @Override
+       /* @Override
         public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException {
 
-        }
+        }*/
 
         @Override
         public void addBook(Book book) throws RemoteException {

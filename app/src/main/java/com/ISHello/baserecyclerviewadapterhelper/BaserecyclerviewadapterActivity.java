@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.ISHello.LaunchMode.SecondActivity;
+import com.ISHello.RemoteCalls.AIDL.BookManagerActivity;
 import com.ISHello.base.base.BaseActivity;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.example.ishelloword.R;
@@ -90,7 +91,7 @@ public class BaserecyclerviewadapterActivity extends BaseActivity {
                 //ToastUtils.showShortToast(TITLE[position]);
                 HomeItem item = (HomeItem) homeAdapter.getData().get(position);
                 ToastUtils.showShortToast(item.getTitle());
-                Intent intent=new Intent(BaserecyclerviewadapterActivity.this,SecondActivity.class);
+                Intent intent=new Intent(BaserecyclerviewadapterActivity.this,BookManagerActivity.class);
                 startActivity(intent);
             }
         });
