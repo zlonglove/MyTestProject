@@ -86,6 +86,7 @@ dependencies {
     implementation rootProject.ext.dependencies.support_v4
     implementation rootProject.ext.dependencies.design
     implementation rootProject.ext.dependencies.recycleview
+    implementation rootProject.ext.dependencies.cardview
     implementation files('libs/android-async-http-1.4.4.jar')
     implementation files('libs/AnimationLibrary.jar')
     implementation files('libs/commons-httpclient-3.0.1.jar')
@@ -147,6 +148,7 @@ dependencies {
     implementation project(':base')
     // 标题栏：https://github.com/getActivity/TitleBar
     implementation 'com.hjq:titlebar:latest.integration'
-// 状态栏沉浸：https://github.com/gyf-dev/ImmersionBar
+    // 状态栏沉浸：https://github.com/gyf-dev/ImmersionBar
     implementation 'com.gyf.immersionbar:immersionbar:2.3.3'
+    implementation project(':baseRecyclerViewlibrary')
 }
