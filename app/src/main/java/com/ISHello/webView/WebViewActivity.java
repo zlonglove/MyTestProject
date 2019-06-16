@@ -231,7 +231,7 @@ public class WebViewActivity extends BaseActivity implements DownloadListener {
 
         WebSettings settings = webView.getSettings();
         String defaultUA = settings.getUserAgentString();
-        //Mozilla/5.0 (Linux; Android 7.0; HUAWEI NXT-TL00 Build/HUAWEINXT-TL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36
+        //Mozilla/5.0 (Linux; Android 7.0; HUAWEI NXT-TL00 Builder/HUAWEINXT-TL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36
         settings.setUserAgentString(defaultUA + " " + Constants.WebViewUA);//添加UA,是与网页商量好的标识，页面确认UA为这个就认为该请求的终端为App
         LogUtil.log(TAG, "WebView New UA==" + settings.getUserAgentString());
 

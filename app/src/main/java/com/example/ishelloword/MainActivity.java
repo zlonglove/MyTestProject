@@ -52,6 +52,7 @@ import com.ISHello.DAO.WealthBarInfoDAO;
 import com.ISHello.DateAndTime.DateTimeActivity;
 import com.ISHello.DefineDialog.DefineDialog;
 import com.ISHello.DefineDialog.ShareDialog;
+import com.ISHello.DesignMode.proxy.NotifyProxy;
 import com.ISHello.DialogTheme.ThemeDialogActivity;
 import com.ISHello.DropDownMenu.ui.DropDownMenuActivity;
 import com.ISHello.Encryption.Des;
@@ -654,6 +655,7 @@ public class MainActivity extends CheckPermissionsActivity {
                         break;
                     case 1:
                         //gotoJNIActivity();
+                        new NotifyProxy(MainActivity.this).send();
                         break;
                     case 2:
                         GesturePassword();
