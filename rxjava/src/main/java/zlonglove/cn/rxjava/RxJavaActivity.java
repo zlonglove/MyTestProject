@@ -5,17 +5,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
+import org.reactivestreams.Subscriber;
+import org.reactivestreams.Subscription;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
+import io.reactivex.BackpressureStrategy;
+import io.reactivex.Flowable;
+import io.reactivex.FlowableEmitter;
+import io.reactivex.FlowableOnSubscribe;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.BiFunction;
@@ -51,7 +57,9 @@ public class RxJavaActivity extends AppCompatActivity {
         doOnNext();
         flatMap();*/
         //getStudentInfo();
-        zipTest();
+        //zipTest();
+
+        flowable();
     }
 
     private void getStudentInfo() {
@@ -424,13 +432,13 @@ public class RxJavaActivity extends AppCompatActivity {
         Observable<Integer> observable1 = Observable.create(new ObservableOnSubscribe<Integer>() {
             @Override
             public void subscribe(ObservableEmitter<Integer> emitter) throws Exception {
-                Log.i(TAG,"emit 1");
+                Log.i(TAG, "emit 1");
                 emitter.onNext(1);
-                Log.i(TAG,"emit 2");
+                Log.i(TAG, "emit 2");
                 emitter.onNext(2);
-                Log.i(TAG,"emit 3");
+                Log.i(TAG, "emit 3");
                 emitter.onNext(3);
-                Log.i(TAG,"emit 4");
+                Log.i(TAG, "emit 4");
                 emitter.onNext(4);
                 emitter.onComplete();
             }
@@ -439,11 +447,11 @@ public class RxJavaActivity extends AppCompatActivity {
         Observable<String> observable2 = Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(ObservableEmitter<String> emitter) throws Exception {
-                Log.i(TAG,"emit A");
+                Log.i(TAG, "emit A");
                 emitter.onNext("A");
-                Log.i(TAG,"emit B");
+                Log.i(TAG, "emit B");
                 emitter.onNext("B");
-                Log.i(TAG,"emit C");
+                Log.i(TAG, "emit C");
                 emitter.onNext("C");
                 emitter.onComplete();
             }
@@ -456,12 +464,12 @@ public class RxJavaActivity extends AppCompatActivity {
         }).subscribe(new Observer<String>() {
             @Override
             public void onSubscribe(Disposable d) {
-                Log.i(TAG,"onSubscribe()");
+                Log.i(TAG, "onSubscribe()");
             }
 
             @Override
             public void onNext(String s) {
-                Log.i(TAG,s);
+                Log.i(TAG, s);
             }
 
             @Override
@@ -471,9 +479,137 @@ public class RxJavaActivity extends AppCompatActivity {
 
             @Override
             public void onComplete() {
-                Log.i(TAG,"onComplete()");
+                Log.i(TAG, "onComplete()");
             }
         });
     }
 
+    /**
+     * 当被观察者发送事件大于128时，观察者抛出异常并终止接收事件，但不会影响被观察者继续发送事件
+     * <p>
+     * 被观察者发送事件的速度大于观察者接收事件的速度时，观察者内会创建一个无限制大少的缓冲池存储未接收的事件，
+     * 因此当存储的事件越来越多时就会导致OOM的出现（注：当subscribeOn与observeOn不为同一个线程时，
+     * 被观察者与观察者内存在不同时长耗时任务，就会使发送与接收速度存在差异)
+     */
+    public void flowable() {
+        Flowable.create(new FlowableOnSubscribe<Integer>() {
+            @Override
+            public void subscribe(FlowableEmitter<Integer> e) throws Exception {
+                for (int j = 0; j <= 200; j++) {
+                    e.onNext(j);
+                    Log.i(TAG, " 发送数据：" + j);
+                    try {
+                        Thread.sleep(50);
+                    } catch (Exception ex) {
+                    }
+                }
+            }
+        }, BackpressureStrategy.ERROR)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(Schedulers.newThread())
+                .subscribe(new Subscriber<Integer>() {
+                    @Override
+                    public void onSubscribe(Subscription s) {
+                        s.request(Long.MAX_VALUE); //观察者设置接收事件的数量,如果不设置接收不到事件
+                    }
+
+                    @Override
+                    public void onNext(Integer integer) {
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        Log.e(TAG, "onNext : " + (integer));
+                    }
+
+                    @Override
+                    public void onError(Throwable t) {
+                        Log.e(TAG, "onError : " + t.toString());
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        Log.e(TAG, "onComplete");
+                    }
+                });
+    }
+
+    /**
+     * ERROR-当被观察者发送事件大于128时，观察者抛出异常并终止接收事件，但不会影响被观察者继续发送事件
+     * <p>
+     * BUFFER-与Observable一样存在背压问题，但是接收性能比Observable低，
+     * 因为BUFFER类型通过BufferAsyncEmitter添加了额外的逻辑处理，再发送至观察者
+     * <p>
+     * DROP-每当观察者接收128事件之后，就会丢弃部分事件。
+     * onNext : 127
+     * onNext : 190
+     * onNext : 191
+     * <p>
+     * LATEST-LATEST与DROP使用效果一样，但LATEST会保证能接收最后一个事件，而DROP则不会保证
+     * <p>
+     * MISSING-MISSING就是没有采取背压策略的类型，效果跟Obserable一样
+     */
+
+
+    /**
+     * 设置接收事件的数量
+     * <p>
+     * 当遇到在接收事件时想追加接收数量（如：通信数据通过几次接收，验证准确性的应用场景），可以通过以下方式进行扩展
+     * </p>
+     * 可以动态设置观察者接收事件的数量，但不影响被观察者继续发送事件
+     */
+    public void flowableRequest() {
+        Flowable.create(new FlowableOnSubscribe<Integer>() {
+            @Override
+            public void subscribe(FlowableEmitter<Integer> e) throws Exception {
+                for (int j = 0; j < 50; j++) {
+                    e.onNext(j);
+                    /**
+                     * e.requested()
+                     * 剩余可接收的数量 ,它的作用就是可以检测剩余可接收的事件数量
+                     */
+                    Log.i(TAG, e.requested() + " 发送数据：" + j);
+                    try {
+                        Thread.sleep(50);
+                    } catch (Exception ex) {
+                    }
+                }
+            }
+        }, BackpressureStrategy.BUFFER)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(Schedulers.newThread())
+                .subscribe(new Subscriber<Integer>() {
+                    private Subscription subscription;
+
+                    @Override
+                    public void onSubscribe(Subscription s) {
+                        subscription = s;
+                        s.request(10); //观察者设置接收事件的数量,如果不设置接收不到事件
+                    }
+
+                    @Override
+                    public void onNext(Integer integer) {
+                        if (integer == 5) {
+                            subscription.request(3);
+                        }
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        Log.e(TAG, "onNext : " + (integer));
+                    }
+
+                    @Override
+                    public void onError(Throwable t) {
+                        Log.e(TAG, "onError : " + t.toString());
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        Log.e(TAG, "onComplete");
+                    }
+                });
+    }
 }
