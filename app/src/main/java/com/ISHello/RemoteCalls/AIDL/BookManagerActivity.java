@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.ISHello.Parcelable.Book;
 import com.ISHello.Parcelable.BookAidlInterface;
+import com.ISHello.Parcelable.IOnNewBookArrivedListener;
 import com.ISHello.base.base.BaseActivity;
 import com.example.ishelloword.R;
 
@@ -78,6 +79,11 @@ public class BookManagerActivity extends BaseActivity {
             }
             bookAidlInterface = BookAidlInterface.Stub.asInterface(iBinder);
             try {
+                bookAidlInterface.registerListener(mOnNewBookArrivedListener);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+            try {
                 iBinder.linkToDeath(mDeathRecipient, 0);//给binder设置死亡代理
             } catch (RemoteException e) {
                 e.printStackTrace();
@@ -90,6 +96,13 @@ public class BookManagerActivity extends BaseActivity {
         }
     };
 
+    private  IOnNewBookArrivedListener mOnNewBookArrivedListener=new
+            IOnNewBookArrivedListener.Stub() {
+                @Override
+                public void onNewBookArrived(Book newBook) throws RemoteException {
+                    Log.i(TAG, "--->bookList==" + newBook.toString());
+                }
+            };
 
     private IBinder.DeathRecipient mDeathRecipient = new IBinder.DeathRecipient() {
         @Override
@@ -107,6 +120,13 @@ public class BookManagerActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
+        if (bookAidlInterface!=null&&bookAidlInterface.asBinder().isBinderAlive()){
+            try {
+                bookAidlInterface.unregisterListener(mOnNewBookArrivedListener);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
         unbindService(mConnection);
         super.onDestroy();
     }
