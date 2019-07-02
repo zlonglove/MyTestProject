@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.ISHello.LaunchMode.SecondActivity;
 import com.ISHello.RemoteCalls.AIDL.BookManagerActivity;
 import com.ISHello.base.base.BaseActivity;
 import com.chad.library.adapter.base.BaseQuickAdapter;
