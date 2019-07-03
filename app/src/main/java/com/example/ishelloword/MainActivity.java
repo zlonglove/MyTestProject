@@ -44,6 +44,7 @@ import com.ISHello.AIDL.mp3RemoteService;
 import com.ISHello.AndroidThread.AndroidThread;
 import com.ISHello.AppManager.AppManager;
 import com.ISHello.Banner2.BannerActivity2;
+import com.ISHello.BinderPool.Client.BinderPoolActivity;
 import com.ISHello.BroadcastReceiver.MediaControlReceiver;
 import com.ISHello.Builder.BuildTools;
 import com.ISHello.Builder.User;
@@ -635,7 +636,7 @@ public class MainActivity extends CheckPermissionsActivity {
             }
         });*/
 
-        /*Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+        /*Intent intent = new Intent(MainActivity.this, BinderPoolActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);*/
     }
@@ -768,6 +769,9 @@ public class MainActivity extends CheckPermissionsActivity {
                         break;
                     case 38:
                         gotoHomeActivity();
+                        break;
+                    case 39:
+                        gotoBindPool();
                         break;
                     default:
                         break;
@@ -1160,6 +1164,11 @@ public class MainActivity extends CheckPermissionsActivity {
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
+    private void gotoBindPool(){
+        Intent intent = new Intent(MainActivity.this, BinderPoolActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
     private void gotoShareDialog() {
         //显示分享底部区域
         ShareDialog shareDialog = ShareDialog.getInstance();

@@ -925,6 +925,17 @@
 
         <activity
             android:name="com.ISHello.Socket.TCPClientActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.ISHello.BinderPool.Server.BinderPoolService"
+            android:enabled="true"
+            android:process=":bindPoolService"
+            android:exported="true">
+        </service>
+
+        <activity
+            android:name="com.ISHello.BinderPool.Client.BinderPoolActivity"
             android:screenOrientation="portrait"></activity>
     </application>
 
