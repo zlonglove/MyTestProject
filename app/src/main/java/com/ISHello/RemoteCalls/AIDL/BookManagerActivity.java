@@ -49,6 +49,10 @@ public class BookManagerActivity extends BaseActivity {
         try {
             if (bookAidlInterface != null) {
                 Book newBook = new Book(1, "Android");
+                /**
+                 * 由于被调用的方法运行在服务端的Binder线程池中，同时客户端被挂起，如果远程
+                 * 某个方法是耗时的，那么要避免在客户端的UI线程中调用
+                 */
                 bookAidlInterface.addBook(newBook);
                 List<Book> newList = bookAidlInterface.getBookList();
                 Log.i(TAG, "--->bookList==" + newList.toString());
@@ -96,11 +100,14 @@ public class BookManagerActivity extends BaseActivity {
         }
     };
 
-    private  IOnNewBookArrivedListener mOnNewBookArrivedListener=new
+    private IOnNewBookArrivedListener mOnNewBookArrivedListener = new
             IOnNewBookArrivedListener.Stub() {
                 @Override
                 public void onNewBookArrived(Book newBook) throws RemoteException {
-                    Log.i(TAG, "--->bookList==" + newBook.toString());
+                    /**
+                     * 由于运行在Binder线程池中，所以不能进行UI操作，可使用Handler
+                     */
+                    Log.i(TAG, "--->bookList==" + newBook.toString() + Thread.currentThread().getName());
                 }
             };
 
@@ -120,7 +127,7 @@ public class BookManagerActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
-        if (bookAidlInterface!=null&&bookAidlInterface.asBinder().isBinderAlive()){
+        if (bookAidlInterface != null && bookAidlInterface.asBinder().isBinderAlive()) {
             try {
                 bookAidlInterface.unregisterListener(mOnNewBookArrivedListener);
             } catch (RemoteException e) {

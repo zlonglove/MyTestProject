@@ -916,7 +916,16 @@
             android:name="com.ISHello.Service.AlarmJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <activity android:name="com.ISHello.TouchEvent.TouchEvent1Activity"></activity>
+        <activity android:name="com.ISHello.TouchEvent.TouchEvent1Activity" />
+
+        <service
+            android:name="com.ISHello.Socket.TCPServerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="com.ISHello.Socket.TCPClientActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
