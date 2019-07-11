@@ -1,4 +1,4 @@
-package com.ISHello.DesignMode;
+package com.ISHello.DesignMode.singleton;
 
 
 /**
