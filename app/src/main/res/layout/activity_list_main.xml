@@ -38,10 +38,10 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
             android:layout_marginEnd="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
+            android:layout_marginStart="10dp"
             android:src="@drawable/search_bar_icon_normal" />
 
         <com.ISHello.View.CleanableEditText
@@ -49,12 +49,12 @@
             android:layout_width="fill_parent"
             android:layout_height="43dp"
             android:layout_centerVertical="true"
-            android:layout_marginStart="20dip"
-            android:layout_marginLeft="20dip"
             android:layout_marginEnd="10dip"
+            android:layout_marginLeft="20dip"
             android:layout_marginRight="10dip"
-            android:layout_toStartOf="@id/common_searchText_search"
+            android:layout_marginStart="20dip"
             android:layout_toLeftOf="@id/common_searchText_search"
+            android:layout_toStartOf="@id/common_searchText_search"
             android:background="@null"
             android:hint="请输入关键词"
             android:imeOptions="actionSearch"
@@ -70,6 +70,10 @@
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:background="#f3f3f3" />
+
+    <com.ISHello.View.FingerView
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
 
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
         android:id="@+id/pull_to_refresh_main"
