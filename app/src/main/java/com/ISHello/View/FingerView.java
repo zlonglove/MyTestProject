@@ -22,6 +22,10 @@ public class FingerView extends View {
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN: {
+                /**
+                 * 移动画笔，x：终点x坐标值，y：终点y坐标值
+                 * moveTo方法只移动path画笔不绘制线
+                 */
                 mPath.moveTo(event.getX(), event.getY());
                 mPreX = event.getX();
                 mPreY = event.getY();
@@ -30,6 +34,9 @@ public class FingerView extends View {
             case MotionEvent.ACTION_MOVE:
                 float endX = (mPreX + event.getX()) / 2;
                 float endY = (mPreY + event.getY()) / 2;
+                /**
+                 * 绘制二阶贝塞尔曲线，控制点坐标：(x1,y1)，终点坐标：(x2,y2)
+                 */
                 mPath.quadTo(mPreX, mPreY, endX, endY);
                 mPreX = event.getX();
                 mPreY = event.getY();
