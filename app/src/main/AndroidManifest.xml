@@ -930,13 +930,19 @@
         <service
             android:name="com.ISHello.BinderPool.Server.BinderPoolService"
             android:enabled="true"
-            android:process=":bindPoolService"
-            android:exported="true">
-        </service>
+            android:exported="true"
+            android:process=":bindPoolService" />
 
         <activity
             android:name="com.ISHello.BinderPool.Client.BinderPoolActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ISHello.Mvc.controller.WeatherActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.ISHello.AndroidThread.ISIntentService"
+            android:exported="false"></service>
     </application>
 
 </manifest>

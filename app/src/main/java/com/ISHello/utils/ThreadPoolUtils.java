@@ -49,7 +49,7 @@ public final class ThreadPoolUtils {
      */
     public ThreadPoolUtils(@Type int type, int corePoolSize) {
         // 构造有定时功能的线程池
-        // ThreadPoolExecutor(corePoolSize, Integer.MAX_VALUE, 10L, TimeUnit.MILLISECONDS, new BlockingQueue<Runnable>)
+        //new ThreadPoolExecutor(corePoolSize, Integer.MAX_VALUE, 10L, TimeUnit.MILLISECONDS, new BlockingQueue<Runnable>)
         scheduleExec = Executors.newScheduledThreadPool(corePoolSize);
         switch (type) {
             case FixedThread:

@@ -604,7 +604,7 @@ public class MainActivity extends CheckPermissionsActivity {
         BuryPointDao buryPointDao = new BuryPointDao();
         HashMap<String, String> map = buryPointDao.getBuryPointInfo("SubMenuActivity_tv_titlemenu_tofavor");
         LogUtil.log(map);
-        BuryPointEntity buryPointEntity=buryPointDao.getBuryPointEntity("SubMenuActivity_tv_titlemenu_tofavor");
+        BuryPointEntity buryPointEntity = buryPointDao.getBuryPointEntity("SubMenuActivity_tv_titlemenu_tofavor");
         LogUtil.log(buryPointEntity.toString());
 
     }
@@ -1164,11 +1164,12 @@ public class MainActivity extends CheckPermissionsActivity {
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
-    private void gotoBindPool(){
+    private void gotoBindPool() {
         Intent intent = new Intent(MainActivity.this, BinderPoolActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
+
     private void gotoShareDialog() {
         //显示分享底部区域
         ShareDialog shareDialog = ShareDialog.getInstance();
