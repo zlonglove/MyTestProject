@@ -35,8 +35,13 @@ public class ISIntentService extends IntentService {
     }
 
     @Override
+    public void onCreate() {
+        super.onCreate();
+        Log.i(TAG, "--->onCreate()");
+    }
+
+    @Override
     public int onStartCommand(@Nullable Intent intent, int flags, int startId) {
-        Log.i(TAG, "--->onStartCommand()==" + startId);
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -47,11 +52,17 @@ public class ISIntentService extends IntentService {
         try {
             Thread.sleep(3000);
             if ("com.zlonglove.cn.download".equals(action)) {
-                Log.i(TAG, "--->mydownload Process==");
+                Log.i(TAG, "--->handle task :"+action);
                 //根据action判断要执行的任务
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG, "--->onDestroy()");
     }
 }

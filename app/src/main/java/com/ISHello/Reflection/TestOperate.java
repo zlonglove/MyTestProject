@@ -4,8 +4,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import android.util.Log;
-
 public class TestOperate {
     public void add(int param1, int param2) {
 
@@ -32,7 +30,7 @@ public class TestOperate {
             // float result = (Float) addMethod.invoke(invokeOperation, new
             // Object[] { new Integer(param1), new Integer(param2) });
             float result = (Float) addMethod.invoke(invokeOperation, new Object[]{param1, param2});
-            Log.i("Reflection", "--->add value==" + result);
+            System.out.println("--->add value==" + result);
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
