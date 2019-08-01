@@ -46,6 +46,7 @@ public class ReflectClass {
             Object objectBook = classBook.newInstance();
             Field fieldTag = classBook.getDeclaredField("TAG");
             fieldTag.setAccessible(true);
+            fieldTag.set(objectBook,"11111111111111111111111");
             String tag = (String) fieldTag.get(objectBook);
             System.out.println("--->reflectPrivateField tag = " + tag);
         } catch (Exception ex) {

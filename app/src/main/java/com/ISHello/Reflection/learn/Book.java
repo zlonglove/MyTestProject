@@ -1,7 +1,7 @@
 package com.ISHello.Reflection.learn;
 
 public class Book extends Book1 {
-    private final static String TAG = Book.class.getSimpleName();
+    private static String TAG = Book.class.getSimpleName();
     private String name;
     private String author;
 
