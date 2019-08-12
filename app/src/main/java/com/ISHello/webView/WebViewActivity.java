@@ -79,7 +79,6 @@ public class WebViewActivity extends BaseActivity implements DownloadListener {
 
     private CreditKeyboardBinder creditKeyboardBinder;
     //private final String loadUrl = "http://gdown.baidu.com/data/wisegame/91319a5a1dfae322/baidu_16785426.apk";
-
     /**
      * Called when the activity is first created.
      */
@@ -642,5 +641,10 @@ public class WebViewActivity extends BaseActivity implements DownloadListener {
             errorPopupWindow.showAtLocation(root, Gravity.TOP | Gravity.LEFT, 0, frame.top);
         } catch (Exception e) {
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

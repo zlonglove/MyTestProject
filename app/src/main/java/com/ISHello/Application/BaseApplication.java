@@ -29,6 +29,8 @@ import com.scwang.smartrefresh.layout.api.RefreshHeader;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
+import com.squareup.leakcanary.LeakCanary;
+import com.squareup.leakcanary.RefWatcher;
 
 import cn.jpush.android.api.JPushInterface;
 
@@ -47,6 +49,8 @@ public class BaseApplication extends MultiDexApplication {
 
     LockScreenReceiver receiver;
     IntentFilter filter;
+
+    private RefWatcher refWatcher;
 
     /**
      *  static 代码段可以防止内存泄露
@@ -112,6 +116,8 @@ public class BaseApplication extends MultiDexApplication {
         KLog.init(BuildConfig.LOG_DEBUG);
         Utils.init(getApplicationContext());
         ToastUtils.init(true);
+
+        refWatcher=LeakCanary.install(this);
     }
 
     @Override
@@ -178,5 +184,9 @@ public class BaseApplication extends MultiDexApplication {
                 isLocked = true;
             }
         }
+    }
+
+    public  RefWatcher getRefWatcher(){
+        return refWatcher;
     }
 }

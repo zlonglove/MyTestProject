@@ -14,12 +14,19 @@
     <com.ISHello.ViewDraw.DrawLinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <com.ISHello.ViewDraw.DrawView
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:background="@color/red" />
+            android:id="@+id/view_draw"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_500"
+            android:layout_marginTop="10dp"
+            android:background="@color/white" />
+
+        <com.ISHello.View.FingerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#efeded" />
     </com.ISHello.ViewDraw.DrawLinearLayout>
 
 </RelativeLayout>

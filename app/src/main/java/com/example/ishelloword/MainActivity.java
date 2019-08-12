@@ -90,6 +90,7 @@ import com.ISHello.Tools.ISTools;
 import com.ISHello.TouchEvent.TouchEvent1Activity;
 import com.ISHello.Update.ISUpdateActivity;
 import com.ISHello.UserInfo.ISUserInfo;
+import com.ISHello.ViewDraw.ViewDrawActivity;
 import com.ISHello.ViewPage.ViewPagerActivity;
 import com.ISHello.Voice.VoiceActivity;
 import com.ISHello.XmlManager.xmlManager;
@@ -102,6 +103,7 @@ import com.ISHello.utils.DipPixUtil;
 import com.ISHello.utils.FileLogUtil;
 import com.ISHello.utils.LogUtil;
 import com.ISHello.utils.NetworkUtils;
+import com.ISHello.utils.SavaData;
 import com.ISHello.utils.SdcardUtils;
 import com.ISHello.webView.WebViewActivity;
 import com.app.guide.library.FunctionGuideActivity;
@@ -164,8 +166,8 @@ public class MainActivity extends CheckPermissionsActivity {
         LANDSCAPE, PORTRAIT
     }
 
-    AudioManager audioManager;
-    ComponentName mediaComponentName;
+    private AudioManager audioManager;
+    private ComponentName mediaComponentName;
     private final int EXIT_DIALOG = 1;
     private PlayerProxy playerProxy = null;
     private ServiceConnection connection;
@@ -212,7 +214,6 @@ public class MainActivity extends CheckPermissionsActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-
 
         initUI();
 
@@ -597,7 +598,7 @@ public class MainActivity extends CheckPermissionsActivity {
 
         /********************************************************************************************************************/
         //gotoShareDialog();
-        getBookSearch();
+        //getBookSearch();
         /********************************************************************************************************************/
 
         /********************************************************************************************************************/
@@ -636,9 +637,20 @@ public class MainActivity extends CheckPermissionsActivity {
             }
         });*/
 
-        /*Intent intent = new Intent(MainActivity.this, BinderPoolActivity.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);*/
+        /*SmsObserver smsObserver = new SmsObserver(this, new Handler(),
+                new SmsObserver.SmsListener() {
+                    @Override
+                    public void onResult(String smsContent) {
+                        //todo
+                        Log.e(TAG, "--->Sms Result==" + smsContent);
+                    }
+                });
+        this.getContentResolver().registerContentObserver(
+                Uri.parse("content://sms/"), true, smsObserver);*/
+        String encode=SavaData.encrypt("zhanglong",SavaData.key);
+        Log.e(TAG,"--->encode()=="+encode);
+        String decode=SavaData.decrypt(encode,SavaData.key);
+        Log.e(TAG,"--->decode()=="+decode);
     }
 
     private void initUI() {
@@ -772,6 +784,9 @@ public class MainActivity extends CheckPermissionsActivity {
                         break;
                     case 39:
                         gotoBindPool();
+                        break;
+                    case 40:
+                        gotoDefineView();
                         break;
                     default:
                         break;
@@ -1166,6 +1181,12 @@ public class MainActivity extends CheckPermissionsActivity {
 
     private void gotoBindPool() {
         Intent intent = new Intent(MainActivity.this, BinderPoolActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
+
+    private void gotoDefineView(){
+        Intent intent = new Intent(MainActivity.this, ViewDrawActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }

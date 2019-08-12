@@ -94,7 +94,8 @@
         <item>StickHeaderRecycler</item>
         <item>Recode</item>
         <item>Retrofit文件下载</item>
-        <item>HomeActivity</item>
+        <item>底部导航栏</item>
         <item>BindPool</item>
+        <item>自定义View</item>
     </string-array>
 </resources>

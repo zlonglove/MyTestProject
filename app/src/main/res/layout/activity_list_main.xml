@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:elevation="4dp"
         android:theme="@style/ThemeToolbarDarkOverflow"
         app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
@@ -26,7 +26,7 @@
     </android.support.v7.widget.Toolbar>
 
 
-    <RelativeLayout
+   <!-- <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white">
@@ -64,22 +64,12 @@
             android:textColor="@color/black"
             android:textColorHint="#999999"
             android:textSize="14sp" />
-    </RelativeLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="#f3f3f3" />
-
-    <com.ISHello.View.FingerView
-        android:layout_width="match_parent"
-        android:layout_height="100dp" />
+    </RelativeLayout>-->
 
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
         android:id="@+id/pull_to_refresh_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white"
         app:srlEnableAutoLoadMore="false"
         app:srlEnableLoadMore="true"
         app:srlPrimaryColor="#444444">
@@ -112,8 +102,8 @@
             android:id="@+id/list_view_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:divider="@color/gray"
-            android:dividerHeight="1dp"
+            android:divider="@color/white20"
+            android:dividerHeight="0.5dp"
             android:fadingEdge="none" />
 
         <com.scwang.smartrefresh.layout.footer.ClassicsFooter

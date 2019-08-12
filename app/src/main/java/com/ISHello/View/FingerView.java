@@ -13,9 +13,22 @@ import android.view.View;
 public class FingerView extends View {
     private Path mPath = new Path();
     private float mPreX, mPreY;
+    private Paint strokePaint;
 
     public FingerView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        init();
+    }
+
+    private void init() {
+        strokePaint = new Paint();
+        strokePaint.setAntiAlias(true);
+        strokePaint.setDither(true);
+        strokePaint.setColor(Color.BLACK);
+        strokePaint.setStyle(Paint.Style.STROKE);
+        strokePaint.setStrokeJoin(Paint.Join.ROUND);
+        strokePaint.setStrokeCap(Paint.Cap.ROUND);
+        strokePaint.setStrokeWidth(3);
     }
 
     @Override
@@ -56,11 +69,7 @@ public class FingerView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        Paint paint = new Paint();
-        paint.setColor(Color.WHITE);
-        paint.setStyle(Paint.Style.STROKE);
-
-        canvas.drawPath(mPath, paint);
+        canvas.drawPath(mPath, strokePaint);
     }
 
 }

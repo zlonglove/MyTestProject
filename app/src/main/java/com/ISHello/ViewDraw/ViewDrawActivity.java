@@ -3,19 +3,20 @@ package com.ISHello.ViewDraw;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.ISHello.base.base.BaseActivity;
 import com.example.ishelloword.R;
 
 public class ViewDrawActivity extends BaseActivity implements View.OnClickListener {
     private final String TAG = "ViewDrawActivity";
-    private Button viewDraw;
+    private DrawView viewDraw;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_draw);
+        setTitle("自定义文本绘制");
+        //setContentView(R.layout.activity_view_draw);
+        setContentView(R.layout.activity_circle_view);
         findView();
         init();
     }
@@ -23,11 +24,11 @@ public class ViewDrawActivity extends BaseActivity implements View.OnClickListen
     private void findView() {
         //得到我们设置的ContentView
         ViewGroup content = (ViewGroup) ((ViewGroup) findViewById(android.R.id.content)).getChildAt(0);
-        //viewDraw = (Button) content.findViewById(R.id.view_draw);
+        //viewDraw = (DrawView) content.findViewById(R.id.view_draw);
     }
 
     private void init() {
-        viewDraw.setOnClickListener(this);
+        //viewDraw.setOnClickListener(this);
     }
 
     @Override

@@ -16,10 +16,15 @@
             android:id="@+id/ctl_test_bar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/space_512"
-            app:contentScrim="@color/white"
+            app:contentScrim="@color/green"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:scrimVisibleHeightTrigger="@dimen/space_200">
-
+            <!--app:title="标题"
+          expandedTitleMarginStart - 设置扩张时候(还没有收缩时)title向左填充的距离。
+          expandedTitleGravity：指定toolbar展开时，title所在的位置。
+              类似的还有expandedTitleMargin、collapsedTitleGravity这些属性。
+          collapsedTitleTextAppearance：指定toolbar收缩时，标题字体的样式，类似的还有expandedTitleText
+          contentScrim 完全折叠后的背景颜色-->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -74,7 +79,6 @@
                 </LinearLayout>
 
             </com.hjq.bar.TitleBar>
-
         </com.ISHello.baseModule.widget.XCollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
@@ -87,10 +91,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
             android:layout_marginLeft="@dimen/space_60"
             android:layout_marginRight="@dimen/space_60"
             android:orientation="vertical">
 
+            <include layout="@layout/card_layout" />
+
+            <include layout="@layout/card_layout" />
+
+            <include layout="@layout/card_layout" />
+
+            <include layout="@layout/card_layout" />
+
+            <include layout="@layout/card_layout" />
+
+            <include layout="@layout/card_layout" />
+
+            <include layout="@layout/card_layout" />
+
+            <include layout="@layout/card_layout" />
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>

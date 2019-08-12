@@ -151,4 +151,6 @@ dependencies {
     // 状态栏沉浸：https://github.com/gyf-dev/ImmersionBar
     implementation 'com.gyf.immersionbar:immersionbar:2.3.3'
     implementation project(':baseRecyclerViewlibrary')
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.3'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.3'
 }
