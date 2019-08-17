@@ -15,7 +15,7 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="最近快捷菜单" />
+            android:text="快捷菜单名称" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler"

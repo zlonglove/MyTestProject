@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:text="JNI调用"
             android:textColor="#ffffff"
-            android:textSize="11sp" />
+            android:textSize="14sp" />
     </android.support.v7.widget.Toolbar>
 
     <Button

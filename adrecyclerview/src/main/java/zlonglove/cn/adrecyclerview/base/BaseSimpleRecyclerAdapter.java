@@ -58,6 +58,10 @@ public abstract class BaseSimpleRecyclerAdapter<VH extends RecyclerView.ViewHold
         });
     }
 
+    public void setData(List<RI> recyclerItems) {
+        mRecyclerItems = recyclerItems;
+    }
+
     /**
      * 获取列表条目单击监听器
      *

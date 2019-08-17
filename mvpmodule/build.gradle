@@ -9,33 +9,36 @@ android {
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
     }
-
     buildTypes {
-        debug {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
-    implementation rootProject.ext.dependencies.appcompatV7
-    implementation project(':CommonUtil')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //okhttp3
+    implementation rootProject.ext.dependencies.okhttp
+    implementation rootProject.ext.dependencies.okhttp_interceptor
+
+    //retrofit2
     implementation rootProject.ext.dependencies.retrofit
-    implementation rootProject.ext.dependencies.retrofit_adapter_rxjava2
     implementation rootProject.ext.dependencies.retrofit_converter_gson
-    implementation rootProject.ext.dependencies.gson
+    implementation rootProject.ext.dependencies.retrofit_adapter_rxjava2
+    //rxjava2
     implementation rootProject.ext.dependencies.rxjava
     implementation rootProject.ext.dependencies.rxjava_android
-    implementation rootProject.ext.dependencies.okhttp_interceptor
-    implementation('com.squareup.retrofit2:converter-simplexml:2.3.0') {
-        exclude group: 'xpp3', module: 'xpp3'
-        exclude group: 'stax', module: 'stax-api'
-        exclude group: 'stax', module: 'stax'
-    }
+
+    implementation rootProject.ext.dependencies.appcompatV7
+    implementation rootProject.ext.dependencies.support_v4
+    implementation rootProject.ext.dependencies.design
+    //Material-dialogs
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    //jetbrains 注解
+    implementation 'org.jetbrains:annotations-java5:15.0'
 }

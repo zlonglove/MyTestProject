@@ -37,7 +37,7 @@ dependencies {
         exclude group: 'com.android.support'
     }*/
 
-    api rootProject.ext.dependencies.support_v4
-    api rootProject.ext.dependencies.design
-    api rootProject.ext.dependencies.recycleview
+    implementation rootProject.ext.dependencies.support_v4
+    implementation rootProject.ext.dependencies.design
+    implementation rootProject.ext.dependencies.recycleview
 }

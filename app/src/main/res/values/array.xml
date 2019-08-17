@@ -97,5 +97,6 @@
         <item>底部导航栏</item>
         <item>BindPool</item>
         <item>自定义View</item>
+        <item>MVP</item>
     </string-array>
 </resources>

@@ -53,7 +53,6 @@ import com.ISHello.DAO.WealthBarInfoDAO;
 import com.ISHello.DateAndTime.DateTimeActivity;
 import com.ISHello.DefineDialog.DefineDialog;
 import com.ISHello.DefineDialog.ShareDialog;
-import com.ISHello.DesignMode.proxy.NotifyProxy;
 import com.ISHello.DialogTheme.ThemeDialogActivity;
 import com.ISHello.DropDownMenu.ui.DropDownMenuActivity;
 import com.ISHello.Encryption.Des;
@@ -142,6 +141,7 @@ import im.icbc.cn.keyboard.safePay.PayKeyboardActivity;
 import im.icbc.com.downloadfile.DownloadActivity;
 import im.icbc.com.golddrop.GoldAnimationActivity;
 import im.icbc.com.indexbarlayout.activity.barIndexLayoutActivity;
+import im.icbc.com.jnisdk.activity.JNIActivity;
 import im.icbc.com.linclibrary.PhoneInfo;
 import im.icbc.com.popmenu.PopMenu;
 import im.icbc.com.popmenu.PopMenuItem;
@@ -667,8 +667,8 @@ public class MainActivity extends CheckPermissionsActivity {
                         gotoLocation();
                         break;
                     case 1:
-                        //gotoJNIActivity();
-                        new NotifyProxy(MainActivity.this).send();
+                        gotoJNIActivity();
+                        //new NotifyProxy(MainActivity.this).send();
                         break;
                     case 2:
                         GesturePassword();
@@ -787,6 +787,9 @@ public class MainActivity extends CheckPermissionsActivity {
                         break;
                     case 40:
                         gotoDefineView();
+                        break;
+                    case 41:
+                        gotoMvp();
                         break;
                     default:
                         break;
@@ -1191,6 +1194,12 @@ public class MainActivity extends CheckPermissionsActivity {
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
+    private void gotoMvp(){
+        Intent intent = new Intent(MainActivity.this, cin.hello.com.mvpmodule.MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
+
     private void gotoShareDialog() {
         //显示分享底部区域
         ShareDialog shareDialog = ShareDialog.getInstance();
@@ -1337,9 +1346,9 @@ public class MainActivity extends CheckPermissionsActivity {
     }
 
     public void gotoJNIActivity() {
-        /*Intent intent = new Intent(MainActivity.this, JNIActivity.class);
+        Intent intent = new Intent(MainActivity.this, JNIActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);*/
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
     public void gotoGetPic() {
