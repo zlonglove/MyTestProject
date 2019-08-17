@@ -3,31 +3,44 @@ package cin.hello.com.mvpmodule.bean;
 import java.util.List;
 
 /**
- * @author azheng
- * @date 2018/6/4.
- * GitHub：https://github.com/RookieExaminer
- * Email：wei.azheng@foxmail.com
+ * @author
  * Description：登陆
  */
 public class LoginBean {
 
     /**
+     * admin : false
+     * chapterTops : []
      * collectIds : []
      * email :
      * icon :
-     * id : 6300
-     * password : test123321
+     * id : 28803
+     * nickname : zlonglove
+     * password :
+     * token :
      * type : 0
-     * username : test123321
+     * username : zlonglove
      */
 
+    private boolean admin;
     private String email;
     private String icon;
     private int id;
+    private String nickname;
     private String password;
+    private String token;
     private int type;
     private String username;
+    private List<?> chapterTops;
     private List<?> collectIds;
+
+    public boolean isAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(boolean admin) {
+        this.admin = admin;
+    }
 
     public String getEmail() {
         return email;
@@ -53,12 +66,28 @@ public class LoginBean {
         this.id = id;
     }
 
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 
     public int getType() {
@@ -77,11 +106,36 @@ public class LoginBean {
         this.username = username;
     }
 
+    public List<?> getChapterTops() {
+        return chapterTops;
+    }
+
+    public void setChapterTops(List<?> chapterTops) {
+        this.chapterTops = chapterTops;
+    }
+
     public List<?> getCollectIds() {
         return collectIds;
     }
 
     public void setCollectIds(List<?> collectIds) {
         this.collectIds = collectIds;
+    }
+
+    @Override
+    public String toString() {
+        return "LoginBean{" +
+                "admin=" + admin +
+                ", email='" + email + '\'' +
+                ", icon='" + icon + '\'' +
+                ", id=" + id +
+                ", nickname='" + nickname + '\'' +
+                ", password='" + password + '\'' +
+                ", token='" + token + '\'' +
+                ", type=" + type +
+                ", username='" + username + '\'' +
+                ", chapterTops=" + chapterTops +
+                ", collectIds=" + collectIds +
+                '}';
     }
 }

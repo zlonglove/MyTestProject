@@ -8,10 +8,7 @@ import cin.hello.com.mvpmodule.net.RetrofitClient;
 import io.reactivex.Flowable;
 
 /**
- * @author azheng
- * @date 2018/6/4.
- * GitHub：https://github.com/RookieExaminer
- * Email：wei.azheng@foxmail.com
+ * @author
  * Description：
  */
 public class MainModel  implements MainContract.Model {

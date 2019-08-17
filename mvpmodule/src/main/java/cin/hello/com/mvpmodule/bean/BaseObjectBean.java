@@ -3,10 +3,7 @@ package cin.hello.com.mvpmodule.bean;
 
 
 /**
- * @author azheng
- * @date 2018/4/24.
- * GitHub：https://github.com/RookieExaminer
- * Email：wei.azheng@foxmail.com
+ * @author
  * Description：对象
  */
 public class BaseObjectBean<T> {
@@ -19,7 +16,7 @@ public class BaseObjectBean<T> {
 
     private int errorCode;
     private String errorMsg;
-    private T result;
+    private T data;
 
     public int getErrorCode() {
         return errorCode;
@@ -38,11 +35,11 @@ public class BaseObjectBean<T> {
     }
 
     public T getResult() {
-        return result;
+        return data;
     }
 
     public void setResult(T result) {
-        this.result = result;
+        this.data = result;
     }
 
 

@@ -5,22 +5,17 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- * @author azheng
- * @date 2018/4/24.
- * GitHub：https://github.com/RookieExaminer
- * Email：wei.azheng@foxmail.com
+ * @author
  * Description：
  */
 public abstract class BaseActivity extends AppCompatActivity {
-
-
     //private Unbinder unbinder;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(this.getLayoutId());
         //unbinder = ButterKnife.bind(this);
+        findViews();
         initView();
     }
 
@@ -42,5 +37,9 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     public abstract void initView();
 
+    /**
+     * 找到对应的控件
+     */
+    public abstract void findViews();
 
 }

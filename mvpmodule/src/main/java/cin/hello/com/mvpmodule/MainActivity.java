@@ -5,21 +5,24 @@ import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import cin.hello.com.mvpmodule.base.BaseMvpActivity;
 import cin.hello.com.mvpmodule.bean.BaseObjectBean;
+import cin.hello.com.mvpmodule.bean.LoginBean;
 import cin.hello.com.mvpmodule.contract.MainContract;
 import cin.hello.com.mvpmodule.presenter.MainPresenter;
 import cin.hello.com.mvpmodule.util.ProgressDialog;
 
 public class MainActivity extends BaseMvpActivity<MainPresenter> implements MainContract.View {
     //@BindView(R2.id.et_username_login)
-    TextInputEditText etUsernameLogin;
+    private TextInputEditText etUsernameLogin;
     //@BindView(R2.id.et_password_login)
-    TextInputEditText etPasswordLogin;
+    private TextInputEditText etPasswordLogin;
 
-    Button btn_signin_login;
+    private Button btnSigniLogin;
+    private TextView responseBody;
 
     @Override
     public int getLayoutId() {
@@ -27,13 +30,18 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
     }
 
     @Override
-    public void initView() {
+    public void findViews() {
         etUsernameLogin = findViewById(R.id.et_username_login);
         etPasswordLogin = findViewById(R.id.et_password_login);
-        btn_signin_login = findViewById(R.id.btn_signin_login);
+        btnSigniLogin = findViewById(R.id.btn_signin_login);
+        responseBody = findViewById(R.id.responseBody);
+    }
+
+    @Override
+    public void initView() {
         mPresenter = new MainPresenter();
         mPresenter.attachView(this);
-        btn_signin_login.setOnClickListener(new View.OnClickListener() {
+        btnSigniLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (getUsername().isEmpty() || getPassword().isEmpty()) {
@@ -61,7 +69,8 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
 
     @Override
     public void onSuccess(BaseObjectBean bean) {
-        Toast.makeText(this, bean.getErrorMsg(), Toast.LENGTH_SHORT).show();
+        LoginBean loginBean = (LoginBean) bean.getResult();
+        responseBody.setText( loginBean.toString());
     }
 
     @Override
@@ -76,7 +85,7 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
 
     @Override
     public void onError(Throwable throwable) {
-        Toast.makeText(this, throwable.getMessage(), Toast.LENGTH_SHORT).show();
+        responseBody.setText(throwable.getMessage());
     }
 
     @Override

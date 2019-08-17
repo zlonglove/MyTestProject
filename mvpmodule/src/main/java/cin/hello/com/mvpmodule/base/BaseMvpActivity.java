@@ -5,10 +5,7 @@ import android.support.annotation.Nullable;
 
 
 /**
- * @author azheng
- * @date 2018/4/24.
- * GitHub：https://github.com/RookieExaminer
- * Email：wei.azheng@foxmail.com
+ * @author
  * Description：
  */
 public abstract class BaseMvpActivity<T extends BasePresenter> extends BaseActivity implements BaseView {

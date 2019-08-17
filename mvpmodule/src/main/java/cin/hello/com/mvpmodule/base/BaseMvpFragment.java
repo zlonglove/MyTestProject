@@ -1,10 +1,7 @@
 package cin.hello.com.mvpmodule.base;
 
 /**
- * @author azheng
- * @date 2018/4/24.
- * GitHub：https://github.com/RookieExaminer
- * Email：wei.azheng@foxmail.com
+ * @author
  * Description：
  */
 public abstract class BaseMvpFragment<T extends BasePresenter>  extends BaseFragment implements BaseView{

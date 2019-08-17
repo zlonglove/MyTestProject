@@ -15,17 +15,14 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * @author azheng
- * @date 2018/4/17.
- * GitHub：https://github.com/RookieExaminer
- * email：wei.azheng@foxmail.com
+ * @author
  * description：
  */
 public class RetrofitClient {
 
     private static volatile RetrofitClient instance;
     private APIService apiService;
-    private String baseUrl = "http://www.wanandroid.com/";
+    private String baseUrl = "https://www.wanandroid.com/";
 
     private RetrofitClient() {
     }

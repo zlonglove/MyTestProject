@@ -6,5 +6,7 @@
     <!-- ProgressDialog-->
     <string name="progress_dialog_title">Progress Dialog</string>
     <string name="progress_please_wait">Please wait…</string>
+    <string name="default_mvp_username">zlonglove</string>
+    <string name="default_mvp_password">zlonglove</string>
 </resources>
 
