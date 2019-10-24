@@ -1,6 +1,10 @@
 package com.ISHello.DesignMode.strategy.example;
 
+/**
+ * @author zhanglong
+ */
 public class TranficTest {
+
     public static void main(String[] args) {
         TranficCalcutor mTranficCalcutor = new TranficCalcutor();
         mTranficCalcutor.setStrategy(new BusStrategy());
