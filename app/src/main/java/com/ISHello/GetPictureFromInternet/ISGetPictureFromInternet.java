@@ -244,13 +244,7 @@ public class ISGetPictureFromInternet extends BaseActivity {
     }
 
     public void showImage(View view) {
-        /*if (isNetWork != null) {
-            isNetWork.sendNetWorkEvent(ISNetWorkCmd.EVENT_GET_PICTURE,
-					urlPathEditText.getText().toString());
-		}*/
-        //ImageLoaderActivity.getInstance().loadImage("http://122.19.157.215/userfiles/menuPic/B3.png",image,true);
-
-        String url = "http://img3.duitang.com/uploads/item/201604/30/20160430090033_HrznW.jpeg";
+        String url = "http://img.taopic.com/uploads/allimg/130501/240451-13050106450911.jpg";
         ISDiskLruCacheUtils diskLruCacheUtils = ISDiskLruCacheUtils.getInstance(this);
         if (!diskLruCacheUtils.open("bitmap")) {
             Log.i(TAG, "--->init DiskLruCache fail");

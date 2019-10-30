@@ -46,7 +46,7 @@ public final class StorageUtils {
      * directory on device's file system.
      *
      * @param context
-     *            Application context
+     *            SerialPortManager context
      * @return Cache {@link File directory}.<br />
      *         <b>NOTE:</b> Can be null in some unpredictable cases (if SD card
      *         is unmounted and {@link android.content.Context#getCacheDir()
@@ -63,7 +63,7 @@ public final class StorageUtils {
      * depending incoming parameters.
      *
      * @param context
-     *            Application context
+     *            SerialPortManager context
      * @param preferExternal
      *            Whether prefer external location for cache
      * @return Cache {@link File directory}.<br />
@@ -105,7 +105,7 @@ public final class StorageUtils {
      * directory on device's file system.
      *
      * @param context
-     *            Application context
+     *            SerialPortManager context
      * @return Cache {@link File directory}
      */
     public static File getIndividualCacheDirectory(Context context) {
@@ -126,7 +126,7 @@ public final class StorageUtils {
      * device's file system.
      *
      * @param context
-     *            Application context
+     *            SerialPortManager context
      * @param cacheDir
      *            Cache directory path (e.g.: "AppCacheDir",
      *            "AppDir/cache/images")

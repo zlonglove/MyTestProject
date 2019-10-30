@@ -102,7 +102,7 @@ dependencies {
     //compile(name: 'sdk-release', ext: 'aar')
     //compile(name: 'android-gif-drawable-1.2.12', ext: 'aar')
     implementation project(':linclibrary')
-    implementation project(':jnisdk')
+    //implementation project(':jnisdk')
     implementation files('libs/jcore-android_v1.1.2.jar')
     implementation files('libs/jpush-android_v3.0.5.jar')
     implementation project(':keyboard')
@@ -134,7 +134,7 @@ dependencies {
     implementation project(':tabswitch')
     implementation project(':aidl')
     implementation project(':pushtorefresh')
-    implementation project(':android-gif-drawable')
+    //implementation project(':android-gif-drawable')
     implementation project(':lfilepickerlibrary')
     implementation project(':recyclerview')
     implementation project(':adrecyclerview')
@@ -157,4 +157,5 @@ dependencies {
     implementation rootProject.ext.dependencies.retrofit_adapter_rxjava2
     implementation rootProject.ext.dependencies.retrofit_converter_gson
     implementation project(':mvpmodule')
+    //implementation project(':serialport')
 }

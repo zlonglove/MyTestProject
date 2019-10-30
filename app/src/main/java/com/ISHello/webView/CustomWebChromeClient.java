@@ -238,5 +238,6 @@ public class CustomWebChromeClient extends WebChromeClient {
     public void onReceivedTitle(WebView view, String title) {
         LogUtil.log("onReceived Title==" + title);
         super.onReceivedTitle(view, title);
+        nativeWebviewBaseProxy.setTitle(title);
     }
 }

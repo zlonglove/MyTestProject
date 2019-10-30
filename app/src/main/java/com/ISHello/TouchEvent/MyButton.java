@@ -14,43 +14,18 @@ public class MyButton extends AppCompatButton {
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        int action = event.getAction();
-
-        switch (action) {
-            case MotionEvent.ACTION_DOWN:
-                Log.e(TAG, "--->onTouchEvent ACTION_DOWN");
-                break;
-            case MotionEvent.ACTION_MOVE:
-                Log.e(TAG, "--->onTouchEvent ACTION_MOVE");
-                break;
-            case MotionEvent.ACTION_UP:
-                Log.e(TAG, "--->onTouchEvent ACTION_UP");
-                break;
-            default:
-                break;
-        }
-        return super.onTouchEvent(event);
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        Log.i(TAG, "--->【Button】下达任务：" + Util.actionToString(event.getAction()));
+        boolean result = super.dispatchTouchEvent(event);
+        return result;
     }
 
     @Override
-    public boolean dispatchTouchEvent(MotionEvent event) {
-        int action = event.getAction();
-
-        switch (action) {
-            case MotionEvent.ACTION_DOWN:
-                Log.e(TAG, "--->dispatchTouchEvent ACTION_DOWN");
-                break;
-            case MotionEvent.ACTION_MOVE:
-                Log.e(TAG, "--->dispatchTouchEvent ACTION_MOVE");
-                break;
-            case MotionEvent.ACTION_UP:
-                Log.e(TAG, "--->dispatchTouchEvent ACTION_UP");
-                break;
-
-            default:
-                break;
-        }
-        return super.dispatchTouchEvent(event);
+    public boolean onTouchEvent(MotionEvent event) {
+        //boolean relust = false;
+        boolean relust = super.onTouchEvent(event);
+        Log.i(TAG, "--->【Button】完成任务：" + Util.actionToString(event.getAction()) +
+                "，【Button】现在只能靠自己了！是否解决：" + Util.canDoTask(relust));
+        return relust;
     }
 }

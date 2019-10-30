@@ -1,8 +1,5 @@
 package com.ISHello.Audio;
 
-import com.example.ishelloword.R;
-
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,8 +7,11 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
-public class AudioActivity extends Activity {
-    private static final String TAG = "AudioActivity";
+import com.ISHello.base.base.BaseActivity;
+import com.example.ishelloword.R;
+
+public class AudioActivity extends BaseActivity {
+    private static final String TAG = AudioActivity.class.getSimpleName();
     private SeekBar seekBar;
     private Button muteButton;
     private AudioTrackPlay audioTrackPlay;
@@ -21,10 +21,9 @@ public class AudioActivity extends Activity {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.audioactivity);
+        setTitle("音频");
         progressBarInit();
-        Bundle bundle = getIntent().getExtras();
         muteButton = (Button) this.findViewById(R.id.muteButton);
-        Log.i(TAG, "--->The get info==" + bundle.getString("Audio"));
     }
 
     private void progressBarInit() {

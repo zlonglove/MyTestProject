@@ -2,11 +2,9 @@ package com.ISHello.TouchEvent;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 import com.ISHello.base.base.BaseActivity;
 import com.example.ishelloword.R;
@@ -14,15 +12,16 @@ import com.example.ishelloword.R;
 public class TouchEvent1Activity extends BaseActivity {
     protected static final String TAG = TouchEvent1Activity.class.getSimpleName();
     private Button mButton;
-    private LinearLayout parent_layout;
+    private MyRelativeLayout parent_layout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_touch_event1);
 
-        mButton = (Button) findViewById(R.id.id_btn);
-        parent_layout=(LinearLayout)findViewById(R.id.parent_layout);
-        mButton.setOnTouchListener(new View.OnTouchListener() {
+        mButton = findViewById(R.id.id_btn);
+        parent_layout = findViewById(R.id.parent_layout);
+        /*mButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 int action = event.getAction();
@@ -42,7 +41,7 @@ public class TouchEvent1Activity extends BaseActivity {
                 }
                 return false;
             }
-        });
+        });*/
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,14 +58,17 @@ public class TouchEvent1Activity extends BaseActivity {
     }
 
     @Override
-    public boolean dispatchKeyEvent(KeyEvent event) {
-        Log.i(TAG, "--->dispatchKeyEvent()");
-        return super.dispatchKeyEvent(event);
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        Log.i(TAG, "--->【Activity】下达任务：" + Util.actionToString(ev.getAction()) +
+                "，找个人帮我完成，任务往下分发。");
+        return super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.i(TAG, "--->onTouchEvent()");
-        return super.onTouchEvent(event);
+        boolean result = super.onTouchEvent(event);
+        Log.i(TAG, "--->【Activity】完成任务：" + Util.actionToString(event.getAction()) +
+                "，【ViewGroup】太差劲了，以后不再找你干活了，我自来搞定！是否解决：" + Util.canDoTaskTop(result));
+        return result;
     }
 }

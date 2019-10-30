@@ -98,5 +98,7 @@
         <item>BindPool</item>
         <item>自定义View</item>
         <item>MVP</item>
+        <item>串口</item>
+        <item>Audio</item>
     </string-array>
 </resources>

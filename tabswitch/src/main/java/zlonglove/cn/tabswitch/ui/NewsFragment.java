@@ -1,6 +1,7 @@
 package zlonglove.cn.tabswitch.ui;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -31,6 +32,12 @@ public class NewsFragment extends BaseFragment {
 
     public NewsFragment() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        Log.d(TAG, "--->onAttach()");
     }
 
     @Override

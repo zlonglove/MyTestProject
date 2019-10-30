@@ -43,6 +43,7 @@ import com.ISHello.AIDL.PlayerProxy;
 import com.ISHello.AIDL.mp3RemoteService;
 import com.ISHello.AndroidThread.AndroidThread;
 import com.ISHello.AppManager.AppManager;
+import com.ISHello.Audio.AudioActivity;
 import com.ISHello.Banner2.BannerActivity2;
 import com.ISHello.BinderPool.Client.BinderPoolActivity;
 import com.ISHello.BroadcastReceiver.MediaControlReceiver;
@@ -141,7 +142,6 @@ import im.icbc.cn.keyboard.safePay.PayKeyboardActivity;
 import im.icbc.com.downloadfile.DownloadActivity;
 import im.icbc.com.golddrop.GoldAnimationActivity;
 import im.icbc.com.indexbarlayout.activity.barIndexLayoutActivity;
-import im.icbc.com.jnisdk.activity.JNIActivity;
 import im.icbc.com.linclibrary.PhoneInfo;
 import im.icbc.com.popmenu.PopMenu;
 import im.icbc.com.popmenu.PopMenuItem;
@@ -273,7 +273,7 @@ public class MainActivity extends CheckPermissionsActivity {
         /********************************************************************************************************************/
 
         /********************************************************************************************************************/
-        ISScreenInfo screenInfo = new ISScreenInfo(this);
+        ISScreenInfo screenInfo = new ISScreenInfo();
         LogUtil.log(TAG, "--->Screen info==" + screenInfo.toString());
         /********************************************************************************************************************/
 
@@ -647,10 +647,10 @@ public class MainActivity extends CheckPermissionsActivity {
                 });
         this.getContentResolver().registerContentObserver(
                 Uri.parse("content://sms/"), true, smsObserver);*/
-        String encode=SavaData.encrypt("zhanglong",SavaData.key);
-        Log.e(TAG,"--->encode()=="+encode);
-        String decode=SavaData.decrypt(encode,SavaData.key);
-        Log.e(TAG,"--->decode()=="+decode);
+        String encode = SavaData.encrypt("zhanglong", SavaData.key);
+        Log.e(TAG, "--->encode()==" + encode);
+        String decode = SavaData.decrypt(encode, SavaData.key);
+        Log.e(TAG, "--->decode()==" + decode);
     }
 
     private void initUI() {
@@ -790,6 +790,12 @@ public class MainActivity extends CheckPermissionsActivity {
                         break;
                     case 41:
                         gotoMvp();
+                        break;
+                    case 42:
+                        gotoSeriaPort();
+                        break;
+                    case 43:
+                        gotoAudio();
                         break;
                     default:
                         break;
@@ -1188,14 +1194,26 @@ public class MainActivity extends CheckPermissionsActivity {
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
-    private void gotoDefineView(){
+    private void gotoDefineView() {
         Intent intent = new Intent(MainActivity.this, ViewDrawActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
 
-    private void gotoMvp(){
+    private void gotoMvp() {
         Intent intent = new Intent(MainActivity.this, cin.hello.com.mvpmodule.MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+    }
+
+    private void gotoSeriaPort() {
+        /*Intent intent = new Intent(MainActivity.this, MainMenu.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);*/
+    }
+
+    private void gotoAudio() {
+        Intent intent = new Intent(MainActivity.this, AudioActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
@@ -1346,9 +1364,9 @@ public class MainActivity extends CheckPermissionsActivity {
     }
 
     public void gotoJNIActivity() {
-        Intent intent = new Intent(MainActivity.this, JNIActivity.class);
+        /*Intent intent = new Intent(MainActivity.this, JNIActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);*/
     }
 
     public void gotoGetPic() {

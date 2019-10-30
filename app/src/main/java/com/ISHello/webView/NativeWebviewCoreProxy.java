@@ -1,6 +1,7 @@
 package com.ISHello.webView;
 
 import android.app.Activity;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.webkit.JavascriptInterface;
@@ -16,7 +17,8 @@ public class NativeWebviewCoreProxy implements NativeWebviewBaseProxy {
 
     public enum HandleType {
         SHOW_INDICATOR,
-        HIDE_INDICATOR
+        HIDE_INDICATOR,
+        SET_TITLE
     }
 
     private Activity mContext;
@@ -86,4 +88,15 @@ public class NativeWebviewCoreProxy implements NativeWebviewBaseProxy {
             mContext.finish();
         }
     }
+
+    @Override
+    public void setTitle(String title) {
+        Message msg = Message.obtain();
+        msg.obj = HandleType.SET_TITLE;
+        Bundle bundle=new Bundle();
+        bundle.putString("title",title);
+        msg.setData(bundle);
+        mHandler.sendMessage(msg);
+    }
+
 }

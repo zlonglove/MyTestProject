@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.ISHello.ViewDraw.ViewDrawActivity">
 
     <com.ISHello.ViewDraw.DrawLinearLayout
@@ -24,9 +24,11 @@
             android:background="@color/white" />
 
         <com.ISHello.View.FingerView
+            android:id="@+id/view_finger"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#efeded" />
+            android:background="#efeded"
+            android:clickable="true" />
     </com.ISHello.ViewDraw.DrawLinearLayout>
 
 </RelativeLayout>

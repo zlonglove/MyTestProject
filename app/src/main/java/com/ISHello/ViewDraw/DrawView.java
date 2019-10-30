@@ -61,6 +61,6 @@ public class DrawView extends View {
         canvas.drawText(str, 0, str.length(), 0, 50, textPaint);
         width += 2;
 
-        invalidate();
+        //invalidate();
     }
 }

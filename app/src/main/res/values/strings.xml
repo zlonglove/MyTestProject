@@ -78,7 +78,8 @@
     <string name="NoSdcard">There is no SDCard or not allow to write</string>
     <string name="openWebPage">打开网页</string>
     <string name="openWebView">webView</string>
-    <string name="default_webpage">122.19.173.71:8011</string>
+    <!--<string name="default_webpage">122.19.173.71:8011</string>-->
+    <string name="default_webpage">www.baidu.com</string>-->
     <string name="go">Enter</string>
     <string name="updateapk">在线更新apk</string>
     <string name="dlg_prompt">提示</string>

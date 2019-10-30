@@ -163,7 +163,7 @@ public class RemoteCallsClient extends Activity {
             this.mMenuWindow.setAnimationStyle(R.style.PopupAnimation);
 
             this.mOptionMenu = ((ISMenu) this.mMenuView.findViewById(R.id.option_menu));
-            this.mOptionMenu.addMenuItems(ISScreenInfo.instance(this).getWidth(), MENU_TEXT_RES_ID);
+            this.mOptionMenu.addMenuItems(ISScreenInfo.instance().getWidth(), MENU_TEXT_RES_ID);
             this.mOptionMenu.setMenuClickListener(new View.OnClickListener() {
                 public void onClick(View paramView) {
                     Log.i(TAG, "--->showMenuWindow - onClick");

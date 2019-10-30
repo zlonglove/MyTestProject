@@ -7,10 +7,12 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
 public class FingerView extends View {
+    private final String TAG = FingerView.class.getSimpleName();
     private Path mPath = new Path();
     private float mPreX, mPreY;
     private Paint strokePaint;
@@ -42,7 +44,7 @@ public class FingerView extends View {
                 mPath.moveTo(event.getX(), event.getY());
                 mPreX = event.getX();
                 mPreY = event.getY();
-                return true;
+                //return true;//如果此处返回true则不会响应onClick事件
             }
             case MotionEvent.ACTION_MOVE:
                 float endX = (mPreX + event.getX()) / 2;
@@ -54,6 +56,9 @@ public class FingerView extends View {
                 mPreX = event.getX();
                 mPreY = event.getY();
                 invalidate();
+                break;
+            case MotionEvent.ACTION_UP:
+                Log.i(TAG,"--->action_up");
                 break;
             default:
                 break;
@@ -68,6 +73,7 @@ public class FingerView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
+        Log.i(TAG, "--->onDraw()");
         super.onDraw(canvas);
         canvas.drawPath(mPath, strokePaint);
     }

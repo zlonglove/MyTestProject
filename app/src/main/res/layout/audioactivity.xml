@@ -2,17 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loadbk"
     android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/AudioText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@color/red"
-        android:textSize="@dimen/titlesize"
-        android:text="@string/AudioText" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -43,9 +33,9 @@
 
     <SeekBar
         android:id="@+id/PlayVol"
-        android:layout_margin="40dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="40dp"
         android:max="15"
         android:progress="6"
         android:secondaryProgress="15"></SeekBar>
@@ -58,7 +48,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/PlayAssert"
-            android:onClick="playAssert" />
+            android:onClick="playAssert"
+            android:text="@string/PlayAssert" />
     </LinearLayout>
 </LinearLayout>

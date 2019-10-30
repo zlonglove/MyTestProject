@@ -43,7 +43,8 @@ public class CheckPermissionsActivity extends BaseActivity implements ActivityCo
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.READ_PHONE_STATE,
-            Manifest.permission.READ_SMS
+            Manifest.permission.READ_SMS,
+            Manifest.permission.RECORD_AUDIO
     };
 
     private static final int PERMISSON_REQUESTCODE = 0;

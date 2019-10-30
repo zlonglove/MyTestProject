@@ -79,6 +79,7 @@ public class WebViewActivity extends BaseActivity implements DownloadListener {
 
     private CreditKeyboardBinder creditKeyboardBinder;
     //private final String loadUrl = "http://gdown.baidu.com/data/wisegame/91319a5a1dfae322/baidu_16785426.apk";
+
     /**
      * Called when the activity is first created.
      */
@@ -93,12 +94,12 @@ public class WebViewActivity extends BaseActivity implements DownloadListener {
     }
 
     private void findViews() {
-        editText = (EditText) findViewById(R.id.editText);
-        button = (Button) findViewById(R.id.button);
-        jsButton = (Button) findViewById(R.id.jsbutton);
-        javaToJavaScript = (Button) findViewById(R.id.javaToJavaScript);
-        javaCallAlert = (Button) findViewById(R.id.javaCallAlert);
-        webView = (CustomWebView) findViewById(R.id.webView);
+        editText = findViewById(R.id.editText);
+        button = findViewById(R.id.button);
+        jsButton = findViewById(R.id.jsbutton);
+        javaToJavaScript = findViewById(R.id.javaToJavaScript);
+        javaCallAlert = findViewById(R.id.javaCallAlert);
+        webView = findViewById(R.id.webView);
         //loadView = (LinearLayout) this.findViewById(R.id.loadView);
         //message = (TextView) this.findViewById(R.id.message);
     }
@@ -241,7 +242,7 @@ public class WebViewActivity extends BaseActivity implements DownloadListener {
         settings.setAppCacheEnabled(true);// 设置缓存
 
         settings.setDefaultTextEncodingName("UTF-8");
-        settings.setJavaScriptCanOpenWindowsAutomatically(true);
+        settings.setJavaScriptCanOpenWindowsAutomatically(true);//设置允许JS弹窗
 
         proxy = new NativeWebviewCoreProxy(this, webView, extendHandler);
         CustomWebChromeClient customWebChromeClient = new CustomWebChromeClient(this, proxy);
@@ -308,6 +309,10 @@ public class WebViewActivity extends BaseActivity implements DownloadListener {
                     if (loadingDialog != null && loadingDialog.isShowing()) {
                         loadingDialog.dismiss();
                     }
+                    break;
+                case SET_TITLE:
+                    String title = msg.getData().getString("title");
+                    WebViewActivity.this.setTitle(title);
                     break;
             }
         }
@@ -378,7 +383,7 @@ public class WebViewActivity extends BaseActivity implements DownloadListener {
          */
         @Override
         public void onLoadResource(WebView view, String url) {
-            //Log.i(TAG, "--->onLoadResource()");
+            Log.i(TAG, "--->onLoadResource()" + url);
             super.onLoadResource(view, url);
         }
 
@@ -390,6 +395,7 @@ public class WebViewActivity extends BaseActivity implements DownloadListener {
             Log.i(TAG, "--->onPageStarted()--url=" + url);
             loadingDialog.show();
             //checkWebViewUrl(view, url);
+            webView.setLayerType(View.LAYER_TYPE_SOFTWARE,null);
             super.onPageStarted(view, url, favicon);
         }
 
@@ -398,10 +404,10 @@ public class WebViewActivity extends BaseActivity implements DownloadListener {
          */
         @Override
         public void onPageFinished(WebView view, String url) {
-
             Log.i(TAG, "--->onPageFinished()--url=" + url);
             super.onPageFinished(view, url);
             loadingDialog.dismiss();
+            webView.setLayerType(View.LAYER_TYPE_HARDWARE,null);
             addImageClickListener(view);//待网页加载完全后设置图片点击的监听方法
         }
 
@@ -646,5 +652,8 @@ public class WebViewActivity extends BaseActivity implements DownloadListener {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        if (extendHandler!=null){
+            extendHandler.removeCallbacksAndMessages(null);
+        }
     }
 }

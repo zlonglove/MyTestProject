@@ -18,4 +18,6 @@ public interface NativeWebviewBaseProxy {
     void hideIndicator();
 
     void close();
+
+    void setTitle(String title);
 }

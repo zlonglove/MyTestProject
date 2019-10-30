@@ -1,7 +1,7 @@
 package com.ISHello.DesignMode.strategy.example;
 
 /**
- * 计算接口
+ * 计费接口
  */
 public interface CalculateStrategy {
     /**

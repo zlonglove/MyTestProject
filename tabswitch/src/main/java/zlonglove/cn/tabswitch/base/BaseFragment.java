@@ -29,7 +29,7 @@ public abstract class BaseFragment extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         this.mActivity = (BaseActivity) context;
-        Log.d(TAG, "--->onAttach()");
+        //Log.d(TAG, "--->onAttach()");
     }
 
 

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
 
     private Button btnSigniLogin;
     private TextView responseBody;
+    private ImageView ivBackImage;
 
     @Override
     public int getLayoutId() {
@@ -35,6 +37,7 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
         etPasswordLogin = findViewById(R.id.et_password_login);
         btnSigniLogin = findViewById(R.id.btn_signin_login);
         responseBody = findViewById(R.id.responseBody);
+        ivBackImage = findViewById(R.id.iv_back_toolbar);
     }
 
     @Override
@@ -49,6 +52,12 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
                     return;
                 }
                 mPresenter.login(getUsername(), getPassword());
+            }
+        });
+        ivBackImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.this.finish();
             }
         });
     }
@@ -70,7 +79,7 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
     @Override
     public void onSuccess(BaseObjectBean bean) {
         LoginBean loginBean = (LoginBean) bean.getResult();
-        responseBody.setText( loginBean.toString());
+        responseBody.setText(loginBean.toString());
     }
 
     @Override

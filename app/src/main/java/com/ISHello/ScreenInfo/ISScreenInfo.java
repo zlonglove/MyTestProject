@@ -1,7 +1,10 @@
 package com.ISHello.ScreenInfo;
 
-import android.app.Activity;
+import android.content.Context;
 import android.util.DisplayMetrics;
+import android.view.WindowManager;
+
+import com.ISHello.Application.BaseApplication;
 
 /**
  * 获取屏幕的信息
@@ -16,20 +19,22 @@ public class ISScreenInfo {
 
     private static ISScreenInfo isScreenInfo;
 
-    public static ISScreenInfo instance(Activity activity) {
+    public static ISScreenInfo instance() {
         if (isScreenInfo == null) {
-            isScreenInfo = new ISScreenInfo(activity);
+            isScreenInfo = new ISScreenInfo();
         }
         return isScreenInfo;
     }
 
-    public ISScreenInfo(Activity activity) {
+    public ISScreenInfo() {
         DisplayMetrics metric = new DisplayMetrics();
-        activity.getWindowManager().getDefaultDisplay().getMetrics(metric);
+        WindowManager wm = (WindowManager) BaseApplication.getInstance().getSystemService(Context.WINDOW_SERVICE);
+        //activity.getWindowManager().getDefaultDisplay().getMetrics(metric);
+        wm.getDefaultDisplay().getMetrics(metric);
         width = metric.widthPixels;  // 屏幕宽度（像素）
         height = metric.heightPixels;  // 屏幕高度（像素）
-        density = metric.density;  // 屏幕密度（0.75 / 1.0 / 1.5）
-        densityDpi = metric.densityDpi;  // 屏幕密度DPI（120 / 160 / 240）
+        density = metric.density;  //          屏幕密度（0.75 / 1.0 / 1.5 / 2 / 3 / 4 ）
+        densityDpi = metric.densityDpi;  // 屏幕密度DPI（120 / 160 / 240 / 320 / 480 / 640 ）
     }
 
     public int getWidth() {

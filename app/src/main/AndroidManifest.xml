@@ -152,12 +152,12 @@
             android:name="com.ISHello.Service.ServerActivity"
             android:clearTaskOnLaunch="true"
             android:launchMode="singleTask"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait"
             android:stateNotNeeded="true"
             android:theme="@style/AppTheme" />
         <activity
             android:name="com.ISHello.Audio.AudioActivity"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name="com.ISHello.BroadcastReceiver.broadCastActivity"
